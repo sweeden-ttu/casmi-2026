@@ -81,8 +81,11 @@ def render_tracker(status: Mapping[str, Any]) -> None:
             "",
             f"- Python: `{status.get('python', '')}`",
             f"- CUDA: `{status.get('cuda', False)}`",
-            f"- RDKit: `{status.get('rdkit', False)}`",
-            "- Local spectra: `data/synthetic` only. `data/raw/train.parquet` is not on disk.",
+            f"- RDKit: {status.get('rdkit_note', '`' + str(status.get('rdkit', False)) + '`')}",
+            status.get(
+                "spectra_note",
+                "- Local spectra: `data/synthetic` only. `data/raw/train.parquet` is not on disk.",
+            ),
             "",
         ]
     )

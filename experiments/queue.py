@@ -12,6 +12,19 @@ from typing import Dict, List, Tuple
 Requirement = Tuple[str, str]
 
 REQUIREMENTS: Dict[str, List[Requirement]] = {
+    "NPC0": [
+        ("artifacts/NPC0/npcomposer", "ralyn/NPComposer snapshot. Do not initialize from GP-MoLFormer-Uniq."),
+        ("data/raw/train.parquet", "Competition train.parquet. data/synthetic is not a substitute."),
+        ("artifacts/dreams/backbone.pt", "DreaMS self-supervised backbone, not a NIST fine-tune."),
+    ],
+    "NPC1": [
+        ("artifacts/NPC1/npcomposer-v2", "ralyn/NPComposer-v2, the same COCONUT fine-tune published under the v2 name."),
+        ("data/raw/train.parquet", "Competition train.parquet. data/synthetic is not a substitute."),
+        ("artifacts/dreams/backbone.pt", "DreaMS self-supervised backbone, not a NIST fine-tune."),
+    ],
+    "NPC2": [
+        ("experiments/runs/NPC0/predictions.json", "NPComposer generations on the labeled holdout, with the baseline metrics to beat."),
+    ],
     "GM0": [
         ("data/raw/train.parquet", "Competition train.parquet. data/synthetic is not a substitute."),
         ("artifacts/dreams/backbone.pt", "DreaMS self-supervised backbone, not a NIST fine-tune."),
@@ -54,9 +67,12 @@ REQUIREMENTS: Dict[str, List[Requirement]] = {
     ],
 }
 
-GPU_REQUIRED = {"GM0", "DN6", "DN1", "P4", "RR1", "RR5", "FH0"}
+GPU_REQUIRED = {"NPC0", "NPC1", "GM0", "DN6", "DN1", "P4", "RR1", "RR5", "FH0"}
 
 NEXT_COMMAND = {
+    "NPC0": "Initialize from ralyn/NPComposer, not GP-MoLFormer-Uniq. The snapshot is at artifacts/NPC0/npcomposer and data/raw/train.parquet is in place. Place artifacts/dreams/backbone.pt, then train the conditioner first and the whole model on a GPU: python -m experiments NPC0.",
+    "NPC1": "ralyn/NPComposer-v2 is the same 188,169,651-byte checkpoint as ralyn/NPComposer. Do not train a second copy. Continue with NPC0.",
+    "NPC2": "Fit the generation ranker on NPComposer predictions. Keep it only when the held-out MRR@25 is higher than the order the model generated. python -m experiments NPC2.",
     "GM0": "Train with the conditioner first, then the whole GP-MoLFormer, seed 3407. data/raw/train.parquet and artifacts/GM0/gp-molformer are in place. Place artifacts/dreams/backbone.pt and rerun on a GPU: python -m experiments GM0.",
     "DN6": "Export the official DualLGD checkpoint to artifacts/DN6/duallgd.pt, generate under the formula shortlist, and write experiments/runs/DN6/candidates.json.",
     "IV4": "Rerun after DN6 has written candidates.json. P5 rescores those rows with the retrieval blend before the merge.",

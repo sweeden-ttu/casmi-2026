@@ -7,6 +7,9 @@ Run ``python -m experiments`` from the repository root with the kagg interpreter
 __all__ = ["QUEUE"]
 
 QUEUE = [
+    "NPC0",
+    "NPC1",
+    "NPC2",
     "GM0",
     "DN6",
     "IV4",

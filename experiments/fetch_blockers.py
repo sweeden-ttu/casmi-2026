@@ -82,6 +82,16 @@ def _snapshots() -> None:
     from huggingface_hub import snapshot_download
 
     snapshot_download(
+        repo_id="ralyn/NPComposer",
+        local_dir=str(REPO_ROOT / "artifacts" / "NPC0" / "npcomposer"),
+    )
+    print("wrote artifacts/NPC0/npcomposer", flush=True)
+    snapshot_download(
+        repo_id="ralyn/NPComposer-v2",
+        local_dir=str(REPO_ROOT / "artifacts" / "NPC1" / "npcomposer-v2"),
+    )
+    print("wrote artifacts/NPC1/npcomposer-v2", flush=True)
+    snapshot_download(
         repo_id="ibm-research/GP-MoLFormer-Uniq",
         local_dir=str(REPO_ROOT / "artifacts" / "GM0" / "gp-molformer"),
     )

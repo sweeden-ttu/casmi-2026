@@ -90,14 +90,38 @@
       "blocker": "artifacts/EN1/dreams_embeddings.parquet: The 128-d adduct vector is concatenated to the 1024-d DreaMS embedding.",
       "manifest": "experiments/runs/IV1/manifest.json",
       "weight_version": "v002"
+    },
+    "NPC0": {
+      "status": "blocked",
+      "next_action": "Initialize from ralyn/NPComposer, not GP-MoLFormer-Uniq. The snapshot is at artifacts/NPC0/npcomposer and data/raw/train.parquet is in place. Place artifacts/dreams/backbone.pt, then train the conditioner first and the whole model on a GPU: python -m experiments NPC0.",
+      "blocker": "artifacts/dreams/backbone.pt: DreaMS self-supervised backbone, not a NIST fine-tune.",
+      "manifest": "experiments/runs/NPC0/manifest.json",
+      "weight_version": "v002"
+    },
+    "NPC1": {
+      "status": "same_weights",
+      "next_action": "ralyn/NPComposer-v2 is the same 188,169,651-byte checkpoint as ralyn/NPComposer. Do not train a second copy. Continue with NPC0.",
+      "blocker": "",
+      "manifest": "experiments/runs/NPC1/manifest.json",
+      "weight_version": "v002"
+    },
+    "NPC2": {
+      "status": "blocked",
+      "next_action": "Fit the generation ranker on NPComposer predictions. Keep it only when the held-out MRR@25 is higher than the order the model generated. python -m experiments NPC2.",
+      "blocker": "experiments/runs/NPC0/predictions.json: NPComposer generations on the labeled holdout, with the baseline metrics to beat.",
+      "manifest": "experiments/runs/NPC2/manifest.json",
+      "weight_version": "v002"
     }
   },
-  "updated_utc": "2026-11-17T14:29:48+00:00",
+  "updated_utc": "2026-11-17T14:50:48+00:00",
   "weight_version": "v002",
   "python": "/home/sweeden/.conda/envs/kagg/bin/python",
   "cuda": false,
   "rdkit": true,
   "queue": [
+    "NPC0",
+    "NPC1",
+    "NPC2",
     "GM0",
     "DN6",
     "IV4",
@@ -112,5 +136,7 @@
     "FH0",
     "IV1"
   ],
-  "evidently_weights_dataset_id": "01a1e9e9-fd4f-742c-88c3-02721042396e"
+  "evidently_weights_dataset_id": "01a1e9e9-fd4f-742c-88c3-02721042396e",
+  "rdkit_note": "`True` (2026.09.2 in the kagg env; the contest pin remains 2026.03.3)",
+  "spectra_note": "- Local spectra: `data/raw/train.parquet` (2,539,608 rows) and `data/raw/test.parquet` (1,213 rows), linked from `data/kaggle_dl`. `data/synthetic` remains the toy set."
 }

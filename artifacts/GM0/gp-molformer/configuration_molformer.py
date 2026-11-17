@@ -25,6 +25,8 @@ from transformers.utils import logging
 logger = logging.get_logger(__name__)
 
 MOLFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
+    "ralyn/NPComposer": "https://huggingface.co/ralyn/NPComposer/resolve/main/config.json",
+    "ralyn/NPComposer-v2": "https://huggingface.co/ralyn/NPComposer-v2/resolve/main/config.json",
     "ibm/GP-MoLFormer-Uniq": "https://huggingface.co/ibm/GP-MoLFormer-Uniq/resolve/main/config.json",
 }
 

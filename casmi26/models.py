@@ -639,6 +639,8 @@ class CASMIPipeline:
     ) -> np.ndarray:
         """Scores candidates using the learned GBDT reranker + the Evidently blend.
 
+        Always returns float64. The no-reranker path matches ``apply_blend``.
+
         ``weights`` defaults to ``experiments/weights/current.json``. The GBDT
         mix (0.65 / 0.35) is unchanged; that file's importances are empty, so
         there is no learned ranker coefficient to load.
@@ -647,16 +649,17 @@ class CASMIPipeline:
         linear_score, _used = linear_blend(cand_feats, blend)
 
         if self.reranker is None:
-            return linear_score
+            return np.asarray(linear_score, dtype=np.float64)
 
         X = cand_feats[FEATURE_COLUMNS].to_numpy(dtype=np.float32)
         if hasattr(self.reranker, "predict_proba"):
-            gbdt_score = self.reranker.predict_proba(X)[:, 1].astype(np.float32)
+            gbdt_score = self.reranker.predict_proba(X)[:, 1]
         else:
-            gbdt_score = self.reranker.predict(X).astype(np.float32)
+            gbdt_score = self.reranker.predict(X)
 
-        # Blend GBDT rank score with analytical fusion score
-        return 0.65 * gbdt_score + 0.35 * linear_score.astype(np.float32, copy=False)
+        # Same float64 contract as the analytical path and apply_blend.
+        mixed = 0.65 * np.asarray(gbdt_score, dtype=np.float64) + 0.35 * linear_score
+        return np.asarray(mixed, dtype=np.float64)
 
     def predict_top25_for_test_df(
         self,

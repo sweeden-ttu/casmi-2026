@@ -1,0 +1,12 @@
+{
+  "status": "same_weights",
+  "blocker": "",
+  "weights_changed": false,
+  "bytes": 188169651,
+  "sha256": "e7bbbeeceb92b1920bb7e73628502375534fa175edf74e1cff3d5a83b058658c",
+  "next_action": "ralyn/NPComposer-v2 is the same 188,169,651-byte checkpoint as ralyn/NPComposer. Do not train a second copy. Continue with NPC0.",
+  "exp_id": "NPC1",
+  "utc": "2026-11-17T14:50:48+00:00",
+  "seed": 3407,
+  "weight_version": "v002"
+}

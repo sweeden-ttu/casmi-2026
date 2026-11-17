@@ -1,0 +1,1194 @@
+{
+  "added_tokens_decoder": {
+    "0": {
+      "content": "<bos>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "1": {
+      "content": "<eos>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2": {
+      "content": "<pad>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "3": {
+      "content": "<mask>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2361": {
+      "content": "<unk>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2362": {
+      "content": "<aromatic_rings_count:0>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2363": {
+      "content": "<aromatic_rings_count:10>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2364": {
+      "content": "<aromatic_rings_count:11>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2365": {
+      "content": "<aromatic_rings_count:12>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2366": {
+      "content": "<aromatic_rings_count:13>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2367": {
+      "content": "<aromatic_rings_count:14>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2368": {
+      "content": "<aromatic_rings_count:15>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2369": {
+      "content": "<aromatic_rings_count:16>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2370": {
+      "content": "<aromatic_rings_count:17>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2371": {
+      "content": "<aromatic_rings_count:18>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2372": {
+      "content": "<aromatic_rings_count:19>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2373": {
+      "content": "<aromatic_rings_count:1>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2374": {
+      "content": "<aromatic_rings_count:20>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2375": {
+      "content": "<aromatic_rings_count:22>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2376": {
+      "content": "<aromatic_rings_count:2>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2377": {
+      "content": "<aromatic_rings_count:3>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2378": {
+      "content": "<aromatic_rings_count:4>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2379": {
+      "content": "<aromatic_rings_count:5>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2380": {
+      "content": "<aromatic_rings_count:6>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2381": {
+      "content": "<aromatic_rings_count:7>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2382": {
+      "content": "<aromatic_rings_count:8>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2383": {
+      "content": "<aromatic_rings_count:9>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2384": {
+      "content": "<np_classifier_is_glycoside:False>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2385": {
+      "content": "<np_classifier_is_glycoside:True>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2386": {
+      "content": "<np_classifier_pathway:Alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2387": {
+      "content": "<np_classifier_pathway:Amino acids and Peptides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2388": {
+      "content": "<np_classifier_pathway:Carbohydrates>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2389": {
+      "content": "<np_classifier_pathway:Fatty acids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2390": {
+      "content": "<np_classifier_pathway:Polyketides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2391": {
+      "content": "<np_classifier_pathway:Shikimates and Phenylpropanoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2392": {
+      "content": "<np_classifier_pathway:Terpenoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2393": {
+      "content": "<np_classifier_superclass:Alkylresorcinols>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2394": {
+      "content": "<np_classifier_superclass:Amino acid glycosides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2395": {
+      "content": "<np_classifier_superclass:Aminosugars and aminoglycosides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2396": {
+      "content": "<np_classifier_superclass:Anthranilic acid alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2397": {
+      "content": "<np_classifier_superclass:Apocarotenoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2398": {
+      "content": "<np_classifier_superclass:Aromatic polyketides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2399": {
+      "content": "<np_classifier_superclass:Carotenoids (C40)>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2400": {
+      "content": "<np_classifier_superclass:Carotenoids (C45)>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2401": {
+      "content": "<np_classifier_superclass:Carotenoids (C50)>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2402": {
+      "content": "<np_classifier_superclass:Chromanes>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2403": {
+      "content": "<np_classifier_superclass:Coumarins>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2404": {
+      "content": "<np_classifier_superclass:Cyclic polyketides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2405": {
+      "content": "<np_classifier_superclass:Diarylheptanoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2406": {
+      "content": "<np_classifier_superclass:Diazotetronic acids and derivatives>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2407": {
+      "content": "<np_classifier_superclass:Diphenyl ethers (DPEs)>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2408": {
+      "content": "<np_classifier_superclass:Diterpenoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2409": {
+      "content": "<np_classifier_superclass:Docosanoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2410": {
+      "content": "<np_classifier_superclass:Eicosanoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2411": {
+      "content": "<np_classifier_superclass:Fatty Acids and Conjugates>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2412": {
+      "content": "<np_classifier_superclass:Fatty acyl glycosides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2413": {
+      "content": "<np_classifier_superclass:Fatty acyls>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2414": {
+      "content": "<np_classifier_superclass:Fatty amides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2415": {
+      "content": "<np_classifier_superclass:Fatty esters>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2416": {
+      "content": "<np_classifier_superclass:Flavonoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2417": {
+      "content": "<np_classifier_superclass:Fluorenes>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2418": {
+      "content": "<np_classifier_superclass:Glycerolipids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2419": {
+      "content": "<np_classifier_superclass:Glycerophospholipids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2420": {
+      "content": "<np_classifier_superclass:Guanidine alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2421": {
+      "content": "<np_classifier_superclass:Histidine alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2422": {
+      "content": "<np_classifier_superclass:Isoflavonoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2423": {
+      "content": "<np_classifier_superclass:Lignans>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2424": {
+      "content": "<np_classifier_superclass:Linear polyketides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2425": {
+      "content": "<np_classifier_superclass:Lysine alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2426": {
+      "content": "<np_classifier_superclass:Macrolides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2427": {
+      "content": "<np_classifier_superclass:Meroterpenoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2428": {
+      "content": "<np_classifier_superclass:Miscellaneous alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2429": {
+      "content": "<np_classifier_superclass:Miscellaneous polyketides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2430": {
+      "content": "<np_classifier_superclass:Mitomycin derivatives>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2431": {
+      "content": "<np_classifier_superclass:Monoterpenoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2432": {
+      "content": "<np_classifier_superclass:Mycosporine derivatives>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2433": {
+      "content": "<np_classifier_superclass:Naphthalenes>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2434": {
+      "content": "<np_classifier_superclass:Nicotinic acid alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2435": {
+      "content": "<np_classifier_superclass:Nucleosides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2436": {
+      "content": "<np_classifier_superclass:Octadecanoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2437": {
+      "content": "<np_classifier_superclass:Oligopeptides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2438": {
+      "content": "<np_classifier_superclass:Ornithine alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2439": {
+      "content": "<np_classifier_superclass:Peptide alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2440": {
+      "content": "<np_classifier_superclass:Phenanthrenoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2441": {
+      "content": "<np_classifier_superclass:Phenolic acids (C6-C1)>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2442": {
+      "content": "<np_classifier_superclass:Phenylethanoids (C6-C2)>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2443": {
+      "content": "<np_classifier_superclass:Phenylpropanoids (C6-C3)>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2444": {
+      "content": "<np_classifier_superclass:Phloroglucinols>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2445": {
+      "content": "<np_classifier_superclass:Polycyclic aromatic polyketides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2446": {
+      "content": "<np_classifier_superclass:Polyethers>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2447": {
+      "content": "<np_classifier_superclass:Polyols>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2448": {
+      "content": "<np_classifier_superclass:Polyprenols>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2449": {
+      "content": "<np_classifier_superclass:Proline alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2450": {
+      "content": "<np_classifier_superclass:Pseudoalkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2451": {
+      "content": "<np_classifier_superclass:Saccharides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2452": {
+      "content": "<np_classifier_superclass:Serine alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2453": {
+      "content": "<np_classifier_superclass:Sesquiterpenoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2454": {
+      "content": "<np_classifier_superclass:Sesterterpenoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2455": {
+      "content": "<np_classifier_superclass:Small peptides>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2456": {
+      "content": "<np_classifier_superclass:Sphingolipids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2457": {
+      "content": "<np_classifier_superclass:Steroids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2458": {
+      "content": "<np_classifier_superclass:Stilbenoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2459": {
+      "content": "<np_classifier_superclass:Styrylpyrones>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2460": {
+      "content": "<np_classifier_superclass:Terphenyls>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2461": {
+      "content": "<np_classifier_superclass:Tetramate alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2462": {
+      "content": "<np_classifier_superclass:Triterpenoids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2463": {
+      "content": "<np_classifier_superclass:Tropolones>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2464": {
+      "content": "<np_classifier_superclass:Tryptophan alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2465": {
+      "content": "<np_classifier_superclass:Tyrosine alkaloids>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2466": {
+      "content": "<np_classifier_superclass:Xanthones>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2467": {
+      "content": "<np_classifier_superclass:β-lactams>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2468": {
+      "content": "<np_classifier_superclass:γ-lactam-β-lactones>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2469": {
+      "content": "<qed_bin:0.1<=qed<0.2>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2470": {
+      "content": "<qed_bin:0.2<=qed<0.3>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2471": {
+      "content": "<qed_bin:0.3<=qed<0.4>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2472": {
+      "content": "<qed_bin:0.4<=qed<0.5>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2473": {
+      "content": "<qed_bin:0.5<=qed<0.6>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2474": {
+      "content": "<qed_bin:0.6<=qed<0.7>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2475": {
+      "content": "<qed_bin:0.7<=qed<0.8>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2476": {
+      "content": "<qed_bin:0.8<=qed<0.9>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2477": {
+      "content": "<qed_bin:0.9<=qed<1>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2478": {
+      "content": "<qed_bin:0<=qed<0.1>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2479": {
+      "content": "<sa_bin:1<=sa<2>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2480": {
+      "content": "<sa_bin:2<=sa<3>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2481": {
+      "content": "<sa_bin:3<=sa<4>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2482": {
+      "content": "<sa_bin:4<=sa<5>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2483": {
+      "content": "<sa_bin:5<=sa<6>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2484": {
+      "content": "<sa_bin:6<=sa<7>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2485": {
+      "content": "<sa_bin:7<=sa<8>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2486": {
+      "content": "<sa_bin:8<=sa<9>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2487": {
+      "content": "<sa_bin:9<=sa<10>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    }
+  },
+  "additional_special_tokens": [
+    "<aromatic_rings_count:0>",
+    "<aromatic_rings_count:10>",
+    "<aromatic_rings_count:11>",
+    "<aromatic_rings_count:12>",
+    "<aromatic_rings_count:13>",
+    "<aromatic_rings_count:14>",
+    "<aromatic_rings_count:15>",
+    "<aromatic_rings_count:16>",
+    "<aromatic_rings_count:17>",
+    "<aromatic_rings_count:18>",
+    "<aromatic_rings_count:19>",
+    "<aromatic_rings_count:1>",
+    "<aromatic_rings_count:20>",
+    "<aromatic_rings_count:22>",
+    "<aromatic_rings_count:2>",
+    "<aromatic_rings_count:3>",
+    "<aromatic_rings_count:4>",
+    "<aromatic_rings_count:5>",
+    "<aromatic_rings_count:6>",
+    "<aromatic_rings_count:7>",
+    "<aromatic_rings_count:8>",
+    "<aromatic_rings_count:9>",
+    "<np_classifier_is_glycoside:False>",
+    "<np_classifier_is_glycoside:True>",
+    "<np_classifier_pathway:Alkaloids>",
+    "<np_classifier_pathway:Amino acids and Peptides>",
+    "<np_classifier_pathway:Carbohydrates>",
+    "<np_classifier_pathway:Fatty acids>",
+    "<np_classifier_pathway:Polyketides>",
+    "<np_classifier_pathway:Shikimates and Phenylpropanoids>",
+    "<np_classifier_pathway:Terpenoids>",
+    "<np_classifier_superclass:Alkylresorcinols>",
+    "<np_classifier_superclass:Amino acid glycosides>",
+    "<np_classifier_superclass:Aminosugars and aminoglycosides>",
+    "<np_classifier_superclass:Anthranilic acid alkaloids>",
+    "<np_classifier_superclass:Apocarotenoids>",
+    "<np_classifier_superclass:Aromatic polyketides>",
+    "<np_classifier_superclass:Carotenoids (C40)>",
+    "<np_classifier_superclass:Carotenoids (C45)>",
+    "<np_classifier_superclass:Carotenoids (C50)>",
+    "<np_classifier_superclass:Chromanes>",
+    "<np_classifier_superclass:Coumarins>",
+    "<np_classifier_superclass:Cyclic polyketides>",
+    "<np_classifier_superclass:Diarylheptanoids>",
+    "<np_classifier_superclass:Diazotetronic acids and derivatives>",
+    "<np_classifier_superclass:Diphenyl ethers (DPEs)>",
+    "<np_classifier_superclass:Diterpenoids>",
+    "<np_classifier_superclass:Docosanoids>",
+    "<np_classifier_superclass:Eicosanoids>",
+    "<np_classifier_superclass:Fatty Acids and Conjugates>",
+    "<np_classifier_superclass:Fatty acyl glycosides>",
+    "<np_classifier_superclass:Fatty acyls>",
+    "<np_classifier_superclass:Fatty amides>",
+    "<np_classifier_superclass:Fatty esters>",
+    "<np_classifier_superclass:Flavonoids>",
+    "<np_classifier_superclass:Fluorenes>",
+    "<np_classifier_superclass:Glycerolipids>",
+    "<np_classifier_superclass:Glycerophospholipids>",
+    "<np_classifier_superclass:Guanidine alkaloids>",
+    "<np_classifier_superclass:Histidine alkaloids>",
+    "<np_classifier_superclass:Isoflavonoids>",
+    "<np_classifier_superclass:Lignans>",
+    "<np_classifier_superclass:Linear polyketides>",
+    "<np_classifier_superclass:Lysine alkaloids>",
+    "<np_classifier_superclass:Macrolides>",
+    "<np_classifier_superclass:Meroterpenoids>",
+    "<np_classifier_superclass:Miscellaneous alkaloids>",
+    "<np_classifier_superclass:Miscellaneous polyketides>",
+    "<np_classifier_superclass:Mitomycin derivatives>",
+    "<np_classifier_superclass:Monoterpenoids>",
+    "<np_classifier_superclass:Mycosporine derivatives>",
+    "<np_classifier_superclass:Naphthalenes>",
+    "<np_classifier_superclass:Nicotinic acid alkaloids>",
+    "<np_classifier_superclass:Nucleosides>",
+    "<np_classifier_superclass:Octadecanoids>",
+    "<np_classifier_superclass:Oligopeptides>",
+    "<np_classifier_superclass:Ornithine alkaloids>",
+    "<np_classifier_superclass:Peptide alkaloids>",
+    "<np_classifier_superclass:Phenanthrenoids>",
+    "<np_classifier_superclass:Phenolic acids (C6-C1)>",
+    "<np_classifier_superclass:Phenylethanoids (C6-C2)>",
+    "<np_classifier_superclass:Phenylpropanoids (C6-C3)>",
+    "<np_classifier_superclass:Phloroglucinols>",
+    "<np_classifier_superclass:Polycyclic aromatic polyketides>",
+    "<np_classifier_superclass:Polyethers>",
+    "<np_classifier_superclass:Polyols>",
+    "<np_classifier_superclass:Polyprenols>",
+    "<np_classifier_superclass:Proline alkaloids>",
+    "<np_classifier_superclass:Pseudoalkaloids>",
+    "<np_classifier_superclass:Saccharides>",
+    "<np_classifier_superclass:Serine alkaloids>",
+    "<np_classifier_superclass:Sesquiterpenoids>",
+    "<np_classifier_superclass:Sesterterpenoids>",
+    "<np_classifier_superclass:Small peptides>",
+    "<np_classifier_superclass:Sphingolipids>",
+    "<np_classifier_superclass:Steroids>",
+    "<np_classifier_superclass:Stilbenoids>",
+    "<np_classifier_superclass:Styrylpyrones>",
+    "<np_classifier_superclass:Terphenyls>",
+    "<np_classifier_superclass:Tetramate alkaloids>",
+    "<np_classifier_superclass:Triterpenoids>",
+    "<np_classifier_superclass:Tropolones>",
+    "<np_classifier_superclass:Tryptophan alkaloids>",
+    "<np_classifier_superclass:Tyrosine alkaloids>",
+    "<np_classifier_superclass:Xanthones>",
+    "<np_classifier_superclass:β-lactams>",
+    "<np_classifier_superclass:γ-lactam-β-lactones>",
+    "<qed_bin:0.1<=qed<0.2>",
+    "<qed_bin:0.2<=qed<0.3>",
+    "<qed_bin:0.3<=qed<0.4>",
+    "<qed_bin:0.4<=qed<0.5>",
+    "<qed_bin:0.5<=qed<0.6>",
+    "<qed_bin:0.6<=qed<0.7>",
+    "<qed_bin:0.7<=qed<0.8>",
+    "<qed_bin:0.8<=qed<0.9>",
+    "<qed_bin:0.9<=qed<1>",
+    "<qed_bin:0<=qed<0.1>",
+    "<sa_bin:1<=sa<2>",
+    "<sa_bin:2<=sa<3>",
+    "<sa_bin:3<=sa<4>",
+    "<sa_bin:4<=sa<5>",
+    "<sa_bin:5<=sa<6>",
+    "<sa_bin:6<=sa<7>",
+    "<sa_bin:7<=sa<8>",
+    "<sa_bin:8<=sa<9>",
+    "<sa_bin:9<=sa<10>"
+  ],
+  "auto_map": {
+    "AutoTokenizer": [
+      "ibm-research/MoLFormer-XL-both-10pct--tokenization_molformer.MolformerTokenizer",
+      "ibm-research/MoLFormer-XL-both-10pct--tokenization_molformer_fast.MolformerTokenizerFast"
+    ]
+  },
+  "clean_up_tokenization_spaces": true,
+  "cls_token": "<bos>",
+  "mask_token": "<mask>",
+  "model_max_length": 1000000000000000019884624838656,
+  "pad_token": "<pad>",
+  "sep_token": "<eos>",
+  "tokenizer_class": "MolformerTokenizer",
+  "unk_token": "<unk>"
+}

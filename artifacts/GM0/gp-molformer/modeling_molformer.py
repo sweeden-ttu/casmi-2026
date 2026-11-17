@@ -43,10 +43,14 @@ from .configuration_molformer import MolformerConfig
 
 logger = logging.get_logger(__name__)
 
-_CHECKPOINT_FOR_DOC = "ibm/GP-MoLFormer-Uniq"
+_CHECKPOINT_FOR_DOC = "ralyn/NPComposer"
 _CONFIG_FOR_DOC = "MolformerConfig"
 
+# First archives are the ones this challenge tests. NPComposer-v2 publishes the
+# same COCONUT fine-tune as NPComposer. GP-MoLFormer-Uniq stays as the control.
 MOLFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
+    "ralyn/NPComposer",
+    "ralyn/NPComposer-v2",
     "ibm/GP-MoLFormer-Uniq",
     # See all MoLFormer models at https://huggingface.co/models?filter=molformer
 ]

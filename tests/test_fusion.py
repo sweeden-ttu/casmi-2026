@@ -35,9 +35,28 @@ def test_missing_features_rank_the_same_in_both_scorers():
 
     scored = CASMIPipeline.score_candidates(_NoReranker(), frame, weights)
     fused = apply_blend(frame, weights)
+    assert scored.dtype == np.float64
     assert np.array_equal(scored, fused)
     assert scored[0] == scored[1]
     assert float(scored[3]) == 0.0
+
+
+def test_reranker_blend_returns_float64():
+    from casmi26.models import FEATURE_COLUMNS
+
+    frame = pd.DataFrame({name: [1.0, np.nan] for name in FEATURE_COLUMNS})
+    weights = {"lib_max_entropy_sim": 4.5, "mass_error_ppm": -0.08}
+
+    class _ConstantReranker:
+        class _Model:
+            def predict(self, features):
+                return np.ones(len(features), dtype=np.float32)
+
+        reranker = _Model()
+
+    scored = CASMIPipeline.score_candidates(_ConstantReranker(), frame, weights)
+    assert scored.dtype == np.float64
+    assert scored.shape == (2,)
 
 
 def test_generator_only_rows_keep_their_score():

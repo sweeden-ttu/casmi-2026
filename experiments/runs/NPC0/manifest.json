@@ -1,0 +1,20 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "artifacts/dreams/backbone.pt",
+      "purpose": "DreaMS self-supervised backbone, not a NIST fine-tune."
+    },
+    {
+      "path": "cuda",
+      "purpose": "This run needs a GPU. torch.cuda.is_available() is false."
+    }
+  ],
+  "blocker": "artifacts/dreams/backbone.pt: DreaMS self-supervised backbone, not a NIST fine-tune.",
+  "weights_changed": false,
+  "next_action": "Initialize from ralyn/NPComposer, not GP-MoLFormer-Uniq. The snapshot is at artifacts/NPC0/npcomposer and data/raw/train.parquet is in place. Place artifacts/dreams/backbone.pt, then train the conditioner first and the whole model on a GPU: python -m experiments NPC0.",
+  "exp_id": "NPC0",
+  "utc": "2026-11-17T14:50:48+00:00",
+  "seed": 3407,
+  "weight_version": "v002"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "experiments/runs/NPC0/predictions.json",
+      "purpose": "NPComposer generations on the labeled holdout, with the baseline metrics to beat."
+    }
+  ],
+  "blocker": "experiments/runs/NPC0/predictions.json: NPComposer generations on the labeled holdout, with the baseline metrics to beat.",
+  "weights_changed": false,
+  "next_action": "Fit the generation ranker on NPComposer predictions. Keep it only when the held-out MRR@25 is higher than the order the model generated. python -m experiments NPC2.",
+  "exp_id": "NPC2",
+  "utc": "2026-11-17T14:48:56+00:00",
+  "seed": 3407,
+  "weight_version": "v002"
+}

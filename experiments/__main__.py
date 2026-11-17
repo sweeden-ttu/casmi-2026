@@ -11,10 +11,12 @@ import importlib.util
 import json
 import sys
 
+import pandas as pd
 import torch
 
 from experiments import QUEUE
 from experiments.iv3_run import run_iv3
+from experiments.npc_run import same_published_weights, train_to_beat_generations
 from experiments.p5_run import run_p5
 from experiments.publish_weights import publish
 from experiments.queue import GPU_REQUIRED, NEXT_COMMAND, REQUIREMENTS
@@ -109,7 +111,28 @@ def main(argv: list[str]) -> None:
     blend = weights["reranker_analytical_weights"]
 
     for exp_id in selected:
-        if exp_id == "P5":
+        if exp_id == "NPC1":
+            match = same_published_weights()
+            if match.get("identical"):
+                result = {
+                    "status": "same_weights",
+                    "blocker": "",
+                    "weights_changed": False,
+                    "bytes": match["bytes"],
+                    "sha256": match["sha256"],
+                    "next_action": NEXT_COMMAND["NPC1"],
+                }
+            else:
+                result = blocked_record(exp_id, cuda)
+        elif exp_id == "NPC2":
+            predictions_path = REPO_ROOT / "experiments" / "runs" / "NPC0" / "predictions.json"
+            result = blocked_record(exp_id, cuda)
+            if result["status"] != "blocked":
+                generated = json.loads(predictions_path.read_text(encoding="utf-8"))
+                result = train_to_beat_generations(pd.DataFrame(generated["rows"]))
+                result["published_eval_loss"] = generated.get("published_eval_loss", result.get("published_eval_loss"))
+                result["next_action"] = NEXT_COMMAND["NPC2"]
+        elif exp_id == "P5":
             result = run_p5(blend)
         elif exp_id == "IV3":
             result = run_iv3()
