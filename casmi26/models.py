@@ -48,6 +48,7 @@ from casmi26.features import (
     spectrum_to_binned_vector,
 )
 from casmi26.retrieval import CandidatePool
+from casmi26.fusion import linear_blend
 from casmi26.weights import analytical_weights
 
 try:
@@ -643,12 +644,7 @@ class CASMIPipeline:
         there is no learned ranker coefficient to load.
         """
         blend = analytical_weights() if weights is None else weights
-        linear_score = np.zeros(len(cand_feats), dtype=np.float32)
-        for key, coef in blend.items():
-            if key not in cand_feats.columns:
-                continue
-            values = pd.to_numeric(cand_feats[key], errors="coerce").fillna(0.0)
-            linear_score = linear_score + np.float32(coef) * values.to_numpy(dtype=np.float32)
+        linear_score, _used = linear_blend(cand_feats, blend)
 
         if self.reranker is None:
             return linear_score
@@ -660,7 +656,7 @@ class CASMIPipeline:
             gbdt_score = self.reranker.predict(X).astype(np.float32)
 
         # Blend GBDT rank score with analytical fusion score
-        return 0.65 * gbdt_score + 0.35 * linear_score
+        return 0.65 * gbdt_score + 0.35 * linear_score.astype(np.float32, copy=False)
 
     def predict_top25_for_test_df(
         self,

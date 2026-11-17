@@ -34,8 +34,8 @@ if [[ ! -f "${HOME}/.kaggle/kaggle.json" ]] && [[ -z "${KAGGLE_USERNAME:-}" ]]; 
     exit 1
 fi
 
-echo "[1/2] Downloading primary competition files (enveda-casmi-2026)..."
-kaggle competitions download -c enveda-casmi-2026 -p "${TARGET_DIR}"
+echo "[1/2] Downloading primary competition files (enveda-CASMI26-molecule-id-mass-spectra)..."
+kaggle competitions download -c enveda-CASMI26-molecule-id-mass-spectra -p "${TARGET_DIR}"
 for z in "${TARGET_DIR}"/*.zip; do
     if [[ -f "$z" ]]; then
         echo "[INFO] Extracting $z ..."

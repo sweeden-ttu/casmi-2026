@@ -16,7 +16,7 @@ Weights version: `v002`. Evidently dataset: `01a1e9e9-fd4f-742c-88c3-02721042396
 
 | Order | Experiment | Status | Next action |
 | --- | --- | --- | --- |
-| 1 | GM0 | blocked | Train with the conditioner first, then the whole GP-MoLFormer, seed 3407. Place data/raw/train.parquet, artifacts/dreams/backbone.pt, and artifacts/GM0/gp-molformer, then rerun python -m experiments GM0. |
+| 1 | GM0 | blocked | Train with the conditioner first, then the whole GP-MoLFormer, seed 3407. data/raw/train.parquet and artifacts/GM0/gp-molformer are in place. Place artifacts/dreams/backbone.pt and rerun on a GPU: python -m experiments GM0. |
 | 2 | DN6 | blocked | Export the official DualLGD checkpoint to artifacts/DN6/duallgd.pt, generate under the formula shortlist, and write experiments/runs/DN6/candidates.json. |
 | 3 | IV4 | blocked | IV4 waits on DN6. P5 already merges a DualLGD frame when experiments/runs/DN6/candidates.json is present. |
 | 4 | P5 | wiring_complete | P5 fused the database list with the Evidently blend. Add experiments/runs/DN6/candidates.json and rerun so IV4 enters the merge. Do not submit this synthetic MRR. |
@@ -34,5 +34,5 @@ Weights version: `v002`. Evidently dataset: `01a1e9e9-fd4f-742c-88c3-02721042396
 
 - Python: `/home/sweeden/.conda/envs/kagg/bin/python`
 - CUDA: `False`
-- RDKit: `False`
-- Local spectra: `data/synthetic` only. `data/raw/train.parquet` is not on disk.
+- RDKit: `True` (2026.09.2 in the kagg env; the contest pin remains 2026.03.3)
+- Local spectra: `data/raw/train.parquet` (2,539,608 rows) and `data/raw/test.parquet` (1,213 rows), linked from `data/kaggle_dl`. `data/synthetic` remains the toy set.

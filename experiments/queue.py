@@ -57,7 +57,7 @@ REQUIREMENTS: Dict[str, List[Requirement]] = {
 GPU_REQUIRED = {"GM0", "DN6", "DN1", "P4", "RR1", "RR5", "FH0"}
 
 NEXT_COMMAND = {
-    "GM0": "Train with the conditioner first, then the whole GP-MoLFormer, seed 3407. Place data/raw/train.parquet, artifacts/dreams/backbone.pt, and artifacts/GM0/gp-molformer, then rerun python -m experiments GM0.",
+    "GM0": "Train with the conditioner first, then the whole GP-MoLFormer, seed 3407. data/raw/train.parquet and artifacts/GM0/gp-molformer are in place. Place artifacts/dreams/backbone.pt and rerun on a GPU: python -m experiments GM0.",
     "DN6": "Export the official DualLGD checkpoint to artifacts/DN6/duallgd.pt, generate under the formula shortlist, and write experiments/runs/DN6/candidates.json.",
     "IV4": "Rerun after DN6 has written candidates.json. P5 rescores those rows with the retrieval blend before the merge.",
     "EN1": "Build the DreaMS cache with the self-supervised backbone and write artifacts/EN1/dreams_embeddings.parquet.",

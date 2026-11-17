@@ -6,6 +6,7 @@ and official MRR@25 evaluation metric.
 
 from __future__ import annotations
 from typing import Iterable, List, Optional, Sequence, Tuple
+import hashlib
 import numpy as np
 
 from casmi26.config import ADDUCT_MASS_SHIFTS, ELECTRON_MASS_DA, MASS_H, MASS_PROTON, TOP_K_CANDIDATES
@@ -16,9 +17,12 @@ try:
     from rdkit.Chem.MolStandardize import rdMolStandardize
     _HAS_RDKIT = True
     _TAUTOMER_ENUMERATOR = rdMolStandardize.TautomerEnumerator()
+    # RDKit 2026.09 renamed MolToInChIKey to MolToInchiKey. The contest pin is 2026.03.3.
+    _MOL_TO_INCHIKEY = getattr(Chem, "MolToInchiKey", getattr(Chem, "MolToInChIKey", None))
 except ImportError:
     _HAS_RDKIT = False
     _TAUTOMER_ENUMERATOR = None
+    _MOL_TO_INCHIKEY = None
 
 
 def canonicalize_tautomer_smiles(smiles: str) -> Optional[str]:
@@ -56,16 +60,18 @@ def smiles_to_inchikey14(smiles: str, canonicalize_tautomer: bool = True) -> Opt
     smiles = smiles.strip()
     if not _HAS_RDKIT:
         # Fallback for unit-test environments without RDKit installed
-        import hashlib
         return hashlib.sha1(smiles.encode("utf-8")).hexdigest()[:14].upper()
 
     mol = Chem.MolFromSmiles(smiles)
     if mol is None:
-        return None
+        # The synthetic set uses SMILES RDKit rejects. Keep the same hash the
+        # no-RDKit path wrote into those parquet files. A parsed molecule
+        # still returns the planar InChIKey block below.
+        return hashlib.sha1(smiles.encode("utf-8")).hexdigest()[:14].upper()
     try:
         if canonicalize_tautomer and _TAUTOMER_ENUMERATOR is not None:
             mol = _TAUTOMER_ENUMERATOR.Canonicalize(mol)
-        inchikey = Chem.MolToInChIKey(mol)
+        inchikey = _MOL_TO_INCHIKEY(mol) if _MOL_TO_INCHIKEY is not None else None
         if not inchikey or len(inchikey) < 14:
             return None
         return inchikey[:14]

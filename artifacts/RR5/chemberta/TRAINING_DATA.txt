@@ -1,0 +1,2 @@
+DeepChem/ChemBERTa-77M-MLM is the 77M MLM trained on PubChem SMILES.
+PubChem pretraining is the allowed source for RR5. ZINC-only ChemBERTa weights were not downloaded.

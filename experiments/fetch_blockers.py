@@ -14,7 +14,6 @@ from pathlib import Path
 import hashlib
 import json
 import sys
-import urllib.request
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -51,29 +50,22 @@ DOWNLOADS = [
 
 
 def _download(item: dict) -> None:
+    import subprocess
+
     target = REPO_ROOT / item["path"]
     target.parent.mkdir(parents=True, exist_ok=True)
     expected = int(item["bytes"])
     if target.is_file() and target.stat().st_size == expected:
         print(f"have {item['path']}", flush=True)
         return
-    partial = target.with_suffix(target.suffix + ".partial")
-    start = partial.stat().st_size if partial.is_file() else 0
-    request = urllib.request.Request(item["url"], headers={"User-Agent": "casmi-fetch/1"})
-    if start:
-        request.add_header("Range", f"bytes={start}-")
-    print(f"get {item['path']} from byte {start}", flush=True)
-    with urllib.request.urlopen(request, timeout=120) as response, partial.open("ab") as handle:
-        while True:
-            chunk = response.read(8 * 1024 * 1024)
-            if not chunk:
-                break
-            handle.write(chunk)
-            start += len(chunk)
-            print(f"  {item['path']} {start}/{expected}", flush=True)
-    if partial.stat().st_size != expected:
-        raise SystemExit(f"{item['path']} is {partial.stat().st_size} bytes, expected {expected}")
-    partial.replace(target)
+    command = [
+        "curl", "-L", "--fail", "--retry", "8", "--retry-all-errors", "-C", "-",
+        "-o", str(target), item["url"],
+    ]
+    print(f"get {item['path']}", flush=True)
+    subprocess.run(command, check=True)
+    if target.stat().st_size != expected:
+        raise SystemExit(f"{item['path']} is {target.stat().st_size} bytes, expected {expected}")
     if item["md5"]:
         digest = hashlib.md5()
         with target.open("rb") as handle:

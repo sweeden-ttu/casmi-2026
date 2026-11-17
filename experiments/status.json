@@ -2,8 +2,8 @@
   "experiments": {
     "GM0": {
       "status": "blocked",
-      "next_action": "Train with the conditioner first, then the whole GP-MoLFormer, seed 3407. Place data/raw/train.parquet, artifacts/dreams/backbone.pt, and artifacts/GM0/gp-molformer, then rerun python -m experiments GM0.",
-      "blocker": "data/raw/train.parquet: Competition train.parquet. data/synthetic is not a substitute.",
+      "next_action": "Train with the conditioner first, then the whole GP-MoLFormer, seed 3407. data/raw/train.parquet and artifacts/GM0/gp-molformer are in place. Place artifacts/dreams/backbone.pt and rerun on a GPU: python -m experiments GM0.",
+      "blocker": "artifacts/dreams/backbone.pt: DreaMS self-supervised backbone, not a NIST fine-tune.",
       "manifest": "experiments/runs/GM0/manifest.json",
       "weight_version": "v001"
     },
@@ -96,7 +96,7 @@
   "weight_version": "v002",
   "python": "/home/sweeden/.conda/envs/kagg/bin/python",
   "cuda": false,
-  "rdkit": false,
+  "rdkit": true,
   "queue": [
     "GM0",
     "DN6",

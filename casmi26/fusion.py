@@ -16,8 +16,13 @@ import pandas as pd
 SOURCE_FRAME = Tuple[str, pd.DataFrame]
 
 
-def apply_blend(frame: pd.DataFrame, weights: Mapping[str, float]) -> np.ndarray:
-    """Apply the analytical blend. Generator-only rows use ``generator_score``."""
+def linear_blend(frame: pd.DataFrame, weights: Mapping[str, float]) -> Tuple[np.ndarray, np.ndarray]:
+    """Sum finite blend features. Missing and non-finite values are left out.
+
+    A missing similarity is not a measured zero, and an infinite mass error is
+    not a real penalty. Both scorers call this so a NaN cannot change rank in
+    one path and disappear in the other.
+    """
     score = np.zeros(len(frame), dtype=np.float64)
     used = np.zeros(len(frame), dtype=bool)
     for key, coef in weights.items():
@@ -27,6 +32,12 @@ def apply_blend(frame: pd.DataFrame, weights: Mapping[str, float]) -> np.ndarray
         present = np.isfinite(values)
         score = np.where(present, score + float(coef) * np.where(present, values, 0.0), score)
         used = used | present
+    return score, used
+
+
+def apply_blend(frame: pd.DataFrame, weights: Mapping[str, float]) -> np.ndarray:
+    """Apply the analytical blend. Generator-only rows use ``generator_score``."""
+    score, used = linear_blend(frame, weights)
     if "generator_score" in frame.columns:
         generated = pd.to_numeric(frame["generator_score"], errors="coerce").to_numpy(dtype=np.float64)
         generated_ok = np.isfinite(generated) & ~used

@@ -2,25 +2,17 @@
   "status": "blocked",
   "missing": [
     {
-      "path": "data/raw/train.parquet",
-      "purpose": "Competition train.parquet. data/synthetic is not a substitute."
-    },
-    {
       "path": "artifacts/dreams/backbone.pt",
       "purpose": "DreaMS self-supervised backbone, not a NIST fine-tune."
-    },
-    {
-      "path": "artifacts/GM0/gp-molformer",
-      "purpose": "ibm-research/GP-MoLFormer-Uniq snapshot."
     },
     {
       "path": "cuda",
       "purpose": "This run needs a GPU. torch.cuda.is_available() is false."
     }
   ],
-  "blocker": "data/raw/train.parquet: Competition train.parquet. data/synthetic is not a substitute.",
+  "blocker": "artifacts/dreams/backbone.pt: DreaMS self-supervised backbone, not a NIST fine-tune.",
   "weights_changed": false,
-  "next_action": "Train with the conditioner first, then the whole GP-MoLFormer, seed 3407. Place data/raw/train.parquet, artifacts/dreams/backbone.pt, and artifacts/GM0/gp-molformer, then rerun python -m experiments GM0.",
+  "next_action": "Train with the conditioner first, then the whole GP-MoLFormer, seed 3407. data/raw/train.parquet and artifacts/GM0/gp-molformer are in place. Place artifacts/dreams/backbone.pt and rerun on a GPU: python -m experiments GM0.",
   "exp_id": "GM0",
   "utc": "2026-11-17T14:29:42+00:00",
   "seed": 3407,
