@@ -1,0 +1,24 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "artifacts/RR5/chemberta",
+      "purpose": "PubChem-pretrained SMILES encoder whose training data has been checked."
+    },
+    {
+      "path": "artifacts/EN1/dreams_embeddings.parquet",
+      "purpose": "Spectrum side stays the custom encoder cache."
+    },
+    {
+      "path": "cuda",
+      "purpose": "This run needs a GPU. torch.cuda.is_available() is false."
+    }
+  ],
+  "blocker": "artifacts/RR5/chemberta: PubChem-pretrained SMILES encoder whose training data has been checked.",
+  "weights_changed": false,
+  "next_action": "LoRA-tune the SMILES encoder under the same InfoNCE loss. Keep it on the P3 path.",
+  "exp_id": "RR5",
+  "utc": "2026-11-17T14:29:48+00:00",
+  "seed": 3407,
+  "weight_version": "v002"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "wiring_complete",
+  "scope": "synthetic",
+  "leaderboard_run": false,
+  "n_molecules": 29,
+  "truth_in_pool": 1.0,
+  "mrr_at_25": 1.0,
+  "mrr_min": 1.0,
+  "sources": [
+    "database"
+  ],
+  "dn6_rows": 0,
+  "weights_changed": false,
+  "next_action": "P5 fused the database list with the Evidently blend. Add experiments/runs/DN6/candidates.json and rerun so IV4 enters the merge. Do not submit this synthetic MRR.",
+  "exp_id": "P5",
+  "utc": "2026-11-17T14:29:47+00:00",
+  "seed": 3407,
+  "weight_version": "v001"
+}

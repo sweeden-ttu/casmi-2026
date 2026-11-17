@@ -1,0 +1,24 @@
+{
+  "status": "not_adopted",
+  "scope": "synthetic",
+  "leaderboard_run": false,
+  "n_rows": 58,
+  "positive_rate": 0.5,
+  "top_score_auc": 1.0,
+  "gate_auc": 1.0,
+  "coefficients": {
+    "top_score": 0.3255879587245674,
+    "gap_to_second": -1.4251542464110256,
+    "score_entropy": 0.10697471465143892,
+    "n_sources": 0.00019642958658402105,
+    "intercept": 1.9719187351484848
+  },
+  "adopted": false,
+  "weights_changed": true,
+  "active_blend_changed": false,
+  "next_action": "Gate coefficients are stored inactive under iv3_gate. Refit on real spectra with the Tanimoto 0.7 absent rule before turning the gate on in P5.",
+  "exp_id": "IV3",
+  "utc": "2026-11-17T14:29:48+00:00",
+  "seed": 3407,
+  "weight_version": "v002"
+}

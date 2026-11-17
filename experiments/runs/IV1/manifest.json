@@ -1,0 +1,16 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "artifacts/EN1/dreams_embeddings.parquet",
+      "purpose": "The 128-d adduct vector is concatenated to the 1024-d DreaMS embedding."
+    }
+  ],
+  "blocker": "artifacts/EN1/dreams_embeddings.parquet: The 128-d adduct vector is concatenated to the 1024-d DreaMS embedding.",
+  "weights_changed": false,
+  "next_action": "Concatenate a learned 128-d adduct vector to the DreaMS embedding and report MRR by adduct.",
+  "exp_id": "IV1",
+  "utc": "2026-11-17T14:29:48+00:00",
+  "seed": 3407,
+  "weight_version": "v002"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "experiments/runs/DN6/candidates.json",
+      "purpose": "Structures written by a finished DN6 run, one record per candidate."
+    }
+  ],
+  "blocker": "experiments/runs/DN6/candidates.json: Structures written by a finished DN6 run, one record per candidate.",
+  "weights_changed": false,
+  "next_action": "IV4 waits on DN6. P5 already merges a DualLGD frame when experiments/runs/DN6/candidates.json is present.",
+  "exp_id": "IV4",
+  "utc": "2026-11-17T14:29:42+00:00",
+  "seed": 3407,
+  "weight_version": "v001"
+}

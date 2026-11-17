@@ -48,6 +48,7 @@ from casmi26.features import (
     spectrum_to_binned_vector,
 )
 from casmi26.retrieval import CandidatePool
+from casmi26.weights import analytical_weights
 
 try:
     import lightgbm as lgb
@@ -630,21 +631,24 @@ class CASMIPipeline:
 
         return self
 
-    def score_candidates(self, cand_feats: pd.DataFrame) -> np.ndarray:
-        """Scores candidates using the learned GBDT reranker + calibrated linear fusion."""
-        # Calibrated domain prior linear score (always computed for stability / blending)
-        linear_score = (
-            4.5 * cand_feats["lib_max_entropy_sim"].to_numpy(dtype=np.float32)
-            + 2.0 * cand_feats["lib_mean_entropy_sim"].to_numpy(dtype=np.float32)
-            + 1.5 * cand_feats["lib_max_cosine_sim"].to_numpy(dtype=np.float32)
-            + 3.0 * cand_feats["fp_tanimoto_sim"].to_numpy(dtype=np.float32)
-            + 1.2 * cand_feats["fp_log_likelihood"].to_numpy(dtype=np.float32)
-            + 1.8 * cand_feats["network_max_tanimoto"].to_numpy(dtype=np.float32)
-            + 1.2 * cand_feats["network_weighted_tanimoto"].to_numpy(dtype=np.float32)
-            + 0.35 * cand_feats["source_prior"].to_numpy(dtype=np.float32)
-            + 0.25 * cand_feats["np_likeness_score"].to_numpy(dtype=np.float32)
-            - 0.08 * cand_feats["mass_error_ppm"].to_numpy(dtype=np.float32)
-        )
+    def score_candidates(
+        self,
+        cand_feats: pd.DataFrame,
+        weights: Dict[str, float] | None = None,
+    ) -> np.ndarray:
+        """Scores candidates using the learned GBDT reranker + the Evidently blend.
+
+        ``weights`` defaults to ``experiments/weights/current.json``. The GBDT
+        mix (0.65 / 0.35) is unchanged; that file's importances are empty, so
+        there is no learned ranker coefficient to load.
+        """
+        blend = analytical_weights() if weights is None else weights
+        linear_score = np.zeros(len(cand_feats), dtype=np.float32)
+        for key, coef in blend.items():
+            if key not in cand_feats.columns:
+                continue
+            values = pd.to_numeric(cand_feats[key], errors="coerce").fillna(0.0)
+            linear_score = linear_score + np.float32(coef) * values.to_numpy(dtype=np.float32)
 
         if self.reranker is None:
             return linear_score

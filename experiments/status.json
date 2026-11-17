@@ -1,0 +1,116 @@
+{
+  "experiments": {
+    "GM0": {
+      "status": "blocked",
+      "next_action": "Train with the conditioner first, then the whole GP-MoLFormer, seed 3407. Place data/raw/train.parquet, artifacts/dreams/backbone.pt, and artifacts/GM0/gp-molformer, then rerun python -m experiments GM0.",
+      "blocker": "data/raw/train.parquet: Competition train.parquet. data/synthetic is not a substitute.",
+      "manifest": "experiments/runs/GM0/manifest.json",
+      "weight_version": "v001"
+    },
+    "DN6": {
+      "status": "blocked",
+      "next_action": "Export the official DualLGD checkpoint to artifacts/DN6/duallgd.pt, generate under the formula shortlist, and write experiments/runs/DN6/candidates.json.",
+      "blocker": "artifacts/DN6/duallgd.pt: DualLGD TorchScript export. The P5 flag reads this path.",
+      "manifest": "experiments/runs/DN6/manifest.json",
+      "weight_version": "v001"
+    },
+    "IV4": {
+      "status": "blocked",
+      "next_action": "IV4 waits on DN6. P5 already merges a DualLGD frame when experiments/runs/DN6/candidates.json is present.",
+      "blocker": "experiments/runs/DN6/candidates.json: Structures written by a finished DN6 run, one record per candidate.",
+      "manifest": "experiments/runs/IV4/manifest.json",
+      "weight_version": "v001"
+    },
+    "P5": {
+      "status": "wiring_complete",
+      "next_action": "P5 fused the database list with the Evidently blend. Add experiments/runs/DN6/candidates.json and rerun so IV4 enters the merge. Do not submit this synthetic MRR.",
+      "blocker": "",
+      "manifest": "experiments/runs/P5/manifest.json",
+      "weight_version": "v001"
+    },
+    "EN1": {
+      "status": "blocked",
+      "next_action": "Build the DreaMS cache with the self-supervised backbone and write artifacts/EN1/dreams_embeddings.parquet.",
+      "blocker": "artifacts/EN1/dreams_embeddings.parquet: Frozen DreaMS embedding cache for train and validation spectra.",
+      "manifest": "experiments/runs/EN1/manifest.json",
+      "weight_version": "v001"
+    },
+    "DN1": {
+      "status": "blocked",
+      "next_action": "Score DiffMS structures with the unchanged retrieval blend and write experiments/runs/DN1/candidates.json.",
+      "blocker": "artifacts/DN1/diffms.pt: Official DiffMS weights plus the MIST encoder they condition on.",
+      "manifest": "experiments/runs/DN1/manifest.json",
+      "weight_version": "v001"
+    },
+    "P4": {
+      "status": "blocked",
+      "next_action": "Train the projector and LoRA only after the base model is allowed. Keep database retrieval out of this run.",
+      "blocker": "artifacts/dreams/backbone.pt: DreaMS backbone whose soft tokens feed the projector.",
+      "manifest": "experiments/runs/P4/manifest.json",
+      "weight_version": "v001"
+    },
+    "IV3": {
+      "status": "not_adopted",
+      "next_action": "Gate coefficients are stored inactive under iv3_gate. Refit on real spectra with the Tanimoto 0.7 absent rule before turning the gate on in P5.",
+      "blocker": "",
+      "manifest": "experiments/runs/IV3/manifest.json",
+      "weight_version": "v002"
+    },
+    "EN4": {
+      "status": "blocked",
+      "next_action": "Cache MIST embeddings under the top-5 formula shortlist and fit the shared heads on that cache.",
+      "blocker": "artifacts/EN4/mist.pt: MIST weights trained on MassSpecGym, with the authors' training code.",
+      "manifest": "experiments/runs/EN4/manifest.json",
+      "weight_version": "v002"
+    },
+    "RR1": {
+      "status": "blocked",
+      "next_action": "Train the spectrum and molecule encoders with InfoNCE and same-formula negatives. Do not replace P2 until it beats RR2.",
+      "blocker": "artifacts/EN1/dreams_embeddings.parquet: Spectrum side of the InfoNCE head is the frozen DreaMS cache.",
+      "manifest": "experiments/runs/RR1/manifest.json",
+      "weight_version": "v002"
+    },
+    "RR5": {
+      "status": "blocked",
+      "next_action": "LoRA-tune the SMILES encoder under the same InfoNCE loss. Keep it on the P3 path.",
+      "blocker": "artifacts/RR5/chemberta: PubChem-pretrained SMILES encoder whose training data has been checked.",
+      "manifest": "experiments/runs/RR5/manifest.json",
+      "weight_version": "v002"
+    },
+    "FH0": {
+      "status": "blocked",
+      "next_action": "Train the hierarchical GNN molecule encoder against the DreaMS embedding. P3 ships only if it beats P2.",
+      "blocker": "artifacts/EN1/dreams_embeddings.parquet: InfoNCE target on the spectrum side is the DreaMS embedding.",
+      "manifest": "experiments/runs/FH0/manifest.json",
+      "weight_version": "v002"
+    },
+    "IV1": {
+      "status": "blocked",
+      "next_action": "Concatenate a learned 128-d adduct vector to the DreaMS embedding and report MRR by adduct.",
+      "blocker": "artifacts/EN1/dreams_embeddings.parquet: The 128-d adduct vector is concatenated to the 1024-d DreaMS embedding.",
+      "manifest": "experiments/runs/IV1/manifest.json",
+      "weight_version": "v002"
+    }
+  },
+  "updated_utc": "2026-11-17T14:29:48+00:00",
+  "weight_version": "v002",
+  "python": "/home/sweeden/.conda/envs/kagg/bin/python",
+  "cuda": false,
+  "rdkit": false,
+  "queue": [
+    "GM0",
+    "DN6",
+    "IV4",
+    "P5",
+    "EN1",
+    "DN1",
+    "P4",
+    "IV3",
+    "EN4",
+    "RR1",
+    "RR5",
+    "FH0",
+    "IV1"
+  ],
+  "evidently_weights_dataset_id": "01a1e9e9-fd4f-742c-88c3-02721042396e"
+}

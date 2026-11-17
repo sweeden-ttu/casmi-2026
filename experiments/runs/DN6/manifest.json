@@ -1,0 +1,20 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "artifacts/DN6/duallgd.pt",
+      "purpose": "DualLGD TorchScript export. The P5 flag reads this path."
+    },
+    {
+      "path": "cuda",
+      "purpose": "This run needs a GPU. torch.cuda.is_available() is false."
+    }
+  ],
+  "blocker": "artifacts/DN6/duallgd.pt: DualLGD TorchScript export. The P5 flag reads this path.",
+  "weights_changed": false,
+  "next_action": "Export the official DualLGD checkpoint to artifacts/DN6/duallgd.pt, generate under the formula shortlist, and write experiments/runs/DN6/candidates.json.",
+  "exp_id": "DN6",
+  "utc": "2026-11-17T14:29:42+00:00",
+  "seed": 3407,
+  "weight_version": "v001"
+}

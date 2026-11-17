@@ -33,6 +33,7 @@ import time
 import numpy as np
 import pandas as pd
 
+from casmi26.weights import analytical_weights
 from casmi26.chemistry import (
     ELECTRON_MASS_DA,
     deduplicate_ranked_smiles,
@@ -295,18 +296,7 @@ def log_weights_and_biases_to_evidently(
         }
 
     # 2. Extract Reranker feature weights / importances & analytical prior weights
-    analytical_prior_weights = {
-        "lib_max_entropy_sim": 4.5,
-        "lib_mean_entropy_sim": 2.0,
-        "lib_max_cosine_sim": 1.5,
-        "fp_tanimoto_sim": 3.0,
-        "fp_log_likelihood": 1.2,
-        "network_max_tanimoto": 1.8,
-        "network_weighted_tanimoto": 1.2,
-        "source_prior": 0.35,
-        "np_likeness_score": 0.25,
-        "mass_error_ppm": -0.08,
-    }
+    analytical_prior_weights = analytical_weights()
     gbdt_feature_importances: Dict[str, float] = {}
     if pipeline.reranker is not None and hasattr(pipeline.reranker, "feature_importances_"):
         imps = np.asarray(pipeline.reranker.feature_importances_, dtype=np.float64)

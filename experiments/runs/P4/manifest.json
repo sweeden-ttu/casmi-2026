@@ -1,0 +1,28 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "artifacts/dreams/backbone.pt",
+      "purpose": "DreaMS backbone whose soft tokens feed the projector."
+    },
+    {
+      "path": "artifacts/P4/spectral.pt",
+      "purpose": "Projector checkpoint from train_spectral_llm stages 2 and 3."
+    },
+    {
+      "path": "artifacts/P4/lora",
+      "purpose": "LoRA adapter for the spectral language model."
+    },
+    {
+      "path": "cuda",
+      "purpose": "This run needs a GPU. torch.cuda.is_available() is false."
+    }
+  ],
+  "blocker": "artifacts/dreams/backbone.pt: DreaMS backbone whose soft tokens feed the projector.",
+  "weights_changed": false,
+  "next_action": "Train the projector and LoRA only after the base model is allowed. Keep database retrieval out of this run.",
+  "exp_id": "P4",
+  "utc": "2026-11-17T14:29:47+00:00",
+  "seed": 3407,
+  "weight_version": "v001"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "artifacts/EN1/dreams_embeddings.parquet",
+      "purpose": "Frozen DreaMS embedding cache for train and validation spectra."
+    }
+  ],
+  "blocker": "artifacts/EN1/dreams_embeddings.parquet: Frozen DreaMS embedding cache for train and validation spectra.",
+  "weights_changed": false,
+  "next_action": "Build the DreaMS cache with the self-supervised backbone and write artifacts/EN1/dreams_embeddings.parquet.",
+  "exp_id": "EN1",
+  "utc": "2026-11-17T14:29:47+00:00",
+  "seed": 3407,
+  "weight_version": "v001"
+}

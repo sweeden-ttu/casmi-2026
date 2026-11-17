@@ -1,0 +1,24 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "artifacts/EN1/dreams_embeddings.parquet",
+      "purpose": "Spectrum side of the InfoNCE head is the frozen DreaMS cache."
+    },
+    {
+      "path": "cuda",
+      "purpose": "This run needs a GPU. torch.cuda.is_available() is false."
+    },
+    {
+      "path": "rdkit",
+      "purpose": "Molecule graphs need RDKit. It is not installed in the kagg env."
+    }
+  ],
+  "blocker": "artifacts/EN1/dreams_embeddings.parquet: Spectrum side of the InfoNCE head is the frozen DreaMS cache.",
+  "weights_changed": false,
+  "next_action": "Train the spectrum and molecule encoders with InfoNCE and same-formula negatives. Do not replace P2 until it beats RR2.",
+  "exp_id": "RR1",
+  "utc": "2026-11-17T14:29:48+00:00",
+  "seed": 3407,
+  "weight_version": "v002"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "artifacts/EN4/mist.pt",
+      "purpose": "MIST weights trained on MassSpecGym, with the authors' training code."
+    }
+  ],
+  "blocker": "artifacts/EN4/mist.pt: MIST weights trained on MassSpecGym, with the authors' training code.",
+  "weights_changed": false,
+  "next_action": "Cache MIST embeddings under the top-5 formula shortlist and fit the shared heads on that cache.",
+  "exp_id": "EN4",
+  "utc": "2026-11-17T14:29:48+00:00",
+  "seed": 3407,
+  "weight_version": "v002"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "artifacts/EN1/dreams_embeddings.parquet",
+      "purpose": "InfoNCE target on the spectrum side is the DreaMS embedding."
+    },
+    {
+      "path": "data/hgraph",
+      "purpose": "Hierarchical graph cache. RDKit is also required to rebuild a missing cache."
+    },
+    {
+      "path": "cuda",
+      "purpose": "This run needs a GPU. torch.cuda.is_available() is false."
+    },
+    {
+      "path": "rdkit",
+      "purpose": "Molecule graphs need RDKit. It is not installed in the kagg env."
+    }
+  ],
+  "blocker": "artifacts/EN1/dreams_embeddings.parquet: InfoNCE target on the spectrum side is the DreaMS embedding.",
+  "weights_changed": false,
+  "next_action": "Train the hierarchical GNN molecule encoder against the DreaMS embedding. P3 ships only if it beats P2.",
+  "exp_id": "FH0",
+  "utc": "2026-11-17T14:29:48+00:00",
+  "seed": 3407,
+  "weight_version": "v002"
+}

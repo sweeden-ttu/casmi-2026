@@ -1,0 +1,24 @@
+{
+  "status": "blocked",
+  "missing": [
+    {
+      "path": "artifacts/DN1/diffms.pt",
+      "purpose": "Official DiffMS weights plus the MIST encoder they condition on."
+    },
+    {
+      "path": "artifacts/EN4/mist.pt",
+      "purpose": "MIST formula transformer. DiffMS is conditioned on it."
+    },
+    {
+      "path": "cuda",
+      "purpose": "This run needs a GPU. torch.cuda.is_available() is false."
+    }
+  ],
+  "blocker": "artifacts/DN1/diffms.pt: Official DiffMS weights plus the MIST encoder they condition on.",
+  "weights_changed": false,
+  "next_action": "Score DiffMS structures with the unchanged retrieval blend and write experiments/runs/DN1/candidates.json.",
+  "exp_id": "DN1",
+  "utc": "2026-11-17T14:29:47+00:00",
+  "seed": 3407,
+  "weight_version": "v001"
+}

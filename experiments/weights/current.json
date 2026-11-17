@@ -1,0 +1,47 @@
+{
+  "version": "v002",
+  "source": "outputs/evidently/evidently_weights_biases_and_metrics.json",
+  "reranker_analytical_weights": {
+    "lib_max_entropy_sim": 4.5,
+    "lib_mean_entropy_sim": 2.0,
+    "lib_max_cosine_sim": 1.5,
+    "fp_tanimoto_sim": 3.0,
+    "fp_log_likelihood": 1.2,
+    "network_max_tanimoto": 1.8,
+    "network_weighted_tanimoto": 1.2,
+    "source_prior": 0.35,
+    "np_likeness_score": 0.25,
+    "mass_error_ppm": -0.08
+  },
+  "fp_model_weights_and_biases": {
+    "model_type": "RidgeFPProjection",
+    "weight_l2_norm": 13.7468,
+    "weight_mean_abs": 0.001474,
+    "bias_mean": 0.029764,
+    "bias_std": 0.151989
+  },
+  "reranker_gbdt_importances": {},
+  "gbdt_mix": {
+    "gbdt": 0.65,
+    "analytical": 0.35
+  },
+  "active_blend_changed": false,
+  "inactive": {
+    "iv3_gate": {
+      "adopted": false,
+      "scope": "synthetic",
+      "coefficients": {
+        "top_score": 0.3255879587245674,
+        "gap_to_second": -1.4251542464110256,
+        "score_entropy": 0.10697471465143892,
+        "n_sources": 0.00019642958658402105,
+        "intercept": 1.9719187351484848
+      },
+      "top_score_auc": 1.0,
+      "gate_auc": 1.0,
+      "reason": "Fitted on synthetic candidates. The active blend was not changed."
+    }
+  },
+  "notes": "v002 adds the inactive IV3 gate. Scoring still uses the v001 blend.",
+  "evidently_dataset_id": "01a1e9e9-fd4f-742c-88c3-02721042396e"
+}
