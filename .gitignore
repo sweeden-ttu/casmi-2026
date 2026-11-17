@@ -58,3 +58,9 @@ kaggle.json
 !.gitkeep
 !README.md
 !dataset-metadata.json
+
+# Ignore generated copies inside kaggle_dataset_export/ so git doesn't duplicate src
+kaggle_dataset_export/casmi26/
+kaggle_dataset_export/scripts/
+kaggle_dataset_export/tests/
+kaggle_dataset_export/synthetic_data/
