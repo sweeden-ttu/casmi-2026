@@ -1,0 +1,60 @@
+# =============================================================================
+# Enveda CASMI 2026 - Git Ignore Configuration
+# =============================================================================
+# Ignore all competition datasets, candidate shards (COCONUT 2.0 / PubChem),
+# large serialized model binaries, and Python virtual environments, while
+# preserving tracked placeholder folder structures via `.gitkeep` & `README.md`.
+# =============================================================================
+
+# Python virtual environments & bytecode caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.ipynb_checkpoints/
+.ruff_cache/
+
+# Competition datasets, candidate database shards, and generated submissions
+*.parquet
+*.mgf
+*.mzML
+*.mzXML
+*.sdf
+*.csv
+*.tsv
+*.feather
+*.arrow
+*.h5
+*.hdf5
+*.npz
+*.npy
+
+# Trained model weights & checkpoints (published separately via Kaggle Datasets)
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+*.lgb
+*.cbm
+
+# Archive files & credentials
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+kaggle.json
+.env
+*.key
+
+# Keep directory placeholders (.gitkeep and README.md) tracked in git
+!.gitkeep
+!README.md
+!dataset-metadata.json
