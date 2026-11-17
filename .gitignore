@@ -43,6 +43,7 @@ __pycache__/
 *.bin
 *.lgb
 *.cbm
+outputs/evidently/*.json
 
 # Archive files & credentials
 *.zip
