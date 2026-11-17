@@ -1,0 +1,9 @@
+{
+  "formula_neutral_counterpart": "Remove H+ from a singly positive formula; add H+ to a singly negative formula. Impossible negative H count is excluded. Canonical Hill text exact match; frozen tier (150.00001725..1249.99949137 Da) and explicit window 157..1159 counted separately.",
+  "small_fragment_range": "The tier starts at 150 Da. A missing counterpart below 150 is outside this resource, not proof of absence from PubChem.",
+  "structure_neutral_counterpart": "Capped atom-connected pieces of the known structure after <=3 bond removals, H-saturated to neutral closed shell; exact IK14 lookup. No tautomer or full PubChem standardisation performed.",
+  "weighting": "Primary fixed spectrum-stratified sample only for population summaries. Each primary spectrum has eligible-stratum-population / sampled-stratum-size weight. Graph/absence supplements excluded. All frequencies label raw and population-weighted fractions.",
+  "neutral_loss": "Precursor/product differences and best-formula-compatible product/product differences. Neither is a measured sequential MSn edge. Fragment formulas may have multiple assignments; names are tentative.",
+  "radical": "Odd total-electron parity of a neutral-loss formula from an even-electron precursor; denominator limited to peaks whose every compatible formula has the same electron parity. Does not detect electronic state or distinguish all radical mechanisms.",
+  "ion_formula_order": "Stored annotation formulas use explicit element order; catalogue queries canonicalise to Hill order before exact equality."
+}

@@ -1,0 +1,107 @@
+{
+  "state": "validated",
+  "scope": "Existing trained structures only; 110 new structures remain data-only. No pool, structure or feature-bank rows appended.",
+  "pins": {
+    "files": {
+      "external_delta.parquet": "e75558832935f28e85a5419022c4cfba4d0d4b49f1063544c317c8ae61c2ac41",
+      "external_record_quality.parquet": "4f5b227d1c874624182c76e8f8406ba3ee86521744831cb461d6198c898b6c9e",
+      "external_scorer_sid_links.parquet": "8cd61b8f110bfd6686684d330609a1d0f0d7cc96eab32b9cdd3352939ef443ef"
+    },
+    "base_files": {
+      "train_structs.parquet": "f20aa1cac23af42e430a6633707fda34e48dea97114bdc3e443897f692df3656",
+      "pool_meta.parquet": "82b8c40315611289b9a4004b3af18d6d3402b3cd5baa4ee5723da07b7e2f6bb0"
+    },
+    "keys": 782,
+    "delta_rows": 1384,
+    "structure_rows": 275810,
+    "added_rows": 751,
+    "added_keys": 469
+  },
+  "enabled_sources": {
+    "MassBank": 265,
+    "MoNA": 258,
+    "GNPS": 228
+  },
+  "enabled_modes": {
+    "positive": 521,
+    "negative": 230
+  },
+  "trained_rows_omitted_quality_or_link": 457,
+  "trained_rows_omitted_inconsistent_polarity": 16,
+  "link_policy": "Verified scorer identity and exact mass within 1e-5 Da; existing pool train_sid reachable; prefer identical library key then lowest SID.",
+  "multi_candidate_sid_keys": 40,
+  "comparison": {
+    "visible": {
+      "molecules": 12,
+      "changed_top60_lists": 1,
+      "changed_top25_lists": 1,
+      "changed_top1": 0,
+      "changed_features": 1,
+      "changed_lib_max": 0,
+      "baseline_query_seconds": 20.911387072876096,
+      "extended_query_seconds": 19.005146335810423
+    },
+    "panel": {
+      "molecules": 20,
+      "changed_top60_lists": 1,
+      "changed_top25_lists": 1,
+      "changed_top1": 0,
+      "changed_features": 6,
+      "changed_lib_max": 0,
+      "baseline_query_seconds": 77.21610590163618,
+      "extended_query_seconds": 75.96904416102916
+    }
+  },
+  "runtime": {
+    "baseline": {
+      "device": "cpu",
+      "init_seconds": 8.499025233089924,
+      "seconds": 107.49277229700238,
+      "peak_rss_kib": 6264132
+    },
+    "extended": {
+      "device": "cpu",
+      "init_seconds": 8.955440790392458,
+      "seconds": 104.82620292436332,
+      "peak_rss_kib": 6227740
+    }
+  },
+  "cache_build_seconds": 213.08157195337117,
+  "cache_build_peak_rss_kib": 5653164,
+  "extension_revalidation_seconds": 24.16994773130864,
+  "extension_revalidation_peak_rss_kib": 2376636,
+  "original_cache_reused_by_full_hash": true,
+  "notebook_existing_determinism_patch": {
+    "applied": true,
+    "original_source_root": "code",
+    "work_source_root": "v43_v4code",
+    "original_sha256": "d914bf9d5eb56cfff434b5d53a4d55881b97697aa834a627d9932a4f8c650d27",
+    "patched_sha256": "e4943fb26a8141f47ea95e744910c2d0f4746e36e72ef43e3263e7f327cfc0b5",
+    "original_line": "ad = max(set(adducts), key=adducts.count)",
+    "patched_line": "ad = max(adducts, key=adducts.count)",
+    "subprocess_pythonhashseed": "0",
+    "torch_seed": 0,
+    "cuda_seed": 0,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false
+  },
+  "added_clean_peaks": 54338,
+  "fallback_matches_unmodified_visible_outputs": true,
+  "failure_checks": [
+    "missing_table",
+    "checksum_mismatch",
+    "structure_version_mismatch",
+    "out_of_range_sid",
+    "invalid_csr"
+  ],
+  "fallback_control_molecules": 32,
+  "fallback_control_setup": "Unmodified cell36; same 32-molecule dataframe and group order as both paired arms. Exact lists/SMILES/lib_max/feature bytes.",
+  "limitations": [
+    "CPU cluster emulation, not a measured Kaggle T4 session.",
+    "Cells35-36 and base candidate ranking only; other engines, forward simulators and final fusion not rerun.",
+    "20 public panel molecules with enveda-np-examples references excluded; not hidden-test evidence.",
+    "110 new-to-training structures not enabled."
+  ],
+  "training_file_sha256": "9423f90ec08b941a9646b535bf0606183e86ff0c5a297978f5a70693d41bcd98",
+  "source_notebook_sha256": "08944366de0224ae52fdbba22a1cd6f02650423a46c54ab5ad0799d09adc22a6"
+}

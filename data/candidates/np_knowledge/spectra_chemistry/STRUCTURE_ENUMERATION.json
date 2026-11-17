@@ -1,0 +1,21 @@
+{
+  "parents": 211,
+  "query_keys": 5771,
+  "catalogued_keys": 864,
+  "cluster_results": "structure_matches",
+  "strata": {
+    "(True, '[M+H]+', 'small')": 20,
+    "(True, '[M-H]-', 'small')": 20,
+    "(True, '[M+H]+', 'medium')": 21,
+    "(True, '[M-H]-', 'medium')": 20,
+    "(True, '[M-H]-', 'large')": 20,
+    "(True, '[M+H]+', 'large')": 20,
+    "(False, '[M+H]+', 'medium')": 20,
+    "(False, '[M+H]+', 'small')": 20,
+    "(False, '[M-H]-', 'medium')": 20,
+    "(False, '[M-H]-', 'small')": 20,
+    "(False, '[M-H]-', 'large')": 5,
+    "(False, '[M+H]+', 'large')": 5
+  },
+  "definition": "All components after <=3 heavy-bond cuts (<=60 bonds; otherwise <=2); <=63 atoms, neutral connected unlabelled precursor. Match best subformula with retained atom H and -2..+2 H shifts, protonation/deprotonation. Saturate caps with implicit H; require neutral, sanitised, closed-shell. Exact tier IK14 lookup, not a full rearrangement mechanism."
+}

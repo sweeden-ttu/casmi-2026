@@ -1,0 +1,13 @@
+{
+  "records": 3442,
+  "cluster_paths": "annotations",
+  "settings": {
+    "min_mz": 40,
+    "min_relative_intensity": 0.01,
+    "precursor_exclusion_da": 1.5,
+    "max_peaks": 300,
+    "tolerance": "max(0.002 Da, 10 ppm)",
+    "heavy_combination_cap": 2000000
+  },
+  "definition": "Known neutral precursor; charged atom-count formula, explicit electron-mass correction; all heavy counts <= precursor; H <= precursor ion; DBE >= -0.5; closest-mass assignment. All matches counted, parity ambiguity retained."
+}

@@ -1,0 +1,59 @@
+{
+  "formulas": {
+    "hexose": "C6H10O5",
+    "deoxyhexose": "C6H10O4",
+    "pentose": "C5H8O4",
+    "uronic_acid": "C6H8O6",
+    "hex_deoxy_disaccharide": "C12H20O9",
+    "malonyl": "C3H2O3",
+    "galloyl": "C7H4O4",
+    "caffeoyl": "C9H6O3",
+    "feruloyl": "C10H8O3",
+    "sinapoyl": "C11H10O4",
+    "sulfate": "SO3",
+    "phosphate": "H3PO4"
+  },
+  "exact_masses": {
+    "hexose": 162.05282341999998,
+    "deoxyhexose": 146.0579088,
+    "pentose": 132.042258736,
+    "uronic_acid": 176.03208797599999,
+    "hex_deoxy_disaccharide": 308.11073222,
+    "malonyl": 86.000393924,
+    "galloyl": 152.010958608,
+    "caffeoyl": 162.03169405199998,
+    "feruloyl": 176.04734411599998,
+    "sinapoyl": 206.0579088,
+    "sulfate": 79.95681486,
+    "phosphate": 97.976895206
+  },
+  "smarts": {
+    "galloyl": "[#6]-[OX2]-[CX3](=[OX1])-c1[cH]c([O;H1,-1])c([O;H1,-1])c([O;H1,-1])[cH]1",
+    "caffeoyl": "[#6]-[OX2]-[CX3](=[OX1])-[CH]=[CH]-c1[cH]c([O;H1,-1])c([O;H1,-1])[cH][cH]1",
+    "feruloyl": "[#6]-[OX2]-[CX3](=[OX1])-[CH]=[CH]-c1[cH]c([OX2]-[CH3])c([O;H1,-1])[cH][cH]1",
+    "sinapoyl": "[#6]-[OX2]-[CX3](=[OX1])-[CH]=[CH]-c1[cH]c([OX2]-[CH3])c([O;H1,-1])c([OX2]-[CH3])[cH]1",
+    "malonyl": "[OX2]-[CX3](=[OX1])-[CH2]-[CX3](=[OX1])-[O]",
+    "sulfate": "[SX4](=[OX1])(=[OX1])([OX2]-[#6])-[O;H1,-1,$([OX2]-[#6])]",
+    "phosphate": "[PX4](=[OX1])([OX2]-[#6])([O;H1,-1,$([OX2]-[#6])])-[O;H1,-1,$([OX2]-[#6])]"
+  },
+  "unit_columns": [
+    "hexose",
+    "deoxyhexose",
+    "pentose",
+    "uronic_acid",
+    "hex_deoxy_disaccharide",
+    "malonyl",
+    "galloyl",
+    "caffeoyl",
+    "feruloyl",
+    "sinapoyl",
+    "sulfate",
+    "phosphate",
+    "rutinoside_like",
+    "sugar_ring_other",
+    "sugar_pyranose",
+    "sugar_furanose",
+    "valid_structure"
+  ],
+  "stereochemistry": "ignored; topology-based units; rutinoside_like is deoxyhexosyl-(1-to-6)-hexoside topology"
+}

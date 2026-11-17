@@ -1,0 +1,41 @@
+{
+  "run": "runs/20261022-build-chemeda",
+  "sources": {
+    "comp": "data/comp",
+    "knowledge": "v4",
+    "popularity": "v4",
+    "candidates": "v4",
+    "folds": "v4/casmi26-identity-disjoint-validation-folds"
+  },
+  "rdkit": "2026.03.3",
+  "training_scope": "275,810 rows in frozen train_structs.parquet, rather than all raw spectrum-level SMILES aliases. Stereo removal and tautomer choice preserve elemental composition. Fragment catalogue membership uses exact RDKit IK14, not all-tier scorer tautomer equivalence.",
+  "code": [
+    {
+      "path": "v4/casmi26-attributed-v4g-reproduction-assets/casmi26-v4b-models/code/casmi/chem.py",
+      "bytes": 12328,
+      "sha256": "99474f23d8a67040b0c0f8c70e73592a6f7f656f50103e350ca473451e2169f1"
+    },
+    {
+      "path": "v4/casmi26-attributed-v4g-reproduction-assets/casmi26-v4b-models/code/casmi/engine.py",
+      "bytes": 26449,
+      "sha256": "d914bf9d5eb56cfff434b5d53a4d55881b97697aa834a627d9932a4f8c650d27"
+    },
+    {
+      "path": "v4/casmi26-attributed-v4g-reproduction-assets/casmi26-v4b-models/code/casmi/frag.py",
+      "bytes": 11172,
+      "sha256": "809f5582494cee4cf6dcace4b04699b8427e81022b78d42162cc0239a57773de"
+    },
+    {
+      "path": "v4/casmi26-attributed-v4g-reproduction-assets/casmi26-v4b-models/code/fe_v4/chemfeat.py",
+      "bytes": 6158,
+      "sha256": "8fedf317042f989b1569ca65c0d6d87a0387f9fc9934504420a95d8d973f8746"
+    },
+    {
+      "path": "v4/casmi26-attributed-v4g-reproduction-assets/casmi26-v4b-models/code/fe_v4/fams/frag2.py",
+      "bytes": 29368,
+      "sha256": "bf17577ef673f8ab0121caa1c9335dc1e827e2f1eb44b3bbde0b0c0cbe858e6c"
+    }
+  ],
+  "execution": "All substantial computation on CPU via the owner file bridge. No training, prediction, GPU, SSH, Kaggle CLI, credentials, git push, publication or submission.",
+  "tier_method": "Final census fully reparses every valid/invalid tier SMILES with RDKit 2026.03.3. A sampled-validated fast reconstruction was rejected after its full distinct-formula total disagreed with the frozen reference; final tables do not use those fast counts."
+}

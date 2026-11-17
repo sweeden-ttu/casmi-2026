@@ -1,0 +1,67 @@
+{
+  "precursor_mass": {
+    "5": {
+      "eligible": 2068,
+      "passed": 1926,
+      "share": 0.9313346228239845
+    },
+    "10": {
+      "eligible": 2068,
+      "passed": 1973,
+      "share": 0.9540618955512572
+    },
+    "30": {
+      "eligible": 2068,
+      "passed": 2004,
+      "share": 0.9690522243713733
+    },
+    "50": {
+      "eligible": 2068,
+      "passed": 2004,
+      "share": 0.9690522243713733
+    }
+  },
+  "precursor_mass_scope": "Supported primary sample, precursor_ppm from predecessor; denominator conversion difference is below rounding precision.",
+  "figure_spectrum_rows": [
+    2010765,
+    2405729,
+    2405736
+  ],
+  "raw_spectrum_lengths": [
+    11,
+    7,
+    10,
+    18,
+    17
+  ],
+  "rdbe_requested_B_free": {
+    "eligible": 275249,
+    "passed": 275248,
+    "failure_rate": 3.6330740529333383e-06
+  },
+  "resource_end": {
+    "host": "prepost",
+    "available_GiB": 211.93431091308594,
+    "rss_GiB": 0.294708251953125,
+    "time": 1792777218.1579502
+  },
+  "resource_start": {
+    "host": "prepost",
+    "available_GiB": 212.05870056152344,
+    "rss_GiB": 0.17231369018554688,
+    "time": 1792777215.3092911
+  },
+  "rdkit": "2026.03.3",
+  "seconds": 2.873103141784668,
+  "ppm_definition_check": {
+    "formula": "1e6*(observed-calculated)/calculated",
+    "eligible": 2068,
+    "counts": {
+      "5": 1926,
+      "10": 1973,
+      "30": 2004,
+      "50": 2004
+    },
+    "same_boundary_counts_as_predecessor": true
+  }
+}

@@ -1,0 +1,761 @@
+{
+  "controls": {
+    "methyl_glucopyranoside": {
+      "smiles": "COC1OC(CO)C(O)C(O)C1O",
+      "counts": {
+        "hexose": 1,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 1,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "hexose": 1,
+        "sugar_pyranose": 1
+      },
+      "pass": true
+    },
+    "methyl_deoxyhexoside": {
+      "smiles": "COC1OC(C)C(O)C(O)C1O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 1,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 1,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "deoxyhexose": 1
+      },
+      "pass": true
+    },
+    "methyl_2_deoxyhexoside": {
+      "smiles": "COC1OC(CO)C(O)C(O)C1",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 1,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 1,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "deoxyhexose": 1
+      },
+      "pass": true
+    },
+    "methyl_pentopyranoside": {
+      "smiles": "COC1OCC(O)C(O)C1O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 1,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 1,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "pentose": 1,
+        "sugar_pyranose": 1
+      },
+      "pass": true
+    },
+    "methyl_pentofuranoside": {
+      "smiles": "COC1OC(CO)C(O)C1O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 1,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 1,
+        "valid_structure": 1
+      },
+      "expected": {
+        "pentose": 1,
+        "sugar_furanose": 1
+      },
+      "pass": true
+    },
+    "methyl_hexofuranoside": {
+      "smiles": "COC1OC(C(O)CO)C(O)C1O",
+      "counts": {
+        "hexose": 1,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 1,
+        "valid_structure": 1
+      },
+      "expected": {
+        "hexose": 1,
+        "sugar_furanose": 1
+      },
+      "pass": true
+    },
+    "methyl_glucuronide": {
+      "smiles": "COC1OC(C(=O)O)C(O)C(O)C1O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 1,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 1,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "uronic_acid": 1
+      },
+      "pass": true
+    },
+    "free_glucose": {
+      "smiles": "OC1OC(CO)C(O)C(O)C1O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {},
+      "pass": true
+    },
+    "C_glycoside": {
+      "smiles": "CC1OC(CO)C(O)C(O)C1O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {},
+      "pass": true
+    },
+    "tetrahydropyran": {
+      "smiles": "COC1OCCCC1",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {},
+      "pass": true
+    },
+    "methyl_gallate": {
+      "smiles": "COC(=O)c1cc(O)c(O)c(O)c1",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 1,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "galloyl": 1
+      },
+      "pass": true
+    },
+    "gallic_acid": {
+      "smiles": "O=C(O)c1cc(O)c(O)c(O)c1",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {},
+      "pass": true
+    },
+    "methyl_caffeate": {
+      "smiles": "COC(=O)C=Cc1ccc(O)c(O)c1",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 1,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "caffeoyl": 1
+      },
+      "pass": true
+    },
+    "methyl_ferulate": {
+      "smiles": "COC(=O)C=Cc1ccc(O)c(OC)c1",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 1,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "feruloyl": 1
+      },
+      "pass": true
+    },
+    "methyl_sinapate": {
+      "smiles": "COC(=O)C=Cc1cc(OC)c(O)c(OC)c1",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 1,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "sinapoyl": 1
+      },
+      "pass": true
+    },
+    "methyl_malonate": {
+      "smiles": "COC(=O)CC(=O)O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 1,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "malonyl": 1
+      },
+      "pass": true
+    },
+    "dimethyl_malonate": {
+      "smiles": "COC(=O)CC(=O)OC",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 1,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "malonyl": 1
+      },
+      "pass": true
+    },
+    "malonic_acid": {
+      "smiles": "O=C(O)CC(=O)O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {},
+      "pass": true
+    },
+    "methyl_sulfate": {
+      "smiles": "COS(=O)(=O)O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 1,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "sulfate": 1
+      },
+      "pass": true
+    },
+    "dimethyl_sulfate": {
+      "smiles": "COS(=O)(=O)OC",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 1,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "sulfate": 1
+      },
+      "pass": true
+    },
+    "sulfonate": {
+      "smiles": "CS(=O)(=O)O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {},
+      "pass": true
+    },
+    "methyl_phosphate": {
+      "smiles": "COP(=O)(O)O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 1,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "phosphate": 1
+      },
+      "pass": true
+    },
+    "trimethyl_phosphate": {
+      "smiles": "COP(=O)(OC)OC",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 1,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "phosphate": 1
+      },
+      "pass": true
+    },
+    "phosphonate": {
+      "smiles": "CP(=O)(O)O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {},
+      "pass": true
+    }
+  },
+  "known_molecules": {
+    "rutin": {
+      "cid": 5280805,
+      "smiles": "C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC[C@@H]2[C@H]([C@@H]([C@H]([C@@H](O2)OC3=C(OC4=CC(=CC(=C4C3=O)O)O)C5=CC(=C(C=C5)O)O)O)O)O)O)O)O",
+      "counts": {
+        "hexose": 1,
+        "deoxyhexose": 1,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 1,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 1,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 2,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "hexose": 1,
+        "deoxyhexose": 1,
+        "hex_deoxy_disaccharide": 1,
+        "rutinoside_like": 1
+      },
+      "pass": true
+    },
+    "hesperidin": {
+      "cid": 10621,
+      "smiles": "C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC[C@@H]2[C@H]([C@@H]([C@H]([C@@H](O2)OC3=CC(=C4C(=O)C[C@H](OC4=C3)C5=CC(=C(C=C5)OC)O)O)O)O)O)O)O)O",
+      "counts": {
+        "hexose": 1,
+        "deoxyhexose": 1,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 1,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 1,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 2,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "hexose": 1,
+        "deoxyhexose": 1,
+        "rutinoside_like": 1
+      },
+      "pass": true
+    },
+    "chlorogenic_acid": {
+      "cid": 1794427,
+      "smiles": "C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 1,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "caffeoyl": 1
+      },
+      "pass": true
+    },
+    "EGCG": {
+      "cid": 65064,
+      "smiles": "C1[C@H]([C@H](OC2=CC(=CC(=C21)O)O)C3=CC(=C(C(=C3)O)O)O)OC(=O)C4=CC(=C(C(=C4)O)O)O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 0,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 1,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 0,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "galloyl": 1
+      },
+      "pass": true
+    },
+    "quercitrin": {
+      "cid": 5280459,
+      "smiles": "C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC2=C(OC3=CC(=CC(=C3C2=O)O)O)C4=CC(=C(C=C4)O)O)O)O)O",
+      "counts": {
+        "hexose": 0,
+        "deoxyhexose": 1,
+        "pentose": 0,
+        "uronic_acid": 0,
+        "hex_deoxy_disaccharide": 0,
+        "malonyl": 0,
+        "galloyl": 0,
+        "caffeoyl": 0,
+        "feruloyl": 0,
+        "sinapoyl": 0,
+        "sulfate": 0,
+        "phosphate": 0,
+        "rutinoside_like": 0,
+        "sugar_ring_other": 0,
+        "sugar_pyranose": 1,
+        "sugar_furanose": 0,
+        "valid_structure": 1
+      },
+      "expected": {
+        "deoxyhexose": 1
+      },
+      "pass": true
+    }
+  },
+  "all_passed": true
+}

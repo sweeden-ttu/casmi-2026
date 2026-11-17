@@ -1,0 +1,172 @@
+[
+  {
+    "rule": "Exact precursor mass / ppm",
+    "formula": "ppm = 10^6 (m_calc - m_obs) / m_obs",
+    "checks": "Mass agreement after isotope, charge and adduct accounting",
+    "application": "Candidate-window filter and continuous ranker feature",
+    "public_pipeline": "Yes: 10 ppm primary / 30 ppm fallback; mass_ppm and mass_ppm_rank",
+    "code_evidence": "casmi/engine.py:32,212,444",
+    "measurement_files": "annotation_summary.csv; true_decoy_rows.csv",
+    "scope_limit": "A mass match does not identify an isomer. Tolerance must reflect calibration."
+  },
+  {
+    "rule": "Adduct equations",
+    "formula": "|z| m/z = n M + delta_atoms - z m_e; M = (|z| m/z - delta_ion) / n",
+    "checks": "Separate the neutral structure from charge carriers and multimers",
+    "application": "Generator mass constraint; match allowed charge carriers in fragments",
+    "public_pipeline": "Yes: ADDUCTS, neutral_mass, precursor_mz_from_mass; fragment carrier map",
+    "code_evidence": "casmi/chem.py:39,118; v20 cell 50",
+    "measurement_files": "adduct_census.csv; spectrum_summary.csv",
+    "scope_limit": "For +1: [M+H]+ = M+1.00727645; [M+Na]+ = M+22.98922070; [M+K]+ = M+38.96315810; [M+NH4]+ = M+18.03382555. Na/K/NH4 need not belong to M."
+  },
+  {
+    "rule": "Nitrogen rule",
+    "formula": "nominal_mass mod 2 = N mod 2 for the eligible closed-shell neutral class",
+    "checks": "Nominal mass parity under stated elemental/valence assumptions",
+    "application": "Formula generator consistency check; soft feature outside the eligible class",
+    "public_pipeline": "No explicit check found in inspected v20 notebook/chemistry modules",
+    "code_evidence": "v20; casmi/chem.py; fe_v4/chemfeat.py",
+    "measurement_files": "rule_retention.csv; mass_defect.csv",
+    "scope_limit": "Nominal mass sums isotope mass numbers. Rounding a large exact molecular mass can give the wrong parity. Charge/adduct/radical state must be handled first."
+  },
+  {
+    "rule": "Neutral RDBE / DBE",
+    "formula": "DBE = 1 + C + Si + (N + P + B - H - F - Cl - Br - I)/2 (low-valence model)",
+    "checks": "Unsaturation budget for specified conventional valences",
+    "application": "Generator constraint within its scope; ranker feature otherwise",
+    "public_pipeline": "Partial/yes: subformula enumeration applies DBE>=-1 and a broad H ceiling; no standalone neutral-candidate DBE cutoff found",
+    "code_evidence": "casmi/frag.py:220,242,248",
+    "measurement_files": "rule_retention.csv; rule_true_decoy_retention.csv",
+    "scope_limit": "Hypervalent P/S, charged structures, radicals and unusual elements can violate a naive nonnegative-integer cutoff."
+  },
+  {
+    "rule": "Ion RDBE",
+    "formula": "DBE(M) = DBE([M+H]+) + 1/2; DBE(M) = DBE([M-H]-) - 1/2",
+    "checks": "Translate a protonated/deprotonated formula to the neutral convention",
+    "application": "Ion-aware formula generation and fragment plausibility feature",
+    "public_pipeline": "Partial: broad subformula DBE>=-1 plus adduct carriers; no general ion-electronic-state DBE filter found",
+    "code_evidence": "casmi/frag.py:248,275; casmi/chem.py",
+    "measurement_files": "spectrum_summary.csv; rule_retention.csv",
+    "scope_limit": "Half-integer DBE for an ion can be expected. These equations are not a universal charge correction for every ion class."
+  },
+  {
+    "rule": "LEWIS / SENIOR",
+    "formula": "S=sum(n_i v_i); S even; S>=2 max(v_i); S>=2(N_atoms-1)",
+    "checks": "Necessary valence-sum conditions for a connected molecular graph",
+    "application": "Formula generator constraint with allowed valence sets",
+    "public_pipeline": "Partial: RDKit sanitisation; no explicit formula-level Senior filter found",
+    "code_evidence": "casmi/chem.py:230; v20 cell 50",
+    "measurement_files": "rule_retention.csv",
+    "scope_limit": "Measured low-valence and variable-P/S versions are necessary checks, not a stability proof or full graph enumeration."
+  },
+  {
+    "rule": "Seven Golden Rules ratios",
+    "formula": "Common H/C 0.2..3.1; extended 0.1..6; element/C ranges from Kind & Fiehn Table 2",
+    "checks": "Whether composition resembles empirical reference formula ranges",
+    "application": "Soft composition features; generator priors with explicit exception support",
+    "public_pipeline": "Partial: element counts/chemistry features exist; no explicit complete 7GR implementation found",
+    "code_evidence": "fe_v4/chemfeat.py:REC_FIELDS",
+    "measurement_files": "rule_retention.csv",
+    "scope_limit": "Only the ratio subset is measured here. The complete method also uses valence checks, isotopes, joint element restrictions and derivatisation context."
+  },
+  {
+    "rule": "Mass defect",
+    "formula": "delta = m_exact - round(m_exact)",
+    "checks": "Composition-dependent deviation from an integer mass",
+    "application": "Continuous feature or series search; learn a conditional range",
+    "public_pipeline": "No explicit mass-defect feature found; exact mass features already exist",
+    "code_evidence": "casmi/engine.py:444",
+    "measurement_files": "mass_defect.csv; true_decoy_rows.csv",
+    "scope_limit": "Same-formula isomers have the same mass defect; tight same-mass decoys can be indistinguishable."
+  },
+  {
+    "rule": "Even-electron rule",
+    "formula": "EE ion -> EE ion + even-electron neutral is a common CID tendency",
+    "checks": "Formula-electron-parity consistency of precursor/product differences",
+    "application": "Soft loss/fragment prior conditioned on mode and energy",
+    "public_pipeline": "No explicit parity prior found in inspected modules",
+    "code_evidence": "v20; casmi/engine.py; v20 cell 50",
+    "measurement_files": "electron_parity_by_energy.csv",
+    "scope_limit": "Odd-electron formula losses are allowed. Formula parity does not establish the electronic state, stability or a unique mechanism."
+  },
+  {
+    "rule": "Fragment subformula consistency",
+    "formula": "0 <= n_i(fragment ion) <= n_i(precursor ion), with the correct adduct inventory",
+    "checks": "Atom conservation for a proposed assignment",
+    "application": "Candidate formula score and generator constraint",
+    "public_pipeline": "Yes: subformula_features; sf_int/sf_cnt/sf_top10/sf_rank",
+    "code_evidence": "casmi/engine.py:431-442",
+    "measurement_files": "annotation_summary.csv; true_decoy_summary.csv",
+    "scope_limit": "Hydrogen transfers, adduct exchange, isotope peaks, co-isolation and noise require an explicit model; same-formula isomers share this score."
+  },
+  {
+    "rule": "Explained intensity",
+    "formula": "EI = sum(I_assigned) / sum(I_retained)",
+    "checks": "How much measured product-ion signal a candidate can account for",
+    "application": "Continuous ranker feature; compare to mass-matched decoys",
+    "public_pipeline": "Yes: fr_int, fr_int_mean, sf_int; MetFrag-lite gap re-score",
+    "code_evidence": "casmi/engine.py:413-442; v20 cell 50",
+    "measurement_files": "annotation_summary.csv; true_decoy_summary.csv",
+    "scope_limit": "Retention threshold, precursor exclusion, tolerance, hydrogen shifts and multiple assignments change the score."
+  },
+  {
+    "rule": "Neutral-loss plausibility",
+    "formula": "S_loss = sum log P(loss | precursor class, adduct, CE)",
+    "checks": "Whether formula-compatible losses fit known chemistry",
+    "application": "Soft ranker feature or generator transition prior",
+    "public_pipeline": "Partial: fragment/context models; no explicit calibrated loss likelihood found",
+    "code_evidence": "fe_v4/fams/frag2.py; v20 cell 50",
+    "measurement_files": "neutral_losses.csv; loss_events.csv",
+    "scope_limit": "Observed mass differences can fit several formulas and paths. Frequencies here do not identify neutral molecules or prove sequential edges."
+  },
+  {
+    "rule": "Fragmentation-tree score",
+    "formula": "S(T) = sum_v s_mass(v) + sum_edges s_loss(parent-child) - lambda I_unexplained",
+    "checks": "Joint explanation of several ions while conserving elements",
+    "application": "Formula/tree ranker feature; structured generator constraint",
+    "public_pipeline": "Partial: fragment graphs in simulators; no explicit SIRIUS tree optimiser invoked",
+    "code_evidence": "v20 cells 39-44; ms_pred/magma/fragmentation.py",
+    "measurement_files": "fragmentation_graph.json; GRAPH_METHOD.json",
+    "scope_limit": "This is a generic SIRIUS-inspired score form. The delivered graph is observational and formula-compatible, not a reproduced SIRIUS inference."
+  },
+  {
+    "rule": "Halogen isotope signatures",
+    "formula": "Cl: +1.99705 Da, M+2/M~0.320 per Cl; Br: +1.99795 Da, ~0.973 per Br",
+    "checks": "Retention of Cl/Br in a proposed fragment formula",
+    "application": "Isotope-aware ranker feature when envelope information is present",
+    "public_pipeline": "Partial: halogen counts; no explicit isotope-envelope score found",
+    "code_evidence": "fe_v4/chemfeat.py:REC_FIELDS",
+    "measurement_files": "fragment_isotope_summary.csv; fragment_isotope_checks.csv",
+    "scope_limit": "The first-M+2 approximation omits other isotope contributions. Deisotoping can remove companions; absence is not a rejection criterion."
+  },
+  {
+    "rule": "Collision-energy behaviour",
+    "formula": "Compare I(fragment, CE), precursor survival and intensity-weighted product m/z within the same context",
+    "checks": "Whether measured energy-dependent changes support a proposed pattern",
+    "application": "Context feature and multi-energy ranker score",
+    "public_pipeline": "Partial/yes: collision-energy context and forward-model conditioning already used",
+    "code_evidence": "v20 spectra contexts; fe_v4 families; simulator inputs",
+    "measurement_files": "graph_energy_behavior.csv; electron_parity_by_energy.csv",
+    "scope_limit": "eV and normalised collision energy are not interchangeable. Different instruments, settings and multiple pathways prevent a universal monotonic rule."
+  },
+  {
+    "rule": "Graph validity / charge / isotope scope",
+    "formula": "RDKit sanitisation; formal_charge; explicit isotope labels",
+    "checks": "Whether the graph parses and whether neutral unlabelled assumptions apply",
+    "application": "Validity filter; context and exception flags",
+    "public_pipeline": "Yes: RDKit parsing and standardisation; charge descriptors",
+    "code_evidence": "casmi/chem.py:230; fe_v4/chemfeat.py",
+    "measurement_files": "collections.csv; structure_properties.csv",
+    "scope_limit": "Scorer identity removes stereo before tautomer canonicalisation. It does not justify silently neutralising every structure or discarding valid permanent ions."
+  },
+  {
+    "rule": "Fragment catalogue existence",
+    "formula": "IK14(H-capped connected fragment) in frozen tier; exact neutral formula existence",
+    "checks": "Coverage of a particular frozen structural resource",
+    "application": "Optional evidence feature; extend fragment libraries",
+    "public_pipeline": "No explicit capped-neutral catalogue feature found in inspected modules",
+    "code_evidence": "v20 inspected notebook and public chemistry modules",
+    "measurement_files": "formula_coverage.csv; structure_coverage.csv",
+    "scope_limit": "A catalogue hit is not proof of an ion structure. Missing entries, resource cutoffs and capping choices prevent use as a hard true-molecule filter."
+  }
+]

@@ -30,15 +30,33 @@ from transformers.modeling_outputs import (
     CausalLMOutputWithCrossAttentions,
 )
 from transformers.modeling_utils import PreTrainedModel
-from transformers.pytorch_utils import apply_chunking_to_forward, find_pruneable_heads_and_indices, prune_linear_layer
-from transformers.utils import (
-    add_code_sample_docstrings,
-    add_start_docstrings,
-    add_start_docstrings_to_model_forward,
-    logging,
-    replace_return_docstrings,
-)
-from .configuration_molformer import MolformerConfig
+from transformers.pytorch_utils import apply_chunking_to_forward
+try:
+    from transformers.pytorch_utils import find_pruneable_heads_and_indices, prune_linear_layer
+except ImportError:
+    find_pruneable_heads_and_indices = None
+    prune_linear_layer = None
+from transformers.utils import logging
+try:
+    from transformers.utils import (
+        add_code_sample_docstrings,
+        add_start_docstrings,
+        add_start_docstrings_to_model_forward,
+        replace_return_docstrings,
+    )
+except ImportError:
+    def _noop_decorator(*args, **kwargs):
+        def wrapper(fn):
+            return fn
+        return wrapper
+    add_code_sample_docstrings = _noop_decorator
+    add_start_docstrings = _noop_decorator
+    add_start_docstrings_to_model_forward = _noop_decorator
+    replace_return_docstrings = _noop_decorator
+try:
+    from .configuration_molformer import MolformerConfig
+except ImportError:
+    from configuration_molformer import MolformerConfig
 
 
 logger = logging.get_logger(__name__)

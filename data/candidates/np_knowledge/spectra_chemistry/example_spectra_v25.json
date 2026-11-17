@@ -1,0 +1,620 @@
+[
+  {
+    "spectrum_row": 2405748,
+    "inchikey14": "TZJALUIVHRYQQB",
+    "adduct": "[M+H]+",
+    "precursor_mz": 677.25,
+    "instrument_type": "Orbitrap",
+    "collision_energy_ev": [
+      13.5
+    ],
+    "collision_energy_orig": "10",
+    "collision_energy_orig_units": "NCE",
+    "mz": [
+      318.292,
+      335.107,
+      369.13,
+      392.184,
+      439.182,
+      480.139,
+      531.184,
+      609.143,
+      677.24,
+      677.355,
+      677.477
+    ],
+    "intensity": [
+      0.01,
+      0.007,
+      0.031,
+      0.013,
+      0.007,
+      0.011,
+      0.571,
+      0.005,
+      1.0,
+      0.817,
+      0.068
+    ],
+    "assignments": [
+      {
+        "node": "C22H38O",
+        "spectrum_row": 2405748,
+        "energy": 13.5,
+        "mz": 318.292,
+        "intensity": 0.01,
+        "assigned": true
+      },
+      {
+        "node": "C21H21O6",
+        "spectrum_row": 2405748,
+        "energy": 13.5,
+        "mz": 369.13,
+        "intensity": 0.031,
+        "assigned": true
+      },
+      {
+        "node": "C21H28O7",
+        "spectrum_row": 2405748,
+        "energy": 13.5,
+        "mz": 392.184,
+        "intensity": 0.013,
+        "assigned": true
+      },
+      {
+        "node": "C26H24O9",
+        "spectrum_row": 2405748,
+        "energy": 13.5,
+        "mz": 480.139,
+        "intensity": 0.011,
+        "assigned": true
+      },
+      {
+        "node": "C27H31O11",
+        "spectrum_row": 2405748,
+        "energy": 13.5,
+        "mz": 531.184,
+        "intensity": 0.571,
+        "assigned": true
+      }
+    ]
+  },
+  {
+    "spectrum_row": 2010765,
+    "inchikey14": "TZJALUIVHRYQQB",
+    "adduct": "[M+H]+",
+    "precursor_mz": 677.244,
+    "instrument_type": "Orbitrap",
+    "collision_energy_ev": [
+      20.3
+    ],
+    "collision_energy_orig": "15.0",
+    "collision_energy_orig_units": "NCE",
+    "mz": [
+      71.0487,
+      85.0279,
+      129.0541,
+      147.0647,
+      313.0702,
+      369.1331,
+      531.1852
+    ],
+    "intensity": [
+      0.44509,
+      0.8530800000000001,
+      0.57459,
+      0.11709,
+      0.13427,
+      1.0,
+      0.6088
+    ],
+    "assignments": [
+      {
+        "node": "C4H7O",
+        "spectrum_row": 2010765,
+        "energy": 20.3,
+        "mz": 71.0487,
+        "intensity": 0.44509,
+        "assigned": true
+      },
+      {
+        "node": "C4H5O2",
+        "spectrum_row": 2010765,
+        "energy": 20.3,
+        "mz": 85.0279,
+        "intensity": 0.8530800000000001,
+        "assigned": true
+      },
+      {
+        "node": "C6H9O3",
+        "spectrum_row": 2010765,
+        "energy": 20.3,
+        "mz": 129.0541,
+        "intensity": 0.57459,
+        "assigned": true
+      },
+      {
+        "node": "C6H11O4",
+        "spectrum_row": 2010765,
+        "energy": 20.3,
+        "mz": 147.0647,
+        "intensity": 0.11709,
+        "assigned": true
+      },
+      {
+        "node": "C17H13O6",
+        "spectrum_row": 2010765,
+        "energy": 20.3,
+        "mz": 313.0702,
+        "intensity": 0.13427,
+        "assigned": true
+      },
+      {
+        "node": "C21H21O6",
+        "spectrum_row": 2010765,
+        "energy": 20.3,
+        "mz": 369.1331,
+        "intensity": 1.0,
+        "assigned": true
+      },
+      {
+        "node": "C27H31O11",
+        "spectrum_row": 2010765,
+        "energy": 20.3,
+        "mz": 531.1852,
+        "intensity": 0.6088,
+        "assigned": true
+      }
+    ]
+  },
+  {
+    "spectrum_row": 2010763,
+    "inchikey14": "TZJALUIVHRYQQB",
+    "adduct": "[M+H]+",
+    "precursor_mz": 677.244,
+    "instrument_type": "Orbitrap",
+    "collision_energy_ev": [
+      20.3,
+      27.1,
+      81.3
+    ],
+    "collision_energy_orig": "[20.0, 15.0, 60.0]",
+    "collision_energy_orig_units": "NCE",
+    "mz": [
+      57.0332,
+      71.0487,
+      85.028,
+      129.0541,
+      135.0438,
+      147.0647,
+      187.0754,
+      313.071,
+      369.1331,
+      531.1853
+    ],
+    "intensity": [
+      0.06863000000000001,
+      0.30811,
+      0.28141,
+      0.13553,
+      0.04133,
+      0.02762,
+      0.02461,
+      1.0,
+      0.44945,
+      0.14359
+    ],
+    "assignments": [
+      {
+        "node": "C3H5O",
+        "spectrum_row": 2010763,
+        "energy": 42.9,
+        "mz": 57.0332,
+        "intensity": 0.06863000000000001,
+        "assigned": true
+      },
+      {
+        "node": "C4H7O",
+        "spectrum_row": 2010763,
+        "energy": 42.9,
+        "mz": 71.0487,
+        "intensity": 0.30811,
+        "assigned": true
+      },
+      {
+        "node": "C4H5O2",
+        "spectrum_row": 2010763,
+        "energy": 42.9,
+        "mz": 85.028,
+        "intensity": 0.28141,
+        "assigned": true
+      },
+      {
+        "node": "C6H9O3",
+        "spectrum_row": 2010763,
+        "energy": 42.9,
+        "mz": 129.0541,
+        "intensity": 0.13553,
+        "assigned": true
+      },
+      {
+        "node": "C8H7O2",
+        "spectrum_row": 2010763,
+        "energy": 42.9,
+        "mz": 135.0438,
+        "intensity": 0.04133,
+        "assigned": true
+      },
+      {
+        "node": "C6H11O4",
+        "spectrum_row": 2010763,
+        "energy": 42.9,
+        "mz": 147.0647,
+        "intensity": 0.02762,
+        "assigned": true
+      },
+      {
+        "node": "C12H11O2",
+        "spectrum_row": 2010763,
+        "energy": 42.9,
+        "mz": 187.0754,
+        "intensity": 0.02461,
+        "assigned": true
+      },
+      {
+        "node": "C17H13O6",
+        "spectrum_row": 2010763,
+        "energy": 42.9,
+        "mz": 313.071,
+        "intensity": 1.0,
+        "assigned": true
+      },
+      {
+        "node": "C21H21O6",
+        "spectrum_row": 2010763,
+        "energy": 42.9,
+        "mz": 369.1331,
+        "intensity": 0.44945,
+        "assigned": true
+      },
+      {
+        "node": "C27H31O11",
+        "spectrum_row": 2010763,
+        "energy": 42.9,
+        "mz": 531.1853,
+        "intensity": 0.14359,
+        "assigned": true
+      }
+    ]
+  },
+  {
+    "spectrum_row": 2405729,
+    "inchikey14": "TZJALUIVHRYQQB",
+    "adduct": "[M+H]+",
+    "precursor_mz": 677.25,
+    "instrument_type": "Orbitrap",
+    "collision_energy_ev": [
+      54.2
+    ],
+    "collision_energy_orig": "40",
+    "collision_energy_orig_units": "NCE",
+    "mz": [
+      71.049,
+      85.028,
+      93.069,
+      122.095,
+      124.111,
+      205.1,
+      216.088,
+      249.089,
+      251.105,
+      258.147,
+      301.068,
+      313.068,
+      355.079,
+      369.13,
+      418.199,
+      420.214,
+      554.25,
+      677.354
+    ],
+    "intensity": [
+      0.011,
+      0.059,
+      0.005,
+      0.012,
+      0.098,
+      0.02,
+      0.006,
+      0.005,
+      0.021,
+      0.212,
+      0.014,
+      0.604,
+      0.005,
+      1.0,
+      0.012,
+      0.093,
+      0.205,
+      0.055
+    ],
+    "assignments": [
+      {
+        "node": "C4H7O",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 71.049,
+        "intensity": 0.011,
+        "assigned": true
+      },
+      {
+        "node": "C4H5O2",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 85.028,
+        "intensity": 0.059,
+        "assigned": true
+      },
+      {
+        "node": "unassigned:2405729:122.09500",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 122.095,
+        "intensity": 0.012,
+        "assigned": false
+      },
+      {
+        "node": "unassigned:2405729:124.11100",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 124.111,
+        "intensity": 0.098,
+        "assigned": false
+      },
+      {
+        "node": "C16H13",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 205.1,
+        "intensity": 0.02,
+        "assigned": true
+      },
+      {
+        "node": "C17H15O2",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 251.105,
+        "intensity": 0.021,
+        "assigned": true
+      },
+      {
+        "node": "C13H22O5",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 258.147,
+        "intensity": 0.212,
+        "assigned": true
+      },
+      {
+        "node": "C16H13O6",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 301.068,
+        "intensity": 0.014,
+        "assigned": true
+      },
+      {
+        "node": "C17H13O6",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 313.068,
+        "intensity": 0.604,
+        "assigned": true
+      },
+      {
+        "node": "C21H21O6",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 369.13,
+        "intensity": 1.0,
+        "assigned": true
+      },
+      {
+        "node": "C23H30O7",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 418.199,
+        "intensity": 0.012,
+        "assigned": true
+      },
+      {
+        "node": "C23H32O7",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 420.214,
+        "intensity": 0.093,
+        "assigned": true
+      },
+      {
+        "node": "C31H38O9",
+        "spectrum_row": 2405729,
+        "energy": 54.2,
+        "mz": 554.25,
+        "intensity": 0.205,
+        "assigned": true
+      }
+    ]
+  },
+  {
+    "spectrum_row": 2405736,
+    "inchikey14": "TZJALUIVHRYQQB",
+    "adduct": "[M+H]+",
+    "precursor_mz": 677.25,
+    "instrument_type": "Orbitrap",
+    "collision_energy_ev": [
+      108.4
+    ],
+    "collision_energy_orig": "80",
+    "collision_energy_orig_units": "NCE",
+    "mz": [
+      91.053,
+      93.069,
+      95.048,
+      105.044,
+      107.012,
+      124.111,
+      135.043,
+      159.079,
+      161.058,
+      187.074,
+      205.1,
+      215.069,
+      242.055,
+      243.063,
+      270.05,
+      298.045,
+      313.068
+    ],
+    "intensity": [
+      0.187,
+      0.103,
+      0.149,
+      0.011,
+      0.059,
+      0.057,
+      0.893,
+      0.032,
+      0.007,
+      0.454,
+      0.458,
+      0.009,
+      0.047,
+      0.133,
+      0.122,
+      0.13,
+      1.0
+    ],
+    "assignments": [
+      {
+        "node": "C7H7",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 91.053,
+        "intensity": 0.187,
+        "assigned": true
+      },
+      {
+        "node": "C7H9",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 93.069,
+        "intensity": 0.103,
+        "assigned": true
+      },
+      {
+        "node": "C6H7O",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 95.048,
+        "intensity": 0.149,
+        "assigned": true
+      },
+      {
+        "node": "unassigned:2405736:105.04400",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 105.044,
+        "intensity": 0.011,
+        "assigned": false
+      },
+      {
+        "node": "C6H3O2",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 107.012,
+        "intensity": 0.059,
+        "assigned": true
+      },
+      {
+        "node": "unassigned:2405736:124.11100",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 124.111,
+        "intensity": 0.057,
+        "assigned": false
+      },
+      {
+        "node": "C8H7O2",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 135.043,
+        "intensity": 0.893,
+        "assigned": true
+      },
+      {
+        "node": "C11H11O",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 159.079,
+        "intensity": 0.032,
+        "assigned": true
+      },
+      {
+        "node": "C12H11O2",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 187.074,
+        "intensity": 0.454,
+        "assigned": true
+      },
+      {
+        "node": "C16H13",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 205.1,
+        "intensity": 0.458,
+        "assigned": true
+      },
+      {
+        "node": "C14H10O4",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 242.055,
+        "intensity": 0.047,
+        "assigned": true
+      },
+      {
+        "node": "C14H11O4",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 243.063,
+        "intensity": 0.133,
+        "assigned": true
+      },
+      {
+        "node": "C15H10O5",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 270.05,
+        "intensity": 0.122,
+        "assigned": true
+      },
+      {
+        "node": "C16H10O6",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 298.045,
+        "intensity": 0.13,
+        "assigned": true
+      },
+      {
+        "node": "C17H13O6",
+        "spectrum_row": 2405736,
+        "energy": 108.4,
+        "mz": 313.068,
+        "intensity": 1.0,
+        "assigned": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "dataset": "casmi26-natural-product-knowledge-table",
+  "version_date": "2026-10-20",
+  "lotus_release": "2026-04-13",
+  "overlay_only": true,
+  "files": {
+    "CARD_CHANGES.md": {
+      "bytes": 7345,
+      "sha256": "ddcd0d087eba72d838c3ef23712abb65dbc35396332d62d18aaa8c3d308f6f38"
+    },
+    "DESCRIPTOR_METHOD.json": {
+      "bytes": 3694,
+      "sha256": "46456e341e87785ae96d3d13aa835a864bcb67a72611a4454cfbda63706b59b1",
+      "previous_sha256": "ddd17306cdeb21e3aedc4a374591f58a3e8fb3f125b9898b89b8356f7e9c4040"
+    },
+    "FILE_DESCRIPTIONS.json": {
+      "bytes": 1499,
+      "sha256": "ed182aaf2f4c13a976e60adef555618285b4c7a8e035413e5e398454b7c8481e",
+      "previous_sha256": "90a0e8455992baaa81891d707d3edd8cc140c0df5eccb56ea2e0eff3003847b0"
+    },
+    "JOIN_NOTES.json": {
+      "bytes": 1397,
+      "sha256": "ed2d4901e4ab1b0b3925181cd0aa0a298b7639bf1171194624c053d1bb8b85b8",
+      "previous_sha256": "7386f47a156740c7acd9fc5a837c8c4adbc646d366b22fa4c460030ceb034d79"
+    },
+    "LOTUS_REFRESH.json": {
+      "bytes": 14743,
+      "sha256": "61cfde26dc65fcc96cf54a493c06840b05f5d3765c76bc87bf9731c18e321bce"
+    },
+    "SUMMARY.json": {
+      "bytes": 486,
+      "sha256": "3d7f23504a56bc802e9249bb4c317e92167adf1cef4aa583af30d3adad2eeb87",
+      "previous_sha256": "4009b972187c628e24624ecf3116e0dd3bf21bb9d8eace507fbff0f2f6055d2b"
+    },
+    "build_np.py": {
+      "bytes": 8965,
+      "sha256": "56d9d7da8566d596c2a503bad4ab70878f9ef02f1b46e7f30a3cf2b733271ef7",
+      "previous_sha256": "b7d3266338d419ba3aa7583d22ca1481022db3529cb454880fae8b604358bf42"
+    },
+    "candidate_joins.parquet": {
+      "bytes": 4468200,
+      "sha256": "ba079638bfa47f0af076a1ae61510129402fce696209c4a1fd05fd7cb5854985",
+      "previous_sha256": "192b99074582dc552b09ec029daf4937ccf97e579205ce428545104a0d232d53"
+    },
+    "descriptors.parquet": {
+      "bytes": 5679231,
+      "sha256": "89ab934a63c0a5303ab1cfc1ec80459daac4b69a648835c92770aadb927375bd",
+      "previous_sha256": "59260800fd5215058d043d9d7235c3ce472f69c22f95ec9922fe6cb81ed2f931"
+    },
+    "external_reference_spectra/external_candidate_additions.parquet": {
+      "bytes": 13047,
+      "sha256": "8e8a88866e11f94ecc5fe2df5f8a9cbb1bc144e6c45387438124b2946947e376",
+      "previous_sha256": "6ee3e590009a30b2139cc542aebbc3ddea7a75d5eae2060edbca9685498788ed"
+    },
+    "external_reference_spectra/external_structure_coverage.parquet": {
+      "bytes": 43715,
+      "sha256": "0a284c243ea4b42151040e6f9e1c9612a6a8f42422cf8835582c5891db08c2e2",
+      "previous_sha256": "866fc1a6d7e0cf570fffb5827a037d00c169db34fd687dd5e5631bd86a2a28b9"
+    },
+    "lotus_structure_genus.csv": {
+      "bytes": 15679755,
+      "sha256": "22a5b0f0d4380781c1a6d67d605ce00b2a8c5d7dfa8214343191535de820da44",
+      "previous_sha256": "b8ac52637cd62733dd962e1fe7e19224d82d16e454cd82de9c379fc1cb647b0e"
+    },
+    "lotus_structure_genus.parquet": {
+      "bytes": 2513093,
+      "sha256": "bbcb313b2001963e8be4485c8a3f2cb318f041b96124704bcb26d4a6004d1436",
+      "previous_sha256": "721dacb5cdfbd7aeefc23948ad6f8e41ed565b54d8d5857916443785daf03d65"
+    },
+    "natural_products.csv": {
+      "bytes": 41057714,
+      "sha256": "71e1fd682443472f7c559361ee5fe183db04ca962bdd761862014b4f8aa7a7ed",
+      "previous_sha256": "37844122be5314c1a396172d7903181c47933bcb541b61d7b32ba289cea3019d"
+    },
+    "natural_products.parquet": {
+      "bytes": 9575768,
+      "sha256": "6ccb833e47d88715fca1d614b05cae92fa333fa388ae1d64226f2695a62081aa",
+      "previous_sha256": "3cc89e29f7686b7d2a24b5c20e3e8cd1c07129ad47fdd8ef83bddf48be3fa46f"
+    },
+    "pathway_coverage.png": {
+      "bytes": 114165,
+      "sha256": "4db2dc085f163a75db3ee28bfd9fe0aebd18f74a48a158e11bbc3b6937921272"
+    }
+  },
+  "payload_bytes": 79182817,
+  "excludes_own_recursive_digest": true
+}

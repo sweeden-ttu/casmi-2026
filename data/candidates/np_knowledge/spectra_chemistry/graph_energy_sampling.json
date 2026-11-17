@@ -1,0 +1,6 @@
+{
+  "added_rows": 499,
+  "sample_rows": 3442,
+  "energy_strata": 392,
+  "method": "2 smallest BLAKE2b graph22:row hashes per parent, adduct, instrument family, stored eV mean rounded to 0.1 and original units; graph selection only; population sample unchanged"
+}

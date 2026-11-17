@@ -1,0 +1,13 @@
+{
+  "assigned_parity_unambiguous": 38314,
+  "possible_isotope_flagged": 1561,
+  "flag": "A stored peak at -1.003354835 Da for carbon, -1.99704992 for Cl or -1.9979535 for Br, within max(0.001 Da,5 ppm), at >=1% base intensity and >=10% of the assigned peak intensity. This is only a possible isotope flag; accidental peak pairs and other isotope types remain.",
+  "scopes": [
+    "broad assignment",
+    "5 ppm / 0.001 Da",
+    "strict + unique formula",
+    "strict + unique + no possible isotope",
+    "strict + unique + no possible isotope + >=5% I + precursor <=10 ppm"
+  ],
+  "interpretation": "Formula-assignment model sensitivity only. Isotope/deisotoping artifacts, incorrect assignments, co-isolation and other peaks can contribute. No direct radical yield or electronic ground-state measurement."
+}

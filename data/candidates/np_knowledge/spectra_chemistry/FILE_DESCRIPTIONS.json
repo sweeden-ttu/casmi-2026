@@ -1,0 +1,859 @@
+{
+  "folder": "spectra_chemistry",
+  "files": [
+    {
+      "file": "ANNOTATION_METHOD.json",
+      "description": "Assignment thresholds, mass tolerance, electron correction and combination cap; final sample row count.",
+      "bytes": 522,
+      "sha256": "e54d9287855639c261bc66487aeefae118b67fdc58de45067e9305be93191836"
+    },
+    {
+      "file": "FRAGMENT_METHOD.json",
+      "description": "Formula vs structural neutral counterparts, range limits, weighting and radical-proxy definitions.",
+      "bytes": 1574,
+      "sha256": "36496fa99211603505235a7e611f375bd2a216de2fca40c0e9debdadfb8b5411"
+    },
+    {
+      "file": "GRAPH_METHOD.json",
+      "description": "Example-selection, graph-interpretation and isotope-check definitions.",
+      "bytes": 947,
+      "sha256": "57bf9eb7e0e3ff72f8adbef3d17329ef89eafa5e0977a47b816a95b466606693"
+    },
+    {
+      "file": "MEASUREMENT_SUMMARY.json",
+      "description": "Small machine-readable headline measurements and denominator/status counts.",
+      "bytes": 1616,
+      "sha256": "0e2f7a66710abc690cd8067c3517c7906b76c092a2c36521688c6511b1f0283a"
+    },
+    {
+      "file": "METHOD_CREDITS.json",
+      "description": "Primary method links and precise attribution of conceptual inspiration versus executed code.",
+      "bytes": 1562,
+      "sha256": "ec4bbbe40038d02667de9a82d6d8aa687234152a7a1c0339810403b815146824"
+    },
+    {
+      "file": "PARITY_SENSITIVITY_METHOD.json",
+      "description": "Exact stricter-scope and possible-isotope flag definitions; explains why these are not direct radical measurements.",
+      "bytes": 820,
+      "sha256": "95294775e979bb751a68135f3c3ce971bfad3a3801b54f9d9fea69b92b5ff58b"
+    },
+    {
+      "file": "PROVENANCE.json",
+      "description": "Allowlisted input roots, code hashes, RDKit version, identity conventions and final full-RDKit census declaration.",
+      "bytes": 2137,
+      "sha256": "8cace7fe456b5a4d4dff55613ff0301744b1e74ebdcfe507e0df842f6b1eff92"
+    },
+    {
+      "file": "STRUCTURE_ENUMERATION.json",
+      "description": "Bounded bond-cut sample, exact frozen-tier fragment-key queries and enumeration definitions; final parent strata are in structural_parent_summary.csv.",
+      "bytes": 965,
+      "sha256": "0c30c129d911aa80755ba040b4899f3a6cadcf4919afb5cc38884549a20a917b"
+    },
+    {
+      "file": "additional_measurements_v25.json",
+      "description": "Scoped mass-window retention, requested B-free RDBE retention, exact ppm-convention boundary check and CPU resource receipt.",
+      "bytes": 1523,
+      "sha256": "89446ba37cb63d86ea9f0207a19b91a53889831b3127ea23795ad897326a9154"
+    },
+    {
+      "file": "adduct_census.csv",
+      "description": "All 2,539,608 training spectra counted by adduct, mode and instrument family; v20 adduct-recognition flag.",
+      "bytes": 5256,
+      "sha256": "b9ac29b3554ea7bb68fe7cd412fe832a1876ab32d85716ec10eb505cae5c8850",
+      "columns": [
+        "adduct",
+        "mode",
+        "instrument_group",
+        "spectra",
+        "recognized_by_v20"
+      ],
+      "rows": 148
+    },
+    {
+      "file": "annotation_by_energy.csv",
+      "description": "Primary sample explanation fractions grouped by adduct, instrument family, stored energy bin and original unit system.",
+      "bytes": 2370,
+      "sha256": "ee25d3328ef2de328bd23370d95742b98e4221d89998c83d1e074d38749a88be",
+      "columns": [
+        "adduct",
+        "instrument_group",
+        "ce_bin",
+        "original_units",
+        "spectra",
+        "mean_explained_intensity",
+        "mean_explained_peak_share",
+        "mean_strict5ppm_intensity"
+      ],
+      "rows": 27
+    },
+    {
+      "file": "annotation_summary.csv",
+      "description": "Primary-sample aggregate peak/intensity explanation, raw/micro and population-weighted statistics by adduct/instrument context.",
+      "bytes": 1132,
+      "sha256": "b8d6a077e0bbe94dcb9bd5221d39afe3bfbe349e37958ed3618bdd2e2f2a7406",
+      "columns": [
+        "group",
+        "spectra",
+        "retained_peaks",
+        "matched_peaks",
+        "micro_peak_share",
+        "mean_intensity_share",
+        "population_weighted_intensity",
+        "population_weighted_peak_share",
+        "micro_intensity_share",
+        "unique_formula_peak_share",
+        "unique_formula_share_of_matches",
+        "precursor_within10ppm"
+      ],
+      "rows": 5
+    },
+    {
+      "file": "bonds.csv",
+      "description": "Bond counts and structure prevalence by endpoint elements and RDKit bond type; implicit/bracket H counted separately. Molecular graphs, not directly measured bond cleavages.",
+      "bytes": 17201,
+      "sha256": "7f6184f83778e11f6c69d01d5301ac9b122f477050dbadedf8449fb7cb1a0e39",
+      "columns": [
+        "collection",
+        "bond",
+        "total_bonds",
+        "structures",
+        "denominator",
+        "share"
+      ],
+      "rows": 274
+    },
+    {
+      "file": "collections.csv",
+      "description": "Training/pool cohort denominators, exact-mass ranges and formula-recalculation agreement.",
+      "bytes": 299,
+      "sha256": "92c8acbdcc6ab47f17785cb32654a12b6575c95b8594798ff615029b3551a018",
+      "columns": [
+        "collection",
+        "input_rows",
+        "valid_rows",
+        "window_rows",
+        "formula_disagreements",
+        "mass_min",
+        "mass_max"
+      ],
+      "rows": 3
+    },
+    {
+      "file": "electron_parity_by_energy.csv",
+      "description": "Formula-inferred odd-electron neutral-loss proxy from even-electron precursors, retaining parity-ambiguous assignments and explicit denominators.",
+      "bytes": 2866,
+      "sha256": "63ab859a29cd4e59cc8e5416837c89fcc9b5672cb7133370c1834a27e90654ff",
+      "columns": [
+        "adduct",
+        "instrument_group",
+        "ce_bin",
+        "original_units",
+        "spectra",
+        "assigned_peaks",
+        "parity_unambiguous_peaks",
+        "odd_loss_peaks",
+        "odd_share_among_unambiguous",
+        "odd_intensity_share",
+        "parity_ambiguous_peaks",
+        "best_formula_odd_share"
+      ],
+      "rows": 28
+    },
+    {
+      "file": "electron_parity_sensitivity.csv",
+      "description": "Odd-electron loss formula proxy under stricter mass tolerance, formula uniqueness, possible-isotope exclusion, intensity and precursor-error scopes, by energy/mode.",
+      "bytes": 13901,
+      "sha256": "471d523efdfdd73716e7a4e01b4485d48ece3ff55ea0dbf047d12401db0c468d",
+      "columns": [
+        "adduct",
+        "instrument_group",
+        "ce_bin",
+        "original_units",
+        "scope",
+        "spectra",
+        "assigned_peaks",
+        "odd_loss_peaks",
+        "odd_loss_share",
+        "odd_loss_intensity_share"
+      ],
+      "rows": 136
+    },
+    {
+      "file": "element_comparison_v25.csv",
+      "description": "Full-precision element prevalence comparison derived from frozen elements.csv and tier_elements.csv.",
+      "bytes": 1593,
+      "sha256": "7d2c2d7e6196bff5c970d2b7b13b484c36699862bed6c922d6c2e7641c3d3089"
+    },
+    {
+      "file": "element_count_distribution.csv",
+      "description": "Exact per-element atom-count distributions including zeros, for training and public-pool cohorts.",
+      "bytes": 28774,
+      "sha256": "ec33ee868c160ea18456d63c6383287dca49dcc739e69810982839fe43ad5561",
+      "columns": [
+        "collection",
+        "element",
+        "count",
+        "structures"
+      ],
+      "rows": 1249
+    },
+    {
+      "file": "element_groups.csv",
+      "description": "Mass ranges and prevalence of CHNO-only, halogen, metal and other-element groups; isotope and molecular-charge groups for training/pool.",
+      "bytes": 2433,
+      "sha256": "ad14011008ca3081e8f5dd7282458b5ded70509e4ef5fba706a1dcfff6f35516",
+      "columns": [
+        "collection",
+        "group",
+        "structures",
+        "denominator",
+        "share",
+        "min_mass",
+        "median_mass",
+        "max_mass"
+      ],
+      "rows": 24
+    },
+    {
+      "file": "element_table_v25.md",
+      "description": "Captioned four-column element table for display-only notebook cells; same-window census, all observed elements.",
+      "bytes": 1376,
+      "sha256": "7a6473b6c695fbf7f186d7db1100e0bd91e99193efa06d0dd0c6155e56eeece2"
+    },
+    {
+      "file": "elements.csv",
+      "description": "RDKit element prevalence, maxima, conditional count summaries and mass ranges: all training rows, in-range training, in-range pool. Explicit zero rows for requested absent elements.",
+      "bytes": 8120,
+      "sha256": "65021292fea55c7cee77161e70812a5564947f3d3011be16fe2da2ac1fd2fcb4",
+      "columns": [
+        "collection",
+        "element",
+        "atomic_number",
+        "structures",
+        "denominator",
+        "share",
+        "mean_count",
+        "max_count",
+        "median_if_present",
+        "p99_if_present",
+        "min_mass",
+        "max_mass"
+      ],
+      "rows": 73
+    },
+    {
+      "file": "example_spectra_v25.json",
+      "description": "All five measured example spectrum arrays and original energy metadata, alongside unchanged retained formula assignments.",
+      "bytes": 12608,
+      "sha256": "3148366acdc317420cb9d54d6a88572d2099d2a28081c81dcbf2e2892cae79c5"
+    },
+    {
+      "file": "figures/elements.png",
+      "description": "Light-background element prevalence figure for the ten most frequent training elements.",
+      "bytes": 64734,
+      "sha256": "c4499f1be55941583fbeb9b2222dacf326e5f20fb93ca1203d9f8174e0a8ee12"
+    },
+    {
+      "file": "figures/example_stick_spectra_v25.png",
+      "description": "Three measured single-energy stick spectra with major formula labels, assignment colours and unique neutral-analogue drawings.",
+      "bytes": 283745,
+      "sha256": "c98b0c6883573b6dcaa305924a6fdfb3ed8a9a17c1346f4bc749ce5bf521db9d"
+    },
+    {
+      "file": "figures/fragment_catalogue_coverage.png",
+      "description": "Light-background coverage figure retaining mass-bin fragment/parent counts and parent membership split.",
+      "bytes": 120851,
+      "sha256": "35b946c2a8fcdb6785f530214b42d082416e97df87167de060fb648fd5da2baa"
+    },
+    {
+      "file": "figures/fragmentation_graph.png",
+      "description": "Precomputed data-derived green-card figure.",
+      "bytes": 168115,
+      "sha256": "ed414d719bc166758d754f73e622d61d9aba46aeaf946cea312429870098d4f4"
+    },
+    {
+      "file": "figures/fragmentation_tree_v25.png",
+      "description": "Rooted five-node formula tree with loss formulas/masses, observed intensity numbers and neutral-analogue drawings; no embedded spectra.",
+      "bytes": 333597,
+      "sha256": "9acaa87d6707f95637f68eb928429327672c07b6a5bb18ce1f22ca10e8560fc6"
+    },
+    {
+      "file": "figures/neutral_losses.png",
+      "description": "Precomputed data-derived green-card figure.",
+      "bytes": 99357,
+      "sha256": "96f208e0ebe89c8219d04ebea1314f0b01850119b2911a3b7efa9d3590c421a1"
+    },
+    {
+      "file": "formula_coverage.csv",
+      "description": "Neutral counterpart formula catalogue coverage by parent tier membership and fragment mass/size, deduplicated per spectrum and formula.",
+      "bytes": 2993,
+      "sha256": "0f8d09ded49cd49f59fbc8a15eb4ded78f8a216d5201e397acdddf38c2a13f66",
+      "columns": [
+        "parent_catalogue",
+        "axis",
+        "bin",
+        "formula_occurrences",
+        "distinct_formulas",
+        "tier_catalogued",
+        "tier_share",
+        "pool_share",
+        "tier_window_share",
+        "intensity_weighted_tier_share"
+      ],
+      "rows": 27
+    },
+    {
+      "file": "fragment_elements.csv",
+      "description": "Best-annotated fragment-ion element prevalence and intensity shares by ion mode; distinct from precursor structure prevalence.",
+      "bytes": 1546,
+      "sha256": "61298f67ae8245a22edcd26c86c226fbaebb07adef6c7c0137adfc63e774edee",
+      "columns": [
+        "adduct",
+        "element",
+        "assigned_ion_occurrences",
+        "containing_element",
+        "occurrence_share",
+        "intensity_share"
+      ],
+      "rows": 26
+    },
+    {
+      "file": "fragment_formula_catalogue.csv",
+      "description": "Unique best-assigned neutral counterpart formulas, exact masses and full-tier/pool formula-existence counts/flags.",
+      "bytes": 726009,
+      "sha256": "24c31fd8385965b42c6e888bd612547a968dc81860003caf36152fe2796c8cf0",
+      "columns": [
+        "formula",
+        "neutral_mass",
+        "heavy_atoms",
+        "tier_rows",
+        "tier_window_rows",
+        "in_pool",
+        "in_pool_window",
+        "peak_occurrences",
+        "spectra"
+      ],
+      "rows": 14762
+    },
+    {
+      "file": "fragment_ions_by_energy.csv",
+      "description": "Best-formula ion frequencies by mode/instrument/energy/original-units context, with explicit spectrum denominators.",
+      "bytes": 1741333,
+      "sha256": "f800d13131c55a8db81226be9c7a8323e992130dc93d39659f3f80d20ac25bd4",
+      "columns": [
+        "adduct",
+        "instrument_group",
+        "ce_bin",
+        "original_units",
+        "ion_formula",
+        "observed_spectra",
+        "spectra",
+        "population_weight",
+        "share"
+      ],
+      "rows": 25054
+    },
+    {
+      "file": "fragment_isotope_checks.csv",
+      "description": "Per annotated Cl/Br fragment-ion isotope-companion check in stored arrays, approximate expected ratio and ambiguity flag.",
+      "bytes": 94488,
+      "sha256": "959a909f5944a497c0bd6886e835bfe4d8da597685714d5b0c959147e1bebfd2",
+      "columns": [
+        "spectrum_row",
+        "adduct",
+        "instrument_group",
+        "ion_formula",
+        "n_Cl",
+        "n_Br",
+        "companion_found",
+        "observed_ratio",
+        "halogen_only_predicted_M2_ratio",
+        "ratio_within50pct",
+        "unique_formula"
+      ],
+      "rows": 1437
+    },
+    {
+      "file": "fragment_isotope_summary.csv",
+      "description": "Cl/Br companion presence and approximate ratio agreement by mode/instrument family; absent companions are not rejection evidence.",
+      "bytes": 287,
+      "sha256": "e1886fa297820676613ee1ce17b66fd38c9131682faa4695ee179d73cfca5d66",
+      "columns": [
+        "adduct",
+        "instrument_group",
+        "eligible_ions",
+        "spectra",
+        "companion_found",
+        "companion_share",
+        "ratio_within50pct"
+      ],
+      "rows": 4
+    },
+    {
+      "file": "fragmentation_graph.json",
+      "description": "Every retained example observation, assigned-formula node, compatible neutral-loss edge, ambiguity and seven-node figure selection; no claimed complete causal mechanism.",
+      "bytes": 163448,
+      "sha256": "52bb5641110ee9e35d539117491c823a1b806a76f9497c6e4ffcb9929f8bdfce"
+    },
+    {
+      "file": "frequent_fragment_ions.csv",
+      "description": "Mode-specific fragment formula frequency/mass; ion-family names are explicitly tentative and mode-aware.",
+      "bytes": 2067769,
+      "sha256": "721cfdee3beda9dc873d8def8ab6ecd0d1743aef67a96183689befa8be3f0668",
+      "columns": [
+        "adduct",
+        "ion_formula",
+        "mz",
+        "spectra",
+        "denominator",
+        "share",
+        "population_weighted_share",
+        "tentative_chemistry"
+      ],
+      "rows": 17087
+    },
+    {
+      "file": "frequent_precursor_losses.csv",
+      "description": "Most common best-assigned precursor-minus-product formula differences, counted by peak occurrence.",
+      "bytes": 2609,
+      "sha256": "21dcea8fc99930a10aa1f65029b9a8f3bd182940433400e56a07a0e7a5154c27",
+      "columns": [
+        "loss_formula",
+        "exact_mass",
+        "peak_occurrences"
+      ],
+      "rows": 100
+    },
+    {
+      "file": "graph_candidates.json",
+      "description": "Twelve oxygen-rich complex training structures preselected by structure/source metadata, before peak-coverage graph selection.",
+      "bytes": 1927,
+      "sha256": "367bbbf06c6f7413d35608564fc759a16f5aa7c3828b65648d1c8c52abc591fa"
+    },
+    {
+      "file": "graph_energy_behavior.csv",
+      "description": "Selected example spectra by stored energy: precursor survival, product mass centroid and explanation fractions.",
+      "bytes": 704,
+      "sha256": "f43799e6fcb9932f6e847cba4a7294b470e7f20e4833c2bf6473f94c2692c6af",
+      "columns": [
+        "parent",
+        "formula",
+        "adduct",
+        "instrument",
+        "original_units",
+        "stored_energy",
+        "spectrum_row",
+        "peaks",
+        "explained_peak_share",
+        "explained_intensity",
+        "precursor_relative_intensity",
+        "intensity_weighted_product_mz"
+      ],
+      "rows": 5
+    },
+    {
+      "file": "graph_energy_sampling.json",
+      "description": "Energy-diverse graph supplement: deterministic two-per-context selection, 499 added spectra, unchanged fixed primary population sample.",
+      "bytes": 267,
+      "sha256": "1882e65c3ae0bb4da8d645ab3ce0edad50be5b88a866051d80a172f9c2e7ed7b"
+    },
+    {
+      "file": "loss_events.csv",
+      "description": "Sample-level presence flags for named formula-compatible losses, with mode, instrument and stored energy context.",
+      "bytes": 276332,
+      "sha256": "31d213eb4ceb5a3ba232f1f898392961131dd02a403f3a6cd706f207b49232ea",
+      "columns": [
+        "spectrum_row",
+        "loss",
+        "direct",
+        "product_pair",
+        "adduct",
+        "instrument_group",
+        "ce_bin",
+        "ce_value",
+        "original_units"
+      ],
+      "rows": 5256
+    },
+    {
+      "file": "mass_defect.csv",
+      "description": "Mass-defect quantiles and difference between rounded exact-mass parity and true isotope-mass-number parity.",
+      "bytes": 734,
+      "sha256": "269f2cd0690a36599a12c54a91d77855fe96cafb0dd94b52909ccfe2276dd162",
+      "columns": [
+        "collection",
+        "group",
+        "rows",
+        "rounded_mass_parity_wrong",
+        "share",
+        "mass_defect_p01",
+        "mass_defect_p50",
+        "mass_defect_p99"
+      ],
+      "rows": 6
+    },
+    {
+      "file": "neutral_loss_table_v25.csv",
+      "description": "Numeric companion to the displayed loss table; frequencies from unchanged predecessor measurements.",
+      "bytes": 1552,
+      "sha256": "4584169d14b734c746c8feffe4204ce2a42d28911509a19c810a6172ef4dc3fe"
+    },
+    {
+      "file": "neutral_loss_table_v25.md",
+      "description": "Captioned six-column loss table, mode-specific spectrum fractions, typical chemical sources and neutral electron parity.",
+      "bytes": 1664,
+      "sha256": "a0625939ff0b0c9f7aa9dde799c18ed373f476a41585672a085b800cd5197bc7"
+    },
+    {
+      "file": "neutral_losses.csv",
+      "description": "Named neutral-loss compositions, exact mass, parity, typical chemistry and precursor/product or product/product spectrum frequencies.",
+      "bytes": 7979,
+      "sha256": "c77ef06f3e54deb0e1d9797610c1a3b14fbfe4676ea729aebe03713d65078d21",
+      "columns": [
+        "loss_formula",
+        "name",
+        "exact_mass",
+        "electron_class",
+        "typical_chemistry",
+        "adduct",
+        "spectra",
+        "precursor_loss_spectra",
+        "product_pair_spectra",
+        "either_spectra",
+        "precursor_share",
+        "either_share",
+        "population_weighted_either"
+      ],
+      "rows": 48
+    },
+    {
+      "file": "neutral_losses_by_energy.csv",
+      "description": "Named loss frequencies with explicit primary-sample denominators and weights by ion mode, instrument family, energy bin and original units.",
+      "bytes": 37894,
+      "sha256": "b7b1f57595d0de6c13de97ec7e4caec96cb7d97fece11a0d33d7094b8197ae49",
+      "columns": [
+        "adduct",
+        "instrument_group",
+        "ce_bin",
+        "original_units",
+        "spectra",
+        "population_weight",
+        "loss",
+        "observed_spectra",
+        "direct_spectra",
+        "weighted_hits",
+        "share",
+        "population_weighted_share"
+      ],
+      "rows": 432
+    },
+    {
+      "file": "parent_tier_coverage.json",
+      "description": "Exact tier connectivity membership for the requested 275,810 standardised training structure rows, with 157..1159 Da subset.",
+      "bytes": 222,
+      "sha256": "b15d6b4b8653615490dc937e867dd3e7f2b4a6e9e5eecea72bee915f35159ea4"
+    },
+    {
+      "file": "physical_rules.csv",
+      "description": "Compact rule/formula/check/use/pipeline-status/evidence/scope table.",
+      "bytes": 8482,
+      "sha256": "d37ad50bb60add9d0d7375b0605c12a23e991ea609a04364945d5e7434a57091",
+      "columns": [
+        "rule",
+        "formula",
+        "checks",
+        "application",
+        "public_pipeline",
+        "code_evidence",
+        "measurement_files",
+        "scope_limit"
+      ],
+      "rows": 17
+    },
+    {
+      "file": "physical_rules.json",
+      "description": "JSON copy of the physical-rule table.",
+      "bytes": 11565,
+      "sha256": "6ccc62e3cb47ea7435f4dbccbd5c90f39aed4f587822480886f2a86baa692ea2"
+    },
+    {
+      "file": "rule_method.json",
+      "description": "Measured rule scopes, ratio subset, decoy selection and exact feature settings.",
+      "bytes": 1017,
+      "sha256": "20e9534a0ca7f13cc3510e1b2a324a00cf785312bd7f327c220691b5919ecf99"
+    },
+    {
+      "file": "rule_retention.csv",
+      "description": "Full training/in-range pool pass rates of explicitly scoped nitrogen/DBE/Senior/ratio checks; denominators retained.",
+      "bytes": 1106,
+      "sha256": "9295300e9b59f0f9fcebbbae893ff42edd8e8e0c6c75a579f4e67c52b1b2559e",
+      "columns": [
+        "collection",
+        "rule",
+        "eligible",
+        "pass_count",
+        "pass_share",
+        "total_rows"
+      ],
+      "rows": 16
+    },
+    {
+      "file": "rule_true_decoy_retention.csv",
+      "description": "The same declared rule subsets measured on true and same-mass decoy candidates, with same-formula/different-formula groups.",
+      "bytes": 1635,
+      "sha256": "c1f62808af2620094aa40ae47d069ea5fdd8f0e42ceb58ea91d6cdc334b4a087",
+      "columns": [
+        "candidate_group",
+        "rule",
+        "eligible",
+        "pass_count",
+        "pass_share"
+      ],
+      "rows": 32
+    },
+    {
+      "file": "sampling.json",
+      "description": "Fixed primary spectrum strata, population/sample denominators, deterministic hash seed and initial supplements; extra graph energies are documented separately.",
+      "bytes": 3605,
+      "sha256": "0fc132d4435f0418396834da5aadaf7a50923af5db1b18a47684991acd3f3689"
+    },
+    {
+      "file": "spectrum_summary.csv",
+      "description": "One row per sampled spectrum: role, supported scope, explained-peak/intensity fractions, assignment ambiguity, strict-tolerance sensitivity and primary-sample weight.",
+      "bytes": 695856,
+      "sha256": "ae61b574a39ef6b5fec824400a4865f7ab272f7b321f68ee1130f62459187c1b",
+      "columns": [
+        "spectrum_row",
+        "parent",
+        "structure_ik14",
+        "role",
+        "stratum",
+        "adduct",
+        "instrument_group",
+        "ce_value",
+        "ce_bin",
+        "original_units",
+        "parent_in_tier",
+        "status",
+        "n_peaks",
+        "explained_peaks",
+        "explained_peak_share",
+        "explained_intensity_share",
+        "unambiguous_peak_share",
+        "strict5ppm_explained_intensity",
+        "precursor_ppm",
+        "weight",
+        "discarded_top300"
+      ],
+      "rows": 3442
+    },
+    {
+      "file": "structural_fragment_matches.csv",
+      "description": "Unique H-capped neutral fragment connectivity per sampled parent, minimal cut depth, matched-peak count, size and exact tier membership.",
+      "bytes": 724588,
+      "sha256": "de0c0947358897bd3135323722c0d1932babdde17167ac0595985f49093c13e1",
+      "columns": [
+        "parent",
+        "parent_in_tier",
+        "fragment_key",
+        "fragment_smiles",
+        "fragment_formula",
+        "mass",
+        "mass_bin",
+        "heavy_atoms",
+        "size_bin",
+        "depth",
+        "in_tier",
+        "matched_peaks"
+      ],
+      "rows": 6383
+    },
+    {
+      "file": "structural_parent_summary.csv",
+      "description": "Every parent attempted in the bounded structural experiment, inclusion status, peak/intensity match fractions and exceptions.",
+      "bytes": 36152,
+      "sha256": "fdac0453c9f7e477357506ab8bbe1e1adae4d5fa7bae5ccd659eebebe00715d7",
+      "columns": [
+        "parent",
+        "parent_in_tier",
+        "mass",
+        "spectrum_row",
+        "valid",
+        "status",
+        "matched_peaks",
+        "n_peaks",
+        "structural_intensity_share"
+      ],
+      "rows": 211
+    },
+    {
+      "file": "structure_coverage.csv",
+      "description": "Capped neutral fragment/parent-pair catalogue coverage by parent membership and mass/atom-count bin; not a unique-ion structure identification rate.",
+      "bytes": 1513,
+      "sha256": "4605097212a45fff933ea3ae6a12c59adc0d3eff585affd5c1c3745e059aeb01",
+      "columns": [
+        "parent_catalogue",
+        "axis",
+        "bin",
+        "parents",
+        "fragment_parent_pairs",
+        "unique_fragment_keys",
+        "catalogued",
+        "catalogued_share"
+      ],
+      "rows": 27
+    },
+    {
+      "file": "structure_properties.csv",
+      "description": "Formal charge, charged atom counts, isotopic labels, disconnected components and radical-electron counts for training/pool cohorts.",
+      "bytes": 3339,
+      "sha256": "9273676235b07884d783bf66439831a461fd27d602d683e7cd0d895d620da661",
+      "columns": [
+        "collection",
+        "property",
+        "value",
+        "structures",
+        "denominator"
+      ],
+      "rows": 80
+    },
+    {
+      "file": "tier_census.json",
+      "description": "Final full-RDKit tier row counts, parse failures, exact source mass limits and number of distinct formulas.",
+      "bytes": 428,
+      "sha256": "78edb44b1931e4980add31024ff5278287b01aa5a8c98221f853af1519a088dc"
+    },
+    {
+      "file": "tier_element_count_distribution.csv",
+      "description": "Exact per-element atom-count distributions of valid in-range tier rows, including zeros.",
+      "bytes": 15789,
+      "sha256": "de05378ec050279aa9e2147ec23c4a2675f386e961125fabdcb95509edfd89d9",
+      "columns": [
+        "collection",
+        "element",
+        "count",
+        "structures"
+      ],
+      "rows": 557
+    },
+    {
+      "file": "tier_element_groups.csv",
+      "description": "Element-group prevalence and mass ranges in the valid in-range frozen tier.",
+      "bytes": 499,
+      "sha256": "d397e44a816abc4da25e0c4cc0e491a10eba08b007e85969c15a4d13724c7f82",
+      "columns": [
+        "collection",
+        "group",
+        "structures",
+        "denominator",
+        "share",
+        "min_mass",
+        "max_mass"
+      ],
+      "rows": 6
+    },
+    {
+      "file": "tier_elements.csv",
+      "description": "Final full-RDKit PubChem-tier element census restricted to 157..1159 Da; excluded invalid parses reported separately.",
+      "bytes": 1624,
+      "sha256": "ca42830e481fd04bf1a693eca6473489de21148e9603fadb64d308b800bee717",
+      "columns": [
+        "collection",
+        "element",
+        "atomic_number",
+        "structures",
+        "denominator",
+        "share",
+        "mean_count",
+        "max_count",
+        "median_if_present",
+        "p99_if_present",
+        "min_mass",
+        "max_mass"
+      ],
+      "rows": 17
+    },
+    {
+      "file": "tier_structure_properties.csv",
+      "description": "Formal charge, isotope-label flag and disconnected-component flag for valid in-range tier rows.",
+      "bytes": 213,
+      "sha256": "c44bee463ae6b8ac0d25f62c920f2c0d5dd11e935eaeb21ff3ab9cc49c0ba7e5",
+      "columns": [
+        "collection",
+        "property",
+        "value",
+        "structures",
+        "denominator"
+      ],
+      "rows": 3
+    },
+    {
+      "file": "true_decoy_rows.csv",
+      "description": "Known true candidates and up to eight distinct scorer-identity mass-window pool decoys for 192 fixed parents; formula/structural features and rule results.",
+      "bytes": 277969,
+      "sha256": "0ff37c8799b40aa30a22e26ae9673432fc4e5b55af83bc3fdca02c1c4e18b7b9",
+      "columns": [
+        "spectrum_row",
+        "parent",
+        "candidate_key",
+        "true",
+        "same_formula",
+        "candidate_formula",
+        "candidate_mass",
+        "mass_ppm",
+        "subformula_intensity",
+        "structural_intensity",
+        "nitrogen_nominal",
+        "rdbe_low_valence",
+        "senior_lewis_variable_PS",
+        "senior_lewis_low_valence",
+        "golden_HC_common",
+        "golden_HC_extended",
+        "golden_ratios_common",
+        "golden_ratios_extended"
+      ],
+      "rows": 1642
+    },
+    {
+      "file": "true_decoy_summary.csv",
+      "description": "Paired true/decoy feature means, win/tie fractions and pairwise AUC; includes same-formula diagnostic and is not a ranker MRR result.",
+      "bytes": 842,
+      "sha256": "df59815e81e3d811e2024116ec45049cb051a8af77d386281fc85457fff3743e",
+      "columns": [
+        "feature",
+        "decoys",
+        "pairs",
+        "parents",
+        "true_mean",
+        "decoy_mean",
+        "true_wins",
+        "ties",
+        "pairwise_auc"
+      ],
+      "rows": 6
+    },
+    {
+      "file": "unusual_training_structures.csv",
+      "description": "Training examples without carbon or containing B/Si/As/Se/Sn, with structure/formula/mass and exact lookup key.",
+      "bytes": 14953,
+      "sha256": "8c3d0320604cf512dcc2a9edc00224ff1d02436bd917c338b210b44f221bc2f3",
+      "columns": [
+        "row",
+        "inchikey14",
+        "key",
+        "smiles",
+        "formula",
+        "mass",
+        "charge",
+        "isotope_atoms",
+        "elements"
+      ],
+      "rows": 88
+    }
+  ],
+  "units": "Masses and mass differences in Da; fragment m/z for singly charged ions; ppm explicitly named; shares in 0..1; stored collision energies with original unit context retained.",
+  "scope": "Public training-derived small measurements and frozen public structure resources. No test predictions, hidden labels, model fitting or publication. Training-derived artifacts retain competition terms; source-specific licences and attribution still apply.",
+  "methods": "Final tier census is full RDKit, independently checked against frozen formula-frequency counts; physical-ratio subset and custom bond cuts are labelled.",
+  "plot_style": "Requested dark-green palette adapted from dscards/lab/base_figures.py; deterministic PIL/RDKit drawing. All plotted values are supplied in the small tables/graph JSON.",
+  "v25_note": "Overlay onto existing spectra_chemistry. Existing measurements and full graph remain unchanged. New notebook uses the display assets named v25 and restyled census/coverage figures."
+}

@@ -1,0 +1,44 @@
+{
+  "sample_total": 3442,
+  "primary_spectra": 2123,
+  "supported_primary": 2068,
+  "status_counts": {
+    "ok": 2119,
+    "unsupported_precursor": 4
+  },
+  "eligible_population": 1742223,
+  "annotation": {
+    "group": "all supported primary",
+    "spectra": 2068,
+    "retained_peaks": 49932,
+    "matched_peaks": 38314,
+    "micro_peak_share": 0.7673235600416567,
+    "mean_intensity_share": 0.8596080493882455,
+    "population_weighted_intensity": 0.8902189867394225,
+    "population_weighted_peak_share": 0.8044234160169164,
+    "micro_intensity_share": 0.8485740507317845,
+    "unique_formula_peak_share": 0.4975967315549147,
+    "unique_formula_share_of_matches": 0.648483583024482,
+    "precursor_within10ppm": 0.9540618955512572
+  },
+  "radical_proxy": {
+    "adduct": "all",
+    "instrument_group": "all",
+    "ce_bin": "all",
+    "original_units": "all",
+    "spectra": 2068,
+    "assigned_peaks": 38314,
+    "parity_unambiguous_peaks": 38314,
+    "odd_loss_peaks": 9807,
+    "odd_share_among_unambiguous": 0.2559638774338362,
+    "odd_intensity_share": 0.19405784802795525,
+    "parity_ambiguous_peaks": 0,
+    "best_formula_odd_share": 0.2559638774338362
+  },
+  "formula_occurrences": 38147,
+  "distinct_fragment_neutral_formulas": 14762,
+  "structural_parents": 211,
+  "structural_valid_parents": 203,
+  "structural_fragment_parent_pairs": 6383,
+  "interpretation": "Subformula and capped-neutral catalogue matches establish compatibility and exact frozen-catalogue existence only. They do not establish ion connectivity, stability or a complete mechanism."
+}

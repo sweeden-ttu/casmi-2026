@@ -1,0 +1,37 @@
+[
+  {
+    "method": "MetFrag",
+    "url": "https://doi.org/10.1186/s13321-016-0115-9",
+    "use": "Conceptual bond-cleavage and peak-explanation inspiration; not an execution of MetFrag."
+  },
+  {
+    "method": "MAGMa",
+    "url": "https://doi.org/10.1002/rcm.6364",
+    "use": "Substructure-based multistage spectral annotation inspiration; bounded custom bond cuts used here."
+  },
+  {
+    "method": "SIRIUS 4",
+    "url": "https://doi.org/10.1038/s41592-019-0344-8",
+    "use": "Formula/fragmentation-tree inference concept; SIRIUS not run."
+  },
+  {
+    "method": "Seven Golden Rules",
+    "url": "https://doi.org/10.1186/1471-2105-8-105",
+    "use": "Kind and Fiehn 2007 ratio ranges and valence-rule context; only declared subsets evaluated."
+  },
+  {
+    "method": "ICEBERG",
+    "url": "https://doi.org/10.1021/acs.analchem.3c04654",
+    "use": "Learned fragmentation-graph method already in the public pipeline; no model run for this section."
+  },
+  {
+    "method": "Competition data",
+    "url": "https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra/data",
+    "use": "Training data and competition terms. Hidden-test range 157..1159 Da supplied by owner task; page text was not independently retrievable."
+  },
+  {
+    "method": "Public engine fragment score",
+    "url": "https://www.kaggle.com/code/ahmedberatozer/casmi26-v7c-e006-fraggap",
+    "use": "v20 cell 50 embedded frag_rescore.py; attributed to Huseyin Emre Aksoy, Apache-2.0; source citation retained in extracted script."
+  }
+]

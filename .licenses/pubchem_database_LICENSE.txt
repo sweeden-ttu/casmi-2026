@@ -1,0 +1,4 @@
+Timestamp: 2026-11-17T11:42:00-06:00
+User notified of terms of use:
+- PubChem Citation Guidelines: https://pubchem.ncbi.nlm.nih.gov/docs/citation-guidelines
+- PubChem PUG-REST Terms: https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest

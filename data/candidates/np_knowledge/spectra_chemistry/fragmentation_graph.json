@@ -1,0 +1,5892 @@
+{
+  "parent_key": "TZJALUIVHRYQQB",
+  "parent_formula": "C33H40O15",
+  "parent_smiles": "COc1ccc(-c2oc3c(CC=C(C)C)c(OC4OC(CO)C(O)C(O)C4O)cc(O)c3c(=O)c2OC2OC(C)C(O)C(O)C2O)cc1",
+  "adduct": "[M+H]+",
+  "instrument_group": "other",
+  "instrument_type": "Orbitrap",
+  "original_energy_units": "NCE",
+  "stored_energies": [
+    13.5,
+    20.3,
+    42.9,
+    54.2,
+    108.4
+  ],
+  "spectrum_rows": [
+    2405748,
+    2010765,
+    2010763,
+    2405729,
+    2405736
+  ],
+  "nodes": [
+    {
+      "id": "precursor",
+      "formula": "C33H41O15",
+      "counts": [
+        33,
+        41,
+        0,
+        15,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 677.243997032091,
+      "precursor": true,
+      "smiles": "COc1ccc(-c2oc3c(CC=C(C)C)c(OC4OC(CO)C(O)C(O)C4O)cc(O)c3c(=O)c2OC2OC(C)C(O)C(O)C2O)cc1",
+      "assignment": "known precursor structure",
+      "intensities": {
+        "13.5": 0.0,
+        "20.3": 0.0,
+        "42.9": 0.0,
+        "54.2": 0.0,
+        "108.4": 0.0
+      }
+    },
+    {
+      "id": "C22H38O",
+      "formula": "C22H38O",
+      "counts": [
+        22,
+        38,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 318.29171725609086,
+      "precursor": false,
+      "intensities": {
+        "13.5": 0.01
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405748,
+          "mz": 318.292,
+          "intensity": 0.01,
+          "mass_error_ppm": -0.8883161031714585,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C22H38O",
+          "formula_alternatives": [
+            {
+              "formula": "C22H38O",
+              "counts": [
+                22,
+                38,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": -0.00028274390911064984,
+              "capped_keys": 0
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 0,
+      "assignment": "formula only; no enumerated closed-shell cap"
+    },
+    {
+      "id": "C21H21O6",
+      "formula": "C21H21O6",
+      "counts": [
+        21,
+        21,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 369.13326481209094,
+      "precursor": false,
+      "intensities": {
+        "13.5": 0.031,
+        "20.3": 1.0,
+        "42.9": 0.44945,
+        "54.2": 1.0
+      },
+      "max_formula_candidates": 2,
+      "observations": [
+        {
+          "spectrum_row": 2405748,
+          "mz": 369.13,
+          "intensity": 0.031,
+          "mass_error_ppm": 8.844613255195311,
+          "formula_candidates": 2,
+          "closest_mass_formula": "C28H17O",
+          "formula_alternatives": [
+            {
+              "formula": "C28H17O",
+              "counts": [
+                28,
+                17,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": -0.0026084159090942194,
+              "capped_keys": 0
+            },
+            {
+              "formula": "C21H21O6",
+              "counts": [
+                21,
+                21,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0032648120908902456,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2010765,
+          "mz": 369.1331,
+          "intensity": 1.0,
+          "mass_error_ppm": 0.4464841838150017,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C21H21O6",
+          "formula_alternatives": [
+            {
+              "formula": "C21H21O6",
+              "counts": [
+                21,
+                21,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0001648120908726014,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2010763,
+          "mz": 369.1331,
+          "intensity": 0.44945,
+          "mass_error_ppm": 0.4464841838150017,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C21H21O6",
+          "formula_alternatives": [
+            {
+              "formula": "C21H21O6",
+              "counts": [
+                21,
+                21,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0001648120908726014,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2405729,
+          "mz": 369.13,
+          "intensity": 1.0,
+          "mass_error_ppm": 8.844613255195311,
+          "formula_candidates": 2,
+          "closest_mass_formula": "C28H17O",
+          "formula_alternatives": [
+            {
+              "formula": "C28H17O",
+              "counts": [
+                28,
+                17,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": -0.0026084159090942194,
+              "capped_keys": 0
+            },
+            {
+              "formula": "C21H21O6",
+              "counts": [
+                21,
+                21,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0032648120908902456,
+              "capped_keys": 1
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 1,
+      "capped_neutral_smiles": "COc1ccc(-c2oc3c(CC=C(C)C)c(O)cc(O)c3c(=O)c2O)cc1",
+      "capped_neutral_ik14": "TUUXBSASAQJECY",
+      "assignment": "unique H-capped analogue among enumerated cuts; ion connectivity unproven"
+    },
+    {
+      "id": "C21H28O7",
+      "formula": "C21H28O7",
+      "counts": [
+        21,
+        28,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 392.1829546560909,
+      "precursor": false,
+      "intensities": {
+        "13.5": 0.013
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405748,
+          "mz": 392.184,
+          "intensity": 0.013,
+          "mass_error_ppm": -2.6654425196863807,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C21H28O7",
+          "formula_alternatives": [
+            {
+              "formula": "C21H28O7",
+              "counts": [
+                21,
+                28,
+                0,
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": -0.0010453439091406835,
+              "capped_keys": 0
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 0,
+      "assignment": "formula only; no enumerated closed-shell cap"
+    },
+    {
+      "id": "C26H24O9",
+      "formula": "C26H24O9",
+      "counts": [
+        26,
+        24,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 480.1414837680909,
+      "precursor": false,
+      "intensities": {
+        "13.5": 0.011
+      },
+      "max_formula_candidates": 2,
+      "observations": [
+        {
+          "spectrum_row": 2405748,
+          "mz": 480.139,
+          "intensity": 0.011,
+          "mass_error_ppm": 5.173018835968609,
+          "formula_candidates": 2,
+          "closest_mass_formula": "C26H24O9",
+          "formula_alternatives": [
+            {
+              "formula": "C33H20O4",
+              "counts": [
+                33,
+                20,
+                0,
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": -0.0033894599091013333,
+              "capped_keys": 0
+            },
+            {
+              "formula": "C26H24O9",
+              "counts": [
+                26,
+                24,
+                0,
+                9,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0024837680908831317,
+              "capped_keys": 31
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 31,
+      "assignment": "ambiguous structure"
+    },
+    {
+      "id": "C27H31O11",
+      "formula": "C27H31O11",
+      "counts": [
+        27,
+        31,
+        0,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 531.1860882320909,
+      "precursor": false,
+      "intensities": {
+        "13.5": 0.571,
+        "20.3": 0.6088,
+        "42.9": 0.14359
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405748,
+          "mz": 531.184,
+          "intensity": 0.571,
+          "mass_error_ppm": 3.9312782217743556,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C27H31O11",
+          "formula_alternatives": [
+            {
+              "formula": "C27H31O11",
+              "counts": [
+                27,
+                31,
+                0,
+                11,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.002088232090954989,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2010765,
+          "mz": 531.1852,
+          "intensity": 0.6088,
+          "mass_error_ppm": 1.6721702542072954,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C27H31O11",
+          "formula_alternatives": [
+            {
+              "formula": "C27H31O11",
+              "counts": [
+                27,
+                31,
+                0,
+                11,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0008882320909151531,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2010763,
+          "mz": 531.1853,
+          "intensity": 0.14359,
+          "mass_error_ppm": 1.4839117177004997,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C27H31O11",
+          "formula_alternatives": [
+            {
+              "formula": "C27H31O11",
+              "counts": [
+                27,
+                31,
+                0,
+                11,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0007882320909402551,
+              "capped_keys": 1
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 1,
+      "capped_neutral_smiles": "COc1ccc(-c2oc3c(CC=C(C)C)c(OC4OC(CO)C(O)C(O)C4O)cc(O)c3c(=O)c2O)cc1",
+      "capped_neutral_ik14": "IYCPMVXIUPYNHI",
+      "assignment": "unique H-capped analogue among enumerated cuts; ion connectivity unproven"
+    },
+    {
+      "id": "C4H7O",
+      "formula": "C4H7O",
+      "counts": [
+        4,
+        7,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 71.04914126409093,
+      "precursor": false,
+      "intensities": {
+        "20.3": 0.44509,
+        "42.9": 0.30811,
+        "54.2": 0.011
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2010765,
+          "mz": 71.0487,
+          "intensity": 0.44509,
+          "mass_error_ppm": 6.210727162325568,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C4H7O",
+          "formula_alternatives": [
+            {
+              "formula": "C4H7O",
+              "counts": [
+                4,
+                7,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.00044126409093792063,
+              "capped_keys": 5
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2010763,
+          "mz": 71.0487,
+          "intensity": 0.30811,
+          "mass_error_ppm": 6.210727162325568,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C4H7O",
+          "formula_alternatives": [
+            {
+              "formula": "C4H7O",
+              "counts": [
+                4,
+                7,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.00044126409093792063,
+              "capped_keys": 5
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2405729,
+          "mz": 71.049,
+          "intensity": 0.011,
+          "mass_error_ppm": 1.9882629020529725,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C4H7O",
+          "formula_alternatives": [
+            {
+              "formula": "C4H7O",
+              "counts": [
+                4,
+                7,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.00014126409092796166,
+              "capped_keys": 5
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 5,
+      "assignment": "ambiguous structure"
+    },
+    {
+      "id": "C4H5O2",
+      "formula": "C4H5O2",
+      "counts": [
+        4,
+        5,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 85.02840582009094,
+      "precursor": false,
+      "intensities": {
+        "20.3": 0.8530800000000001,
+        "42.9": 0.28141,
+        "54.2": 0.059
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2010765,
+          "mz": 85.0279,
+          "intensity": 0.8530800000000001,
+          "mass_error_ppm": 5.948871969506793,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C4H5O2",
+          "formula_alternatives": [
+            {
+              "formula": "C4H5O2",
+              "counts": [
+                4,
+                5,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0005058200909360266,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2010763,
+          "mz": 85.028,
+          "intensity": 0.28141,
+          "mass_error_ppm": 4.772781800497565,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C4H5O2",
+          "formula_alternatives": [
+            {
+              "formula": "C4H5O2",
+              "counts": [
+                4,
+                5,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.000405820090932707,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2405729,
+          "mz": 85.028,
+          "intensity": 0.059,
+          "mass_error_ppm": 4.772781800497565,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C4H5O2",
+          "formula_alternatives": [
+            {
+              "formula": "C4H5O2",
+              "counts": [
+                4,
+                5,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.000405820090932707,
+              "capped_keys": 1
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 1,
+      "capped_neutral_smiles": "CC(O)=CC=O",
+      "capped_neutral_ik14": "MRAJDYPEXQBSLZ",
+      "assignment": "unique H-capped analogue among enumerated cuts; ion connectivity unproven"
+    },
+    {
+      "id": "C6H9O3",
+      "formula": "C6H9O3",
+      "counts": [
+        6,
+        9,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 129.05462056809094,
+      "precursor": false,
+      "intensities": {
+        "20.3": 0.57459,
+        "42.9": 0.13553
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2010765,
+          "mz": 129.0541,
+          "intensity": 0.57459,
+          "mass_error_ppm": 4.033719896804117,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C6H9O3",
+          "formula_alternatives": [
+            {
+              "formula": "C6H9O3",
+              "counts": [
+                6,
+                9,
+                0,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0005205680909341481,
+              "capped_keys": 9
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2010763,
+          "mz": 129.0541,
+          "intensity": 0.13553,
+          "mass_error_ppm": 4.033719896804117,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C6H9O3",
+          "formula_alternatives": [
+            {
+              "formula": "C6H9O3",
+              "counts": [
+                6,
+                9,
+                0,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0005205680909341481,
+              "capped_keys": 9
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 9,
+      "assignment": "ambiguous structure"
+    },
+    {
+      "id": "C6H11O4",
+      "formula": "C6H11O4",
+      "counts": [
+        6,
+        11,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 147.0651852520909,
+      "precursor": false,
+      "intensities": {
+        "20.3": 0.11709,
+        "42.9": 0.02762
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2010765,
+          "mz": 147.0647,
+          "intensity": 0.11709,
+          "mass_error_ppm": 3.2995823671740134,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C6H11O4",
+          "formula_alternatives": [
+            {
+              "formula": "C6H11O4",
+              "counts": [
+                6,
+                11,
+                0,
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0004852520909537361,
+              "capped_keys": 12
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2010763,
+          "mz": 147.0647,
+          "intensity": 0.02762,
+          "mass_error_ppm": 3.2995823671740134,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C6H11O4",
+          "formula_alternatives": [
+            {
+              "formula": "C6H11O4",
+              "counts": [
+                6,
+                11,
+                0,
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0004852520909537361,
+              "capped_keys": 12
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 12,
+      "assignment": "ambiguous structure"
+    },
+    {
+      "id": "C17H13O6",
+      "formula": "C17H13O6",
+      "counts": [
+        17,
+        13,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 313.0706645560909,
+      "precursor": false,
+      "intensities": {
+        "20.3": 0.13427,
+        "42.9": 1.0,
+        "54.2": 0.604,
+        "108.4": 1.0
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2010765,
+          "mz": 313.0702,
+          "intensity": 0.13427,
+          "mass_error_ppm": 1.4838719587166092,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C17H13O6",
+          "formula_alternatives": [
+            {
+              "formula": "C17H13O6",
+              "counts": [
+                17,
+                13,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.00046455609088980054,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2010763,
+          "mz": 313.071,
+          "intensity": 1.0,
+          "mass_error_ppm": -1.0714627325327375,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C17H13O6",
+          "formula_alternatives": [
+            {
+              "formula": "C17H13O6",
+              "counts": [
+                17,
+                13,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": -0.0003354439091367567,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2405729,
+          "mz": 313.068,
+          "intensity": 0.604,
+          "mass_error_ppm": 8.511109697912241,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C17H13O6",
+          "formula_alternatives": [
+            {
+              "formula": "C17H13O6",
+              "counts": [
+                17,
+                13,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0026645560909059895,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2405736,
+          "mz": 313.068,
+          "intensity": 1.0,
+          "mass_error_ppm": 8.511109697912241,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C17H13O6",
+          "formula_alternatives": [
+            {
+              "formula": "C17H13O6",
+              "counts": [
+                17,
+                13,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0026645560909059895,
+              "capped_keys": 1
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 1,
+      "capped_neutral_smiles": "COc1ccc(-c2oc3c(C)c(O)cc(O)c3c(=O)c2O)cc1",
+      "capped_neutral_ik14": "OUEWLMIZHXRVEX",
+      "assignment": "unique H-capped analogue among enumerated cuts; ion connectivity unproven"
+    },
+    {
+      "id": "C3H5O",
+      "formula": "C3H5O",
+      "counts": [
+        3,
+        5,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 57.033491200090936,
+      "precursor": false,
+      "intensities": {
+        "42.9": 0.06863000000000001
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2010763,
+          "mz": 57.0332,
+          "intensity": 0.06863000000000001,
+          "mass_error_ppm": 5.10579962083052,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C3H5O",
+          "formula_alternatives": [
+            {
+              "formula": "C3H5O",
+              "counts": [
+                3,
+                5,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0002912000909347512,
+              "capped_keys": 7
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 7,
+      "assignment": "ambiguous structure"
+    },
+    {
+      "id": "C8H7O2",
+      "formula": "C8H7O2",
+      "counts": [
+        8,
+        7,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 135.04405588409094,
+      "precursor": false,
+      "intensities": {
+        "42.9": 0.04133,
+        "108.4": 0.893
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2010763,
+          "mz": 135.0438,
+          "intensity": 0.04133,
+          "mass_error_ppm": 1.8948229458370016,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C8H7O2",
+          "formula_alternatives": [
+            {
+              "formula": "C8H7O2",
+              "counts": [
+                8,
+                7,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0002558840909330229,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2405736,
+          "mz": 135.043,
+          "intensity": 0.893,
+          "mass_error_ppm": 7.818873180625123,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C8H7O2",
+          "formula_alternatives": [
+            {
+              "formula": "C8H7O2",
+              "counts": [
+                8,
+                7,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0010558840909311584,
+              "capped_keys": 1
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 1,
+      "capped_neutral_smiles": "COc1ccc(CO)cc1",
+      "capped_neutral_ik14": "MSHFRERJPWKJFX",
+      "assignment": "unique H-capped analogue among enumerated cuts; ion connectivity unproven"
+    },
+    {
+      "id": "C12H11O2",
+      "formula": "C12H11O2",
+      "counts": [
+        12,
+        11,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 187.07535601209094,
+      "precursor": false,
+      "intensities": {
+        "42.9": 0.02461,
+        "108.4": 0.454
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2010763,
+          "mz": 187.0754,
+          "intensity": 0.02461,
+          "mass_error_ppm": -0.23513465194432465,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C12H11O2",
+          "formula_alternatives": [
+            {
+              "formula": "C12H11O2",
+              "counts": [
+                12,
+                11,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": -4.398790906634531e-05,
+              "capped_keys": 1
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2405736,
+          "mz": 187.074,
+          "intensity": 0.454,
+          "mass_error_ppm": 7.248533152246097,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C12H11O2",
+          "formula_alternatives": [
+            {
+              "formula": "C12H11O2",
+              "counts": [
+                12,
+                11,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0013560120909232865,
+              "capped_keys": 1
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 1,
+      "capped_neutral_smiles": "CC(C)=CCc1ccc(O)c(C=O)c1",
+      "capped_neutral_ik14": "LODIAKAYUBOALZ",
+      "assignment": "unique H-capped analogue among enumerated cuts; ion connectivity unproven"
+    },
+    {
+      "id": "C16H13",
+      "formula": "C16H13",
+      "counts": [
+        16,
+        13,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 205.10117683609093,
+      "precursor": false,
+      "intensities": {
+        "54.2": 0.02,
+        "108.4": 0.458
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405729,
+          "mz": 205.1,
+          "intensity": 0.02,
+          "mass_error_ppm": 5.737864899728572,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C16H13",
+          "formula_alternatives": [
+            {
+              "formula": "C16H13",
+              "counts": [
+                16,
+                13,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.00117683609093433,
+              "capped_keys": 0
+            }
+          ]
+        },
+        {
+          "spectrum_row": 2405736,
+          "mz": 205.1,
+          "intensity": 0.458,
+          "mass_error_ppm": 5.737864899728572,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C16H13",
+          "formula_alternatives": [
+            {
+              "formula": "C16H13",
+              "counts": [
+                16,
+                13,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.00117683609093433,
+              "capped_keys": 0
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 0,
+      "assignment": "formula only; no enumerated closed-shell cap"
+    },
+    {
+      "id": "C17H15O2",
+      "formula": "C17H15O2",
+      "counts": [
+        17,
+        15,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 251.10665614009093,
+      "precursor": false,
+      "intensities": {
+        "54.2": 0.021
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405729,
+          "mz": 251.105,
+          "intensity": 0.021,
+          "mass_error_ppm": 6.595408657509155,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C17H15O2",
+          "formula_alternatives": [
+            {
+              "formula": "C17H15O2",
+              "counts": [
+                17,
+                15,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0016561400909438362,
+              "capped_keys": 0
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 0,
+      "assignment": "formula only; no enumerated closed-shell cap"
+    },
+    {
+      "id": "C13H22O5",
+      "formula": "C13H22O5",
+      "counts": [
+        13,
+        22,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 258.1461752240909,
+      "precursor": false,
+      "intensities": {
+        "54.2": 0.212
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405729,
+          "mz": 258.147,
+          "intensity": 0.212,
+          "mass_error_ppm": -3.194985450573205,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C13H22O5",
+          "formula_alternatives": [
+            {
+              "formula": "C13H22O5",
+              "counts": [
+                13,
+                22,
+                0,
+                5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": -0.0008247759091091211,
+              "capped_keys": 4
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 4,
+      "assignment": "ambiguous structure"
+    },
+    {
+      "id": "C16H13O6",
+      "formula": "C16H13O6",
+      "counts": [
+        16,
+        13,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 301.0706645560909,
+      "precursor": false,
+      "intensities": {
+        "54.2": 0.014
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405729,
+          "mz": 301.068,
+          "intensity": 0.014,
+          "mass_error_ppm": 8.850346403158056,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C16H13O6",
+          "formula_alternatives": [
+            {
+              "formula": "C16H13O6",
+              "counts": [
+                16,
+                13,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0026645560909059895,
+              "capped_keys": 0
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 0,
+      "assignment": "formula only; no enumerated closed-shell cap"
+    },
+    {
+      "id": "C23H30O7",
+      "formula": "C23H30O7",
+      "counts": [
+        23,
+        30,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 418.1986047200909,
+      "precursor": false,
+      "intensities": {
+        "54.2": 0.012
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405729,
+          "mz": 418.199,
+          "intensity": 0.012,
+          "mass_error_ppm": -0.945195730090271,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C23H30O7",
+          "formula_alternatives": [
+            {
+              "formula": "C23H30O7",
+              "counts": [
+                23,
+                30,
+                0,
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": -0.00039527990912802125,
+              "capped_keys": 0
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 0,
+      "assignment": "formula only; no enumerated closed-shell cap"
+    },
+    {
+      "id": "C23H32O7",
+      "formula": "C23H32O7",
+      "counts": [
+        23,
+        32,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 420.2142547840909,
+      "precursor": false,
+      "intensities": {
+        "54.2": 0.093
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405729,
+          "mz": 420.214,
+          "intensity": 0.093,
+          "mass_error_ppm": 0.6063198534190699,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C23H32O7",
+          "formula_alternatives": [
+            {
+              "formula": "C23H32O7",
+              "counts": [
+                23,
+                32,
+                0,
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.00025478409088464105,
+              "capped_keys": 0
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 0,
+      "assignment": "formula only; no enumerated closed-shell cap"
+    },
+    {
+      "id": "C31H38O9",
+      "formula": "C31H38O9",
+      "counts": [
+        31,
+        38,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 554.2510342160909,
+      "precursor": false,
+      "intensities": {
+        "54.2": 0.205
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405729,
+          "mz": 554.25,
+          "intensity": 0.205,
+          "mass_error_ppm": 1.8659740026037321,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C31H38O9",
+          "formula_alternatives": [
+            {
+              "formula": "C31H38O9",
+              "counts": [
+                31,
+                38,
+                0,
+                9,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0010342160909431186,
+              "capped_keys": 0
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 0,
+      "assignment": "formula only; no enumerated closed-shell cap"
+    },
+    {
+      "id": "C7H7",
+      "formula": "C7H7",
+      "counts": [
+        7,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 91.05422664409093,
+      "precursor": false,
+      "intensities": {
+        "108.4": 0.187
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405736,
+          "mz": 91.053,
+          "intensity": 0.187,
+          "mass_error_ppm": 13.471759205455225,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C7H7",
+          "formula_alternatives": [
+            {
+              "formula": "C7H7",
+              "counts": [
+                7,
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0012266440909343146,
+              "capped_keys": 1
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 1,
+      "capped_neutral_smiles": "Cc1ccccc1",
+      "capped_neutral_ik14": "YXFVVABEGXRONW",
+      "assignment": "unique H-capped analogue among enumerated cuts; ion connectivity unproven"
+    },
+    {
+      "id": "C7H9",
+      "formula": "C7H9",
+      "counts": [
+        7,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 93.06987670809093,
+      "precursor": false,
+      "intensities": {
+        "108.4": 0.103
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405736,
+          "mz": 93.069,
+          "intensity": 0.103,
+          "mass_error_ppm": 9.419979702457223,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C7H9",
+          "formula_alternatives": [
+            {
+              "formula": "C7H9",
+              "counts": [
+                7,
+                9,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0008767080909279912,
+              "capped_keys": 2
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 2,
+      "assignment": "ambiguous structure"
+    },
+    {
+      "id": "C6H7O",
+      "formula": "C6H7O",
+      "counts": [
+        6,
+        7,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 95.04914126409093,
+      "precursor": false,
+      "intensities": {
+        "108.4": 0.149
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405736,
+          "mz": 95.048,
+          "intensity": 0.149,
+          "mass_error_ppm": 12.007239404645405,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C6H7O",
+          "formula_alternatives": [
+            {
+              "formula": "C6H7O",
+              "counts": [
+                6,
+                7,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0011412640909327365,
+              "capped_keys": 6
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 6,
+      "assignment": "ambiguous structure"
+    },
+    {
+      "id": "C6H3O2",
+      "formula": "C6H3O2",
+      "counts": [
+        6,
+        3,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 107.01275575609094,
+      "precursor": false,
+      "intensities": {
+        "108.4": 0.059
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405736,
+          "mz": 107.012,
+          "intensity": 0.059,
+          "mass_error_ppm": 7.062348997673442,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C6H3O2",
+          "formula_alternatives": [
+            {
+              "formula": "C6H3O2",
+              "counts": [
+                6,
+                3,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0007557560909390304,
+              "capped_keys": 0
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 0,
+      "assignment": "formula only; no enumerated closed-shell cap"
+    },
+    {
+      "id": "C11H11O",
+      "formula": "C11H11O",
+      "counts": [
+        11,
+        11,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 159.08044139209093,
+      "precursor": false,
+      "intensities": {
+        "108.4": 0.032
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405736,
+          "mz": 159.079,
+          "intensity": 0.032,
+          "mass_error_ppm": 9.060857127118378,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C11H11O",
+          "formula_alternatives": [
+            {
+              "formula": "C11H11O",
+              "counts": [
+                11,
+                11,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0014413920909248645,
+              "capped_keys": 1
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 1,
+      "capped_neutral_smiles": "CC(C)=CCc1ccc(O)cc1",
+      "capped_neutral_ik14": "CBUZIDRVPSPPOE",
+      "assignment": "unique H-capped analogue among enumerated cuts; ion connectivity unproven"
+    },
+    {
+      "id": "C14H10O4",
+      "formula": "C14H10O4",
+      "counts": [
+        14,
+        10,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 242.05736022009094,
+      "precursor": false,
+      "intensities": {
+        "108.4": 0.047
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405736,
+          "mz": 242.055,
+          "intensity": 0.047,
+          "mass_error_ppm": 9.750759500672046,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C14H10O4",
+          "formula_alternatives": [
+            {
+              "formula": "C14H10O4",
+              "counts": [
+                14,
+                10,
+                0,
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0023602200909351723,
+              "capped_keys": 3
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 3,
+      "assignment": "ambiguous structure"
+    },
+    {
+      "id": "C14H11O4",
+      "formula": "C14H11O4",
+      "counts": [
+        14,
+        11,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 243.0651852520909,
+      "precursor": false,
+      "intensities": {
+        "108.4": 0.133
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405736,
+          "mz": 243.063,
+          "intensity": 0.133,
+          "mass_error_ppm": 8.990476094483023,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C14H11O4",
+          "formula_alternatives": [
+            {
+              "formula": "C14H11O4",
+              "counts": [
+                14,
+                11,
+                0,
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.002185252090953327,
+              "capped_keys": 3
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 3,
+      "assignment": "ambiguous structure"
+    },
+    {
+      "id": "C15H10O5",
+      "formula": "C15H10O5",
+      "counts": [
+        15,
+        10,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 270.0522748400909,
+      "precursor": false,
+      "intensities": {
+        "108.4": 0.122
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405736,
+          "mz": 270.05,
+          "intensity": 0.122,
+          "mass_error_ppm": 8.42377371181911,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C15H10O5",
+          "formula_alternatives": [
+            {
+              "formula": "C15H10O5",
+              "counts": [
+                15,
+                10,
+                0,
+                5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.0022748400908767508,
+              "capped_keys": 0
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 0,
+      "assignment": "formula only; no enumerated closed-shell cap"
+    },
+    {
+      "id": "C16H10O6",
+      "formula": "C16H10O6",
+      "counts": [
+        16,
+        10,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mz": 298.0471894600909,
+      "precursor": false,
+      "intensities": {
+        "108.4": 0.13
+      },
+      "max_formula_candidates": 1,
+      "observations": [
+        {
+          "spectrum_row": 2405736,
+          "mz": 298.045,
+          "intensity": 0.13,
+          "mass_error_ppm": 7.346072206702849,
+          "formula_candidates": 1,
+          "closest_mass_formula": "C16H10O6",
+          "formula_alternatives": [
+            {
+              "formula": "C16H10O6",
+              "counts": [
+                16,
+                10,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "error_da": 0.002189460090846751,
+              "capped_keys": 1
+            }
+          ]
+        }
+      ],
+      "cleavage_compatible_neutral_connectivities": 1,
+      "capped_neutral_smiles": "COc1ccc(-c2oc3cc(O)cc(O)c3c(=O)c2O)cc1",
+      "capped_neutral_ik14": "SQFSKOYWJBQGKQ",
+      "assignment": "unique H-capped analogue among enumerated cuts; ion connectivity unproven"
+    }
+  ],
+  "edges": [
+    {
+      "source": "precursor",
+      "target": "C22H38O",
+      "loss_formula": "C11H3O14",
+      "loss_mass": 358.952279776,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C22H38O",
+      "loss_formula": "C9O8",
+      "loss_mass": 235.95931696,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "precursor",
+      "target": "C21H21O6",
+      "loss_formula": "C12H20O9",
+      "loss_mass": 308.11073222,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C21H21O6",
+      "loss_formula": "H7O",
+      "loss_mass": 23.049689844,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C21H21O6",
+      "loss_formula": "C5H3O3",
+      "loss_mass": 111.008218956,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C21H21O6",
+      "loss_formula": "C6H10O5",
+      "loss_mass": 162.05282341999998,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C21H21O6",
+      "loss_formula": "C2H9O",
+      "loss_mass": 49.065339908,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C21H21O6",
+      "loss_formula": "C2H11O",
+      "loss_mass": 51.080989972,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C21H21O6",
+      "loss_formula": "C10H17O3",
+      "loss_mass": 185.117769404,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C21H28O7",
+      "loss_formula": "C12H13O8",
+      "loss_mass": 285.061042376,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C21H28O7",
+      "loss_formula": "C6H3O4",
+      "loss_mass": 139.00313357599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C21H28O7",
+      "loss_formula": "C2H2",
+      "loss_mass": 26.015650064,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C21H28O7",
+      "loss_formula": "C2H4",
+      "loss_mass": 28.031300127999998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C21H28O7",
+      "loss_formula": "C10H10O2",
+      "loss_mass": 162.06807956,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C26H24O9",
+      "loss_formula": "C7H17O6",
+      "loss_mass": 197.102513264,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C26H24O9",
+      "loss_formula": "CH7O2",
+      "loss_mass": 51.044604464,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C26H24O9",
+      "loss_formula": "C5H14",
+      "loss_mass": 74.109550448,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C27H31O11",
+      "loss_formula": "C6H10O4",
+      "loss_mass": 146.0579088,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "precursor",
+      "target": "C4H7O",
+      "loss_formula": "C29H34O14",
+      "loss_mass": 606.194855768,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C22H38O",
+      "target": "C4H7O",
+      "loss_formula": "C18H31",
+      "loss_mass": 247.24257599199998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C4H7O",
+      "loss_formula": "C17H14O5",
+      "loss_mass": 298.084123548,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C4H7O",
+      "loss_formula": "C17H21O6",
+      "loss_mass": 321.133813392,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C4H7O",
+      "loss_formula": "C22H17O8",
+      "loss_mass": 409.09234250400004,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C4H7O",
+      "loss_formula": "C23H24O10",
+      "loss_mass": 460.13694696799996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C6H9O3",
+      "target": "C4H7O",
+      "loss_formula": "C2H2O2",
+      "loss_mass": 58.005479304,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C6H11O4",
+      "target": "C4H7O",
+      "loss_formula": "C2H4O3",
+      "loss_mass": 76.01604398799999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C4H7O",
+      "loss_formula": "C13H6O5",
+      "loss_mass": 242.02152329199998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C8H7O2",
+      "target": "C4H7O",
+      "loss_formula": "C4O",
+      "loss_mass": 63.99491462,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C12H11O2",
+      "target": "C4H7O",
+      "loss_formula": "C8H4O",
+      "loss_mass": 116.026214748,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C4H7O",
+      "loss_formula": "C13H8O",
+      "loss_mass": 180.057514876,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C4H7O",
+      "loss_formula": "C9H15O4",
+      "loss_mass": 187.09703395999998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C4H7O",
+      "loss_formula": "C12H6O5",
+      "loss_mass": 230.02152329199998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C4H7O",
+      "loss_formula": "C19H23O6",
+      "loss_mass": 347.149463456,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C4H7O",
+      "loss_formula": "C19H25O6",
+      "loss_mass": 349.16511352,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C4H7O",
+      "loss_formula": "C27H31O8",
+      "loss_mass": 483.201892952,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C6H7O",
+      "target": "C4H7O",
+      "loss_formula": "C2",
+      "loss_mass": 24.0,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C11H11O",
+      "target": "C4H7O",
+      "loss_formula": "C7H4",
+      "loss_mass": 88.031300128,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H10O4",
+      "target": "C4H7O",
+      "loss_formula": "C10H3O3",
+      "loss_mass": 171.008218956,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C4H7O",
+      "loss_formula": "C10H4O3",
+      "loss_mass": 172.016043988,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C15H10O5",
+      "target": "C4H7O",
+      "loss_formula": "C11H3O4",
+      "loss_mass": 199.00313357599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C4H7O",
+      "loss_formula": "C12H3O5",
+      "loss_mass": 226.99804819599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C4H5O2",
+      "loss_formula": "C29H36O13",
+      "loss_mass": 592.2155912119999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C4H5O2",
+      "loss_formula": "C17H16O4",
+      "loss_mass": 284.104858992,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C4H5O2",
+      "loss_formula": "C17H23O5",
+      "loss_mass": 307.154548836,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C4H5O2",
+      "loss_formula": "C22H19O7",
+      "loss_mass": 395.113077948,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C4H5O2",
+      "loss_formula": "C23H26O9",
+      "loss_mass": 446.157682412,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C6H9O3",
+      "target": "C4H5O2",
+      "loss_formula": "C2H4O",
+      "loss_mass": 44.026214748,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C6H11O4",
+      "target": "C4H5O2",
+      "loss_formula": "C2H6O2",
+      "loss_mass": 62.036779432,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C4H5O2",
+      "loss_formula": "C13H8O4",
+      "loss_mass": 228.042258736,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C8H7O2",
+      "target": "C4H5O2",
+      "loss_formula": "C4H2",
+      "loss_mass": 50.015650064,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C12H11O2",
+      "target": "C4H5O2",
+      "loss_formula": "C8H6",
+      "loss_mass": 102.046950192,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C4H5O2",
+      "loss_formula": "C13H10",
+      "loss_mass": 166.07825032,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C4H5O2",
+      "loss_formula": "C9H17O3",
+      "loss_mass": 173.117769404,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C4H5O2",
+      "loss_formula": "C12H8O4",
+      "loss_mass": 216.042258736,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C4H5O2",
+      "loss_formula": "C19H25O5",
+      "loss_mass": 333.1701989,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C4H5O2",
+      "loss_formula": "C19H27O5",
+      "loss_mass": 335.185848964,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C4H5O2",
+      "loss_formula": "C27H33O7",
+      "loss_mass": 469.222628396,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H10O4",
+      "target": "C4H5O2",
+      "loss_formula": "C10H5O2",
+      "loss_mass": 157.0289544,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C4H5O2",
+      "loss_formula": "C10H6O2",
+      "loss_mass": 158.036779432,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C15H10O5",
+      "target": "C4H5O2",
+      "loss_formula": "C11H5O3",
+      "loss_mass": 185.02386902,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C4H5O2",
+      "loss_formula": "C12H5O4",
+      "loss_mass": 213.01878363999998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C6H9O3",
+      "loss_formula": "C27H32O12",
+      "loss_mass": 548.189376464,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C6H9O3",
+      "loss_formula": "C15H12O3",
+      "loss_mass": 240.078644244,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C6H9O3",
+      "loss_formula": "C15H19O4",
+      "loss_mass": 263.128334088,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C6H9O3",
+      "loss_formula": "C20H15O6",
+      "loss_mass": 351.0868632,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C6H9O3",
+      "loss_formula": "C21H22O8",
+      "loss_mass": 402.13146766399996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C6H11O4",
+      "target": "C6H9O3",
+      "loss_formula": "H2O",
+      "loss_mass": 18.010564684,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C6H9O3",
+      "loss_formula": "C11H4O3",
+      "loss_mass": 184.016043988,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C6H9O3",
+      "loss_formula": "C7H13O2",
+      "loss_mass": 129.091554656,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C6H9O3",
+      "loss_formula": "C10H4O3",
+      "loss_mass": 172.016043988,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C6H9O3",
+      "loss_formula": "C17H21O4",
+      "loss_mass": 289.143984152,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C6H9O3",
+      "loss_formula": "C17H23O4",
+      "loss_mass": 291.159634216,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C6H9O3",
+      "loss_formula": "C25H29O6",
+      "loss_mass": 425.19641364800003,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H10O4",
+      "target": "C6H9O3",
+      "loss_formula": "C8HO",
+      "loss_mass": 113.002739652,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C6H9O3",
+      "loss_formula": "C8H2O",
+      "loss_mass": 114.010564684,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C15H10O5",
+      "target": "C6H9O3",
+      "loss_formula": "C9HO2",
+      "loss_mass": 140.997654272,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C6H9O3",
+      "loss_formula": "C10HO3",
+      "loss_mass": 168.992568892,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C6H11O4",
+      "loss_formula": "C27H30O11",
+      "loss_mass": 530.1788117799999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C6H11O4",
+      "loss_formula": "C15H10O2",
+      "loss_mass": 222.06807956,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C6H11O4",
+      "loss_formula": "C15H17O3",
+      "loss_mass": 245.117769404,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C6H11O4",
+      "loss_formula": "C20H13O5",
+      "loss_mass": 333.076298516,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C6H11O4",
+      "loss_formula": "C21H20O7",
+      "loss_mass": 384.12090298,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C6H11O4",
+      "loss_formula": "C11H2O2",
+      "loss_mass": 166.005479304,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C6H11O4",
+      "loss_formula": "C7H11O",
+      "loss_mass": 111.080989972,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C6H11O4",
+      "loss_formula": "C10H2O2",
+      "loss_mass": 154.005479304,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C6H11O4",
+      "loss_formula": "C17H19O3",
+      "loss_mass": 271.133419468,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C6H11O4",
+      "loss_formula": "C17H21O3",
+      "loss_mass": 273.149069532,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C6H11O4",
+      "loss_formula": "C25H27O5",
+      "loss_mass": 407.185848964,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C6H11O4",
+      "loss_formula": "C8",
+      "loss_mass": 96.0,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "precursor",
+      "target": "C17H13O6",
+      "loss_formula": "C16H28O9",
+      "loss_mass": 364.173332476,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C17H13O6",
+      "loss_formula": "C4H8",
+      "loss_mass": 56.062600255999996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C17H13O6",
+      "loss_formula": "C4H15O",
+      "loss_mass": 79.1122901,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C17H13O6",
+      "loss_formula": "C9H11O3",
+      "loss_mass": 167.070819212,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C17H13O6",
+      "loss_formula": "C10H18O5",
+      "loss_mass": 218.11542367599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C17H13O6",
+      "loss_formula": "C6H17O",
+      "loss_mass": 105.12794016400001,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C17H13O6",
+      "loss_formula": "C6H19O",
+      "loss_mass": 107.14359022800001,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C17H13O6",
+      "loss_formula": "C14H25O3",
+      "loss_mass": 241.18036966,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C3H5O",
+      "loss_formula": "C30H36O14",
+      "loss_mass": 620.210505832,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C22H38O",
+      "target": "C3H5O",
+      "loss_formula": "C19H33",
+      "loss_mass": 261.258226056,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C3H5O",
+      "loss_formula": "C18H16O5",
+      "loss_mass": 312.099773612,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C3H5O",
+      "loss_formula": "C18H23O6",
+      "loss_mass": 335.149463456,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C3H5O",
+      "loss_formula": "C23H19O8",
+      "loss_mass": 423.107992568,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C3H5O",
+      "loss_formula": "C24H26O10",
+      "loss_mass": 474.15259703199996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C4H7O",
+      "target": "C3H5O",
+      "loss_formula": "CH2",
+      "loss_mass": 14.015650063999999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C4H5O2",
+      "target": "C3H5O",
+      "loss_formula": "CO",
+      "loss_mass": 27.99491462,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C6H9O3",
+      "target": "C3H5O",
+      "loss_formula": "C3H4O2",
+      "loss_mass": 72.021129368,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C6H11O4",
+      "target": "C3H5O",
+      "loss_formula": "C3H6O3",
+      "loss_mass": 90.03169405199999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C3H5O",
+      "loss_formula": "C14H8O5",
+      "loss_mass": 256.037173356,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C8H7O2",
+      "target": "C3H5O",
+      "loss_formula": "C5H2O",
+      "loss_mass": 78.010564684,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C12H11O2",
+      "target": "C3H5O",
+      "loss_formula": "C9H6O",
+      "loss_mass": 130.041864812,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C3H5O",
+      "loss_formula": "C14H10O",
+      "loss_mass": 194.07316494,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C3H5O",
+      "loss_formula": "C10H17O4",
+      "loss_mass": 201.11268402399998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C3H5O",
+      "loss_formula": "C13H8O5",
+      "loss_mass": 244.03717335599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C3H5O",
+      "loss_formula": "C20H25O6",
+      "loss_mass": 361.16511352000003,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C3H5O",
+      "loss_formula": "C20H27O6",
+      "loss_mass": 363.18076358400003,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C3H5O",
+      "loss_formula": "C28H33O8",
+      "loss_mass": 497.21754301600004,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C6H7O",
+      "target": "C3H5O",
+      "loss_formula": "C3H2",
+      "loss_mass": 38.015650064,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C11H11O",
+      "target": "C3H5O",
+      "loss_formula": "C8H6",
+      "loss_mass": 102.046950192,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H10O4",
+      "target": "C3H5O",
+      "loss_formula": "C11H5O3",
+      "loss_mass": 185.02386902,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C3H5O",
+      "loss_formula": "C11H6O3",
+      "loss_mass": 186.031694052,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C15H10O5",
+      "target": "C3H5O",
+      "loss_formula": "C12H5O4",
+      "loss_mass": 213.01878363999998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C3H5O",
+      "loss_formula": "C13H5O5",
+      "loss_mass": 241.01369825999998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C8H7O2",
+      "loss_formula": "C25H34O13",
+      "loss_mass": 542.199941148,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C8H7O2",
+      "loss_formula": "C13H14O4",
+      "loss_mass": 234.089208928,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C8H7O2",
+      "loss_formula": "C13H21O5",
+      "loss_mass": 257.138898772,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C8H7O2",
+      "loss_formula": "C18H17O7",
+      "loss_mass": 345.097427884,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C8H7O2",
+      "loss_formula": "C19H24O9",
+      "loss_mass": 396.142032348,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C8H7O2",
+      "loss_formula": "C9H6O4",
+      "loss_mass": 178.026608672,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C12H11O2",
+      "target": "C8H7O2",
+      "loss_formula": "C4H4",
+      "loss_mass": 52.031300128,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C8H7O2",
+      "loss_formula": "C9H8",
+      "loss_mass": 116.062600256,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C8H7O2",
+      "loss_formula": "C5H15O3",
+      "loss_mass": 123.10211933999999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C8H7O2",
+      "loss_formula": "C8H6O4",
+      "loss_mass": 166.026608672,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C8H7O2",
+      "loss_formula": "C15H23O5",
+      "loss_mass": 283.154548836,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C8H7O2",
+      "loss_formula": "C15H25O5",
+      "loss_mass": 285.1701989,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C8H7O2",
+      "loss_formula": "C23H31O7",
+      "loss_mass": 419.206978332,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H10O4",
+      "target": "C8H7O2",
+      "loss_formula": "C6H3O2",
+      "loss_mass": 107.013304336,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C8H7O2",
+      "loss_formula": "C6H4O2",
+      "loss_mass": 108.021129368,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C15H10O5",
+      "target": "C8H7O2",
+      "loss_formula": "C7H3O3",
+      "loss_mass": 135.008218956,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C8H7O2",
+      "loss_formula": "C8H3O4",
+      "loss_mass": 163.00313357599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C12H11O2",
+      "loss_formula": "C21H30O13",
+      "loss_mass": 490.16864102,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C12H11O2",
+      "loss_formula": "C9H10O4",
+      "loss_mass": 182.0579088,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C12H11O2",
+      "loss_formula": "C9H17O5",
+      "loss_mass": 205.107598644,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C12H11O2",
+      "loss_formula": "C14H13O7",
+      "loss_mass": 293.066127756,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C12H11O2",
+      "loss_formula": "C15H20O9",
+      "loss_mass": 344.11073222,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C12H11O2",
+      "loss_formula": "C5H2O4",
+      "loss_mass": 125.995308544,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C12H11O2",
+      "loss_formula": "C5H4",
+      "loss_mass": 64.031300128,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C12H11O2",
+      "loss_formula": "CH11O3",
+      "loss_mass": 71.070819212,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C12H11O2",
+      "loss_formula": "C4H2O4",
+      "loss_mass": 113.995308544,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C12H11O2",
+      "loss_formula": "C11H19O5",
+      "loss_mass": 231.12324870799998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C12H11O2",
+      "loss_formula": "C11H21O5",
+      "loss_mass": 233.13889877199998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C12H11O2",
+      "loss_formula": "C19H27O7",
+      "loss_mass": 367.175678204,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C12H11O2",
+      "loss_formula": "C2O2",
+      "loss_mass": 55.98982924,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "precursor",
+      "target": "C16H13",
+      "loss_formula": "C17H28O15",
+      "loss_mass": 472.142820196,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C22H38O",
+      "target": "C16H13",
+      "loss_formula": "C6H25O",
+      "loss_mass": 113.19054042,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C16H13",
+      "loss_formula": "C5H8O6",
+      "loss_mass": 164.03208797599999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C16H13",
+      "loss_formula": "C5H15O7",
+      "loss_mass": 187.08177781999999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C16H13",
+      "loss_formula": "C10H11O9",
+      "loss_mass": 275.04030693199996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C16H13",
+      "loss_formula": "C11H18O11",
+      "loss_mass": 326.084911396,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C16H13",
+      "loss_formula": "CO6",
+      "loss_mass": 107.96948771999999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C16H13",
+      "loss_formula": "CH2O2",
+      "loss_mass": 46.005479304,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C16H13",
+      "loss_formula": "O6",
+      "loss_mass": 95.96948771999999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C16H13",
+      "loss_formula": "C7H17O7",
+      "loss_mass": 213.097427884,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C16H13",
+      "loss_formula": "C7H19O7",
+      "loss_mass": 215.113077948,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C16H13",
+      "loss_formula": "C15H25O9",
+      "loss_mass": 349.14985737999996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C17H15O2",
+      "loss_formula": "C16H26O13",
+      "loss_mass": 426.137340892,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C17H15O2",
+      "loss_formula": "C4H6O4",
+      "loss_mass": 118.026608672,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C17H15O2",
+      "loss_formula": "C4H13O5",
+      "loss_mass": 141.076298516,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C17H15O2",
+      "loss_formula": "C9H9O7",
+      "loss_mass": 229.034827628,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C17H15O2",
+      "loss_formula": "C10H16O9",
+      "loss_mass": 280.079432092,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C17H15O2",
+      "loss_formula": "C6H15O5",
+      "loss_mass": 167.09194857999998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C17H15O2",
+      "loss_formula": "C6H17O5",
+      "loss_mass": 169.107598644,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C17H15O2",
+      "loss_formula": "C14H23O7",
+      "loss_mass": 303.144378076,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C13H22O5",
+      "loss_formula": "C20H19O10",
+      "loss_mass": 419.097821808,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C13H22O5",
+      "loss_formula": "C8H6O2",
+      "loss_mass": 134.036779432,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C13H22O5",
+      "loss_formula": "C13H2O4",
+      "loss_mass": 221.995308544,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C13H22O5",
+      "loss_formula": "C14H9O6",
+      "loss_mass": 273.039913008,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C13H22O5",
+      "loss_formula": "C10H8O2",
+      "loss_mass": 160.052429496,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C13H22O5",
+      "loss_formula": "C10H10O2",
+      "loss_mass": 162.06807956,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C13H22O5",
+      "loss_formula": "C18H16O4",
+      "loss_mass": 296.104858992,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C16H13O6",
+      "loss_formula": "C17H28O9",
+      "loss_mass": 376.173332476,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C16H13O6",
+      "loss_formula": "C5H8",
+      "loss_mass": 68.062600256,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C16H13O6",
+      "loss_formula": "C5H15O",
+      "loss_mass": 91.1122901,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C16H13O6",
+      "loss_formula": "C10H11O3",
+      "loss_mass": 179.070819212,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C16H13O6",
+      "loss_formula": "C11H18O5",
+      "loss_mass": 230.11542367599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C16H13O6",
+      "loss_formula": "C",
+      "loss_mass": 12.0,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C16H13O6",
+      "loss_formula": "C7H17O",
+      "loss_mass": 117.12794016400001,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C16H13O6",
+      "loss_formula": "C7H19O",
+      "loss_mass": 119.14359022800001,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C16H13O6",
+      "loss_formula": "C15H25O3",
+      "loss_mass": 253.18036966,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C23H30O7",
+      "loss_formula": "C10H11O8",
+      "loss_mass": 259.045392312,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C23H30O7",
+      "loss_formula": "C4HO4",
+      "loss_mass": 112.987483512,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C23H30O7",
+      "loss_formula": "H2",
+      "loss_mass": 2.015650064,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C23H30O7",
+      "loss_formula": "C8H8O2",
+      "loss_mass": 136.052429496,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C23H32O7",
+      "loss_formula": "C10H9O8",
+      "loss_mass": 257.029742248,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C23H32O7",
+      "loss_formula": "C8H6O2",
+      "loss_mass": 134.036779432,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "precursor",
+      "target": "C31H38O9",
+      "loss_formula": "C2H3O6",
+      "loss_mass": 122.99296281599999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "precursor",
+      "target": "C7H7",
+      "loss_formula": "C26H34O15",
+      "loss_mass": 586.1897703879999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C22H38O",
+      "target": "C7H7",
+      "loss_formula": "C15H31O",
+      "loss_mass": 227.237490612,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C7H7",
+      "loss_formula": "C14H14O6",
+      "loss_mass": 278.079038168,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C7H7",
+      "loss_formula": "C14H21O7",
+      "loss_mass": 301.128728012,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C7H7",
+      "loss_formula": "C19H17O9",
+      "loss_mass": 389.08725712399996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C7H7",
+      "loss_formula": "C20H24O11",
+      "loss_mass": 440.131861588,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C7H7",
+      "loss_formula": "C10H6O6",
+      "loss_mass": 222.016437912,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C8H7O2",
+      "target": "C7H7",
+      "loss_formula": "CO2",
+      "loss_mass": 43.98982924,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C12H11O2",
+      "target": "C7H7",
+      "loss_formula": "C5H4O2",
+      "loss_mass": 96.021129368,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13",
+      "target": "C7H7",
+      "loss_formula": "C9H6",
+      "loss_mass": 114.046950192,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C7H7",
+      "loss_formula": "C10H8O2",
+      "loss_mass": 160.052429496,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C7H7",
+      "loss_formula": "C6H15O5",
+      "loss_mass": 167.09194857999998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C7H7",
+      "loss_formula": "C9H6O6",
+      "loss_mass": 210.016437912,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C7H7",
+      "loss_formula": "C16H23O7",
+      "loss_mass": 327.144378076,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C7H7",
+      "loss_formula": "C16H25O7",
+      "loss_mass": 329.16002814,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C7H7",
+      "loss_formula": "C24H31O9",
+      "loss_mass": 463.196807572,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C7H9",
+      "target": "C7H7",
+      "loss_formula": "H2",
+      "loss_mass": 2.015650064,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C11H11O",
+      "target": "C7H7",
+      "loss_formula": "C4H4O",
+      "loss_mass": 68.026214748,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H10O4",
+      "target": "C7H7",
+      "loss_formula": "C7H3O4",
+      "loss_mass": 151.00313357599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C7H7",
+      "loss_formula": "C7H4O4",
+      "loss_mass": 152.010958608,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C15H10O5",
+      "target": "C7H7",
+      "loss_formula": "C8H3O5",
+      "loss_mass": 178.99804819599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C7H7",
+      "loss_formula": "C9H3O6",
+      "loss_mass": 206.992962816,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C7H9",
+      "loss_formula": "C26H32O15",
+      "loss_mass": 584.174120324,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C22H38O",
+      "target": "C7H9",
+      "loss_formula": "C15H29O",
+      "loss_mass": 225.221840548,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C7H9",
+      "loss_formula": "C14H12O6",
+      "loss_mass": 276.063388104,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C7H9",
+      "loss_formula": "C14H19O7",
+      "loss_mass": 299.113077948,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C7H9",
+      "loss_formula": "C19H15O9",
+      "loss_mass": 387.07160705999996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C7H9",
+      "loss_formula": "C20H22O11",
+      "loss_mass": 438.116211524,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C7H9",
+      "loss_formula": "C10H4O6",
+      "loss_mass": 220.000787848,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C12H11O2",
+      "target": "C7H9",
+      "loss_formula": "C5H2O2",
+      "loss_mass": 94.005479304,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13",
+      "target": "C7H9",
+      "loss_formula": "C9H4",
+      "loss_mass": 112.031300128,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C7H9",
+      "loss_formula": "C10H6O2",
+      "loss_mass": 158.036779432,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C7H9",
+      "loss_formula": "C6H13O5",
+      "loss_mass": 165.07629851599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C7H9",
+      "loss_formula": "C9H4O6",
+      "loss_mass": 208.000787848,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C7H9",
+      "loss_formula": "C16H21O7",
+      "loss_mass": 325.128728012,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C7H9",
+      "loss_formula": "C16H23O7",
+      "loss_mass": 327.144378076,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C7H9",
+      "loss_formula": "C24H29O9",
+      "loss_mass": 461.181157508,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C11H11O",
+      "target": "C7H9",
+      "loss_formula": "C4H2O",
+      "loss_mass": 66.010564684,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C14H10O4",
+      "target": "C7H9",
+      "loss_formula": "C7HO4",
+      "loss_mass": 148.98748351199998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C7H9",
+      "loss_formula": "C7H2O4",
+      "loss_mass": 149.995308544,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C15H10O5",
+      "target": "C7H9",
+      "loss_formula": "C8HO5",
+      "loss_mass": 176.982398132,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C7H9",
+      "loss_formula": "C9HO6",
+      "loss_mass": 204.977312752,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C6H7O",
+      "loss_formula": "C27H34O14",
+      "loss_mass": 582.194855768,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C22H38O",
+      "target": "C6H7O",
+      "loss_formula": "C16H31",
+      "loss_mass": 223.24257599199998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C6H7O",
+      "loss_formula": "C15H14O5",
+      "loss_mass": 274.084123548,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C6H7O",
+      "loss_formula": "C15H21O6",
+      "loss_mass": 297.133813392,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C6H7O",
+      "loss_formula": "C20H17O8",
+      "loss_mass": 385.09234250400004,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C6H7O",
+      "loss_formula": "C21H24O10",
+      "loss_mass": 436.13694696799996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C6H9O3",
+      "target": "C6H7O",
+      "loss_formula": "H2O2",
+      "loss_mass": 34.005479304,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C6H11O4",
+      "target": "C6H7O",
+      "loss_formula": "H4O3",
+      "loss_mass": 52.016043988,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C6H7O",
+      "loss_formula": "C11H6O5",
+      "loss_mass": 218.02152329199998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C8H7O2",
+      "target": "C6H7O",
+      "loss_formula": "C2O",
+      "loss_mass": 39.99491462,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C12H11O2",
+      "target": "C6H7O",
+      "loss_formula": "C6H4O",
+      "loss_mass": 92.026214748,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C6H7O",
+      "loss_formula": "C11H8O",
+      "loss_mass": 156.057514876,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C6H7O",
+      "loss_formula": "C7H15O4",
+      "loss_mass": 163.09703395999998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C6H7O",
+      "loss_formula": "C10H6O5",
+      "loss_mass": 206.02152329199998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C6H7O",
+      "loss_formula": "C17H23O6",
+      "loss_mass": 323.149463456,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C6H7O",
+      "loss_formula": "C17H25O6",
+      "loss_mass": 325.16511352,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C6H7O",
+      "loss_formula": "C25H31O8",
+      "loss_mass": 459.201892952,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C11H11O",
+      "target": "C6H7O",
+      "loss_formula": "C5H4",
+      "loss_mass": 64.031300128,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H10O4",
+      "target": "C6H7O",
+      "loss_formula": "C8H3O3",
+      "loss_mass": 147.008218956,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C6H7O",
+      "loss_formula": "C8H4O3",
+      "loss_mass": 148.016043988,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C15H10O5",
+      "target": "C6H7O",
+      "loss_formula": "C9H3O4",
+      "loss_mass": 175.00313357599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C6H7O",
+      "loss_formula": "C10H3O5",
+      "loss_mass": 202.99804819599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C6H3O2",
+      "loss_formula": "C27H38O13",
+      "loss_mass": 570.231241276,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C6H3O2",
+      "loss_formula": "C15H18O4",
+      "loss_mass": 262.120509056,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C6H3O2",
+      "loss_formula": "C15H25O5",
+      "loss_mass": 285.1701989,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C6H3O2",
+      "loss_formula": "C20H21O7",
+      "loss_mass": 373.128728012,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C6H3O2",
+      "loss_formula": "C21H28O9",
+      "loss_mass": 424.173332476,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C6H9O3",
+      "target": "C6H3O2",
+      "loss_formula": "H6O",
+      "loss_mass": 22.041864812,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C6H11O4",
+      "target": "C6H3O2",
+      "loss_formula": "H8O2",
+      "loss_mass": 40.052429496,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C6H3O2",
+      "loss_formula": "C11H10O4",
+      "loss_mass": 206.0579088,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C8H7O2",
+      "target": "C6H3O2",
+      "loss_formula": "C2H4",
+      "loss_mass": 28.031300127999998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C12H11O2",
+      "target": "C6H3O2",
+      "loss_formula": "C6H8",
+      "loss_mass": 80.062600256,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C6H3O2",
+      "loss_formula": "C11H12",
+      "loss_mass": 144.093900384,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C6H3O2",
+      "loss_formula": "C7H19O3",
+      "loss_mass": 151.133419468,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C6H3O2",
+      "loss_formula": "C10H10O4",
+      "loss_mass": 194.0579088,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C6H3O2",
+      "loss_formula": "C17H27O5",
+      "loss_mass": 311.185848964,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C6H3O2",
+      "loss_formula": "C17H29O5",
+      "loss_mass": 313.201499028,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C6H3O2",
+      "loss_formula": "C25H35O7",
+      "loss_mass": 447.23827846,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H10O4",
+      "target": "C6H3O2",
+      "loss_formula": "C8H7O2",
+      "loss_mass": 135.044604464,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C6H3O2",
+      "loss_formula": "C8H8O2",
+      "loss_mass": 136.052429496,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C15H10O5",
+      "target": "C6H3O2",
+      "loss_formula": "C9H7O3",
+      "loss_mass": 163.039519084,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C6H3O2",
+      "loss_formula": "C10H7O4",
+      "loss_mass": 191.03443370399998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C11H11O",
+      "loss_formula": "C22H30O14",
+      "loss_mass": 518.16355564,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C22H38O",
+      "target": "C11H11O",
+      "loss_formula": "C11H27",
+      "loss_mass": 159.211275864,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C11H11O",
+      "loss_formula": "C10H10O5",
+      "loss_mass": 210.05282341999998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C11H11O",
+      "loss_formula": "C10H17O6",
+      "loss_mass": 233.10251326399998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C11H11O",
+      "loss_formula": "C15H13O8",
+      "loss_mass": 321.061042376,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C11H11O",
+      "loss_formula": "C16H20O10",
+      "loss_mass": 372.10564683999996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C11H11O",
+      "loss_formula": "C6H2O5",
+      "loss_mass": 153.99022316399999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C12H11O2",
+      "target": "C11H11O",
+      "loss_formula": "CO",
+      "loss_mass": 27.99491462,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C17H15O2",
+      "target": "C11H11O",
+      "loss_formula": "C6H4O",
+      "loss_mass": 92.026214748,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C13H22O5",
+      "target": "C11H11O",
+      "loss_formula": "C2H11O4",
+      "loss_mass": 99.065733832,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C11H11O",
+      "loss_formula": "C5H2O5",
+      "loss_mass": 141.99022316399999,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C11H11O",
+      "loss_formula": "C12H19O6",
+      "loss_mass": 259.118163328,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C11H11O",
+      "loss_formula": "C12H21O6",
+      "loss_mass": 261.133813392,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C11H11O",
+      "loss_formula": "C20H27O8",
+      "loss_mass": 395.170592824,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C14H11O4",
+      "target": "C11H11O",
+      "loss_formula": "C3O3",
+      "loss_mass": 83.98474386,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C14H10O4",
+      "loss_formula": "C19H31O11",
+      "loss_mass": 435.186636812,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C14H10O4",
+      "loss_formula": "C7H11O2",
+      "loss_mass": 127.075904592,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C14H10O4",
+      "loss_formula": "C7H18O3",
+      "loss_mass": 150.125594436,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C14H10O4",
+      "loss_formula": "C12H14O5",
+      "loss_mass": 238.08412354799998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C14H10O4",
+      "loss_formula": "C13H21O7",
+      "loss_mass": 289.128728012,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C14H10O4",
+      "loss_formula": "C3H3O2",
+      "loss_mass": 71.013304336,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C14H10O4",
+      "loss_formula": "C2H3O2",
+      "loss_mass": 59.013304336,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C14H10O4",
+      "loss_formula": "C9H20O3",
+      "loss_mass": 176.1412445,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C14H10O4",
+      "loss_formula": "C9H22O3",
+      "loss_mass": 178.156894564,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C14H10O4",
+      "loss_formula": "C17H28O5",
+      "loss_mass": 312.193673996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C15H10O5",
+      "target": "C14H10O4",
+      "loss_formula": "CO",
+      "loss_mass": 27.99491462,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C14H10O4",
+      "loss_formula": "C2O2",
+      "loss_mass": 55.98982924,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C14H11O4",
+      "loss_formula": "C19H30O11",
+      "loss_mass": 434.17881178,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C14H11O4",
+      "loss_formula": "C7H10O2",
+      "loss_mass": 126.06807956,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C14H11O4",
+      "loss_formula": "C7H17O3",
+      "loss_mass": 149.117769404,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C14H11O4",
+      "loss_formula": "C12H13O5",
+      "loss_mass": 237.07629851599998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C14H11O4",
+      "loss_formula": "C13H20O7",
+      "loss_mass": 288.12090298,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C14H11O4",
+      "loss_formula": "C3H2O2",
+      "loss_mass": 70.005479304,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C14H11O4",
+      "loss_formula": "C2H2O2",
+      "loss_mass": 58.005479304,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C14H11O4",
+      "loss_formula": "C9H19O3",
+      "loss_mass": 175.133419468,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C14H11O4",
+      "loss_formula": "C9H21O3",
+      "loss_mass": 177.149069532,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C14H11O4",
+      "loss_formula": "C17H27O5",
+      "loss_mass": 311.185848964,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "precursor",
+      "target": "C15H10O5",
+      "loss_formula": "C18H31O10",
+      "loss_mass": 407.191722192,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C15H10O5",
+      "loss_formula": "C6H11O",
+      "loss_mass": 99.080989972,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C15H10O5",
+      "loss_formula": "C6H18O2",
+      "loss_mass": 122.130679816,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C15H10O5",
+      "loss_formula": "C11H14O4",
+      "loss_mass": 210.089208928,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C15H10O5",
+      "loss_formula": "C12H21O6",
+      "loss_mass": 261.133813392,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C15H10O5",
+      "loss_formula": "C2H3O",
+      "loss_mass": 43.018389716,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C15H10O5",
+      "loss_formula": "CH3O",
+      "loss_mass": 31.018389716,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C15H10O5",
+      "loss_formula": "C8H20O2",
+      "loss_mass": 148.14632988,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C15H10O5",
+      "loss_formula": "C8H22O2",
+      "loss_mass": 150.161979944,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C15H10O5",
+      "loss_formula": "C16H28O4",
+      "loss_mass": 284.198759376,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C16H10O6",
+      "target": "C15H10O5",
+      "loss_formula": "CO",
+      "loss_mass": 27.99491462,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "precursor",
+      "target": "C16H10O6",
+      "loss_formula": "C17H31O9",
+      "loss_mass": 379.19680757199995,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C16H10O6",
+      "loss_formula": "C5H11",
+      "loss_mass": 71.086075352,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C21H28O7",
+      "target": "C16H10O6",
+      "loss_formula": "C5H18O",
+      "loss_mass": 94.13576519600001,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C26H24O9",
+      "target": "C16H10O6",
+      "loss_formula": "C10H14O3",
+      "loss_mass": 182.094294308,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C16H10O6",
+      "loss_formula": "C11H21O5",
+      "loss_mass": 233.13889877199998,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C16H10O6",
+      "loss_formula": "CH3",
+      "loss_mass": 15.023475096,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C16H13O6",
+      "target": "C16H10O6",
+      "loss_formula": "H3",
+      "loss_mass": 3.023475096,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H30O7",
+      "target": "C16H10O6",
+      "loss_formula": "C7H20O",
+      "loss_mass": 120.15141526000001,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C23H32O7",
+      "target": "C16H10O6",
+      "loss_formula": "C7H22O",
+      "loss_mass": 122.167065324,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C31H38O9",
+      "target": "C16H10O6",
+      "loss_formula": "C15H28O3",
+      "loss_mass": 256.20384475599997,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    }
+  ],
+  "observations": [
+    {
+      "node": "C22H38O",
+      "spectrum_row": 2405748,
+      "energy": 13.5,
+      "mz": 318.292,
+      "intensity": 0.01,
+      "assigned": true
+    },
+    {
+      "node": "C21H21O6",
+      "spectrum_row": 2405748,
+      "energy": 13.5,
+      "mz": 369.13,
+      "intensity": 0.031,
+      "assigned": true
+    },
+    {
+      "node": "C21H28O7",
+      "spectrum_row": 2405748,
+      "energy": 13.5,
+      "mz": 392.184,
+      "intensity": 0.013,
+      "assigned": true
+    },
+    {
+      "node": "C26H24O9",
+      "spectrum_row": 2405748,
+      "energy": 13.5,
+      "mz": 480.139,
+      "intensity": 0.011,
+      "assigned": true
+    },
+    {
+      "node": "C27H31O11",
+      "spectrum_row": 2405748,
+      "energy": 13.5,
+      "mz": 531.184,
+      "intensity": 0.571,
+      "assigned": true
+    },
+    {
+      "node": "C4H7O",
+      "spectrum_row": 2010765,
+      "energy": 20.3,
+      "mz": 71.0487,
+      "intensity": 0.44509,
+      "assigned": true
+    },
+    {
+      "node": "C4H5O2",
+      "spectrum_row": 2010765,
+      "energy": 20.3,
+      "mz": 85.0279,
+      "intensity": 0.8530800000000001,
+      "assigned": true
+    },
+    {
+      "node": "C6H9O3",
+      "spectrum_row": 2010765,
+      "energy": 20.3,
+      "mz": 129.0541,
+      "intensity": 0.57459,
+      "assigned": true
+    },
+    {
+      "node": "C6H11O4",
+      "spectrum_row": 2010765,
+      "energy": 20.3,
+      "mz": 147.0647,
+      "intensity": 0.11709,
+      "assigned": true
+    },
+    {
+      "node": "C17H13O6",
+      "spectrum_row": 2010765,
+      "energy": 20.3,
+      "mz": 313.0702,
+      "intensity": 0.13427,
+      "assigned": true
+    },
+    {
+      "node": "C21H21O6",
+      "spectrum_row": 2010765,
+      "energy": 20.3,
+      "mz": 369.1331,
+      "intensity": 1.0,
+      "assigned": true
+    },
+    {
+      "node": "C27H31O11",
+      "spectrum_row": 2010765,
+      "energy": 20.3,
+      "mz": 531.1852,
+      "intensity": 0.6088,
+      "assigned": true
+    },
+    {
+      "node": "C3H5O",
+      "spectrum_row": 2010763,
+      "energy": 42.9,
+      "mz": 57.0332,
+      "intensity": 0.06863000000000001,
+      "assigned": true
+    },
+    {
+      "node": "C4H7O",
+      "spectrum_row": 2010763,
+      "energy": 42.9,
+      "mz": 71.0487,
+      "intensity": 0.30811,
+      "assigned": true
+    },
+    {
+      "node": "C4H5O2",
+      "spectrum_row": 2010763,
+      "energy": 42.9,
+      "mz": 85.028,
+      "intensity": 0.28141,
+      "assigned": true
+    },
+    {
+      "node": "C6H9O3",
+      "spectrum_row": 2010763,
+      "energy": 42.9,
+      "mz": 129.0541,
+      "intensity": 0.13553,
+      "assigned": true
+    },
+    {
+      "node": "C8H7O2",
+      "spectrum_row": 2010763,
+      "energy": 42.9,
+      "mz": 135.0438,
+      "intensity": 0.04133,
+      "assigned": true
+    },
+    {
+      "node": "C6H11O4",
+      "spectrum_row": 2010763,
+      "energy": 42.9,
+      "mz": 147.0647,
+      "intensity": 0.02762,
+      "assigned": true
+    },
+    {
+      "node": "C12H11O2",
+      "spectrum_row": 2010763,
+      "energy": 42.9,
+      "mz": 187.0754,
+      "intensity": 0.02461,
+      "assigned": true
+    },
+    {
+      "node": "C17H13O6",
+      "spectrum_row": 2010763,
+      "energy": 42.9,
+      "mz": 313.071,
+      "intensity": 1.0,
+      "assigned": true
+    },
+    {
+      "node": "C21H21O6",
+      "spectrum_row": 2010763,
+      "energy": 42.9,
+      "mz": 369.1331,
+      "intensity": 0.44945,
+      "assigned": true
+    },
+    {
+      "node": "C27H31O11",
+      "spectrum_row": 2010763,
+      "energy": 42.9,
+      "mz": 531.1853,
+      "intensity": 0.14359,
+      "assigned": true
+    },
+    {
+      "node": "C4H7O",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 71.049,
+      "intensity": 0.011,
+      "assigned": true
+    },
+    {
+      "node": "C4H5O2",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 85.028,
+      "intensity": 0.059,
+      "assigned": true
+    },
+    {
+      "node": "unassigned:2405729:122.09500",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 122.095,
+      "intensity": 0.012,
+      "assigned": false
+    },
+    {
+      "node": "unassigned:2405729:124.11100",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 124.111,
+      "intensity": 0.098,
+      "assigned": false
+    },
+    {
+      "node": "C16H13",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 205.1,
+      "intensity": 0.02,
+      "assigned": true
+    },
+    {
+      "node": "C17H15O2",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 251.105,
+      "intensity": 0.021,
+      "assigned": true
+    },
+    {
+      "node": "C13H22O5",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 258.147,
+      "intensity": 0.212,
+      "assigned": true
+    },
+    {
+      "node": "C16H13O6",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 301.068,
+      "intensity": 0.014,
+      "assigned": true
+    },
+    {
+      "node": "C17H13O6",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 313.068,
+      "intensity": 0.604,
+      "assigned": true
+    },
+    {
+      "node": "C21H21O6",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 369.13,
+      "intensity": 1.0,
+      "assigned": true
+    },
+    {
+      "node": "C23H30O7",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 418.199,
+      "intensity": 0.012,
+      "assigned": true
+    },
+    {
+      "node": "C23H32O7",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 420.214,
+      "intensity": 0.093,
+      "assigned": true
+    },
+    {
+      "node": "C31H38O9",
+      "spectrum_row": 2405729,
+      "energy": 54.2,
+      "mz": 554.25,
+      "intensity": 0.205,
+      "assigned": true
+    },
+    {
+      "node": "C7H7",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 91.053,
+      "intensity": 0.187,
+      "assigned": true
+    },
+    {
+      "node": "C7H9",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 93.069,
+      "intensity": 0.103,
+      "assigned": true
+    },
+    {
+      "node": "C6H7O",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 95.048,
+      "intensity": 0.149,
+      "assigned": true
+    },
+    {
+      "node": "unassigned:2405736:105.04400",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 105.044,
+      "intensity": 0.011,
+      "assigned": false
+    },
+    {
+      "node": "C6H3O2",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 107.012,
+      "intensity": 0.059,
+      "assigned": true
+    },
+    {
+      "node": "unassigned:2405736:124.11100",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 124.111,
+      "intensity": 0.057,
+      "assigned": false
+    },
+    {
+      "node": "C8H7O2",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 135.043,
+      "intensity": 0.893,
+      "assigned": true
+    },
+    {
+      "node": "C11H11O",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 159.079,
+      "intensity": 0.032,
+      "assigned": true
+    },
+    {
+      "node": "C12H11O2",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 187.074,
+      "intensity": 0.454,
+      "assigned": true
+    },
+    {
+      "node": "C16H13",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 205.1,
+      "intensity": 0.458,
+      "assigned": true
+    },
+    {
+      "node": "C14H10O4",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 242.055,
+      "intensity": 0.047,
+      "assigned": true
+    },
+    {
+      "node": "C14H11O4",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 243.063,
+      "intensity": 0.133,
+      "assigned": true
+    },
+    {
+      "node": "C15H10O5",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 270.05,
+      "intensity": 0.122,
+      "assigned": true
+    },
+    {
+      "node": "C16H10O6",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 298.045,
+      "intensity": 0.13,
+      "assigned": true
+    },
+    {
+      "node": "C17H13O6",
+      "spectrum_row": 2405736,
+      "energy": 108.4,
+      "mz": 313.068,
+      "intensity": 1.0,
+      "assigned": true
+    }
+  ],
+  "display_node_ids": [
+    "precursor",
+    "C27H31O11",
+    "C21H21O6",
+    "C17H13O6",
+    "C8H7O2",
+    "C6H9O3",
+    "C4H5O2"
+  ],
+  "display_edges": [
+    {
+      "source": "precursor",
+      "target": "C27H31O11",
+      "loss_formula": "C6H10O4",
+      "loss_mass": 146.0579088,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C27H31O11",
+      "target": "C21H21O6",
+      "loss_formula": "C6H10O5",
+      "loss_mass": 162.05282341999998,
+      "known_loss": true,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C21H21O6",
+      "target": "C17H13O6",
+      "loss_formula": "C4H8",
+      "loss_mass": 56.062600255999996,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C8H7O2",
+      "loss_formula": "C9H6O4",
+      "loss_mass": 178.026608672,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C17H13O6",
+      "target": "C6H9O3",
+      "loss_formula": "C11H4O3",
+      "loss_mass": 184.016043988,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": false
+    },
+    {
+      "source": "C6H9O3",
+      "target": "C4H5O2",
+      "loss_formula": "C2H4O",
+      "loss_mass": 44.026214748,
+      "known_loss": false,
+      "interpretation": "formula-compatible difference; sequential transition not measured",
+      "selected": true
+    }
+  ],
+  "enumeration": {
+    "max_cuts": 3,
+    "heavy_atoms": 48,
+    "bonds": 52,
+    "enumerated_atom_sets": 3156,
+    "neutral_caps": 3156
+  },
+  "coverage": {
+    "retained_observations": 50,
+    "assigned": 46,
+    "assigned_intensity": 0.9863551344555851
+  },
+  "limits": [
+    "MS/MS does not observe the sequence of every cleavage. All graph edges are formula-compatible hypotheses.",
+    "Every retained peak (m/z >=40, intensity >=1%, 1.5 Da below precursor, top 300 cap) is in observations, including unassigned peaks.",
+    "For this illustrative graph, assignments prefer a cleavage-compatible formula within mass tolerance, then the smallest error. All alternatives and the original closest-mass label are retained. Primary-sample summary assignments remain closest-mass only.",
+    "A drawn cap is a neutral H-saturated analogue, not a proven product-ion structure. Unique means unique within this bounded enumeration.",
+    "Five or fewer energies and the best-covered observation at each energy are chosen for illustration; no general causal energy conclusion."
+  ]
+}

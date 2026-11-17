@@ -1,0 +1,565 @@
+{
+  "download_manifest.json": {
+    "sources": {
+      "massbank": {
+        "version": "2026.03",
+        "published_at": "2026-04-15T08:37:50Z",
+        "release_url": "https://github.com/MassBank/MassBank-data/releases/tag/2026.03",
+        "download": {
+          "requested_url": "https://codeload.github.com/MassBank/MassBank-data/tar.gz/refs/tags/2026.03",
+          "resolved_url": "https://codeload.github.com/MassBank/MassBank-data/tar.gz/refs/tags/2026.03",
+          "path": "massbank-2026.03.tar.gz",
+          "retrieved_utc": "2026-10-20T07:14:47.894153+00:00",
+          "headers": {
+            "Content-Type": "application/x-gzip",
+            "ETag": "W/\"ba68f9d0048bd9dc61f4659ad9fedbdfbb3e76a8d8f7198bcff8eb2c2934450d\"",
+            "Date": "Tue, 20 Oct 2026 07:14:38 GMT"
+          },
+          "bytes": 59922824,
+          "sha256": "1bf1325c3788a41570395003dbd0543d062a6a73383595501f977aab5367fc92",
+          "md5": "139ec14bcae20163e3fbbb8da34166c8",
+          "seconds": 10.648
+        }
+      },
+      "gnps_community": {
+        "version": "live-export-2026-10-20",
+        "download": {
+          "requested_url": "https://external.gnps2.org/gnpslibrary/GNPS-LIBRARY.json",
+          "resolved_url": "https://external.gnps2.org/gnpslibrary/GNPS-LIBRARY.json",
+          "path": "gnps-community.json",
+          "retrieved_utc": "2026-10-20T07:18:29.928153+00:00",
+          "headers": {
+            "Date": "Tue, 20 Oct 2026 07:14:23 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "589701190",
+            "Last-Modified": "Mon, 19 Oct 2026 17:26:02 GMT",
+            "ETag": "\"1792430762.035-589701190-1856178290\""
+          },
+          "bytes": 589701190,
+          "sha256": "b9ad535efbe6efa618a0c8d0ec1830360da0693e987a3ec73a6211092a379159",
+          "md5": "0b7da7e25cc6b1de366332f86f9a012e",
+          "seconds": 221.817
+        }
+      }
+    },
+    "errors": {
+      "mona_catalog": "HTTPError('401 Client Error: Unauthorized for url: https://mona.fiehnlab.ucdavis.edu/rest/downloads/list')"
+    }
+  },
+  "more_download_manifest.json": {
+    "downloads": [
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/GNPS-PRESTWICKPHYTOCHEM.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/GNPS-PRESTWICKPHYTOCHEM.json",
+        "path": "GNPS-PRESTWICKPHYTOCHEM.json",
+        "bytes": 4612863,
+        "sha256": "b013bf40b9406fbc74c969455a4dd450e7577f7a4b6ec0e1f552edee783d0c57",
+        "md5": "0e0b5dd911f1eed76a223e19e578a15b",
+        "retrieved_utc": "2026-10-20T07:20:21.909666+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:19:49 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "4612863",
+          "Last-Modified": "Mon, 19 Oct 2026 17:28:58 GMT",
+          "ETag": "\"1792430938.335-4612863-3699379146\""
+        },
+        "seconds": 4.27,
+        "source": "GNPS",
+        "collection": "GNPS-PRESTWICKPHYTOCHEM",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/GNPS-NIH-NATURALPRODUCTSLIBRARY.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/GNPS-NIH-NATURALPRODUCTSLIBRARY.json",
+        "path": "GNPS-NIH-NATURALPRODUCTSLIBRARY.json",
+        "bytes": 57973750,
+        "sha256": "500902e9d1a395478641d16d10c018246479ad3380b732282fb9b59b51a5ad01",
+        "md5": "d336b34fa007cae11fa80bb890cd967b",
+        "retrieved_utc": "2026-10-20T07:20:39.105942+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:19:53 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "57973750",
+          "Last-Modified": "Mon, 19 Oct 2026 17:26:40 GMT",
+          "ETag": "\"1792430800.836-57973750-1025052169\""
+        },
+        "seconds": 17.15,
+        "source": "GNPS",
+        "collection": "GNPS-NIH-NATURALPRODUCTSLIBRARY",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/GNPS-NIH-NATURALPRODUCTSLIBRARY_ROUND2_POSITIVE.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/GNPS-NIH-NATURALPRODUCTSLIBRARY_ROUND2_POSITIVE.json",
+        "path": "GNPS-NIH-NATURALPRODUCTSLIBRARY_ROUND2_POSITIVE.json",
+        "bytes": 86013647,
+        "sha256": "976f22039dcd19ac51f05a33b55728ac95239cca66005681b10e222eef7c803f",
+        "md5": "fc446594042731d6a44aa420ae350d29",
+        "retrieved_utc": "2026-10-20T07:21:06.369329+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:10 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "86013647",
+          "Last-Modified": "Mon, 19 Oct 2026 17:27:39 GMT",
+          "ETag": "\"1792430859.405-86013647-1110643444\""
+        },
+        "seconds": 27.24,
+        "source": "GNPS",
+        "collection": "GNPS-NIH-NATURALPRODUCTSLIBRARY_ROUND2_POSITIVE",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/GNPS-NIH-NATURALPRODUCTSLIBRARY_ROUND2_NEGATIVE.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/GNPS-NIH-NATURALPRODUCTSLIBRARY_ROUND2_NEGATIVE.json",
+        "path": "GNPS-NIH-NATURALPRODUCTSLIBRARY_ROUND2_NEGATIVE.json",
+        "bytes": 9248995,
+        "sha256": "5bc5ea9b5998bbb67a7cd21ca840154eed2cb1f6b697a482ce78adbe98016299",
+        "md5": "66df3f774c89ae09685aff596848868a",
+        "retrieved_utc": "2026-10-20T07:21:11.224740+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:38 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "9248995",
+          "Last-Modified": "Mon, 19 Oct 2026 17:26:52 GMT",
+          "ETag": "\"1792430812.519-9248995-1087181524\""
+        },
+        "seconds": 4.81,
+        "source": "GNPS",
+        "collection": "GNPS-NIH-NATURALPRODUCTSLIBRARY_ROUND2_NEGATIVE",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/GNPS-FAULKNERLEGACY.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/GNPS-FAULKNERLEGACY.json",
+        "path": "GNPS-FAULKNERLEGACY.json",
+        "bytes": 487143,
+        "sha256": "5e9c3a8267fcc9d5540bccadffc9af0ff7bf23bd59c2173789537a0e023f6019",
+        "md5": "76fe66e30f4d7f0832640e9c5973c408",
+        "retrieved_utc": "2026-10-20T07:21:11.772376+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:42 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "487143",
+          "Last-Modified": "Mon, 19 Oct 2026 17:17:46 GMT",
+          "ETag": "\"1792430266.552-487143-2917403242\""
+        },
+        "seconds": 0.5,
+        "source": "GNPS",
+        "collection": "GNPS-FAULKNERLEGACY",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/UM-NPDC.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/UM-NPDC.json",
+        "path": "UM-NPDC.json",
+        "bytes": 927198,
+        "sha256": "833c39048289f165d0a160eea89c7c984f68f4fa14a40f6c547d71dd6961838d",
+        "md5": "0e71bf29ba992a9cc7e0175bbee4fd4e",
+        "retrieved_utc": "2026-10-20T07:21:12.808541+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:43 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "927198",
+          "Last-Modified": "Mon, 19 Oct 2026 19:30:03 GMT",
+          "ETag": "\"1792438203.155-927198-1231881964\""
+        },
+        "seconds": 0.99,
+        "source": "GNPS",
+        "collection": "UM-NPDC",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/GNPS-SAM-SIK-KANG-LEGACY-LIBRARY.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/GNPS-SAM-SIK-KANG-LEGACY-LIBRARY.json",
+        "path": "GNPS-SAM-SIK-KANG-LEGACY-LIBRARY.json",
+        "bytes": 1708317,
+        "sha256": "5ee0abd81c776f42dec5b27d9057315030c59eb7747866f3c592abf7cf04be3d",
+        "md5": "455c3b4edf1e2c7ea8e20cc53f5568fc",
+        "retrieved_utc": "2026-10-20T07:21:14.317527+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:44 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "1708317",
+          "Last-Modified": "Mon, 19 Oct 2026 17:29:34 GMT",
+          "ETag": "\"1792430974.056-1708317-1078005188\""
+        },
+        "seconds": 1.48,
+        "source": "GNPS",
+        "collection": "GNPS-SAM-SIK-KANG-LEGACY-LIBRARY",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/XANTHONES-DB.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/XANTHONES-DB.json",
+        "path": "XANTHONES-DB.json",
+        "bytes": 383278,
+        "sha256": "1493d5cf74c3b9670352974cda543f01bd35def42cc4d4eae3a295f63146ebbc",
+        "md5": "0942bbec94a279f7af93b95aac0382bc",
+        "retrieved_utc": "2026-10-20T07:21:14.902384+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:46 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "383278",
+          "Last-Modified": "Mon, 19 Oct 2026 19:30:52 GMT",
+          "ETag": "\"1792438252.539-383278-1866008675\""
+        },
+        "seconds": 0.51,
+        "source": "GNPS",
+        "collection": "XANTHONES-DB",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/TUEBINGEN-NATURAL-PRODUCT-COLLECTION.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/TUEBINGEN-NATURAL-PRODUCT-COLLECTION.json",
+        "path": "TUEBINGEN-NATURAL-PRODUCT-COLLECTION.json",
+        "bytes": 4436703,
+        "sha256": "8fd3fabe4917e772e86dd731fab1f99cd76d4f58b85b022da13c7cfed6c43a51",
+        "md5": "d21083bce9d939868fd37ac7f3cf5d85",
+        "retrieved_utc": "2026-10-20T07:21:18.744192+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:46 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "4436703",
+          "Last-Modified": "Mon, 19 Oct 2026 19:30:09 GMT",
+          "ETag": "\"1792438209.232-4436703-2187136836\""
+        },
+        "seconds": 3.8,
+        "source": "GNPS",
+        "collection": "TUEBINGEN-NATURAL-PRODUCT-COLLECTION",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/PHENOLICSDB.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/PHENOLICSDB.json",
+        "path": "PHENOLICSDB.json",
+        "bytes": 1165568,
+        "sha256": "40485553c29523fd4e3d14396ce209b0791e5a1a1d98a22c63f1e56b273072f1",
+        "md5": "f2e6153264eb8edb40c7b700bf57fcbe",
+        "retrieved_utc": "2026-10-20T07:21:20.082016+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:50 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "1165568",
+          "Last-Modified": "Mon, 19 Oct 2026 19:28:12 GMT",
+          "ETag": "\"1792438092.045-1165568-1729431587\""
+        },
+        "seconds": 1.3,
+        "source": "GNPS",
+        "collection": "PHENOLICSDB",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/ELIXDB-LICHEN-DATABASE.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/ELIXDB-LICHEN-DATABASE.json",
+        "path": "ELIXDB-LICHEN-DATABASE.json",
+        "bytes": 1680813,
+        "sha256": "8916d942f2da961ba5b08fbba3926145f6c9cc7988f36a25c99ff536d4e15794",
+        "md5": "1579665f1956b0e2c6c135fdfd776018",
+        "retrieved_utc": "2026-10-20T07:21:21.836537+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:51 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "1680813",
+          "Last-Modified": "Mon, 19 Oct 2026 17:03:18 GMT",
+          "ETag": "\"1792429398.267-1680813-3364948722\""
+        },
+        "seconds": 1.72,
+        "source": "GNPS",
+        "collection": "ELIXDB-LICHEN-DATABASE",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/PYRROLIZIDINE-ALKALOID-SPECTRAL-LIBRARY.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/PYRROLIZIDINE-ALKALOID-SPECTRAL-LIBRARY.json",
+        "path": "PYRROLIZIDINE-ALKALOID-SPECTRAL-LIBRARY.json",
+        "bytes": 938816,
+        "sha256": "13125c50f0f1b058788b50d761bbfce41aa69573534ca20eb83aeb25722aea02",
+        "md5": "6f786f01483adefa925223bd136b42a3",
+        "retrieved_utc": "2026-10-20T07:21:22.862367+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:53 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "938816",
+          "Last-Modified": "Mon, 19 Oct 2026 19:29:10 GMT",
+          "ETag": "\"1792438150.243-938816-3021606951\""
+        },
+        "seconds": 0.99,
+        "source": "GNPS",
+        "collection": "PYRROLIZIDINE-ALKALOID-SPECTRAL-LIBRARY",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://external.gnps2.org/gnpslibrary/GNPS-XENORHABDUS-PHOTORHABDUS-COMPOUNDS-LIBRARY.json",
+        "resolved_url": "https://external.gnps2.org/gnpslibrary/GNPS-XENORHABDUS-PHOTORHABDUS-COMPOUNDS-LIBRARY.json",
+        "path": "GNPS-XENORHABDUS-PHOTORHABDUS-COMPOUNDS-LIBRARY.json",
+        "bytes": 492350,
+        "sha256": "f1c3dc0d0e5387174c9699c48e54cc19f32ebed0e664db8e6ba335377e974cb5",
+        "md5": "c4b2669d1e2edb13bf994ec06a06b810",
+        "retrieved_utc": "2026-10-20T07:21:23.390930+00:00",
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:20:54 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "492350",
+          "Last-Modified": "Mon, 19 Oct 2026 17:36:29 GMT",
+          "ETag": "\"1792431389.704-492350-988091015\""
+        },
+        "seconds": 0.5,
+        "source": "GNPS",
+        "collection": "GNPS-XENORHABDUS-PHOTORHABDUS-COMPOUNDS-LIBRARY",
+        "licence": "CC0 1.0",
+        "catalogue_type": "GNPS"
+      },
+      {
+        "url": "https://zenodo.org/api/records/21105617/files/20250828_targetmol_hts_np_neg_ms2.json/content",
+        "resolved_url": "https://zenodo.org/api/records/21105617/files/20250828_targetmol_hts_np_neg_ms2.json/content",
+        "path": "20250828_targetmol_hts_np_neg_ms2.json",
+        "bytes": 20978224,
+        "sha256": "e7cdce15abc933ff440fdb1390ccedc4597d19120b828b9add17ecef54753cfe",
+        "md5": "40319ec152c79dc1686eaf2deffa0dbf",
+        "retrieved_utc": "2026-10-20T07:21:27.340668+00:00",
+        "headers": {
+          "date": "Tue, 20 Oct 2026 07:21:23 GMT",
+          "content-type": "text/plain; charset=utf-8, text/plain; charset=utf-8"
+        },
+        "seconds": 3.92,
+        "source": "MSnLib",
+        "collection": "20250828_targetmol_hts_np_neg_ms2.json",
+        "licence": "CC BY 4.0",
+        "zenodo_record": "21105617",
+        "declared_checksum": "md5:40319ec152c79dc1686eaf2deffa0dbf"
+      },
+      {
+        "url": "https://zenodo.org/api/records/21105617/files/20250828_targetmol_hts_np_pos_ms2.json/content",
+        "resolved_url": "https://zenodo.org/api/records/21105617/files/20250828_targetmol_hts_np_pos_ms2.json/content",
+        "path": "20250828_targetmol_hts_np_pos_ms2.json",
+        "bytes": 22877120,
+        "sha256": "9c99714d6b73affe9ccdeca97d59c3212557e336c8560f9f7fb79c98d98d9008",
+        "md5": "85ef1e2acfff3c4af019a0bacfddd65d",
+        "retrieved_utc": "2026-10-20T07:21:31.499226+00:00",
+        "headers": {
+          "date": "Tue, 20 Oct 2026 07:21:27 GMT",
+          "content-type": "text/plain; charset=utf-8, text/plain; charset=utf-8"
+        },
+        "seconds": 4.12,
+        "source": "MSnLib",
+        "collection": "20250828_targetmol_hts_np_pos_ms2.json",
+        "licence": "CC BY 4.0",
+        "zenodo_record": "21105617",
+        "declared_checksum": "md5:85ef1e2acfff3c4af019a0bacfddd65d"
+      },
+      {
+        "url": "https://zenodo.org/api/records/21105617/files/20241003_nihnp_pos_ms2.json/content",
+        "resolved_url": "https://zenodo.org/api/records/21105617/files/20241003_nihnp_pos_ms2.json/content",
+        "path": "20241003_nihnp_pos_ms2.json",
+        "bytes": 54903512,
+        "sha256": "b051980f2b21f0cebbc5bc69ccd96ab15e3b0eddb90d3a649a895a8cbdd67610",
+        "md5": "a77cde9cff963c9ac6c92f1cdc5d0f3f",
+        "retrieved_utc": "2026-10-20T07:21:38.385151+00:00",
+        "headers": {
+          "date": "Tue, 20 Oct 2026 07:21:31 GMT",
+          "content-type": "text/plain; charset=utf-8, text/plain; charset=utf-8"
+        },
+        "seconds": 6.85,
+        "source": "MSnLib",
+        "collection": "20241003_nihnp_pos_ms2.json",
+        "licence": "CC BY 4.0",
+        "zenodo_record": "21105617",
+        "declared_checksum": "md5:a77cde9cff963c9ac6c92f1cdc5d0f3f"
+      },
+      {
+        "url": "https://zenodo.org/api/records/21105617/files/20241003_nihnp_neg_ms2.json/content",
+        "resolved_url": "https://zenodo.org/api/records/21105617/files/20241003_nihnp_neg_ms2.json/content",
+        "path": "20241003_nihnp_neg_ms2.json",
+        "bytes": 41462451,
+        "sha256": "ae35ff1df48f7cb6633cb857b436f7be5f7580395214632a7173f90a1cd83d2b",
+        "md5": "5952fdd2404f91b593dca3f252784f1a",
+        "retrieved_utc": "2026-10-20T07:21:44.073311+00:00",
+        "headers": {
+          "date": "Tue, 20 Oct 2026 07:21:38 GMT",
+          "content-type": "text/plain; charset=utf-8, text/plain; charset=utf-8"
+        },
+        "seconds": 5.65,
+        "source": "MSnLib",
+        "collection": "20241003_nihnp_neg_ms2.json",
+        "licence": "CC BY 4.0",
+        "zenodo_record": "21105617",
+        "declared_checksum": "md5:5952fdd2404f91b593dca3f252784f1a"
+      }
+    ],
+    "errors": {},
+    "discovery": {
+      "gnps_selected": [
+        "ELIXDB-LICHEN-DATABASE",
+        "GNPS-FAULKNERLEGACY",
+        "GNPS-NIH-NATURALPRODUCTSLIBRARY",
+        "GNPS-NIH-NATURALPRODUCTSLIBRARY_ROUND2_NEGATIVE",
+        "GNPS-NIH-NATURALPRODUCTSLIBRARY_ROUND2_POSITIVE",
+        "GNPS-PRESTWICKPHYTOCHEM",
+        "GNPS-SAM-SIK-KANG-LEGACY-LIBRARY",
+        "GNPS-XENORHABDUS-PHOTORHABDUS-COMPOUNDS-LIBRARY",
+        "PHENOLICSDB",
+        "PYRROLIZIDINE-ALKALOID-SPECTRAL-LIBRARY",
+        "TUEBINGEN-NATURAL-PRODUCT-COLLECTION",
+        "UM-NPDC",
+        "XANTHONES-DB"
+      ],
+      "msnlib": {
+        "id": 21105617,
+        "doi": "10.5281/zenodo.21105617",
+        "metadata": {
+          "title": "MSnLib Mass spectral libraries (.mgf and .json)",
+          "doi": "10.5281/zenodo.21105617",
+          "publication_date": "2026-07-01",
+          "description": "<p>If you use the data of MSnLib, please cite the <a href=\"https://doi.org/10.1038/s41592-025-02813-0\">MSnLib </a>paper in any resulting publication (Brungs, C., Schmid, R., Heuckeroth, S. et al. MSnLib: efficient generation of open multi-stage fragmentation mass spectral libraries. Nat Methods 22, 2028&ndash;2031 (2025). https://doi.org/10.1038/s41592-025-02813-0)</p>\n<p>The data for&nbsp;<a href=\"https://doi.org/10.1038/s41592-025-02813-0\">MSnLib</a> are divided into several Zenodo records due to size constraints.&nbsp;</p>\n<p>raw positive: <a href=\"https://doi.org/10.5281/zenodo.10966404\">10966404</a><br>raw negative: <a href=\"https://doi.org/10.5281/zenodo.10967081\">10967081</a><br>mzml positive and negative: <a href=\"https://doi.org/10.5281/zenodo.10966280\">10966280</a><br>spectral libraries: <a href=\"https://doi.org/10.5281/zenodo.11163380\">11163380</a></p>\n<p>This record includes the automatically generated spectral libraries (MSnLib) within mzmine, acquired using a flow injection method on an Orbitrap ID-X instrument, for all compound libraries. There are multiple files for each compound library containing MS2 only or MSn in two data formats (.mgf or .json) for both polarities. Information about detected compounds are included in the .parquet file.&nbsp;</p>\n<p>MS2 contains next to all MS2 spectra all pseudo MS2 spectra (a full MSn tree merged into one spectrum per compound ion). MSn contains all individual MSn stages additionally. The first number for each file highlights the library building date.</p>\n<p>9 Compound Libraries:</p>\n<ul>\n<li>Short Name: Full name, Provider (Catalog number), total compounds (not all detected during library building)</li>\n<li>MCEBIO: Bioactive Compound Library, MedChemExpress (HY-L001), 10,315 compounds</li>\n<li>MCESAF: 5k Scaffold Library, MedChemExpress, (HY-L902), 4998 compounds</li>\n<li>NIHNP: NIH NPAC ACONN collection of NP, NIH/NCATS, 3988 compounds</li>\n<li>OTAVAPEP: Alpha-helix Peptiomimetic Library, OTAVAchemicals (a-helix-Peptido), 1298 compounds</li>\n<li>ENAMDISC: Discovery Diversity Set -10, Enamine (DDS-10), 10,240 compounds</li>\n<li>ENAMMOL: Carboxylic Acid Fragment Library + Random, Enamine and Molport, 4378 compounds</li>\n<li>MCEDRUG: FDA-Approved Drug Library, MedChemExpress (HY-L022), 2610 compounds</li>\n<li>MCEDIV_50k_Sub: Subset of 50K Diversity Library, MedChemExpress (HY-L901), 20000 compounds</li>\n<li>TargetMolHTSNP: Subset of Natural Product Library for HTS, TargetMol (L6000), 2175 compounds</li>\n</ul>\n<p>Information regarding the SPECTYPE</p>\n<ul>\n<li>no SPECTYPE or SINGLE_BEST_SCAN: Best spectrum for each precursor and energy (highest TIC)</li>\n<li>'SAME_ENERGY' = Additionally, if a spectrum was acquired multiple times for a precursor with the same energy, they are merged into one spectrum only with the same energy (max. signal height used for each fragment signal).</li>\n<li>'ALL_ENERGIES' = merged spectrum of all used energies (in our case 3 for each precursor, using the merged (same energy) if available).</li>\n<li>'ALL_MSN_TO_PSEUDO_MS2' = mzmine merges all MSn into one pseudo MS2.</li>\n</ul>\n<p>&nbsp;</p>\n<p>MCEDIV and TargetmolNPHTS&nbsp;</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Brungs, Corinna",
+              "affiliation": "Czech Academy of Sciences, Institute of Organic Chemistry and Biochemistry",
+              "orcid": "0000-0002-2571-5235"
+            },
+            {
+              "name": "Schmid, Robin",
+              "affiliation": "Czech Academy of Sciences, Institute of Organic Chemistry and Biochemistry"
+            },
+            {
+              "name": "Pluskal, Tomas",
+              "affiliation": "Czech Academy of Sciences, Institute of Organic Chemistry and Biochemistry"
+            }
+          ],
+          "keywords": [
+            "MSnLib",
+            "spectral database"
+          ],
+          "related_identifiers": [
+            {
+              "identifier": "10.1038/s41592-025-02813-0",
+              "relation": "isPublishedIn",
+              "resource_type": "publication",
+              "scheme": "doi"
+            }
+          ],
+          "resource_type": {
+            "title": "Dataset",
+            "type": "dataset"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 7,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "11163380"
+                }
+              }
+            ]
+          }
+        },
+        "source_endpoint": "https://zenodo.org/api/records/11163380"
+      }
+    }
+  },
+  "mona_download_manifest.json": {
+    "downloads": [
+      {
+        "path": "MoNA-export-LC-MS-MS_Spectra-json.zip",
+        "url": "https://mona.fiehnlab.ucdavis.edu/rest/downloads/retrieve/00c877c2-1d32-44d2-be1f-a870e3c0115c",
+        "resolved_url": "https://mona.fiehnlab.ucdavis.edu/rest/downloads/retrieve/00c877c2-1d32-44d2-be1f-a870e3c0115c",
+        "bytes": 3239645927,
+        "sha256": "0b36e4addcfb8975aa370e9b69463cf547e89cd5afefc285b546838c440bf494",
+        "md5": "574ef77e6b71d0d07db2f6c46358af98",
+        "version": "2026-10-20T00:56:39.961000+00:00",
+        "retrieved_utc": "2026-10-20T07:44:03.389568+00:00",
+        "export_metadata": {
+          "id": "00c877c2-1d32-44d2-be1f-a870e3c0115c",
+          "label": "LC-MS Spectra - LC-MS/MS Spectra",
+          "query": "tags.text:'LC-MS' and metaData.name:'ms level' and metaData.value:'MS2'",
+          "format": "json",
+          "date": 1792457799961,
+          "count": 1317264,
+          "size": 3239645927,
+          "queryFile": "MoNA-export-LC-MS-MS_Spectra-query.txt",
+          "exportFile": "MoNA-export-LC-MS-MS_Spectra-json.zip"
+        },
+        "headers": {
+          "Date": "Tue, 20 Oct 2026 07:29:59 GMT",
+          "Content-Type": "application/octet-stream",
+          "Content-Length": "3239645927"
+        },
+        "seconds": 845.24
+      }
+    ]
+  },
+  "msn_measured_download_manifest.json": {
+    "downloads": [
+      {
+        "path": "20250828_targetmol_hts_np_neg_msn.json",
+        "url": "https://zenodo.org/api/records/21105617/files/20250828_targetmol_hts_np_neg_msn.json/content",
+        "bytes": 106951918,
+        "sha256": "1d4f7ed7cad86eb1629d84a0998b9b7db1d4313985d20dcc0d7601d9609099ca",
+        "md5": "8d56ff9a81d2d63d4806b11bbd7e3c5b",
+        "source": "MSnLib",
+        "collection": "20250828_targetmol_hts_np_neg_msn.json",
+        "licence": "CC BY 4.0",
+        "zenodo_record": "21105617",
+        "declared_checksum": "md5:8d56ff9a81d2d63d4806b11bbd7e3c5b",
+        "retrieved_utc": "2026-10-20T07:44:18.288511+00:00"
+      },
+      {
+        "path": "20250828_targetmol_hts_np_pos_msn.json",
+        "url": "https://zenodo.org/api/records/21105617/files/20250828_targetmol_hts_np_pos_msn.json/content",
+        "bytes": 131466271,
+        "sha256": "b1982fa285ecfb17ae2082257451684a4839450cd9ee3c8829a996cd9473846f",
+        "md5": "e57e38241356e1eb14be31a55d131e09",
+        "source": "MSnLib",
+        "collection": "20250828_targetmol_hts_np_pos_msn.json",
+        "licence": "CC BY 4.0",
+        "zenodo_record": "21105617",
+        "declared_checksum": "md5:e57e38241356e1eb14be31a55d131e09",
+        "retrieved_utc": "2026-10-20T07:44:34.666774+00:00"
+      },
+      {
+        "path": "20241003_nihnp_neg_msn.json",
+        "url": "https://zenodo.org/api/records/21105617/files/20241003_nihnp_neg_msn.json/content",
+        "bytes": 169708666,
+        "sha256": "b4d640ff24490fda2b0a0594c7b07723ade098dd9cd8234ecf2741fd5767d4dd",
+        "md5": "472481ab30aa2c74de355d1de39ee992",
+        "source": "MSnLib",
+        "collection": "20241003_nihnp_neg_msn.json",
+        "licence": "CC BY 4.0",
+        "zenodo_record": "21105617",
+        "declared_checksum": "md5:472481ab30aa2c74de355d1de39ee992",
+        "retrieved_utc": "2026-10-20T07:44:40.061374+00:00"
+      },
+      {
+        "path": "20241003_nihnp_pos_msn.json",
+        "url": "https://zenodo.org/api/records/21105617/files/20241003_nihnp_pos_msn.json/content",
+        "bytes": 253779835,
+        "sha256": "2d7940310f3bcf8d8367f300e359d272b47f1b5cadca9ae1b7e1fab11e528fba",
+        "md5": "6c05900c0b29230cc63f004fefd26eaa",
+        "source": "MSnLib",
+        "collection": "20241003_nihnp_pos_msn.json",
+        "licence": "CC BY 4.0",
+        "zenodo_record": "21105617",
+        "declared_checksum": "md5:6c05900c0b29230cc63f004fefd26eaa",
+        "retrieved_utc": "2026-10-20T07:45:06.901033+00:00"
+      }
+    ]
+  }
+}

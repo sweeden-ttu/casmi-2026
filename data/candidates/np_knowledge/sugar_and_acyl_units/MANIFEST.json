@@ -1,0 +1,41 @@
+{
+  "README.md": {
+    "bytes": 3864,
+    "sha256": "e3ca08c561c284e564cecb85105c5b6fdb0fbc907fe654f4af7374a53a00d2a0"
+  },
+  "knowledge_units.parquet": {
+    "bytes": 2309306,
+    "sha256": "60966bec41f36213f126cc8fbe85e3653fbf88d1abb24310c320603132f6ddec",
+    "rows": 153964
+  },
+  "pool_units.parquet": {
+    "bytes": 9219758,
+    "sha256": "20726668d69ad5ca93d3159701210df4f097a1f84015e8044a67843f1c6c3567",
+    "rows": 710701
+  },
+  "selected_rules.json": {
+    "bytes": 11846,
+    "sha256": "145046d119d53fd17ac9b0267ed3e024283f4ee18160a09fce0d62cb664091f0"
+  },
+  "spectrum_validation.json": {
+    "bytes": 1347,
+    "sha256": "6d6d1992948daf6e4fdccd694a50ec3d6ef131a85ed20da8fde35c0bda922b9f"
+  },
+  "structure_validation.json": {
+    "bytes": 18217,
+    "sha256": "e00c8bdb7658c62f96af8817264a3997739a26f45d880648736ecdbdd5061fc8"
+  },
+  "sugarloss_units.py": {
+    "bytes": 5270,
+    "sha256": "c0d3b30949e7d3b9641043dcc654a0d3a3b9780aec28252d1dc69f574b235102"
+  },
+  "training_observed_losses.parquet": {
+    "bytes": 32381810,
+    "sha256": "0da9ed8478bfd4d44defbeea2c1708505f332b9a260ad7c65d4fcfcfe63d4205",
+    "rows": 2539608
+  },
+  "unit_definitions.json": {
+    "bytes": 1871,
+    "sha256": "53b2940e73019e9d866ea15bc2282cc8453333ee826bded03034eae11166cc66"
+  }
+}

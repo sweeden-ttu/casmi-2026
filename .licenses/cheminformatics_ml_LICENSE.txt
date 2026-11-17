@@ -1,0 +1,4 @@
+Timestamp: 2026-11-17T11:42:00-06:00
+User notified of terms of use:
+- RDKit: BSD 3-Clause License (Landrum et al.)
+- scikit-learn: BSD 3-Clause License

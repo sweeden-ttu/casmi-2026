@@ -1,0 +1,23 @@
+{
+ "rows": 153964,
+ "lotus": 151885,
+ "npatlas": 33497,
+ "both": 31418,
+ "in_casmi_pool": 151115,
+ "in_casmi_train": 12291,
+ "new_vs_pool": 2849,
+ "in_pubchem": 151111,
+ "valid_structures": 153964,
+ "genus_pairs": 293503,
+ "pathways": {
+  "Terpenoids": 59335,
+  "Shikimates and Phenylpropanoids": 28198,
+  "Alkaloids": 20831,
+  "Polyketides": 20177,
+  "Amino acids and Peptides": 8783,
+  "Fatty acids": 8054,
+  "Carbohydrates": 1485
+ },
+ "mass_150_1250": 147855,
+ "rdkit": "2026.03.3"
+}

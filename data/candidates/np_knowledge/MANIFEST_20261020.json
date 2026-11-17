@@ -1,0 +1,61 @@
+{
+ "dataset": "casmi26-natural-product-knowledge-table",
+ "version_date": "2026-10-20",
+ "new_or_changed": [
+  {
+   "file": "README.md",
+   "bytes": 6960,
+   "sha256": "fa0e2ce3e64a8e353c0364535dc0c0a809f5148eae9a0a4ef184f7db9c5adfcd"
+  },
+  {
+   "file": "TECHNICAL_NOTES.md",
+   "bytes": 26739,
+   "sha256": "640ed8e5484e038c9cd5eef49282cb5c5d19657722ac08c9ebfd01f0c45678bc"
+  },
+  {
+   "file": "external_reference_spectra/DOWNLOADS.csv",
+   "bytes": 12279,
+   "sha256": "972d0f677c7e33658951ae812348528a6672506e75d60f56a0dbbbdc6f483ac8"
+  },
+  {
+   "file": "external_reference_spectra/INTEGRATION.json",
+   "bytes": 4032,
+   "sha256": "8035b250d2bd1a3af576fb9e5abcbcd45a5a79f016f7d1cc9af1dfb026d05494"
+  },
+  {
+   "file": "external_reference_spectra/LICENCES.md",
+   "bytes": 4467,
+   "sha256": "10fa8e1c4c11bbe823c05c9b2aefff9892fe99a1737e2bccf3d46cc3fb44fbfb"
+  },
+  {
+   "file": "external_reference_spectra/SOURCE_MANIFESTS.json",
+   "bytes": 27651,
+   "sha256": "64005bddbe99a5219ffdb8b6c39079ef1352f719e02ddf754a10a928b78396b2"
+  },
+  {
+   "file": "external_reference_spectra/external_candidate_additions.parquet",
+   "bytes": 13047,
+   "sha256": "6ee3e590009a30b2139cc542aebbc3ddea7a75d5eae2060edbca9685498788ed"
+  },
+  {
+   "file": "external_reference_spectra/external_delta.parquet",
+   "bytes": 4607296,
+   "sha256": "e75558832935f28e85a5419022c4cfba4d0d4b49f1063544c317c8ae61c2ac41"
+  },
+  {
+   "file": "external_reference_spectra/external_record_quality.parquet",
+   "bytes": 94211,
+   "sha256": "4f5b227d1c874624182c76e8f8406ba3ee86521744831cb461d6198c898b6c9e"
+  },
+  {
+   "file": "external_reference_spectra/external_scorer_sid_links.parquet",
+   "bytes": 36920,
+   "sha256": "8cd61b8f110bfd6686684d330609a1d0f0d7cc96eab32b9cdd3352939ef443ef"
+  },
+  {
+   "file": "external_reference_spectra/external_structure_coverage.parquet",
+   "bytes": 43715,
+   "sha256": "866fc1a6d7e0cf570fffb5827a037d00c169db34fd687dd5e5631bd86a2a28b9"
+  }
+ ]
+}

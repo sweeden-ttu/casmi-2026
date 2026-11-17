@@ -1,0 +1,49 @@
+{
+  "knowledge_pool_flag_disagreements": 1,
+  "knowledge_pool_disagreements": [
+    {
+      "ik14": "IJGNGQQFTLOVNN",
+      "scorer_key": "AYOJJYITLOQRGG",
+      "in_casmi_pool": true,
+      "current_pool_row": -1
+    }
+  ],
+  "pubchemlite_raw_vs_candidate_key": [
+    {
+      "pubchemlite_row": 4532,
+      "candidate_key": "ZGTANAOINQSTBY",
+      "ik14": "AVWXOLSGMHQEET"
+    },
+    {
+      "pubchemlite_row": 9905,
+      "candidate_key": "SXDBWCPKPHAZSM",
+      "ik14": "KYHSUUVXZLFMQS"
+    },
+    {
+      "pubchemlite_row": 43042,
+      "candidate_key": "SRPSOCQMBCNWFR",
+      "ik14": "FYVQBHMNAFMCMR"
+    },
+    {
+      "pubchemlite_row": 65768,
+      "candidate_key": "ICIWUVCWSCSTAQ",
+      "ik14": "DWLZEPILACINAS"
+    },
+    {
+      "pubchemlite_row": 91500,
+      "candidate_key": "KHIWWQKSHDUIBK",
+      "ik14": "WXSIPUYRSBVXGK"
+    },
+    {
+      "pubchemlite_row": 149033,
+      "candidate_key": "TWLXDPFBEPBAQB",
+      "ik14": "DSFFTJWVPXAHPD"
+    },
+    {
+      "pubchemlite_row": 363763,
+      "candidate_key": "YWBHDMUVPYKGPZ",
+      "ik14": "CQSULIHSUWZRHN"
+    }
+  ],
+  "interpretation": "Raw structural connectivity and scorer-standardised identity are explicitly different joins. Membership flags retain the original scorer-key OR raw-key definition, while pool_row uses scorer key only. LOTUS 2026-04-13 refresh retains these definitions and recomputes every aligned row."
+}

@@ -18,7 +18,10 @@ from collections import OrderedDict
 from typing import Mapping
 
 from transformers.configuration_utils import PretrainedConfig
-from transformers.onnx import OnnxConfig
+try:
+    from transformers.onnx import OnnxConfig
+except ImportError:
+    OnnxConfig = object
 from transformers.utils import logging
 
 
@@ -158,6 +161,8 @@ class MolformerConfig(PretrainedConfig):
         self.deterministic_eval = deterministic_eval
         self.is_decoder = is_decoder
         self.use_cache = use_cache
+        self.add_cross_attention = kwargs.get("add_cross_attention", False)
+        self.chunk_size_feed_forward = kwargs.get("chunk_size_feed_forward", 0)
 
 
 # Copied from transformers.models.roberta.configuration_roberta.RobertaOnnxConfig with Roberta->Molformer

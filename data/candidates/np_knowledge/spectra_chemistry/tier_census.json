@@ -1,0 +1,13 @@
+{
+  "rows": 105875489,
+  "valid_rows": 105861079,
+  "invalid_rows": 14410,
+  "window_valid_rows": 105339427,
+  "mass_min": 150.00001725,
+  "mass_max": 1249.99949137,
+  "distinct_formulas": 2844545,
+  "rdkit": "2026.03.3",
+  "seconds": 1158.6581165166572,
+  "scope": "all tier rows; reported composition restricted to stored masses 157..1159 Da; no supplements",
+  "cluster_formula_database": "tier_formulas.sqlite"
+}

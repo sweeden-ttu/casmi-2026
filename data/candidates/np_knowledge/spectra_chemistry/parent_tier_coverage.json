@@ -1,0 +1,7 @@
+{
+  "training_rows": 275810,
+  "in_tier": 256476,
+  "window_rows": 273199,
+  "window_in_tier": 255843,
+  "match": "RDKit SMILES InChIKey14 exact connectivity; no scorer tautomer re-standardisation of all tier rows"
+}

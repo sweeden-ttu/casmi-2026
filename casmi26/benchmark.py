@@ -134,6 +134,31 @@ def setup_colab_and_kaggle_secrets(
     """
     status = ColabSecretsStatus()
     drive_path = Path(drive_root)
+    repo_root = Path(__file__).resolve().parents[1]
+
+    # Pre-load `.env` files if present (Drive root, repo root, or current working directory)
+    for dotenv_path in (drive_path / ".env", repo_root / ".env", Path.cwd() / ".env"):
+        if dotenv_path.is_file():
+            try:
+                for raw_line in dotenv_path.read_text(encoding="utf-8").splitlines():
+                    line = raw_line.strip()
+                    if not line or line.startswith("#"):
+                        continue
+                    if line.startswith("export "):
+                        line = line[len("export ") :].strip()
+                    if "=" not in line:
+                        continue
+                    k, v = line.split("=", 1)
+                    k = k.strip()
+                    v = v.strip()
+                    if len(v) >= 2 and v[0] == v[-1] and v[0] in ("'", '"'):
+                        v = v[1:-1]
+                    elif " #" in v:
+                        v = v.split(" #", 1)[0].strip()
+                    if k and v and k not in os.environ:
+                        os.environ[k] = v
+            except Exception:
+                pass
 
     # Try Google Colab userdata API first
     colab_userdata = None
@@ -204,18 +229,27 @@ def setup_colab_and_kaggle_secrets(
                 except Exception:
                     pass
 
-    # Write ~/.kaggle/kaggle.json if both username and key are now available
+    # Write ~/.kaggle/kaggle.json (and ~/.kaggle/access_token for KGAT_ tokens) so both `kaggle` CLI and `kagglehub` work immediately
     if "KAGGLE_USERNAME" in status.loaded_keys and "KAGGLE_KEY" in status.loaded_keys:
+        k_val = status.loaded_keys["KAGGLE_KEY"]
+        os.environ["KAGGLE_API_TOKEN"] = k_val
         home_kaggle.parent.mkdir(parents=True, exist_ok=True)
         payload = {
             "username": status.loaded_keys["KAGGLE_USERNAME"],
-            "key": status.loaded_keys["KAGGLE_KEY"],
+            "key": k_val,
         }
         home_kaggle.write_text(json.dumps(payload), encoding="utf-8")
         try:
             os.chmod(home_kaggle, 0o600)
         except Exception:
             pass
+        if k_val.startswith("KGAT_"):
+            access_token_file = home_kaggle.parent / "access_token"
+            access_token_file.write_text(k_val, encoding="utf-8")
+            try:
+                os.chmod(access_token_file, 0o600)
+            except Exception:
+                pass
         status.kaggle_json_path = home_kaggle
 
     # Check local ~/.config/evidently/token or api_key if EVIDENTLY_TOKEN is not yet loaded

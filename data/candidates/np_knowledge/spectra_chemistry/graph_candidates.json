@@ -1,0 +1,98 @@
+[
+  {
+    "inchikey14": "HELXLJCILKEWJH",
+    "formula": "C44H70O23",
+    "n_spec": 96,
+    "n_tims": 17,
+    "mass": 966.4307885000003,
+    "o": 23
+  },
+  {
+    "inchikey14": "RCINICONZNJXQF",
+    "formula": "C47H51NO14",
+    "n_spec": 298,
+    "n_tims": 13,
+    "mass": 853.3309553119999,
+    "o": 14
+  },
+  {
+    "inchikey14": "XFZJEEAOWLFHDH",
+    "formula": "C30H26O12",
+    "n_spec": 504,
+    "n_tims": 12,
+    "mass": 578.142426272,
+    "o": 12
+  },
+  {
+    "inchikey14": "DVGGLGXQSFURLP",
+    "formula": "C30H26O13",
+    "n_spec": 403,
+    "n_tims": 12,
+    "mass": 594.137340892,
+    "o": 13
+  },
+  {
+    "inchikey14": "TZJALUIVHRYQQB",
+    "formula": "C33H40O15",
+    "n_spec": 355,
+    "n_tims": 12,
+    "mass": 676.2367205799999,
+    "o": 15
+  },
+  {
+    "inchikey14": "UEDUENGHJMELGK",
+    "formula": "C38H60O18",
+    "n_spec": 297,
+    "n_tims": 12,
+    "mass": 804.3779650800001,
+    "o": 18
+  },
+  {
+    "inchikey14": "DUXQKCCELUKXOE",
+    "formula": "C29H34O15",
+    "n_spec": 195,
+    "n_tims": 12,
+    "mass": 622.1897703879999,
+    "o": 15
+  },
+  {
+    "inchikey14": "LPMXVESGRSUGHW",
+    "formula": "C29H44O12",
+    "n_spec": 212,
+    "n_tims": 10,
+    "mass": 584.2832768479999,
+    "o": 12
+  },
+  {
+    "inchikey14": "BMLIIPOXVWESJG",
+    "formula": "C25H22O10",
+    "n_spec": 172,
+    "n_tims": 10,
+    "mass": 482.1212969039999,
+    "o": 10
+  },
+  {
+    "inchikey14": "YKRGDOXKVOZESV",
+    "formula": "C23H28O11",
+    "n_spec": 151,
+    "n_tims": 10,
+    "mass": 480.1631617159999,
+    "o": 11
+  },
+  {
+    "inchikey14": "GZSOSUNBTXMUFQ",
+    "formula": "C28H32O15",
+    "n_spec": 727,
+    "n_tims": 9,
+    "mass": 608.1741203239999,
+    "o": 15
+  },
+  {
+    "inchikey14": "XUCIJNAGGSZNQT",
+    "formula": "C20H27NO11",
+    "n_spec": 358,
+    "n_tims": 9,
+    "mass": 457.15841068399993,
+    "o": 11
+  }
+]

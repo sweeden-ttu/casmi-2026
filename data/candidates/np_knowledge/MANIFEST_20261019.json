@@ -1,0 +1,101 @@
+{
+  "dataset": "dmitriigluzdov/casmi26-natural-product-knowledge-table",
+  "files": {
+    "FILE_DESCRIPTIONS.json": {
+      "bytes": 2101,
+      "sha256": "ceabe58578ef5cbcb4235b97a10cc8745412dc099c8d468c50ab5278b3f8ccde"
+    },
+    "JOIN_NOTES.json": {
+      "bytes": 2252,
+      "sha256": "7386f47a156740c7acd9fc5a837c8c4adbc646d366b22fa4c460030ceb034d79"
+    },
+    "README.md": {
+      "bytes": 2536,
+      "sha256": "c504c9727984574a33ea6bcf38d6995135788f174d22147ce0242e3691aef2c3"
+    },
+    "SOURCE_CHECK_20261019.md": {
+      "bytes": 1393,
+      "sha256": "66e20e11858f855cecb39ed1e947c10828214bd5dc762bf9c797cb00904d3b4e"
+    },
+    "SUMMARY.json": {
+      "bytes": 486,
+      "sha256": "4009b972187c628e24624ecf3116e0dd3bf21bb9d8eace507fbff0f2f6055d2b"
+    },
+    "VALIDATION_20261019.json": {
+      "bytes": 2304,
+      "sha256": "812247057a89cd082695b4a609bcb3a60caf106bf2db3f493eda1ebd4935db5b"
+    },
+    "candidate_joins.parquet": {
+      "bytes": 7019710,
+      "sha256": "192b99074582dc552b09ec029daf4937ccf97e579205ce428545104a0d232d53",
+      "rows": 152717,
+      "dtypes": {
+        "ik14": "large_string",
+        "scorer_key": "large_string",
+        "pool_row": "int32",
+        "tier_row": "int64",
+        "tier_match_count": "int32",
+        "pubchemlite_row": "int32",
+        "pubchemlite_match_count": "int32"
+      }
+    },
+    "dataset-metadata.json": {
+      "bytes": 2925,
+      "sha256": "486f87e4cb5ddc5f2fc89b8a4f4b82c35b54fbbd34362d96ef41f7c04613abab"
+    },
+    "lotus_structure_genus.parquet": {
+      "bytes": 3630505,
+      "sha256": "721dacb5cdfbd7aeefc23948ad6f8e41ed565b54d8d5857916443785daf03d65",
+      "rows": 291660,
+      "dtypes": {
+        "ik14": "large_string",
+        "kingdom": "large_string",
+        "family": "large_string",
+        "genus": "large_string",
+        "n_species": "int64",
+        "n_references": "int64"
+      }
+    },
+    "natural_products.parquet": {
+      "bytes": 13889264,
+      "sha256": "3cc89e29f7686b7d2a24b5c20e3e8cd1c07129ad47fdd8ef83bddf48be3fa46f",
+      "rows": 152717,
+      "dtypes": {
+        "ik14": "large_string",
+        "scorer_key": "large_string",
+        "smiles": "large_string",
+        "formula": "large_string",
+        "mono_mass": "double",
+        "n_heavy": "int64",
+        "in_lotus": "bool",
+        "in_npatlas": "bool",
+        "in_casmi_pool": "bool",
+        "in_casmi_train": "bool",
+        "np_pathway": "large_string",
+        "np_superclass": "large_string",
+        "np_class": "large_string",
+        "n_organisms": "int32",
+        "n_references": "int32",
+        "n_stereoisomers": "int32",
+        "kingdoms": "large_string",
+        "top_families": "large_string",
+        "top_genera": "large_string",
+        "npatlas_id": "large_string",
+        "npatlas_name": "large_string",
+        "npatlas_origin": "large_string",
+        "npatlas_genera": "large_string",
+        "npatlas_first_year": "int32",
+        "pubchem_cid": "int32",
+        "pubchem_substances": "int64",
+        "pubmed_articles": "int64",
+        "patents": "int64"
+      }
+    }
+  },
+  "validation": "VALIDATION_20261019.json",
+  "tags": [
+    "chemistry",
+    "biology",
+    "machine learning"
+  ]
+}

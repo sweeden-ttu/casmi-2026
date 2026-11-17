@@ -1,0 +1,12 @@
+{
+  "SOURCE_CHECK_20261019.md": "Primary-source metadata and licence check; no payload refresh. Records current NPAtlas CC BY-NC 4.0 wording and LOTUS CC0.",
+  "VALIDATION_20261019.json": "Dataset-specific checks and immutability results; MANIFEST_20261019.json pins the final bytes.",
+  "candidate_joins.parquet": "153,964 rows in natural_products.parquet order. Raw ik14 joins to tier/PubChemLite, scorer_key joins to pool.key; deterministic representative rows and multiplicities. Missing row=-1.",
+  "MANIFEST_20261019.json": "Historical file inventory with SHA-256, sizes, row counts/dtypes where applicable. Excludes its own recursive digest; the release report pins this manifest.",
+  "JOIN_NOTES.json": "Explicit identifier-scope discrepancies: PubChemLite supplied keys versus raw SMILES-derived keys, and historical pool flags versus the current scorer-key join.",
+  "README.md": "Current dataset instructions, this release card, source terms and clearly labelled previous-version documentation.",
+  "FILE_DESCRIPTIONS.json": "Descriptions of every staged file, including this index.",
+  "LOTUS_REFRESH.json": "LOTUS 2026-04-13 source checksums, current source terms, snapshot-equivalence limits, table/store counts and paired public-panel replay.",
+  "CHANGED_FILES.json": "Changed-file overlay inventory, sizes and SHA-256; excludes its own recursive digest.",
+  "CARD_CHANGES.md": "Required old-to-new edits for existing cards and technical notes; the source cards are not rewritten."
+}

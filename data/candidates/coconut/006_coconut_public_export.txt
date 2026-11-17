@@ -1,0 +1,43 @@
+
+====================================================================================================
+ENVIRONMENT
+====================================================================================================
+python 3.13.15 | pandas 2.3.3
+[ENVIRONMENT: 0.0s]
+
+====================================================================================================
+LOAD
+====================================================================================================
+/kaggle/input/datasets/xjoannax88/coconut-structures/coconut_structures.parquet  |  494,774 rows
+columns in: ['key', 'smiles', 'formula', 'exact_mass', 'charge', 'n_heavy', 'n_entries', 'coconut_id', 'source']
+[LOAD: 4.7s]
+
+====================================================================================================
+CLEAN
+====================================================================================================
+dropped columns: []
+rows with a key that is not 14 characters: 0 (COCONUT entries behind them: 0)
+key            object
+smiles         object
+formula        object
+exact_mass    float64
+charge          int64
+n_heavy         int64
+n_entries       int64
+coconut_id     object
+source         object
+
+              key                                                                                                                              smiles     formula  exact_mass  charge  n_heavy  n_entries  coconut_id        source
+0  AAAACIDXVXFWLZ                                                                                  O=C1OC2=CC(=CC(OC3OC(CO)C(O)C(O)C3O)=C2C4=C1CCC4)C    C19H22O8  378.131468       0       27          1  CNP0220816  coconut_2021
+1  AAAAWQOPBUPWEV                                                                       O=C1C=C(OC=2C1=C(O)C=C(O)C2C(C=3C=CC=CC3)CC(=O)OC)C=4C=CC=CC4    C25H20O6  416.125988       0       31          1  CNP0293916  coconut_2021
+2  AAABMNXUOFPYQK                                                                    O=C(NC1OCOC2C1OC(CC(OC)CO)C(C)(C)C2OC)C(O)C3(OC)OC(C)C(C(=C)C3)C  C25H43NO10  517.288697       0       36          1  CNP0297651  coconut_2021
+3  AAACGVWOBBHIOG  O=C1C(C(=O)CC)=C([O-])C(C(O)=C1CC=2C(O)=C(C(=O)CC)C(O)=C(C2O)CC3=C(O)C(C(=O)CC)=C(O)C(=C3O)CC4C(=O)C(C(=O)CC)C(=O)C(C4=O)(C)C)(C)C  C43H47O16-  819.286959      -1       59          1  CNP0026932  coconut_2021
+4  AAACJXBPRRVSAV                                                                          O=C(OC1C(=C)C2CCC3(O)C4(C)CCCC(C(=O)O)(C)C4CCC13C2)C=C(C)C    C25H36O5  416.256274       0       30          1  CNP0330764  coconut_2021
+[CLEAN: 1.2s]
+
+====================================================================================================
+SAVE
+====================================================================================================
+saved coconut_structures.parquet: 34.3 MB | 494,774 rows | columns: ['key', 'smiles', 'formula', 'exact_mass', 'charge', 'n_heavy', 'n_entries', 'coconut_id', 'source']
+neutral: 449,897 | charged: 44,877 | 150-1200 Da: 473,872
+[SAVE: 1.9s]

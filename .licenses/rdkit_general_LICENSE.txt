@@ -1,0 +1,5 @@
+Timestamp: 2026-11-17T11:42:00-06:00
+User notified of terms of use:
+- OPSIN: Apache 2.0 (https://opsin.ch.cam.ac.uk)
+- PubChem PUG REST: https://pubchem.ncbi.nlm.nih.gov/docs/citation-guidelines
+- RDKit: BSD 3-Clause License (Landrum et al., https://www.rdkit.org/)

@@ -1,0 +1,9 @@
+{
+  "scope": "neutral, connected, no radical electrons; supported elements H,C,N,O,P,S,F,Cl,Br,I,Si,B,Se; each check denominator explicit",
+  "golden_ratios": "Kind & Fiehn Table 2 common and extended ratios only. Not the full Seven Golden Rules or isotope filter.",
+  "senior": "Necessary valence-sum conditions; low valence and variable aggregate P/S valence shown. Not a proof of a realizable/stable molecule.",
+  "decoys": "192 fixed distinct-parent sample where same-mass public pool decoys exist; max 8 hashed candidates per parent, 10 ppm or 0.002 Da. Not a ranker ablation or identity-disjoint validation.",
+  "formula_score": "Same subformula kernel as annotations, max(0.002 Da,10 ppm).",
+  "structure_score": "Existing v20 cell-50 MetFrag-lite kernel, 2 cuts, +/-2 H, 0.005 Da; all cut-depth weights 1, linear intensity. Same settings for true and decoy.",
+  "mass_defect": "m_exact - round(m_exact); nitrogen nominal mass separately sums isotope mass numbers, never rounds molecular exact mass."
+}

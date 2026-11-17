@@ -1,0 +1,58 @@
+{
+  "rows": 153964,
+  "rdkit": "2026.03.3",
+  "ik14_order_equal": true,
+  "descriptors_reused_unchanged_smiles": 147841,
+  "descriptors_computed": 6123,
+  "invalid_smiles": 0,
+  "invalid_structure_rows": [],
+  "np_score_missing": 0,
+  "acyclic_scaffolds": 8493,
+  "knowledge_formula_counts_nonzero": 146797,
+  "knowledge_tier_count_dtype": "uint16, exact for this immutable public tier",
+  "tier_rows": 105875489,
+  "tier_formula_parse_failures": 14410,
+  "additional_formulas_not_in_retained_knowledge": 749,
+  "additional_mass_window_rows_checked": 204862,
+  "additional_formula_counts_nonzero": 549,
+  "formula_method_version": 2,
+  "formula_definition": "RDKit CalcMolFormula defaults: separateIsotopes=False, charge included; exact text equality",
+  "formula_reuse": "Retained knowledge counts use the same 105875489-row tier. Every previously unseen formula is resolved by exact formula matches in mass windows; non-neutral and unsupported-element formulas have no eligible tier rows.",
+  "np_model_sha256": "34db5b02d762e05a0243e640aee24202a5303b7ec810ced7ff929a233e082ab6",
+  "np_scorer_sha256": "fad19fda1fbf6688c54a15f8dd6ff4fb8d4c0139a3c11537e9b81d1d0332a56c",
+  "np_score_credit": "Ertl, Roggo and Schuffenhauer, J Chem Inf Model 48, 68-74 (2008), DOI 10.1021/ci700286x; RDKit Contrib open-data model",
+  "missing_value_rules": "Invalid sanitized structures retain row position and null chemistry descriptors and scaffolds; valid acyclic scaffolds are empty strings. Formula ambiguity still uses stored formula. A failed scaffold transformation on an otherwise valid molecule produces null only for the undefined scaffold and is listed explicitly; rdkit_valid still describes source sanitization.",
+  "files": {
+    "descriptors.parquet": {
+      "bytes": 5679231,
+      "sha256": "89ab934a63c0a5303ab1cfc1ec80459daac4b69a648835c92770aadb927375bd"
+    }
+  },
+  "seconds": 28.37222035974264,
+  "undefined_scaffolds_on_valid_structures": [
+    {
+      "ik14": "VIQFHHZSLDFWDU",
+      "scaffold_error": "generic_scaffold: AtomValenceException: Explicit valence for atom # 11 C greater than permitted",
+      "smiles": "C=Cc1c(C)c2[n]3c1C=C1C(C)=C(CC)C4=[N+]1[Mg]31[n]3c(c(C)c5c3=C(C3=[N+]1C(=C2)C(C)C3CCC(=O)OCC=C(C)CCCC(C)CCCC(C)CCCC(C)C)C(C(=O)OC)C5=O)=C4"
+    },
+    {
+      "ik14": "ASARMUCNOOHMLO",
+      "scaffold_error": "generic_scaffold: AtomValenceException: Explicit valence for atom # 39 C, 5, is greater than permitted",
+      "smiles": "CC1=C2[N+]3=C(C=C4[N+]5=C(C(C)=C6[N]7C8C(CC(N)=O)C6(C)CCC(=O)NCC(C)OP(=O)(O)OC6C(CO)OC(C6O)n6c[n+](c9cc(C)c(C)cc96)[Co-3]753[N+]3=C1C(CCC(N)=O)C(C)(CC(N)=O)C83C)C(CCC(N)=O)C4(C)C)C(CCC(N)=O)C2(C)CC(N)=O"
+    },
+    {
+      "ik14": "JEWJRMKHSMTXPP",
+      "scaffold_error": "generic_scaffold: AtomValenceException: Explicit valence for atom # 39 C, 5, is greater than permitted",
+      "smiles": "CC1=C2[N+]3=C(C=C4[N+]5=C(C(C)=C6[N]7C8C(CC(N)=O)C6(C)CCC(=O)NCC(C)OP(=O)(O)OC6C(CO)OC(C6O)n6c[n+](c9cc(C)c(C)cc96)[Co-3]753([CH3])[N+]3=C1C(CCC(N)=O)C(C)(CC(N)=O)C83C)C(CCC(N)=O)C4(C)C)C(CCC(N)=O)C2(C)CC(N)=O"
+    },
+    {
+      "ik14": "ZIHHMGTYZOSFRC",
+      "scaffold_error": "generic_scaffold: AtomValenceException: Explicit valence for atom # 39 C, 6, is greater than permitted",
+      "smiles": "CC1=C2[N+]3=C(C=C4[N+]5=C(C(C)=C6[N]7C8C(CC(N)=O)C6(C)CCC(=O)NCC(C)OP(=O)(O)OC6C(CO)OC(C6O)n6c[n+](c9cc(C)c(C)cc96)[Co-3]753([CH2]C3OC(n5cnc6c(N)ncnc65)C(O)C3O)[N+]3=C1C(CCC(N)=O)C(C)(CC(N)=O)C83C)C(CCC(N)=O)C4(C)C)C(CCC(N)=O)C2(C)CC(N)=O"
+    }
+  ],
+  "generic_scaffold_nulls": 4,
+  "source_sha256": "6ccb833e47d88715fca1d614b05cae92fa333fa388ae1d64226f2695a62081aa",
+  "knowledge_rows": 153964,
+  "knowledge_order_ik14_equal": true
+}

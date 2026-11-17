@@ -1,0 +1,41 @@
+{
+ "dataset": "casmi26-natural-product-knowledge-table",
+ "version_date": "2026-10-19",
+ "new_or_changed": [
+  {
+   "file": "DESCRIPTOR_METHOD.json",
+   "bytes": 2132,
+   "sha256": "ddd17306cdeb21e3aedc4a374591f58a3e8fb3f125b9898b89b8356f7e9c4040"
+  },
+  {
+   "file": "README.md",
+   "bytes": 4983,
+   "sha256": "2a923fee1de8ac14d73d01783f376d238b0309f0f62fb2f3bd01e9505fbc6623"
+  },
+  {
+   "file": "TECHNICAL_NOTES.md",
+   "bytes": 19567,
+   "sha256": "970a67f6905863146f41afc0d80ea9856b1a574e8fccaf574bd9765db1bcafcd"
+  },
+  {
+   "file": "build_np.py",
+   "bytes": 7472,
+   "sha256": "b7d3266338d419ba3aa7583d22ca1481022db3529cb454880fae8b604358bf42"
+  },
+  {
+   "file": "descriptors.parquet",
+   "bytes": 5295074,
+   "sha256": "59260800fd5215058d043d9d7235c3ce472f69c22f95ec9922fe6cb81ed2f931"
+  },
+  {
+   "file": "lotus_structure_genus.csv",
+   "bytes": 15846273,
+   "sha256": "b8ac52637cd62733dd962e1fe7e19224d82d16e454cd82de9c379fc1cb647b0e"
+  },
+  {
+   "file": "natural_products.csv",
+   "bytes": 40559627,
+   "sha256": "37844122be5314c1a396172d7903181c47933bcb541b61d7b32ba289cea3019d"
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+{
+  "selection": "From 12 predeclared oxygen-rich complex training parents. Require >=3 stored collision energies in one adduct/instrument/original-unit context; maximise energy diversity, sugar-loss presence, formula diversity, mean explained intensity. Select <=5 energy levels and highest coverage spectrum at each.",
+  "graph": "All retained observations, formula-assigned nodes and all formula-compatible edges; selected edges form a schematic predecessor graph. Illustrative assignments prefer a connected-cleavage-compatible formula within tolerance, then minimum error; every alternative and the primary closest-mass label are retained. This is not a full mechanistic reconstruction or SIRIUS run.",
+  "isotope": "Check +1.99705/+1.99795 Da companions in stored spectrum arrays; expected first M+2 ratio nCl*0.3196+nBr*0.9728 ignores O/S/isotope overlap. Missing companions can reflect deisotoping and do not invalidate a structure."
+}

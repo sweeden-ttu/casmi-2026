@@ -1,0 +1,508 @@
+{
+  "version_date": "2026-10-20",
+  "lotus_release": "2026-04-13",
+  "lotus_record": "https://zenodo.org/records/19360665",
+  "lotus_licence": "CC BY 4.0",
+  "old_record_current_licence": "The current Zenodo API for record 7534071 also says CC BY 4.0. Previous CC0 statements are not verified historical licence evidence.",
+  "npatlas": "Retained table-relevant v2024_09 snapshot fields; public TSV redownload 2026-10-20; conservative CC BY-NC 4.0. Original raw TSV checksum unavailable.",
+  "npatlas_equivalence": {
+    "url": "https://www.npatlas.org/static/downloads/NPAtlas_download.tsv?version=2024_09",
+    "retrieved_utc": "2026-10-20T15:56:32Z",
+    "bytes": 33671731,
+    "md5": "10fd08163f5cda420e104dc21246db4f",
+    "sha256": "4fa5ce93cf5e271d65649f7f5c40e031b1e3d59144cb50c12c5fc9ee041cc72b",
+    "rows": 36454,
+    "raw_keys": 33497,
+    "retained_keys": 33497,
+    "added_keys": 0,
+    "removed_keys": 0,
+    "retained_aggregated_field_differences": {
+      "npatlas_id": 0,
+      "npatlas_name": 0,
+      "npatlas_origin": 0,
+      "npatlas_genera": 0,
+      "npatlas_first_year": 0
+    },
+    "original_payload_checksum_available": false,
+    "npatlas_only_structures_checked": 4734,
+    "npatlas_only_canonical_smiles_differences": []
+  },
+  "lotus_inputs": [
+    {
+      "name": "260413_frozen.csv.gz",
+      "record": "19360665",
+      "url": "https://zenodo.org/records/19360665/files/260413_frozen.csv.gz",
+      "bytes": 20594507,
+      "md5": "cf0cf2afa2ca4d758b68f2e39d466f5d",
+      "sha256": "c0744fb4d4395a638739078601836d9472612c1ed6db6c8e4f0b5e8a972ced70",
+      "publication_date": "2026-04-13",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "retrieved_utc": "2026-10-20T15:46:25Z"
+    },
+    {
+      "name": "260413_changes_report.txt",
+      "record": "19360665",
+      "url": "https://zenodo.org/records/19360665/files/260413_changes_report.txt",
+      "bytes": 374,
+      "md5": "a166d5e34250254389f67605511005a3",
+      "sha256": "e115cac38b9f88769d081d55e37d0788a778da975f6025e543b04cde2366e6ea",
+      "publication_date": "2026-04-13",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "retrieved_utc": "2026-10-20T15:46:26Z"
+    },
+    {
+      "name": "260413_frozen_metadata.csv.gz",
+      "record": "19360665",
+      "url": "https://zenodo.org/records/19360665/files/260413_frozen_metadata.csv.gz",
+      "bytes": 90298678,
+      "md5": "b17048b3b77daae9ab1e480b6591aabd",
+      "sha256": "09885dcfb3bc0e6d700fefcd5778e91446a1f9d5d2fbbcbf00eb5d2e83b68844",
+      "publication_date": "2026-04-13",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "retrieved_utc": "2026-10-20T15:47:56Z"
+    },
+    {
+      "name": "lotus_exporter.py",
+      "record": "19360665",
+      "url": "https://zenodo.org/records/19360665/files/lotus_exporter.py",
+      "bytes": 106800,
+      "md5": "af9209282f5e04586f22ed308cce66d7",
+      "sha256": "01b774f6a26934cd8715d9270570494609bf23e485e48a5efa0d5906473b0071",
+      "publication_date": "2026-04-13",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "retrieved_utc": "2026-10-20T15:47:57Z"
+    },
+    {
+      "name": "230106_frozen.csv.gz",
+      "record": "7534071",
+      "url": "https://zenodo.org/records/7534071/files/230106_frozen.csv.gz",
+      "bytes": 15206738,
+      "md5": "4862ab16a7fe916f8ee6930f9bb95f15",
+      "sha256": "f492bb0a850f149e7bb15df64087b1e1d57077057d7fa8ebca247d6d6520b59d",
+      "publication_date": "2023-01-06",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "retrieved_utc": "2026-10-20T15:48:19Z"
+    },
+    {
+      "name": "230106_frozen_metadata.csv.gz",
+      "record": "7534071",
+      "url": "https://zenodo.org/records/7534071/files/230106_frozen_metadata.csv.gz",
+      "bytes": 92979778,
+      "md5": "324579ae4a4785bf1b50b532b0a00eec",
+      "sha256": "a206b62537733a3e8345598aacec7e8059ab777219d4b867003d49e692a65945",
+      "publication_date": "2023-01-06",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "retrieved_utc": "2026-10-20T15:49:07Z"
+    }
+  ],
+  "pubchem_policy": "Every retained raw-key row keeps its September 2026 representative CID/SID/PMID/patent fields exactly. Newly added keys alone use the recorded current public Extras files. Popularity arrays retain all PubChem measurements and source masks.",
+  "new_key_pubchem_inputs": [
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/pubchem/Compound/Extras/CID-InChI-Key.gz",
+      "bytes": 7371321721,
+      "md5": "69fda88f5674d0767edd0d459796a3e0",
+      "sha256": "70b5968149d6cd96ca1115282e03475b8eff306b8d52c0cf2a79c39a1e344a35",
+      "retrieved_utc": "2026-10-20T16:36:56Z",
+      "http_last_modified": "Mon, 19 Oct 2026 12:47:40 GMT"
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/pubchem/Compound/Extras/CID-SID.gz",
+      "bytes": 2034570162,
+      "md5": "269ca38b2b4b9724bd651360e42a2c0b",
+      "sha256": "18181aa4ecf790989cd615e9481d6274d73bf0c9337df4add2ec9f1214063226",
+      "retrieved_utc": "2026-10-20T16:23:08Z",
+      "http_last_modified": "Mon, 19 Oct 2026 12:07:01 GMT"
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/pubchem/Compound/Extras/CID-PMID.gz",
+      "bytes": 326400588,
+      "md5": "ea46bb397c50f3ee3e00fbe711222805",
+      "sha256": "33609732d13169c1b2a4d6eb6189035a0def31ccf3ca8d6f5f86bded46f82a89",
+      "retrieved_utc": "2026-10-20T16:23:55Z",
+      "http_last_modified": "Fri, 29 Aug 2025 09:44:14 GMT"
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/pubchem/Compound/Extras/CID-Patent.gz",
+      "bytes": 6598443543,
+      "md5": "b10431911b26907a3b772fb8c8fec59b",
+      "sha256": "474a3f11cf532a6f2cfdd4ec968ee92d25524345b5ea930890008045b5890872",
+      "retrieved_utc": "2026-10-20T16:42:37Z",
+      "http_last_modified": "Mon, 19 Oct 2026 12:05:17 GMT"
+    }
+  ],
+  "row_order": "ascending mono_mass via the original pandas sort_values rule; nulls last",
+  "classification": "Packed $ values are decoded to individual labels before the legacy modal-label/top-three rule. The full 2023 modal/top/genus outputs are reproduced exactly by the decoder.",
+  "summary": {
+    "rows": 153964,
+    "lotus": 151885,
+    "npatlas": 33497,
+    "both": 31418,
+    "in_casmi_pool": 151115,
+    "in_casmi_train": 12291,
+    "new_vs_pool": 2849,
+    "in_pubchem": 151111,
+    "valid_structures": 153964,
+    "genus_pairs": 293503,
+    "pathways": {
+      "Terpenoids": 59335,
+      "Shikimates and Phenylpropanoids": 28198,
+      "Alkaloids": 20831,
+      "Polyketides": 20177,
+      "Amino acids and Peptides": 8783,
+      "Fatty acids": 8054,
+      "Carbohydrates": 1485
+    },
+    "mass_150_1250": 147855,
+    "rdkit": "2026.03.3"
+  },
+  "annotation_stores": {
+    "pc": {
+      "rows": 105875489,
+      "np_any": 1368799,
+      "coconut": 1361539,
+      "lotus": 578526,
+      "npatlas": 119349,
+      "lotus_refs_nonzero": 578417,
+      "lotus_refs_max": 3093
+    },
+    "pool": {
+      "rows": 710701,
+      "np_any": 462594,
+      "coconut": 462270,
+      "lotus": 147550,
+      "npatlas": 32445,
+      "lotus_refs_nonzero": 131876,
+      "lotus_refs_max": 3093
+    },
+    "delta_pc": {
+      "rows": 36303,
+      "np_any": 4,
+      "coconut": 4,
+      "lotus": 0,
+      "npatlas": 0,
+      "lotus_refs_nonzero": 0,
+      "lotus_refs_max": 0
+    },
+    "growth_pc": {
+      "rows": 11177,
+      "np_any": 4,
+      "coconut": 4,
+      "lotus": 2,
+      "npatlas": 0,
+      "lotus_refs_nonzero": 2,
+      "lotus_refs_max": 1
+    }
+  },
+  "replay": [
+    {
+      "weight": 0.0,
+      "synonym_weight": 0.0,
+      "n": 250,
+      "mrr_old": 0.9615714285714285,
+      "mrr_new": 0.9615714285714285,
+      "delta_mrr": 0.0,
+      "delta_mrr_ci95": [
+        0.0,
+        0.0
+      ],
+      "mrr_up": 0,
+      "mrr_down": 0,
+      "top1_old": 0.956,
+      "top1_new": 0.956,
+      "delta_top1": 0.0,
+      "delta_top1_ci95": [
+        0.0,
+        0.0
+      ],
+      "top1_up": 0,
+      "top1_down": 0,
+      "top_identity_changed": 0
+    },
+    {
+      "weight": 0.0,
+      "synonym_weight": 0.5,
+      "n": 250,
+      "mrr_old": 0.97,
+      "mrr_new": 0.97,
+      "delta_mrr": 0.0,
+      "delta_mrr_ci95": [
+        0.0,
+        0.0
+      ],
+      "mrr_up": 0,
+      "mrr_down": 0,
+      "top1_old": 0.968,
+      "top1_new": 0.968,
+      "delta_top1": 0.0,
+      "delta_top1_ci95": [
+        0.0,
+        0.0
+      ],
+      "top1_up": 0,
+      "top1_down": 0,
+      "top_identity_changed": 0
+    },
+    {
+      "weight": 0.2,
+      "synonym_weight": 0.0,
+      "n": 250,
+      "mrr_old": 0.9622380952380952,
+      "mrr_new": 0.9622380952380952,
+      "delta_mrr": 0.0,
+      "delta_mrr_ci95": [
+        0.0,
+        0.0
+      ],
+      "mrr_up": 0,
+      "mrr_down": 0,
+      "top1_old": 0.956,
+      "top1_new": 0.956,
+      "delta_top1": 0.0,
+      "delta_top1_ci95": [
+        0.0,
+        0.0
+      ],
+      "top1_up": 0,
+      "top1_down": 0,
+      "top_identity_changed": 0
+    },
+    {
+      "weight": 0.3333333333333333,
+      "synonym_weight": 0.0,
+      "n": 250,
+      "mrr_old": 0.9646666666666667,
+      "mrr_new": 0.9648,
+      "delta_mrr": 0.00013333333333333342,
+      "delta_mrr_ci95": [
+        0.0,
+        0.00040000000000000024
+      ],
+      "mrr_up": 1,
+      "mrr_down": 0,
+      "top1_old": 0.96,
+      "top1_new": 0.96,
+      "delta_top1": 0.0,
+      "delta_top1_ci95": [
+        0.0,
+        0.0
+      ],
+      "top1_up": 0,
+      "top1_down": 0,
+      "top_identity_changed": 0
+    },
+    {
+      "weight": 0.3333333333333333,
+      "synonym_weight": 0.5,
+      "n": 250,
+      "mrr_old": 0.9703333333333334,
+      "mrr_new": 0.9703333333333334,
+      "delta_mrr": 0.0,
+      "delta_mrr_ci95": [
+        0.0,
+        0.0
+      ],
+      "mrr_up": 0,
+      "mrr_down": 0,
+      "top1_old": 0.968,
+      "top1_new": 0.968,
+      "delta_top1": 0.0,
+      "delta_top1_ci95": [
+        0.0,
+        0.0
+      ],
+      "top1_up": 0,
+      "top1_down": 0,
+      "top_identity_changed": 0
+    },
+    {
+      "weight": 0.5,
+      "synonym_weight": 0.0,
+      "n": 250,
+      "mrr_old": 0.9653333333333334,
+      "mrr_new": 0.9653333333333334,
+      "delta_mrr": 0.0,
+      "delta_mrr_ci95": [
+        0.0,
+        0.0
+      ],
+      "mrr_up": 0,
+      "mrr_down": 0,
+      "top1_old": 0.96,
+      "top1_new": 0.96,
+      "delta_top1": 0.0,
+      "delta_top1_ci95": [
+        0.0,
+        0.0
+      ],
+      "top1_up": 0,
+      "top1_down": 0,
+      "top_identity_changed": 0
+    },
+    {
+      "weight": 1.0,
+      "synonym_weight": 0.0,
+      "n": 250,
+      "mrr_old": 0.9114683982683982,
+      "mrr_new": 0.9114683982683982,
+      "delta_mrr": 0.0,
+      "delta_mrr_ci95": [
+        0.0,
+        0.0
+      ],
+      "mrr_up": 0,
+      "mrr_down": 0,
+      "top1_old": 0.892,
+      "top1_new": 0.892,
+      "delta_top1": 0.0,
+      "delta_top1_ci95": [
+        0.0,
+        0.0
+      ],
+      "top1_up": 0,
+      "top1_down": 0,
+      "top_identity_changed": 0
+    }
+  ],
+  "replay_caveat": "The public panel is entirely documented natural products and is optimistic; no hidden-test claim.",
+  "historical_files": "Earlier dated manifests/validation receipts retain their earlier-snapshot meaning. README.md and TECHNICAL_NOTES.md are not replaced by this overlay; apply CARD_CHANGES.md before publication.",
+  "schema_mapping": {
+    "separator": " $ ",
+    "policy": "Decode individual classifier/taxon labels, then preserve the legacy pandas modal-label / top-three frequency rule and source-order tie behaviour. Essential structure, organism-name and DOI cells are not split.",
+    "legacy_validation": {
+      "np_pathway": 0,
+      "np_superclass": 0,
+      "np_class": 0,
+      "kingdoms": 0,
+      "top_families": 0,
+      "top_genera": 0,
+      "genus_table_rows_and_values": true
+    },
+    "source_packed_cells": {
+      "pathway": {
+        "230106": 0,
+        "260413": 30889
+      },
+      "superclass": {
+        "230106": 0,
+        "260413": 20573
+      },
+      "np_class": {
+        "230106": 0,
+        "260413": 82064
+      },
+      "kingdom": {
+        "230106": 0,
+        "260413": 0
+      },
+      "family": {
+        "230106": 0,
+        "260413": 0
+      },
+      "genus": {
+        "230106": 0,
+        "260413": 0
+      }
+    },
+    "genus_rows": 293503,
+    "unique_labels": {
+      "np_pathway": 7,
+      "np_superclass": 76,
+      "np_class": 666
+    },
+    "only_six_label_columns_changed": true,
+    "all_scorer_keys_and_smiles_unchanged": true,
+    "all_prior_source_keys_counts_and_membership_flags_unchanged": true,
+    "normalized_table_sha256": "6ccb833e47d88715fca1d614b05cae92fa333fa388ae1d64226f2695a62081aa"
+  },
+  "external_reference_flags": {
+    "external_structure_coverage.parquet": {
+      "rows": 782,
+      "changed_in_lotus": 16,
+      "changed_in_npatlas": 0,
+      "other_columns_unchanged": true
+    },
+    "external_candidate_additions.parquet": {
+      "rows": 84,
+      "changed_in_lotus": 1,
+      "changed_in_npatlas": 0,
+      "other_columns_unchanged": true
+    }
+  },
+  "v15_store_replay": {
+    "summaries": [
+      {
+        "weight": 0.0,
+        "synonym_weight": 0.5,
+        "n": 250,
+        "mrr_old": 0.97,
+        "mrr_new": 0.97,
+        "delta_mrr": 0.0,
+        "delta_mrr_ci95": [
+          0.0,
+          0.0
+        ],
+        "mrr_up": 0,
+        "mrr_down": 0,
+        "top1_old": 0.968,
+        "top1_new": 0.968,
+        "delta_top1": 0.0,
+        "delta_top1_ci95": [
+          0.0,
+          0.0
+        ],
+        "top1_up": 0,
+        "top1_down": 0,
+        "top_identity_changed": 0
+      },
+      {
+        "weight": 0.3333333333333333,
+        "synonym_weight": 0.5,
+        "n": 250,
+        "mrr_old": 0.9703333333333334,
+        "mrr_new": 0.9703333333333334,
+        "delta_mrr": 0.0,
+        "delta_mrr_ci95": [
+          0.0,
+          0.0
+        ],
+        "mrr_up": 0,
+        "mrr_down": 0,
+        "top1_old": 0.968,
+        "top1_new": 0.968,
+        "delta_top1": 0.0,
+        "delta_top1_ci95": [
+          0.0,
+          0.0
+        ],
+        "top1_up": 0,
+        "top1_down": 0,
+        "top_identity_changed": 0
+      }
+    ],
+    "supplementary_candidate_occurrences": {
+      "delta_pc": 492,
+      "growth_pc": 186
+    },
+    "no_supplementary_window_ranks_equal_pinned_replay": true,
+    "protocol": "Same pinned nextnb logits, score arithmetic, pool exclusion and ranking helpers; v15 independent tier+delta+growth window order; NP1, LOTUS .5ln(1+refs), source .5, synonym .5; lambda .15; fixed A+B and anchored weights.",
+    "bootstrap": {
+      "unit": "molecule",
+      "seed": 20261020,
+      "replicates": 20000,
+      "interval": "paired percentile 95%"
+    },
+    "limitation": "All-natural-product public panel; CPU replay of pinned scores, no full Kaggle/T4 notebook execution."
+  }
+}
