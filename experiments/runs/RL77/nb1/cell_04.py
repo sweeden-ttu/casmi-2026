@@ -89,6 +89,37 @@ def load_competition_frames(
     return train_df, val_df, lib
 
 
+def load_spectra_for_inchikeys(
+    data_dir: Path,
+    inchikeys: List[str],
+    timstof_window_only: bool = False,
+    max_spectra_per_mol: int = CFG.MAX_SPECTRA_LOADED,
+) -> pd.DataFrame:
+    """Reloads the spectra of a saved split (notebook 1 `split/*.txt`) so notebooks 2-5 use the same molecules."""
+    table = pq.read_table(Path(data_dir) / "train.parquet", columns=TRAIN_COLUMNS,
+                          filters=[("inchikey14", "in", sorted(set(inchikeys)))])
+    df = table.to_pandas()
+    if timstof_window_only:
+        df = df[(df["instrument_type"] == "timsTOF") & (df["precursor_mz"] >= 157.0) & (df["precursor_mz"] <= 1159.0)]
+    df = df.dropna(subset=["normalized_smiles"])
+    return df.groupby("inchikey14", sort=False).head(max_spectra_per_mol).reset_index(drop=True)
+
+
+def read_split(split_dir: Path, name: str) -> List[str]:
+    return [line.strip() for line in (Path(split_dir) / f"{name}_inchikey14.txt").read_text().splitlines() if line.strip()]
+
+
+def ground_truth_ik14(df: pd.DataFrame) -> Dict[str, str]:
+    """Validation answer key: molecule_id -> InChIKey14 of the tautomer-canonical true structure.
+
+    train.parquet has no molecule_id, so validation groups (and records) are keyed by its stored inchikey14. The scorer
+    compares tautomer-canonical InChIKey14s, and 0.3% of the held-out molecules (1.5% of train) store the key of a
+    non-canonical tautomer, which `{mid: mid}` made unmatchable even for a correct answer."""
+    first = df.drop_duplicates("inchikey14")
+    return {str(mid): (canonicalize_and_inchikey14(smi)[1] or str(mid))
+            for mid, smi in zip(first["inchikey14"], first["normalized_smiles"])}
+
+
 def _finite_or(value, default: float) -> float:
     try:
         value = float(value)

@@ -36,6 +36,12 @@ def build_candidate_library_index(
     return valid_smiles, np.asarray(exact_masses, dtype=np.float64), library_embs
 
 
+def in_mass_window(masses: np.ndarray, neutral_mass: float, ppm_tol: float = CFG.MASS_TOLERANCE_PPM) -> np.ndarray:
+    """Boolean mask of candidate exact masses within the ppm window (with the absolute floor)."""
+    tol_da = max(neutral_mass * ppm_tol * 1e-6, CFG.MIN_TOLERANCE_DA)
+    return np.abs(np.asarray(masses, dtype=np.float64) - neutral_mass) <= tol_da
+
+
 @torch.no_grad()
 def retrieve_top_k_candidates(
     e_s_batch: torch.Tensor,
@@ -75,7 +81,16 @@ def retrieve_top_k_candidates(
             topk_local = torch.topk(sub_scores, k=top_k).indices
             top_idx = cand_t[topk_local]
         else:
-            top_idx = torch.topk(scores_b, k=min(top_k, len(lib_masses))).indices
+            # Fewer than K structures in the mass window (the usual case at 15 ppm): keep all of them
+            # first and fill the remaining slots from global similarity. The original code discarded the
+            # mass-matched candidates here and returned a purely global top-K.
+            k_total = min(top_k, len(lib_masses))
+            cand_t = torch.tensor(candidate_idx, dtype=torch.long, device=device)
+            in_window = cand_t[torch.argsort(scores_b[cand_t], descending=True)] if len(candidate_idx) else cand_t
+            masked = scores_b.clone()
+            masked[in_window] = float("-inf")
+            fill = torch.topk(masked, k=k_total - len(in_window)).indices
+            top_idx = torch.cat([in_window, fill])
 
         selected_indices.append(top_idx.cpu().tolist())
         selected_embs.append(lib_embs_dev[top_idx])

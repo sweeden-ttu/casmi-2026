@@ -1,0 +1,893 @@
+{
+  "version": "rl77-v009",
+  "created_utc": "2026-11-18T03:30:58+00:00",
+  "evidently": {
+    "project_id": "01a1d2dd-5ca0-7d05-a07a-135ba489166d",
+    "dataset_name": "casmi-rl77-weights",
+    "dataset_id": "01a1ecb5-7e49-76ff-96f6-f8bfdf4e1506"
+  },
+  "weights": {
+    "nb1.retrieval.top_k": 40.0,
+    "nb1.retrieval.mass_tolerance_ppm": 15.0,
+    "nb1.retrieval.min_tolerance_da": 0.02,
+    "nb1.loss.infonce_temperature": 0.1,
+    "nb1.loss.perturb_low": 0.4,
+    "nb1.loss.perturb_high": 1.6,
+    "nb1.decode.beam_size": 5.0,
+    "nb1.decode.max_len": 128.0,
+    "nb1.rerank.alpha": 0.0,
+    "nb1.rerank.generated_insert_rank": 0.0,
+    "nb2.retrieval.top_k": 40.0,
+    "nb2.retrieval.ppm_tol": 15.0,
+    "nb2.retrieval.min_tolerance_da": 0.015,
+    "nb2.retrieval.in_library_boost": 0.03,
+    "nb2.faiss.nprobe": 64.0,
+    "nb3.reranker.w_gen": 0.0,
+    "nb3.reranker.w_pre": 0.25569275221226134,
+    "nb3.reranker.w_siamese": 0.64350664338575,
+    "nb3.reranker.w_fg": 0.02898019240125991,
+    "nb3.reranker.w_rrf": 0.07182041200072864,
+    "nb3.reranker.fg_gamma": 0.15,
+    "nb3.reranker.rrf_k": 15.0,
+    "nb3.reranker.gen_fail_to_pre": 0.6,
+    "nb3.reranker.gen_fail_to_siamese": 0.4,
+    "nb3.siamese.cos_mix": 0.5,
+    "nb3.siamese_loss.margin": 0.25,
+    "nb3.siamese_loss.tau": 0.07,
+    "nb3.siamese_loss.fp_weight": 0.5,
+    "nb3.retrieval.top_k": 60.0,
+    "nb4.filter.ppm_sigma": 4.5,
+    "nb4.filter.nl_tol_da": 0.008,
+    "nb4.score.mass": 1.5,
+    "nb4.score.nl": 1.0,
+    "nb4.score.iso": 0.8,
+    "nb4.score.neural": 1.2,
+    "nb4.nl.explained": 0.35,
+    "nb4.nl.unexplained": -0.45,
+    "nb4.iso.clbr_detected_match": 0.4,
+    "nb4.iso.clbr_detected_mismatch": -0.25,
+    "nb4.iso.clbr_absent_but_present": -0.2,
+    "nb4.iso.clbr_absent_and_absent": 0.05,
+    "nb4.iso.s_detected_match": 0.25,
+    "nb4.iso.s_detected_mismatch": -0.1,
+    "nb4.neural.elem_weight.N": 1.2,
+    "nb4.neural.elem_weight.O": 1.0,
+    "nb4.neural.elem_weight.S": 1.3,
+    "nb4.neural.elem_weight.P": 1.3,
+    "nb4.neural.elem_weight.F": 1.1,
+    "nb4.neural.elem_weight.Cl": 1.4,
+    "nb4.neural.elem_weight.Br": 1.4,
+    "nb4.neural.elem_weight.I": 1.2,
+    "nb4.neural.decay": 1.2,
+    "nb4.neural.rdbe_per_aromatic_ring": 3.5,
+    "nb4.neural.rdbe_per_aliphatic_ring": 1.0,
+    "nb4.neural.rdbe_deficit_penalty": 0.12,
+    "nb4.priors.top_k_formulas": 3.0,
+    "nb4.priors.ppm_window": 15.0,
+    "nb5.reward.invalid": -1.0,
+    "nb5.reward.valid_base": 0.5,
+    "nb5.reward.mass_coarse": 0.8,
+    "nb5.reward.mass_fine": 1.2,
+    "nb5.reward.mass_sigma_da": 0.015,
+    "nb5.reward.coarse_mass_scale_da": 14.0,
+    "nb5.reward.formula_top1": 0.75,
+    "nb5.reward.formula_top3": 0.45,
+    "nb5.reward.fg_weight": 0.5,
+    "nb5.reward.hetero_weight": 0.5,
+    "nb5.reward.fg_decay": 2.0,
+    "nb5.reward.hetero_decay": 1.5,
+    "nb5.reward.embedding_bonus": 0.75,
+    "nb5.potential.heavy_fraction": 0.92,
+    "nb5.potential.underrun_decay": 2.0,
+    "nb5.potential.overrun_penalty": 0.15,
+    "nb5.potential.overrun_margin_da": 1.0,
+    "nb5.rl.gamma": 0.99,
+    "nb5.rl.alpha_ent": 0.05,
+    "nb5.rl.cql_weight": 0.1,
+    "nb5.rl.kl_beta": 0.2,
+    "nb5.rl.sup_anchor_weight": 0.25,
+    "nb5.rl.polyak_tau": 0.01,
+    "nb5.rl.expert_reward": 4.75,
+    "nb5.rl.rollout_temperature": 0.85,
+    "nb5.beam.size": 6.0,
+    "nb5.beam.q_weight_beta": 0.35,
+    "nb5.beam.reward_mix": 0.25,
+    "nb5.beam.mass_prune_margin_da": 2.0,
+    "nb5.rerank.alpha": 0.0,
+    "nb5.rerank.generated_insert_rank": 0.0,
+    "nb4.priors.rank_formulas": 3.0
+  },
+  "meta": {
+    "nb1.retrieval.top_k": {
+      "source": "pdf_prior",
+      "cell": "nb1/cell_07",
+      "note": "Stage 1 pre-retrieval pool size K.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb1.retrieval.mass_tolerance_ppm": {
+      "source": "pdf_prior",
+      "cell": "nb1/cell_07",
+      "note": "Neutral-mass window for library candidates.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb1.retrieval.min_tolerance_da": {
+      "source": "pdf_prior",
+      "cell": "nb1/cell_07",
+      "note": "Absolute floor on the mass window.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb1.loss.infonce_temperature": {
+      "source": "pdf_prior",
+      "cell": "nb1/cell_06",
+      "note": "Dual-path InfoNCE temperature tau.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb1.loss.perturb_low": {
+      "source": "pdf_prior",
+      "cell": "nb1/cell_06",
+      "note": "Lower bound of multiplicative intensity noise for hard negatives.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb1.loss.perturb_high": {
+      "source": "pdf_prior",
+      "cell": "nb1/cell_06",
+      "note": "Upper bound of multiplicative intensity noise for hard negatives.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb1.decode.beam_size": {
+      "source": "pdf_prior",
+      "cell": "nb1/cell_05",
+      "note": "GLMR Stage 2 beam width.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb1.decode.max_len": {
+      "source": "pdf_prior",
+      "cell": "nb1/cell_08",
+      "note": "Maximum generated SMILES tokens.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb1.rerank.alpha": {
+      "source": "fitted:nb1",
+      "cell": "nb1/cell_08",
+      "note": "MRR@25 prior 0.10566485974652619 vs cross-fit 0.15949757228338735 on 250 held-out timsTOF molecules, 2-fold cross-fit; nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+      "active": true,
+      "updated_utc": "2026-11-17T21:27:41+00:00"
+    },
+    "nb1.rerank.generated_insert_rank": {
+      "source": "fitted:nb1",
+      "cell": "nb1/cell_08",
+      "note": "MRR@25 prior 0.10566485974652619 vs cross-fit 0.15949757228338735 on 250 held-out timsTOF molecules, 2-fold cross-fit; nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+      "active": true,
+      "updated_utc": "2026-11-17T21:27:41+00:00"
+    },
+    "nb2.retrieval.top_k": {
+      "source": "pdf_prior",
+      "cell": "nb2/cell_04",
+      "note": "Candidates returned per molecule by the offline store.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb2.retrieval.ppm_tol": {
+      "source": "pdf_prior",
+      "cell": "nb2/cell_04",
+      "note": "Mass window for the sorted-catalog binary search.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb2.retrieval.min_tolerance_da": {
+      "source": "pdf_prior",
+      "cell": "nb2/cell_04",
+      "note": "Absolute floor on the mass window.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb2.retrieval.in_library_boost": {
+      "source": "pdf_prior",
+      "cell": "nb2/cell_04",
+      "note": "Score bonus for structures that appear in train.parquet (source tier 1).",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb2.faiss.nprobe": {
+      "source": "pdf_prior",
+      "cell": "nb2/cell_04",
+      "note": "IVF lists probed in the global fallback search.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb3.reranker.w_gen": {
+      "source": "fitted:nb3",
+      "cell": "nb3/cell_04",
+      "note": "MRR@25 prior 0.2670658950520372 vs cross-fit 0.30843127324259373 on 300 held-out timsTOF molecules, 2-fold cross-fit; nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+      "active": true,
+      "updated_utc": "2026-11-18T01:49:01+00:00"
+    },
+    "nb3.reranker.w_pre": {
+      "source": "fitted:nb3",
+      "cell": "nb3/cell_04",
+      "note": "MRR@25 prior 0.2670658950520372 vs cross-fit 0.30843127324259373 on 300 held-out timsTOF molecules, 2-fold cross-fit; nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+      "active": true,
+      "updated_utc": "2026-11-18T01:49:01+00:00"
+    },
+    "nb3.reranker.w_siamese": {
+      "source": "fitted:nb3",
+      "cell": "nb3/cell_04",
+      "note": "MRR@25 prior 0.2670658950520372 vs cross-fit 0.30843127324259373 on 300 held-out timsTOF molecules, 2-fold cross-fit; nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+      "active": true,
+      "updated_utc": "2026-11-18T01:49:01+00:00"
+    },
+    "nb3.reranker.w_fg": {
+      "source": "fitted:nb3",
+      "cell": "nb3/cell_04",
+      "note": "MRR@25 prior 0.2670658950520372 vs cross-fit 0.30843127324259373 on 300 held-out timsTOF molecules, 2-fold cross-fit; nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+      "active": true,
+      "updated_utc": "2026-11-18T01:49:01+00:00"
+    },
+    "nb3.reranker.w_rrf": {
+      "source": "fitted:nb3",
+      "cell": "nb3/cell_04",
+      "note": "MRR@25 prior 0.2670658950520372 vs cross-fit 0.30843127324259373 on 300 held-out timsTOF molecules, 2-fold cross-fit; nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+      "active": true,
+      "updated_utc": "2026-11-18T01:49:01+00:00"
+    },
+    "nb3.reranker.fg_gamma": {
+      "source": "pdf_prior",
+      "cell": "nb3/cell_04",
+      "note": "Decay in exp(-gamma * L1) for the functional-group kernel.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb3.reranker.rrf_k": {
+      "source": "pdf_prior",
+      "cell": "nb3/cell_04",
+      "note": "RRF rank offset k.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb3.reranker.gen_fail_to_pre": {
+      "source": "pdf_prior",
+      "cell": "nb3/cell_04",
+      "note": "Share of w_gen moved to w_pre when the beam SMILES is invalid.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb3.reranker.gen_fail_to_siamese": {
+      "source": "pdf_prior",
+      "cell": "nb3/cell_04",
+      "note": "Share of w_gen moved to w_siamese when the beam SMILES is invalid.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb3.siamese.cos_mix": {
+      "source": "pdf_prior",
+      "cell": "nb3/cell_05",
+      "note": "s_siamese = mix * cosine + (1 - mix) * continuous Tanimoto.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb3.siamese_loss.margin": {
+      "source": "pdf_prior",
+      "cell": "nb3/cell_02",
+      "note": "Hardest-negative cosine margin.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb3.siamese_loss.tau": {
+      "source": "pdf_prior",
+      "cell": "nb3/cell_02",
+      "note": "Symmetric InfoNCE temperature.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb3.siamese_loss.fp_weight": {
+      "source": "pdf_prior",
+      "cell": "nb3/cell_02",
+      "note": "Weight of BCE + (1 - Tanimoto) on the ECFP4 head.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb3.retrieval.top_k": {
+      "source": "pdf_prior",
+      "cell": "nb3/cell_05",
+      "note": "Candidate pool before ensemble re-ranking.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.filter.ppm_sigma": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Gaussian width of the precursor ppm likelihood (timsTOF).",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.filter.nl_tol_da": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Tolerance for matching diagnostic neutral losses.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.score.mass": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Weight of the ppm score in the formula posterior.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.score.nl": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Weight of the neutral-loss subformula score.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.score.iso": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Weight of the Cl/Br/S isotope score.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.score.neural": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Weight of the Mass2SMILES heteroatom/RDBE score.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.nl.explained": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Per-peak bonus when a candidate formula contains an observed neutral loss.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.nl.unexplained": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Per-peak penalty when it cannot.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.iso.clbr_detected_match": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "M+2 pattern seen and formula has Cl/Br.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.iso.clbr_detected_mismatch": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "M+2 pattern seen and formula lacks Cl/Br.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.iso.clbr_absent_but_present": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "No M+2 pattern but formula has Cl/Br.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.iso.clbr_absent_and_absent": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "No M+2 pattern and formula lacks Cl/Br.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.iso.s_detected_match": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "34S-like pattern seen and formula has S.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.iso.s_detected_mismatch": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "34S-like pattern seen and formula lacks S.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.elem_weight.N": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Heteroatom L1 weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.elem_weight.O": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Heteroatom L1 weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.elem_weight.S": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Heteroatom L1 weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.elem_weight.P": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Heteroatom L1 weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.elem_weight.F": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Heteroatom L1 weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.elem_weight.Cl": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Heteroatom L1 weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.elem_weight.Br": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Heteroatom L1 weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.elem_weight.I": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Heteroatom L1 weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.decay": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "exp(-decay * weighted L1) heteroatom agreement.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.rdbe_per_aromatic_ring": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Expected RDBE contributed per predicted aromatic ring.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.rdbe_per_aliphatic_ring": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Expected RDBE contributed per predicted aliphatic ring.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.neural.rdbe_deficit_penalty": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_03",
+      "note": "Penalty per unit of RDBE below the ring lower bound.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.priors.top_k_formulas": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_04",
+      "note": "Formula priors passed to retrieval per molecule.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb4.priors.ppm_window": {
+      "source": "pdf_prior",
+      "cell": "nb4/cell_04",
+      "note": "Formula candidate window.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.invalid": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Terminal reward for an unparseable SMILES.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.valid_base": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Base reward for a valid SMILES.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.mass_coarse": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Weight of exp(-|dm| / coarse_scale).",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.mass_fine": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Weight of exp(-0.5 (dm / sigma)^2).",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.mass_sigma_da": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Fine mass reward width.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.coarse_mass_scale_da": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Coarse mass reward scale.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.formula_top1": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Bonus when the generated formula equals the top formula prior.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.formula_top3": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Bonus when it is in the top-3 priors.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.fg_weight": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Weight of the functional-group agreement term.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.hetero_weight": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Weight of the heteroatom/ring agreement term.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.fg_decay": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Decay on the functional-group L1.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.hetero_decay": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Decay on the heteroatom/ring L1.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.reward.embedding_bonus": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Weight of cos(E_m_gen, E_m_target).",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.potential.heavy_fraction": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Share of neutral mass expected from heavy atoms.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.potential.underrun_decay": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Potential decay on the heavy-mass shortfall.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.potential.overrun_penalty": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Potential penalty per Da of heavy-mass overrun.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.potential.overrun_margin_da": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_01",
+      "note": "Overrun allowed before the penalty starts.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.rl.gamma": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_03",
+      "note": "Discount factor.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.rl.alpha_ent": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_03",
+      "note": "Soft Bellman entropy temperature.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.rl.cql_weight": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_03",
+      "note": "Conservative Q penalty weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.rl.kl_beta": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_03",
+      "note": "KL(pi || pi_ref) weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.rl.sup_anchor_weight": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_03",
+      "note": "Supervised token anchor weight.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.rl.polyak_tau": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_03",
+      "note": "Target-network Polyak rate.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.rl.expert_reward": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_03",
+      "note": "Terminal reward assigned to ground-truth trajectories.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.rl.rollout_temperature": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_03",
+      "note": "Sampling temperature for on-policy rollouts.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.beam.size": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_04",
+      "note": "Q-guided beam width.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.beam.q_weight_beta": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_04",
+      "note": "Weight of tanh(Q) added to log pi during beam search.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.beam.reward_mix": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_04",
+      "note": "Weight of the length-normalized beam score added to the terminal reward.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.beam.mass_prune_margin_da": {
+      "source": "pdf_prior",
+      "cell": "nb5/cell_04",
+      "note": "Prune beams whose heavy-atom mass exceeds neutral mass + margin.",
+      "active": true,
+      "updated_utc": "2026-11-17T19:35:27+00:00"
+    },
+    "nb5.rerank.alpha": {
+      "source": "fitted:nb5",
+      "cell": "nb5/cell_05",
+      "note": "MRR@25 prior 0.1923596139154963 vs cross-fit 0.23597727279282835 on 200 held-out timsTOF molecules, 2-fold cross-fit; nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+      "active": true,
+      "updated_utc": "2026-11-18T03:30:58+00:00"
+    },
+    "nb5.rerank.generated_insert_rank": {
+      "source": "fitted:nb5",
+      "cell": "nb5/cell_05",
+      "note": "MRR@25 prior 0.1923596139154963 vs cross-fit 0.23597727279282835 on 200 held-out timsTOF molecules, 2-fold cross-fit; nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+      "active": true,
+      "updated_utc": "2026-11-18T03:30:58+00:00"
+    },
+    "nb4.priors.rank_formulas": {
+      "source": "fitted:nb4",
+      "active": true,
+      "updated_utc": "2026-11-18T02:27:15+00:00",
+      "cell": "nb4/cell_06",
+      "note": "MRR@25 (offline store, Stage 1) prior 0.1640517586447109 vs cross-fit 0.2151363354833207 on 998 held-out timsTOF molecules, 2-fold cross-fit; nb4 run finished 2026-11-18T02:25:43+00:00 on cpu"
+    }
+  },
+  "candidates": {
+    "nb4.score.iso": {
+      "value": 0.25,
+      "source": "fitted:nb4",
+      "note": "Not adopted: formula top-1 accuracy prior 0.843687374749499 vs cross-fit 0.8416833667334669 on 998 held-out timsTOF molecules, 2-fold cross-fit; nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+      "updated_utc": "2026-11-18T02:27:15+00:00"
+    },
+    "nb4.score.mass": {
+      "value": 1.2,
+      "source": "fitted:nb4",
+      "note": "Not adopted: formula top-1 accuracy prior 0.843687374749499 vs cross-fit 0.8416833667334669 on 998 held-out timsTOF molecules, 2-fold cross-fit; nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+      "updated_utc": "2026-11-18T02:27:15+00:00"
+    },
+    "nb4.score.neural": {
+      "value": 2.0,
+      "source": "fitted:nb4",
+      "note": "Not adopted: formula top-1 accuracy prior 0.843687374749499 vs cross-fit 0.8416833667334669 on 998 held-out timsTOF molecules, 2-fold cross-fit; nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+      "updated_utc": "2026-11-18T02:27:15+00:00"
+    },
+    "nb4.score.nl": {
+      "value": 0.25,
+      "source": "fitted:nb4",
+      "note": "Not adopted: formula top-1 accuracy prior 0.843687374749499 vs cross-fit 0.8416833667334669 on 998 held-out timsTOF molecules, 2-fold cross-fit; nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+      "updated_utc": "2026-11-18T02:27:15+00:00"
+    }
+  },
+  "metrics": {
+    "nb1.rerank_sweep.best_alpha": 0.0,
+    "nb1.rerank_sweep.best_generated_insert_rank": 0.0,
+    "nb1.rerank_sweep.val_mrr25_best_in_sample": 0.15949757228338732,
+    "nb1.rerank_sweep.val_mrr25_crossfit": 0.15949757228338735,
+    "nb1.rerank_sweep.val_mrr25_prior": 0.10566485974652619,
+    "nb1.val_generated_mass_ok_rate": 0.088,
+    "nb1.val_generated_valid_rate": 0.92,
+    "nb1.val_stage1.mrr25": 0.15949757228338732,
+    "nb1.val_stage1.n": 250.0,
+    "nb1.val_stage1.recall_at_40": 0.648,
+    "nb1.val_two_stage_mrr25": 0.10566485974652619,
+    "nb2.catalog.n_formulas": 72993.0,
+    "nb2.catalog.n_structures": 347032.0,
+    "nb2.catalog.n_tier1_train": 273369.0,
+    "nb2.catalog.n_tier2_external": 73663.0,
+    "nb2.val_store_stage1.mrr25": 0.1640517586447109,
+    "nb2.val_store_stage1.n": 998.0,
+    "nb2.val_store_stage1.recall_at_k": 0.6973947895791583,
+    "nb2.val_store_stage1.truth_in_mass_window": 0.996993987975952,
+    "nb3.train.fg_head_epochs": 2.0,
+    "nb3.train.fg_head_last_loss": 0.138292462627093,
+    "nb3.train.siamese_epochs": 100.0,
+    "nb3.train.siamese_last_loss": 0.2569791728983054,
+    "nb3.val_blend.n": 300.0,
+    "nb3.val_blend.val_mrr25_crossfit": 0.30843127324259373,
+    "nb3.val_blend.val_mrr25_in_sample": 0.39044725993608753,
+    "nb3.val_blend.val_mrr25_prior": 0.2670658950520372,
+    "nb3.val_stream_mrr25.fg": 0.09408505172880595,
+    "nb3.val_stream_mrr25.gen": 0.10560225771894906,
+    "nb3.val_stream_mrr25.pre": 0.13398549113798813,
+    "nb3.val_stream_mrr25.rrf": 0.23537076937510373,
+    "nb3.val_stream_mrr25.siamese": 0.36869231547257525,
+    "nb4.test_score_weights.iso": 0.8,
+    "nb4.test_score_weights.mass": 1.5,
+    "nb4.test_score_weights.neural": 1.2,
+    "nb4.test_score_weights.nl": 1.0,
+    "nb4.val_formula.n": 998.0,
+    "nb4.val_formula.top1_fitted_crossfit": 0.8416833667334669,
+    "nb4.val_formula.top1_fitted_in_sample": 0.8617234468937875,
+    "nb4.val_formula.top1_prior": 0.843687374749499,
+    "nb4.val_formula.top3_fitted_in_sample": 0.9789579158316634,
+    "nb4.val_formula.top3_prior": 0.969939879759519,
+    "nb4.val_formula.truth_in_candidate_window": 1.0,
+    "nb4.val_retrieval_mrr25.mass_window_only": 0.1640517586447109,
+    "nb4.val_retrieval_mrr25.with_formula_priors": 0.1640517586447109,
+    "nb4.formula_tier_fit.best_rank_formulas": 3.0,
+    "nb4.formula_tier_fit.val_mrr25_crossfit": 0.2151363354833207,
+    "nb4.formula_tier_fit.val_mrr25_prior": 0.1640517586447109,
+    "nb4.test_rank_formulas.value": 3.0,
+    "nb4.val_retrieval_mrr25.formula_tiers_0": 0.1640517586447109,
+    "nb4.val_retrieval_mrr25.formula_tiers_1": 0.20638357416148898,
+    "nb4.val_retrieval_mrr25.formula_tiers_2": 0.21371768981735684,
+    "nb4.val_retrieval_mrr25.formula_tiers_3": 0.2151363354833207,
+    "nb5.rerank_sweep.best_alpha": 0.0,
+    "nb5.rerank_sweep.best_generated_insert_rank": 0.0,
+    "nb5.rerank_sweep.val_mrr25_best_in_sample": 0.23597727279282835,
+    "nb5.rerank_sweep.val_mrr25_crossfit": 0.23597727279282835,
+    "nb5.rerank_sweep.val_mrr25_prior": 0.1923596139154963,
+    "nb5.rl.mean_rollout_reward_last100": -0.961336121559143,
+    "nb5.rl.steps": 4885.0,
+    "nb5.test_rerank.alpha": 0.0,
+    "nb5.test_rerank.generated_insert_rank": 0.0,
+    "nb5.val.mrr25_nb1_pipeline": 0.1843599467720177,
+    "nb5.val.mrr25_q_guided": 0.1923596139154963,
+    "nb5.val.n": 200.0,
+    "nb5.val.q_beam_any_valid": 0.49,
+    "nb5.val.q_beam_contains_truth": 0.0,
+    "nb5.val.q_beam_top1_exact": 0.0,
+    "nb5.val.q_beam_top1_mass_ok": 0.0
+  },
+  "metric_notes": {
+    "nb1.rerank_sweep.best_alpha": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb1.rerank_sweep.best_generated_insert_rank": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb1.rerank_sweep.val_mrr25_best_in_sample": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb1.rerank_sweep.val_mrr25_crossfit": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb1.rerank_sweep.val_mrr25_prior": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb1.val_generated_mass_ok_rate": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb1.val_generated_valid_rate": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb1.val_stage1.mrr25": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb1.val_stage1.n": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb1.val_stage1.recall_at_40": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb1.val_two_stage_mrr25": "nb1 run finished 2026-11-17T21:23:15+00:00 on Tesla T4",
+    "nb2.catalog.n_formulas": "nb2 run finished 2026-11-17T23:34:39+00:00 on cpu",
+    "nb2.catalog.n_structures": "nb2 run finished 2026-11-17T23:34:39+00:00 on cpu",
+    "nb2.catalog.n_tier1_train": "nb2 run finished 2026-11-17T23:34:39+00:00 on cpu",
+    "nb2.catalog.n_tier2_external": "nb2 run finished 2026-11-17T23:34:39+00:00 on cpu",
+    "nb2.val_store_stage1.mrr25": "nb2 run finished 2026-11-17T23:34:39+00:00 on cpu",
+    "nb2.val_store_stage1.n": "nb2 run finished 2026-11-17T23:34:39+00:00 on cpu",
+    "nb2.val_store_stage1.recall_at_k": "nb2 run finished 2026-11-17T23:34:39+00:00 on cpu",
+    "nb2.val_store_stage1.truth_in_mass_window": "nb2 run finished 2026-11-17T23:34:39+00:00 on cpu",
+    "nb3.train.fg_head_epochs": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.train.fg_head_last_loss": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.train.siamese_epochs": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.train.siamese_last_loss": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.val_blend.n": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.val_blend.val_mrr25_crossfit": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.val_blend.val_mrr25_in_sample": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.val_blend.val_mrr25_prior": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.val_stream_mrr25.fg": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.val_stream_mrr25.gen": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.val_stream_mrr25.pre": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.val_stream_mrr25.rrf": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb3.val_stream_mrr25.siamese": "nb3 run finished 2026-11-18T01:44:40+00:00 on cpu",
+    "nb4.test_score_weights.iso": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.test_score_weights.mass": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.test_score_weights.neural": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.test_score_weights.nl": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_formula.n": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_formula.top1_fitted_crossfit": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_formula.top1_fitted_in_sample": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_formula.top1_prior": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_formula.top3_fitted_in_sample": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_formula.top3_prior": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_formula.truth_in_candidate_window": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_retrieval_mrr25.mass_window_only": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_retrieval_mrr25.with_formula_priors": "nb4 run finished 2026-11-18T02:03:10+00:00 on cpu",
+    "nb4.formula_tier_fit.best_rank_formulas": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.formula_tier_fit.val_mrr25_crossfit": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.formula_tier_fit.val_mrr25_prior": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.test_rank_formulas.value": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_retrieval_mrr25.formula_tiers_0": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_retrieval_mrr25.formula_tiers_1": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_retrieval_mrr25.formula_tiers_2": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb4.val_retrieval_mrr25.formula_tiers_3": "nb4 run finished 2026-11-18T02:25:43+00:00 on cpu",
+    "nb5.rerank_sweep.best_alpha": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.rerank_sweep.best_generated_insert_rank": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.rerank_sweep.val_mrr25_best_in_sample": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.rerank_sweep.val_mrr25_crossfit": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.rerank_sweep.val_mrr25_prior": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.rl.mean_rollout_reward_last100": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.rl.steps": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.test_rerank.alpha": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.test_rerank.generated_insert_rank": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.val.mrr25_nb1_pipeline": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.val.mrr25_q_guided": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.val.n": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.val.q_beam_any_valid": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.val.q_beam_contains_truth": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.val.q_beam_top1_exact": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4",
+    "nb5.val.q_beam_top1_mass_ok": "nb5 run finished 2026-11-18T03:22:44+00:00 on Tesla T4"
+  }
+}

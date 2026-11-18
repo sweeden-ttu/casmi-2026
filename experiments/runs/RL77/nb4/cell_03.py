@@ -9,34 +9,41 @@ class FastMISTSubformulaFilter:
       5. RDBE vs. Predicted Aromatic + Aliphatic Ring Lower Bound (fg_71_pred[:, 69:71])
     """
 
+    SCORE_KEYS = ("mass", "nl", "iso", "neural")
+
     def __init__(
         self,
         formula_bank: CandidateFormulaBank,
-        adduct_mass_shift: Dict[str, float],
-        ppm_sigma: float = 4.5,
-        nl_tol_da: float = 0.008,
+        adduct_mass_shift: Optional[Dict[str, float]] = None,
+        ppm_sigma: float = W("nb4.filter.ppm_sigma"),
+        nl_tol_da: float = W("nb4.filter.nl_tol_da"),
+        score_weights: Optional[Dict[str, float]] = None,
     ):
         self.bank = formula_bank
-        self.adduct_mass_shift = adduct_mass_shift
+        self.adduct_mass_shift = adduct_mass_shift  # kept for the PDF signature; see infer_consensus_neutral_mass
         self.ppm_sigma = ppm_sigma
         self.nl_tol_da = nl_tol_da
+        # Composite posterior weights (PDF: 1.50 / 1.00 / 0.80 / 1.20) from the Evidently snapshot
+        self.score_weights = dict(score_weights or {k: W(f"nb4.score.{k}") for k in self.SCORE_KEYS})
 
     def infer_consensus_neutral_mass(
         self,
         precursor_mzs: List[float],
         adducts: List[str],
         bpis: Optional[List[float]] = None,
+        ionization_modes: Optional[List[str]] = None,
     ) -> float:
         """
         Combines precursor_mz measurements across all spectra of a molecule_id
         (accounting for adduct mass shifts) weighted by log10(base_peak_intensity).
+        Uses neutral_mass_from_precursor(): the shift table missed formate/acetate spellings and [2M+X].
         """
         masses, weights = [], []
         for idx, (pmz, add) in enumerate(zip(precursor_mzs, adducts)):
             if pmz <= 0.0:
                 continue
-            shift = self.adduct_mass_shift.get(str(add), -1.007276)
-            masses.append(float(pmz) + shift)
+            mode = ionization_modes[idx] if ionization_modes else "positive"
+            masses.append(neutral_mass_from_precursor(float(pmz), str(add), mode))
             w = math.log10(max(float(bpis[idx]), 10.0)) if bpis else 1.0
             weights.append(w)
 
@@ -81,7 +88,7 @@ class FastMISTSubformulaFilter:
                     has_s = True
         return has_cl_br, has_s
 
-    def score_and_select_top_k_formulas(
+    def score_components(
         self,
         neutral_mass: float,
         pooled_nls: np.ndarray,
@@ -89,21 +96,16 @@ class FastMISTSubformulaFilter:
         raw_mzs: Optional[np.ndarray] = None,
         raw_ints: Optional[np.ndarray] = None,
         fg_71_pred: Optional[np.ndarray] = None,
-        ppm_window: float = 15.0,
-        top_k: int = 3,
-    ) -> List[str]:
-        """
-        Scores all valid candidate formulas within +/- ppm_window and returns the top-K
-        Hill-notation formula strings for OfflineMassAndFormulaRetriever.
-        """
+        ppm_window: float = W("nb4.priors.ppm_window"),
+    ) -> Tuple[np.ndarray, Dict[str, np.ndarray]]:
+        """Candidate formulas within +/- ppm_window and their four component scores (before weighting)."""
         formulas, exact_masses, atom_mat, rdbe_vec, hetero_log1p = (
             self.bank.query_mass_window(neutral_mass, ppm_tol=ppm_window)
         )
         n_cand = len(formulas)
+        zeros = {k: np.zeros(n_cand, dtype=np.float64) for k in self.SCORE_KEYS}
         if n_cand == 0:
-            return []
-        if n_cand == 1:
-            return [str(formulas[0])]
+            return formulas, zeros
 
         # 1. Precursor Mass PPM Score (Gaussian log-likelihood in [0, 1])
         ppm_errors = np.abs(exact_masses - neutral_mass) / neutral_mass * 1e6
@@ -114,6 +116,7 @@ class FastMISTSubformulaFilter:
         valid_nl_mask = (pooled_nls > 1.5) & (pooled_ints > 0.05)
         obs_nls = pooled_nls[valid_nl_mask]
         obs_weights = pooled_ints[valid_nl_mask]
+        nl_hit, nl_miss = W("nb4.nl.explained"), W("nb4.nl.unexplained")
 
         if len(obs_nls) > 0:
             # Match observed neutral losses against pre-compiled diagnostic neutral loss table
@@ -125,20 +128,20 @@ class FastMISTSubformulaFilter:
                 w_peak = float(obs_weights[o_i])
                 # Candidate formula can explain this neutral loss iff atom_mat >= req_atoms for all 10 elements
                 can_form_loss = np.all(atom_mat >= req_atoms[None, :], axis=1)
-                score_nl += np.where(can_form_loss, 0.35 * w_peak, -0.45 * w_peak)
+                score_nl += np.where(can_form_loss, nl_hit * w_peak, nl_miss * w_peak)
 
-        # 3. Raw MS2 Isotope Pattern Score (Cl/Br and S M+2 signatures)
+        # 3. Raw MS2 Isotope Pattern Score (Cl/Br and S M+2 signatures; raw_ints must be linear intensities)
         score_iso = np.zeros(n_cand, dtype=np.float64)
         if raw_mzs is not None and raw_ints is not None:
             has_cl_br, has_s = self.detect_halogen_and_sulfur_isotopes(raw_mzs, raw_ints)
             cand_has_cl_br = (atom_mat[:, 7] + atom_mat[:, 8]) > 0
             cand_has_s = atom_mat[:, 5] > 0
             if has_cl_br:
-                score_iso += np.where(cand_has_cl_br, 0.40, -0.25)
+                score_iso += np.where(cand_has_cl_br, W("nb4.iso.clbr_detected_match"), W("nb4.iso.clbr_detected_mismatch"))
             else:
-                score_iso += np.where(cand_has_cl_br, -0.20, 0.05)
+                score_iso += np.where(cand_has_cl_br, W("nb4.iso.clbr_absent_but_present"), W("nb4.iso.clbr_absent_and_absent"))
             if has_s:
-                score_iso += np.where(cand_has_s, 0.25, -0.10)
+                score_iso += np.where(cand_has_s, W("nb4.iso.s_detected_match"), W("nb4.iso.s_detected_mismatch"))
 
         # 4. Mass2SMILES 71-D Neural Heteroatom + Ring RDBE Prior Score
         score_neural = np.zeros(n_cand, dtype=np.float64)
@@ -146,28 +149,48 @@ class FastMISTSubformulaFilter:
             # Indices 60..67: predicted log1p counts for [N, O, S, P, F, Cl, Br, I]
             pred_hetero = np.asarray(fg_71_pred[60:68], dtype=np.float32)
             # Weight N, O, S, P, Cl, Br agreement strongly
-            elem_weights = np.array([1.2, 1.0, 1.3, 1.3, 1.1, 1.4, 1.4, 1.2], dtype=np.float32)
+            elem_weights = np.array(W.vec("nb4.neural.elem_weight", HETEROATOM_SYMBOLS), dtype=np.float32)
             l1_hetero = np.sum(
                 np.abs(hetero_log1p - pred_hetero[None, :]) * elem_weights[None, :],
                 axis=1,
             ) / np.sum(elem_weights)
-            score_neural += np.exp(-1.2 * l1_hetero)
+            score_neural += np.exp(-W("nb4.neural.decay") * l1_hetero)
 
             # Indices 69..70: log1p(aromatic rings) and log1p(aliphatic rings)
             est_arom_rings = max(0.0, float(np.expm1(fg_71_pred[69])))
             est_aliph_rings = max(0.0, float(np.expm1(fg_71_pred[70])))
-            min_expected_rdbe = 3.5 * est_arom_rings + 1.0 * est_aliph_rings
+            min_expected_rdbe = (W("nb4.neural.rdbe_per_aromatic_ring") * est_arom_rings
+                                 + W("nb4.neural.rdbe_per_aliphatic_ring") * est_aliph_rings)
             # Penalize formulas whose RDBE is far below the neural ring lower bound
             rdbe_deficit = np.clip(min_expected_rdbe - rdbe_vec, 0.0, None)
-            score_neural -= 0.12 * rdbe_deficit
+            score_neural -= W("nb4.neural.rdbe_deficit_penalty") * rdbe_deficit
 
-        # Total composite formula log-posterior score
-        total_score = (
-            1.50 * score_mass
-            + 1.00 * score_nl
-            + 0.80 * score_iso
-            + 1.20 * score_neural
+        return formulas, {"mass": score_mass, "nl": score_nl, "iso": score_iso, "neural": score_neural}
+
+    def combine(self, components: Dict[str, np.ndarray], score_weights: Optional[Dict[str, float]] = None) -> np.ndarray:
+        """Total composite formula log-posterior score."""
+        w = score_weights or self.score_weights
+        return sum(w[k] * components[k] for k in self.SCORE_KEYS)
+
+    def score_and_select_top_k_formulas(
+        self,
+        neutral_mass: float,
+        pooled_nls: np.ndarray,
+        pooled_ints: np.ndarray,
+        raw_mzs: Optional[np.ndarray] = None,
+        raw_ints: Optional[np.ndarray] = None,
+        fg_71_pred: Optional[np.ndarray] = None,
+        ppm_window: float = W("nb4.priors.ppm_window"),
+        top_k: int = W.int("nb4.priors.top_k_formulas"),
+    ) -> List[str]:
+        """
+        Scores all valid candidate formulas within +/- ppm_window and returns the top-K
+        Hill-notation formula strings for OfflineMassAndFormulaRetriever.
+        """
+        formulas, components = self.score_components(
+            neutral_mass, pooled_nls, pooled_ints, raw_mzs, raw_ints, fg_71_pred, ppm_window
         )
-
-        ranked_idx = np.argsort(-total_score)[:top_k]
+        if len(formulas) <= 1:
+            return [str(f) for f in formulas]
+        ranked_idx = np.argsort(-self.combine(components))[:top_k]
         return [str(formulas[i]) for i in ranked_idx]

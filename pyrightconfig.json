@@ -1,0 +1,31 @@
+{
+  "venvPath": "/home/sweeden/.conda/envs",
+  "venv": "kagg",
+  "pythonVersion": "3.12",
+  "pythonPlatform": "Linux",
+  "typeCheckingMode": "standard",
+  "useLibraryCodeForTypes": true,
+  "extraPaths": [
+    ".",
+    "experiments/runs/RL77/lib",
+    "artifacts/GM0/gp-molformer"
+  ],
+  "include": [
+    "casmi26",
+    "experiments",
+    "scripts",
+    "tests"
+  ],
+  "exclude": [
+    "**/__pycache__",
+    ".venv",
+    "third_party",
+    "data",
+    "outputs",
+    "artifacts/DN1",
+    "artifacts/DN6",
+    "artifacts/dreams",
+    "artifacts/EN4",
+    "kaggle_dataset_export"
+  ]
+}

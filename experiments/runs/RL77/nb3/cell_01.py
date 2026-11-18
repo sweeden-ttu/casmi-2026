@@ -1,5 +1,6 @@
 # [Colab Ensemble Cell 1] 2000-Bin Spectral Vectorizer, ECFP4 (2048-bit), & 71-D Functional Group Extractor
 import inspect
+from functools import lru_cache
 from typing import Tuple, List, Dict, Optional
 import numpy as np
 import torch
@@ -7,9 +8,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from rdkit import Chem, DataStructs
-from rdkit.Chem import AllChem, Fragments, rdMolDescriptors
+from rdkit.Chem import AllChem, Fragments, rdMolDescriptors, rdFingerprintGenerator
 
-# Deterministically collect the ersten 60 RDKit functional group fragment functions (fr_*)
+# Deterministically collect the first 60 RDKit functional group fragment functions (fr_*, sorted by name)
 RDKIT_FG_FUNCTIONS = sorted(
     [
         (name, func)
@@ -77,7 +78,9 @@ def aggregate_molecule_2000_bins(
         vec = spectrum_to_2000_bins(
             row["ms2_mzs"], row["ms2_normalized_intensities"], num_bins=num_bins
         )
-        bpi = max(float(row.get("base_peak_intensity", 1e4)), 10.0)
+        bpi = row.get("base_peak_intensity", 1e4)
+        bpi = float(bpi) if bpi is not None and np.isfinite(float(bpi)) else 1e4  # 46% of train values are null
+        bpi = max(bpi, 10.0)
         w = float(np.log10(bpi))
         composite += w * vec
         total_weight += w
@@ -86,6 +89,11 @@ def aggregate_molecule_2000_bins(
         composite /= total_weight
     norm = np.linalg.norm(composite)
     return composite / norm if norm > 0 else composite
+
+
+@lru_cache(maxsize=8)
+def _morgan_generator(radius: int, n_bits: int):
+    return rdFingerprintGenerator.GetMorganGenerator(radius=radius, fpSize=n_bits)
 
 
 def smiles_to_ecfp4_and_mass2smiles_71d(
@@ -106,9 +114,8 @@ def smiles_to_ecfp4_and_mass2smiles_71d(
         return None, None
 
     # 1. 2048-bit ECFP4 fingerprint
-    fp_bitvec = AllChem.GetMorganFingerprintAsBitVect(mol, radius=radius, nBits=n_bits)
-    ecfp4_arr = np.zeros((n_bits,), dtype=np.float32)
-    DataStructs.ConvertToNumpyArray(fp_bitvec, ecfp4_arr)
+    # (AllChem.GetMorganFingerprintAsBitVect is deprecated in current RDKit; the generator gives the same bits.)
+    ecfp4_arr = _morgan_generator(radius, n_bits).GetFingerprintAsNumPy(mol).astype(np.float32)
 
     # 2. Mass2SMILES 71-d functional group + heteroatom + sugar descriptor vector
     fg_71 = np.zeros(71, dtype=np.float32)

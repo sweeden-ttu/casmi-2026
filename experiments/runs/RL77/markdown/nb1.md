@@ -50,6 +50,8 @@ This PyTorch Google Colab notebook template implements the two-stage **GLMR (Gen
 
 > **Review fix:** 46% of `train.parquet` `base_peak_intensity` values are null and `max(nan, 1.0)` returns `nan`, which propagated NaN into every encoder pass; non-finite values now default to 1e4. The primary precursor is taken from a singly charged monomer adduct. `load_competition_frames()` applies the same leakage rule as `create_leakage_free_splits()` while streaming the 3 GB parquet through pyarrow filters instead of pandas.
 
+> **Review fix (validation answer key):** `train.parquet` has no `molecule_id`, so validation molecules are keyed by their stored `inchikey14`, and the drivers used `{mid: mid}` as the answer key. The scorer compares tautomer-canonical InChIKey14s; 3 of the 998 held-out molecules (0.3%; 1.5% of train) store a non-canonical tautomer's key and could never be matched. `ground_truth_ik14()` maps each molecule to the canonical key of its structure and every notebook now uses it.
+
 <!-- before:cell_05 -->
 ## Cell 5: GLMR Architecture & Multi-Spectrum Attention Aggregator
 
@@ -62,6 +64,8 @@ This PyTorch Google Colab notebook template implements the two-stage **GLMR (Gen
 
 <!-- before:cell_07 -->
 ## Cell 7: Stage 2 Training — Spec-Mol Cross-Fusion & Context-Aware Generation
+
+> **Review fix:** When the 15 ppm window held fewer than K structures (most queries: ~275 library structures per Da), `retrieve_top_k_candidates` discarded the mass-matched candidates and returned a purely global top-K. In-window candidates are now kept first and global similarity only fills the remaining slots; ranking (Cell 8) also puts mass-consistent candidates ahead of the fill.
 
 <!-- before:cell_08 -->
 ## Cell 8: Two-Stage GLMR Inference, Unimodal Re-Ranking & `inchikey14` Deduplication

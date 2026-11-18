@@ -20,6 +20,13 @@ TOKEN_HEAVY_MASS_LOWER_BOUND = {
     "Cl": 34.9689,
     "Br": 78.9183,
     "I": 126.9045,
+    # The notebook-1 tokenizer is character-level: "Cl" arrives as "C" + "l" and "Br" as "B" + "r".
+    # The two-letter keys above never matched, so Cl counted as 12 Da and Br as 0. Per-character
+    # increments keep the lower bound exact: C + l = Cl, B (boron) + r = Br.
+    "l": 34.9689 - 12.0000,
+    "B": 11.0093,
+    "r": 78.9183 - 11.0093,
+    "H": 1.0078,  # explicit bracket hydrogens, e.g. [nH], [NH+]
 }
 
 
@@ -40,8 +47,8 @@ class CASMI26ChemicalRewardEngine:
         tokenizer,
         canonicalize_fn,
         fg_extractor_fn,
-        mass_sigma_da: float = 0.015,
-        coarse_mass_scale_da: float = 14.0,
+        mass_sigma_da: float = W("nb5.reward.mass_sigma_da"),
+        coarse_mass_scale_da: float = W("nb5.reward.coarse_mass_scale_da"),
     ):
         self.tokenizer = tokenizer
         self.canonicalize_fn = canonicalize_fn
@@ -71,15 +78,15 @@ class CASMI26ChemicalRewardEngine:
 
         target_m = target_neutral_mass.unsqueeze(1).clamp(min=50.0)             # (B, 1)
         # Since hydrogens are implicit in SMILES, heavy atoms typically account for ~90-94% of total mass
-        expected_heavy_target = 0.92 * target_m
+        expected_heavy_target = W("nb5.potential.heavy_fraction") * target_m
         rem_mass = target_m - cum_heavy_mass
         rem_mass_ratio = torch.clamp(rem_mass / target_m, min=-1.0, max=1.0)
 
         # Smooth potential peaks as cumulative heavy mass approaches expected_heavy_target,
         # and drops sharply if heavy-atom mass alone exceeds target_neutral_mass + 1.0 Da
-        overrun_da = F.relu(cum_heavy_mass - (target_m + 1.0))
+        overrun_da = F.relu(cum_heavy_mass - (target_m + W("nb5.potential.overrun_margin_da")))
         underrun_frac = torch.abs(cum_heavy_mass - expected_heavy_target) / target_m
-        phi_potential = torch.exp(-2.0 * underrun_frac) - 0.15 * overrun_da
+        phi_potential = torch.exp(-W("nb5.potential.underrun_decay") * underrun_frac) - W("nb5.potential.overrun_penalty") * overrun_da
 
         return rem_mass_ratio, phi_potential
 
@@ -112,16 +119,16 @@ class CASMI26ChemicalRewardEngine:
             ik14_out.append(ik14)
 
             if canon_smi is None:
-                rewards[b] = -1.0  # Invalid SMILES syntax or rejected valence
+                rewards[b] = W("nb5.reward.invalid")  # Invalid SMILES syntax or rejected valence
                 continue
 
             mol = Chem.MolFromSmiles(canon_smi)
             if mol is None:
-                rewards[b] = -1.0
+                rewards[b] = W("nb5.reward.invalid")
                 continue
 
             # 1. Chemical Validity Base Reward (+0.50)
-            r_total = 0.50
+            r_total = W("nb5.reward.valid_base")
 
             # 2. Exact Monoisotopic Precursor Mass Reward (up to +2.00)
             # Combines a coarse exponential funnel (guides within +/- 14 Da) and a fine sub-15 ppm peak
@@ -132,7 +139,7 @@ class CASMI26ChemicalRewardEngine:
 
             r_mass_coarse = math.exp(-mass_diff_da / self.coarse_mass_scale_da)
             r_mass_fine = math.exp(-0.5 * (mass_diff_da / self.mass_sigma_da) ** 2)
-            r_mass = 0.80 * r_mass_coarse + 1.20 * r_mass_fine
+            r_mass = W("nb5.reward.mass_coarse") * r_mass_coarse + W("nb5.reward.mass_fine") * r_mass_fine
             r_total += r_mass
 
             # 3. MIST-CF / SIRIUS Molecular Formula Match Bonus (+0.75)
@@ -140,9 +147,9 @@ class CASMI26ChemicalRewardEngine:
                 gen_formula = rdMolDescriptors.CalcMolFormula(mol)
                 priors = formula_priors_batch[b]
                 if priors and gen_formula == priors[0]:
-                    r_total += 0.75
+                    r_total += W("nb5.reward.formula_top1")
                 elif priors and gen_formula in priors[:3]:
-                    r_total += 0.45
+                    r_total += W("nb5.reward.formula_top3")
 
             # 4. Mass2SMILES 71-D Functional Group + Heteroatom Consistency Reward (up to +1.00)
             _, gen_fg71 = self.fg_extractor_fn(canon_smi)
@@ -151,7 +158,8 @@ class CASMI26ChemicalRewardEngine:
                 # Separate functional groups (0..59) and heteroatoms/rings (60..70)
                 fg_l1 = float(np.mean(np.abs(gen_fg71[:60] - pred_fg71[:60])))
                 hetero_l1 = float(np.mean(np.abs(gen_fg71[60:] - pred_fg71[60:])))
-                r_fg = 0.50 * math.exp(-2.0 * fg_l1) + 0.50 * math.exp(-1.5 * hetero_l1)
+                r_fg = (W("nb5.reward.fg_weight") * math.exp(-W("nb5.reward.fg_decay") * fg_l1)
+                        + W("nb5.reward.hetero_weight") * math.exp(-W("nb5.reward.hetero_decay") * hetero_l1))
                 r_total += r_fg
 
             rewards[b] = r_total
@@ -166,6 +174,6 @@ class CASMI26ChemicalRewardEngine:
             target_sub = target_mol_embs[valid_indices].to(device)
             cos_sims = torch.sum(e_m_gen * target_sub, dim=-1).clamp(min=0.0).cpu().numpy()
             for idx_pos, b_idx in enumerate(valid_indices):
-                rewards[b_idx] += 0.75 * float(cos_sims[idx_pos])
+                rewards[b_idx] += W("nb5.reward.embedding_bonus") * float(cos_sims[idx_pos])
 
         return torch.tensor(rewards, dtype=torch.float32, device=device), canon_smiles_out, ik14_out

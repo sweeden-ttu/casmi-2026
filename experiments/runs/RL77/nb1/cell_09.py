@@ -78,7 +78,11 @@ def evaluate_stage1_retrieval(model, loader, lib_smiles, lib_ik14, lib_masses, l
             idx = idx_batch[b]
             scores = torch.matmul(lib_embs_dev[idx], e_s_mol[b]).cpu().numpy()
             fallback = torch.topk(torch.matmul(lib_embs_dev, e_s_mol[b]), k=min(100, len(lib_smiles))).indices.cpu().tolist()
+            neutral = neutral_mass_from_precursor(
+                float(batch["precursor_mz"][b]), batch["primary_adduct"][b], batch["ionization_mode"][b]
+            )
             rec = {"cand_smiles": [lib_smiles[i] for i in idx], "stage1_scores": scores, "stage2_scores": None,
+                   "in_window": in_mass_window(lib_masses[idx], neutral),
                    "gen_smiles": None, "gen_ik14": None, "gen_mass_ok": False,
                    "backfill_smiles": [lib_smiles[i] for i in fallback]}
             preds[mol_id] = assemble_ranked_candidates(rec, 0.0, 0)
@@ -87,8 +91,12 @@ def evaluate_stage1_retrieval(model, loader, lib_smiles, lib_ik14, lib_masses, l
     return {"mrr25": compute_casmi_mrr25(preds, gt), f"recall_at_{CFG.TOP_K_CANDIDATES}": float(np.mean(hits)), "n": len(gt)}
 
 
-def sweep_rerank_knobs(records: List[Dict], gt: Dict[str, str], seed: int = CFG.SEED) -> Dict:
-    """Grid over alpha and generated-structure rank with 2-fold cross-fitting for an honest estimate."""
+def sweep_rerank_knobs(
+    records: List[Dict], gt: Dict[str, str], seed: int = CFG.SEED,
+    prior_keys: Tuple[str, str] = ("nb1.rerank.alpha", "nb1.rerank.generated_insert_rank"),
+) -> Dict:
+    """Grid over alpha and generated-structure rank with 2-fold cross-fitting for an honest estimate.
+    `prior_keys` name the Evidently weights the grid is compared against (notebook 5 passes its own)."""
     alphas = [round(a, 2) for a in np.linspace(0.0, 1.0, 11)]
     ranks = [0, 1, 3, 10, 25]
     grid = [(a, r) for a in alphas for r in ranks]
@@ -107,7 +115,7 @@ def sweep_rerank_knobs(records: List[Dict], gt: Dict[str, str], seed: int = CFG.
     full_scores = {f"{a}|{r}": mrr(records, a, r) for a, r in grid}
     best_key = max(full_scores, key=full_scores.get)
     best_alpha, best_rank = best_key.split("|")
-    prior = (W("nb1.rerank.alpha"), W.int("nb1.rerank.generated_insert_rank"))
+    prior = (W(prior_keys[0]), W.int(prior_keys[1]))
     return {
         "best_alpha": float(best_alpha),
         "best_generated_insert_rank": int(best_rank),
@@ -187,7 +195,7 @@ def run_glmr_pipeline(out_dir: Optional[Path] = None) -> Dict:
         model, make_loader(eval_df, tokenizer, train=False, batch_size=16), tokenizer,
         lib_smiles, lib_masses, lib_embs, collect_records=records,
     )
-    gt = {mid: mid for mid in val_sub["molecule_id"]}  # validation groups are keyed by inchikey14
+    gt = ground_truth_ik14(eval_df)
     metrics["val_two_stage_mrr25"] = compute_casmi_mrr25(predictions_from_submission(val_sub), gt)
     metrics["val_generated_valid_rate"] = float(np.mean([r["gen_smiles"] is not None for r in records]))
     metrics["val_generated_mass_ok_rate"] = float(np.mean([r["gen_mass_ok"] for r in records]))

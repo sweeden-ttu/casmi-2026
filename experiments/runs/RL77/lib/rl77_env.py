@@ -23,7 +23,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Mapping, Optional
+from typing import Any, Dict, Iterable, List, Mapping, Optional, Tuple
 
 COMPETITION_SLUG = "enveda-CASMI26-molecule-id-mass-spectra"
 KAGGLE_OWNER = os.environ.get("RL77_KAGGLE_OWNER", "scottweeden")
@@ -35,7 +35,7 @@ PREREQS_SLUG = "casmi26-rl77-prereqs"
 CANDIDATES_SLUG = "casmi26-rl77-candidates"
 OUTPUT_SLUGS = {
     "nb1": "casmi26-rl77-nb1-glmr-outputs",
-    "nb2": "casmi26-rl77-nb2-offline-store",
+    "nb2": "casmi26-rl77-nb2-store-outputs",
     "nb3": "casmi26-rl77-nb3-ensemble-outputs",
     "nb4": "casmi26-rl77-nb4-formula-outputs",
     "nb5": "casmi26-rl77-nb5-qrl-outputs",
@@ -211,6 +211,14 @@ def _json_default(obj: Any) -> Any:
     if isinstance(obj, Path):
         return str(obj)
     raise TypeError(f"Not JSON serializable: {type(obj)}")
+
+
+def select_validated(prior: Any, fitted: Any, prior_score: Optional[float], fitted_score: Optional[float],
+                     min_gain: float = 0.0) -> Tuple[Any, bool]:
+    """Pick the values this run uses on the test set with the same rule as `tools/evidently_weights.py adopt`:
+    fitted values win only when their cross-fitted held-out score beats the prior's. Returns (values, used_fitted)."""
+    used = prior_score is not None and fitted_score is not None and fitted_score > prior_score + min_gain
+    return (fitted if used else prior), used
 
 
 def write_run_manifest(notebook: str, out_dir: Path, weights_version: str, extra: Optional[Mapping[str, Any]] = None) -> Path:

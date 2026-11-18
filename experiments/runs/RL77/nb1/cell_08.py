@@ -16,7 +16,11 @@ def assemble_ranked_candidates(
     stage1 = record["stage1_scores"]
     stage2 = record["stage2_scores"]
     final = stage1 if stage2 is None else alpha_rerank * stage2 + (1.0 - alpha_rerank) * stage1
-    order = np.argsort(-final, kind="stable")
+    # Optional tiers first (notebook 4 formula priors: 0 = top formula, ...), then mass-consistent candidates,
+    # then blended similarity (np.lexsort: last key is primary). Records without "priority" rank as before.
+    in_window = np.asarray(record.get("in_window", np.zeros(len(final), dtype=bool)), dtype=bool)
+    priority = np.asarray(record.get("priority", np.zeros(len(final), dtype=np.int64)))
+    order = np.lexsort((-final, ~in_window, priority))
 
     seen_ik14, ranked = set(), []
     gen_smi, gen_ik14 = record["gen_smiles"], record["gen_ik14"]
@@ -105,17 +109,17 @@ def predict_and_rerank_test_molecules(
             gen_smiles_raw = tokenizer.decode(gen_token_seqs[b])
             canon_gen_smi, gen_ik14 = canonicalize_and_inchikey14(gen_smiles_raw)
 
+            neutral = neutral_mass_from_precursor(
+                float(batch["precursor_mz"][b]), batch["primary_adduct"][b], batch["ionization_mode"][b]
+            )
             # If generated SMILES is chemically valid, compute unimodal similarity Eq. (9)
             stage2_scores, gen_mass_ok = None, False
             if canon_gen_smi is not None:
                 gen_tok = tokenizer.encode(canon_gen_smi, add_cls=True).unsqueeze(0).to(device)
                 _, e_m_plus = model.mol_encoder(gen_tok)  # (1, D)
                 stage2_scores = torch.matmul(cand_embs, e_m_plus.squeeze(0)).cpu().numpy()  # (K,)
-                neutral = neutral_mass_from_precursor(
-                    float(batch["precursor_mz"][b]), batch["primary_adduct"][b], batch["ionization_mode"][b]
-                )
                 gen_mass = Descriptors.ExactMolWt(Chem.MolFromSmiles(canon_gen_smi))
-                gen_mass_ok = abs(gen_mass - neutral) <= max(neutral * CFG.MASS_TOLERANCE_PPM * 1e-6, CFG.MIN_TOLERANCE_DA)
+                gen_mass_ok = bool(in_mass_window(np.array([gen_mass]), neutral)[0])
 
             global_sims = torch.matmul(lib_embs_dev, e_s_mol[b])
             fallback_idx = torch.topk(global_sims, k=min(100, len(lib_smiles))).indices.cpu().tolist()
@@ -125,6 +129,7 @@ def predict_and_rerank_test_molecules(
                 "cand_smiles": [lib_smiles[i] for i in cand_indices],
                 "stage1_scores": stage1_scores,
                 "stage2_scores": stage2_scores,
+                "in_window": in_mass_window(lib_masses[cand_indices], neutral),
                 "gen_smiles": canon_gen_smi,
                 "gen_ik14": gen_ik14,
                 "gen_mass_ok": bool(gen_mass_ok),

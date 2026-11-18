@@ -12,12 +12,12 @@ class GLMRStage25QLearningTrainer:
         self,
         q_decoder: ChemFormerQDecoderWrapper,
         reward_engine: CASMI26ChemicalRewardEngine,
-        gamma: float = 0.99,
-        alpha_ent: float = 0.05,
-        cql_weight: float = 0.10,
-        kl_beta: float = 0.20,
-        sup_anchor_weight: float = 0.25,
-        polyak_tau: float = 0.01,
+        gamma: float = W("nb5.rl.gamma"),
+        alpha_ent: float = W("nb5.rl.alpha_ent"),
+        cql_weight: float = W("nb5.rl.cql_weight"),
+        kl_beta: float = W("nb5.rl.kl_beta"),
+        sup_anchor_weight: float = W("nb5.rl.sup_anchor_weight"),
+        polyak_tau: float = W("nb5.rl.polyak_tau"),
     ):
         self.q_decoder = q_decoder
         self.reward_engine = reward_engine
@@ -39,7 +39,7 @@ class GLMRStage25QLearningTrainer:
         memory: torch.Tensor,              # (B, P, D) H^ca
         target_neutral_mass: torch.Tensor, # (B,)
         max_len: int = 96,
-        temperature: float = 0.85,
+        temperature: float = W("nb5.rl.rollout_temperature"),
     ) -> Tuple[torch.Tensor, List[List[int]]]:
         """Samples on-policy SMILES trajectories y ~ pi_phi( . | H^ca) for RL exploration."""
         self.q_decoder.eval()
@@ -72,6 +72,7 @@ class GLMRStage25QLearningTrainer:
         memory: torch.Tensor,               # (B, P, D) H^ca
         target_neutral_mass: torch.Tensor,  # (B,)
         terminal_rewards: torch.Tensor,     # (B,) R_term(y)
+        sequence_advantages: Optional[torch.Tensor] = None,  # (B,) normalized Monte Carlo advantages for the actor
     ) -> Tuple[torch.Tensor, torch.Tensor]:
         """
         Computes:
@@ -102,9 +103,13 @@ class GLMRStage25QLearningTrainer:
 
         # Forward target Q-network on s_{t+1} for Soft Bellman backup
         with torch.no_grad():
-            _, q_next_all, _ = self.q_decoder.forward_policy_and_q(
-                act_ids, memory, rem_next, target_neutral_mass, use_target_q=True
+            # Q_targ(s_{t+1}, .) is the full-trajectory output at position t+1. The PDF fed act_ids
+            # (the trajectory without BOS) as if it were a sequence, which shifted every position
+            # embedding and dropped the BOS context from the bootstrap target.
+            _, q_full_targ, _ = self.q_decoder.forward_policy_and_q(
+                traj_ids, memory, rem_ratio_all, target_neutral_mass, use_target_q=True
             )
+            q_next_all = q_full_targ[:, 1:, :]
             # Soft value V_targ(s_{t+1}) = alpha * logsumexp(Q_targ(s_{t+1}, a') / alpha)
             v_next_soft = self.alpha_ent * torch.logsumexp(
                 q_next_all / self.alpha_ent, dim=-1
@@ -137,13 +142,19 @@ class GLMRStage25QLearningTrainer:
         probs = F.softmax(policy_logits, dim=-1)
 
         taken_log_prob = log_probs.gather(dim=-1, index=act_ids.unsqueeze(-1)).squeeze(-1)
-        advantages = (q_taken - v_s.squeeze(-1)).detach()
-        # Normalize advantages across valid tokens in batch
-        adv_mean = (advantages * valid_mask).sum() / valid_mask.sum().clamp(min=1.0)
-        adv_std = torch.sqrt(
-            ((advantages - adv_mean).pow(2) * valid_mask).sum() / valid_mask.sum().clamp(min=1.0) + 1e-6
-        )
-        norm_advantages = torch.clamp((advantages - adv_mean) / adv_std, min=-3.0, max=3.0)
+        if sequence_advantages is not None:
+            # REINFORCE with a batch baseline: every token of y shares (R(y) - mean R) / std R. Kaggle nb5 v1 used the
+            # critic's Q - V here; with immature dueling heads that advantage was uncorrelated with the real outcome,
+            # the actor drifted, and rollouts collapsed to invalid SMILES (mean reward -0.28 -> -0.96 over 4,885 steps).
+            norm_advantages = sequence_advantages.detach().unsqueeze(1).expand_as(valid_mask)
+        else:
+            advantages = (q_taken - v_s.squeeze(-1)).detach()
+            # Normalize advantages across valid tokens in batch
+            adv_mean = (advantages * valid_mask).sum() / valid_mask.sum().clamp(min=1.0)
+            adv_std = torch.sqrt(
+                ((advantages - adv_mean).pow(2) * valid_mask).sum() / valid_mask.sum().clamp(min=1.0) + 1e-6
+            )
+            norm_advantages = torch.clamp((advantages - adv_mean) / adv_std, min=-3.0, max=3.0)
 
         pg_loss = -taken_log_prob * norm_advantages
         kl_div = torch.sum(probs * (log_probs - ref_log_probs), dim=-1)
@@ -185,8 +196,10 @@ class GLMRStage25QLearningTrainer:
             neutral_masses = []
             for b in range(B):
                 pmz = float(batch["precursor_mz"][b].item())
-                shift = adduct_shifts.get(str(batch["primary_adduct"][b]), -1.007276)
-                neutral_masses.append(pmz + shift)
+                # adduct_shifts kept for the PDF signature; the helper handles formate/acetate and [2M+X]
+                neutral_masses.append(neutral_mass_from_precursor(
+                    pmz, str(batch["primary_adduct"][b]), str(batch["ionization_mode"][b])
+                ))
             target_neutral_mass_t = torch.tensor(neutral_masses, dtype=torch.float32, device=device)
 
             formula_priors = generate_formula_priors_fn(
@@ -207,13 +220,18 @@ class GLMRStage25QLearningTrainer:
             device=device,
         )
 
+        # Monte Carlo sequence advantages for the actor; an all-invalid (or all-equal) batch gives no push at all.
+        r_std = rollout_rewards.std(unbiased=False)
+        mc_adv = torch.zeros_like(rollout_rewards) if r_std < 1e-6 else torch.clamp(
+            (rollout_rewards - rollout_rewards.mean()) / (r_std + 1e-6), -3.0, 3.0
+        )
         q_loss_on, actor_loss_on = self.compute_shaped_td_and_actor_losses(
-            rollout_seqs, h_ca, target_neutral_mass_t, rollout_rewards
+            rollout_seqs, h_ca, target_neutral_mass_t, rollout_rewards, sequence_advantages=mc_adv
         )
 
         # B. Expert ground-truth trajectory anchor (replay buffer / imitation anchor)
         expert_seqs = batch["mol_tokens_dec"]
-        expert_rewards = torch.full((B,), 4.75, dtype=torch.float32, device=device)
+        expert_rewards = torch.full((B,), W("nb5.rl.expert_reward"), dtype=torch.float32, device=device)
         q_loss_exp, _ = self.compute_shaped_td_and_actor_losses(
             expert_seqs, h_ca, target_neutral_mass_t, expert_rewards
         )

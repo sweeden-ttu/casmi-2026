@@ -1,1 +1,38 @@
-{}
+{
+  "python.defaultInterpreterPath": "/home/sweeden/.conda/envs/kagg/bin/python",
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.indexing": true,
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}",
+    "${workspaceFolder}/experiments/runs/RL77/lib",
+    "${workspaceFolder}/artifacts/GM0/gp-molformer"
+  ],
+  "python.analysis.exclude": [
+    "**/__pycache__",
+    ".venv",
+    "third_party",
+    "data",
+    "outputs",
+    "artifacts/DN1",
+    "artifacts/DN6",
+    "artifacts/dreams",
+    "artifacts/EN4",
+    "kaggle_dataset_export"
+  ],
+  "python.analysis.packageIndexDepths": [
+    { "name": "torch", "depth": 2, "includeAllSymbols": true },
+    { "name": "numpy", "depth": 2, "includeAllSymbols": true },
+    { "name": "pandas", "depth": 2, "includeAllSymbols": true },
+    { "name": "scipy", "depth": 2, "includeAllSymbols": true },
+    { "name": "sklearn", "depth": 2, "includeAllSymbols": true },
+    { "name": "rdkit", "depth": 2, "includeAllSymbols": true },
+    { "name": "pyarrow", "depth": 2, "includeAllSymbols": true },
+    { "name": "transformers", "depth": 2, "includeAllSymbols": true },
+    { "name": "huggingface_hub", "depth": 2, "includeAllSymbols": true },
+    { "name": "faiss", "depth": 2, "includeAllSymbols": true },
+    { "name": "evidently", "depth": 2, "includeAllSymbols": true }
+  ]
+}

@@ -7,9 +7,10 @@ def q_guided_beam_search_decode(
     target_neutral_masses: np.ndarray,     # (B,)
     fg_71_preds: np.ndarray,               # (B, 71)
     formula_priors_batch: Optional[List[List[str]]] = None,
-    beam_size: int = 6,
-    q_weight_beta: float = 0.35,
-    max_len: int = 128,
+    beam_size: int = W.int("nb5.beam.size"),
+    q_weight_beta: float = W("nb5.beam.q_weight_beta"),
+    max_len: int = W.int("nb1.decode.max_len"),
+    reward_lists: Optional[List[List[float]]] = None,
 ) -> Tuple[List[List[str]], List[List[str]]]:
     """
     Executes Mass-Constrained Q-Guided Beam Search per molecule_id and returns:
@@ -70,7 +71,7 @@ def q_guided_beam_search_decode(
                 for sc, tok_id in zip(topk_sc.tolist(), topk_tok.tolist()):
                     new_mass = cum_mass + float(token_masses[tok_id])
                     # Hard physical pruning: heavy atoms alone cannot exceed neutral_mass + 2.0 Da
-                    if new_mass > (target_m + 2.0):
+                    if new_mass > (target_m + W("nb5.beam.mass_prune_margin_da")):
                         continue
                     next_candidates.append((seq + [tok_id], cum_score + sc, new_mass))
 
@@ -96,64 +97,23 @@ def q_guided_beam_search_decode(
 
         # Combine normalized beam search trajectory score with terminal chemical reward
         final_beam_Order = np.argsort(
-            -(beam_rewards.cpu().numpy() + 0.25 * np.array([sc for _, sc in completed_seqs]))
+            -(beam_rewards.cpu().numpy() + W("nb5.beam.reward_mix") * np.array([sc for _, sc in completed_seqs]))
         )
 
+        rewards_np = beam_rewards.cpu().numpy()
         seen_ik14 = set()
-        mol_valid_smis, mol_valid_iks = [], []
+        mol_valid_smis, mol_valid_iks, mol_rewards = [], [], []
         for idx in final_beam_Order:
             c_smi, ik = canon_smis[idx], ik14s[idx]
             if c_smi is not None and ik is not None and ik not in seen_ik14:
                 seen_ik14.add(ik)
                 mol_valid_smis.append(c_smi)
                 mol_valid_iks.append(ik)
+                mol_rewards.append(float(rewards_np[idx]))
 
         all_mol_smiles.append(mol_valid_smis)
         all_mol_ik14s.append(mol_valid_iks)
+        if reward_lists is not None:
+            reward_lists.append(mol_rewards)
 
     return all_mol_smiles, all_mol_ik14s
-
-
-if __name__ == "__main__":
-    # Self-contained verification smoke test of the Q-Learning Decoder Wrapper & Reward Engine
-    # (Assumes SMILESTokenizer, ChemFormerMolecularDecoder, canonicalize_and_inchikey14,
-    #  and smiles_to_ecfp4_and_mass2smiles_71d from previous cells are in scope)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    tokenizer = SMILESTokenizer(max_len=64)
-
-    base_dec = ChemFormerMolecularDecoder(
-        vocab_size=len(tokenizer),
-        pad_id=tokenizer.pad_id,
-        bos_id=tokenizer.bos_id,
-        eos_id=tokenizer.eos_id,
-        d_model=256,
-        n_heads=8,
-        num_layers=2,
-        max_len=64,
-    ).to(device)
-
-    q_wrapper = ChemFormerQDecoderWrapper(base_dec, d_model=256).to(device)
-    reward_eng = CASMI26ChemicalRewardEngine(
-        tokenizer=tokenizer,
-        canonicalize_fn=canonicalize_and_inchikey14,
-        fg_extractor_fn=smiles_to_ecfp4_and_mass2smiles_71d,
-    )
-
-    # Test terminal reward discrimination between Chrysin (254.0579 Da) and an off-mass structure
-    chrysin_smi = "O=c1cc(-c2ccccc2)oc2cc(O)cc(O)c12"
-    off_mass_smi = "CC(=O)Nc1ccc(O)cc1"  # Paracetamol (151.0633 Da)
-    _, target_fg71 = smiles_to_ecfp4_and_mass2smiles_71d(chrysin_smi)
-
-    seqs_test = [
-        tokenizer.encode(chrysin_smi, add_cls=False).tolist(),
-        tokenizer.encode(off_mass_smi, add_cls=False).tolist(),
-    ]
-    r_vals, c_smis, iks = reward_eng.evaluate_terminal_smiles_batch(
-        generated_seqs=seqs_test,
-        target_neutral_masses=np.array([254.0579, 254.0579], dtype=np.float32),
-        target_fg71_preds=np.stack([target_fg71, target_fg71], axis=0),
-        formula_priors_batch=[["C15H10O4"], ["C15H10O4"]],
-        device=device,
-    )
-    print(f"Reward [Exact Mass + FG Match (Chrysin)]: {r_vals[0].item():.4f} | InChIKey14: {iks[0]}")
-    print(f"Reward [Off-Mass Structure (Paracetamol)]: {r_vals[1].item():.4f} | InChIKey14: {iks[1]}")

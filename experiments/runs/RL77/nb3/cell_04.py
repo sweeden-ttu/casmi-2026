@@ -13,10 +13,12 @@ class CASMI26EnsembleReranker:
 
     def __init__(
         self,
-        weights: Tuple[float, float, float, float, float] = (0.42, 0.18, 0.22, 0.10, 0.08),
-        fg_gamma: float = 0.15,
-        rrf_k: float = 15.0,
+        weights: Optional[Tuple[float, float, float, float, float]] = None,
+        fg_gamma: float = W("nb3.reranker.fg_gamma"),
+        rrf_k: float = W("nb3.reranker.rrf_k"),
     ):
+        if weights is None:  # Evidently snapshot (casmi-rl77-weights) instead of the PDF literals
+            weights = tuple(W.vec("nb3.reranker", ["w_gen", "w_pre", "w_siamese", "w_fg", "w_rrf"]))
         # Weights: [w_glmr_gen, w_glmr_pre, w_siamese_ecfp4, w_mass2smiles_fg, w_rrf]
         self.weights = np.asarray(weights, dtype=np.float64)
         self.fg_gamma = fg_gamma
@@ -64,8 +66,8 @@ class CASMI26EnsembleReranker:
         w0, w1, w2, w3, w4 = self.weights
         if not gen_smiles_valid:
             # Redistribute generative weight to Stage 1 and Siamese ECFP4 if beam SMILES failed RDKit check
-            w1 += 0.6 * w0
-            w2 += 0.4 * w0
+            w1 += W("nb3.reranker.gen_fail_to_pre") * w0
+            w2 += W("nb3.reranker.gen_fail_to_siamese") * w0
             w0 = 0.0
 
         return w0 * z_gen + w1 * z_pre + w2 * z_sia + w3 * z_fg + w4 * z_rrf
@@ -99,7 +101,8 @@ class CASMI26EnsembleReranker:
                     rec["s_fg_l1_dist"],
                     gen_smiles_valid=rec["gen_valid"],
                 )
-                order = np.argsort(-blended)
+                in_window = np.asarray(rec.get("in_window", np.zeros(len(blended), dtype=bool)), dtype=bool)
+                order = np.lexsort((-blended, ~in_window))  # mass-consistent candidates first
 
                 seen_ik14 = set()
                 rank = 0
@@ -119,13 +122,26 @@ class CASMI26EnsembleReranker:
 
             return -float(np.mean(rr_list))
 
-        res = minimize(
-            neg_mrr25_objective,
-            self.weights,
-            method="Nelder-Mead",
-            options={"maxiter": 250, "xatol": 1e-3, "fatol": 1e-4},
-        )
-        best_w = np.clip(res.x, 0.0, 1.0)
+        # MRR@25 is piecewise constant in the weights, so one Nelder-Mead run from the prior can stall below
+        # a trivial corner (Kaggle nb3 v1: one fold stopped at 0.222 while the Siamese stream alone scored ~0.37).
+        # Score the prior, uniform and every single-stream vector, then search from the two best starts with an
+        # explicit 0.2 simplex step (SciPy's default step for a zero entry is 0.00025, so one-hot starts never move).
+        n = len(self.weights)
+        starts = [np.asarray(self.weights, dtype=np.float64), np.full(n, 1.0 / n)] + [np.eye(n)[i] for i in range(n)]
+        scored = sorted((neg_mrr25_objective(s), i) for i, s in enumerate(starts))  # ties keep the prior (index 0)
+        best_fun, best_w = scored[0][0], starts[scored[0][1]]
+        for _, i in scored[:2]:
+            x0 = starts[i]
+            simplex = np.vstack([x0] + [x0 + 0.2 * np.eye(n)[j] for j in range(n)])
+            res = minimize(
+                neg_mrr25_objective,
+                x0,
+                method="Nelder-Mead",
+                options={"maxiter": 250, "xatol": 1e-3, "fatol": 1e-4, "initial_simplex": simplex},
+            )
+            if res.fun < best_fun:
+                best_fun, best_w = res.fun, res.x
+        best_w = np.clip(best_w, 0.0, 1.0)
         self.weights = best_w / np.sum(best_w)
-        print(f"Optimized OOF MRR@25: {-res.fun:.4f} | Weights: {np.round(self.weights, 4)}")
+        print(f"Optimized OOF MRR@25: {-best_fun:.4f} | Weights: {np.round(self.weights, 4)}")
         return self.weights

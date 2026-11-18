@@ -70,7 +70,12 @@ class SiameseContrastiveTanimotoLoss(nn.Module):
     differentiable Tanimoto + Binary Cross-Entropy loss on the 2048-bit ECFP4 head.
     """
 
-    def __init__(self, margin: float = 0.25, tau: float = 0.07, fp_weight: float = 0.5):
+    def __init__(
+        self,
+        margin: float = W("nb3.siamese_loss.margin"),
+        tau: float = W("nb3.siamese_loss.tau"),
+        fp_weight: float = W("nb3.siamese_loss.fp_weight"),
+    ):
         super().__init__()
         self.margin = margin
         self.tau = tau

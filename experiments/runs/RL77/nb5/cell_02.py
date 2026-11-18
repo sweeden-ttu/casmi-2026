@@ -70,7 +70,7 @@ class ChemFormerQDecoderWrapper(nn.Module):
         B, Q = tgt_ids.shape
         positions = torch.arange(Q, device=tgt_ids.device).unsqueeze(0).expand(B, Q)
         tgt = self.base_decoder.token_emb(tgt_ids) + self.base_decoder.pos_emb(positions)
-        causal_mask = nn.Transformer.generate_square_subsequent_mask(Q, device=tgt_ids.device)
+        causal_mask = torch.triu(torch.ones(Q, Q, dtype=torch.bool, device=tgt_ids.device), diagonal=1)
         tgt_pad_mask = tgt_ids == self.base_decoder.pad_id
         h_dec = self.base_decoder.decoder(
             tgt=tgt,
