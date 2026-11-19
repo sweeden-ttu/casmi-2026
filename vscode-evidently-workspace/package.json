@@ -1,0 +1,258 @@
+{
+  "name": "evidently-workspace-browser",
+  "displayName": "Evidently Remote Workspace Browser & Join Studio",
+  "description": "Browse all projects, datasets, and reports on a local or remote Evidently workspace, and join tables to create and publish Evidently reports.",
+  "version": "0.1.0",
+  "publisher": "casmi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sweeden-ttu/casmi-2026"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Data Science",
+    "Visualization",
+    "Machine Learning",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onView:evidentlyProjectsTree",
+    "onCommand:evidentlyWorkspace.refresh",
+    "onCommand:evidentlyWorkspace.openJoinBuilder",
+    "onCommand:evidentlyWorkspace.openDataset",
+    "onCommand:evidentlyWorkspace.openReport"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "evidently-workspace",
+          "title": "Evidently Workspace",
+          "icon": "media/evidently-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "evidently-workspace": [
+        {
+          "id": "evidentlyProjectsTree",
+          "name": "Projects, Datasets & Reports"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "evidentlyWorkspace.refresh",
+        "title": "Evidently: Refresh Workspace",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "evidentlyWorkspace.openJoinBuilder",
+        "title": "Evidently: Join Tables & Create Report",
+        "icon": "$(git-merge)"
+      },
+      {
+        "command": "evidentlyWorkspace.filterTree",
+        "title": "Evidently: Filter Projects, Datasets & Reports",
+        "icon": "$(filter)"
+      },
+      {
+        "command": "evidentlyWorkspace.clearFilter",
+        "title": "Evidently: Clear Filter",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "evidentlyWorkspace.configureServer",
+        "title": "Evidently: Configure Server URL & API Key",
+        "icon": "$(gear)"
+      },
+      {
+        "command": "evidentlyWorkspace.openDataset",
+        "title": "Evidently: Browse Dataset",
+        "icon": "$(table)"
+      },
+      {
+        "command": "evidentlyWorkspace.openReport",
+        "title": "Evidently: View Report",
+        "icon": "$(graph)"
+      },
+      {
+        "command": "evidentlyWorkspace.selectLeftTable",
+        "title": "Evidently: Select as Left Table for Join",
+        "icon": "$(arrow-left)"
+      },
+      {
+        "command": "evidentlyWorkspace.selectRightTable",
+        "title": "Evidently: Select as Right Table for Join",
+        "icon": "$(arrow-right)"
+      },
+      {
+        "command": "evidentlyWorkspace.createReportFromDataset",
+        "title": "Evidently: Create Report from Dataset",
+        "icon": "$(beaker)"
+      },
+      {
+        "command": "evidentlyWorkspace.exportDatasetCsv",
+        "title": "Evidently: Export Dataset to CSV",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "evidentlyWorkspace.exportReportHtml",
+        "title": "Evidently: Export Report to HTML",
+        "icon": "$(file-code)"
+      },
+      {
+        "command": "evidentlyWorkspace.openInBrowser",
+        "title": "Evidently: Open in External Browser",
+        "icon": "$(link-external)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "evidentlyWorkspace.openJoinBuilder",
+          "when": "view == evidentlyProjectsTree",
+          "group": "navigation@1"
+        },
+        {
+          "command": "evidentlyWorkspace.filterTree",
+          "when": "view == evidentlyProjectsTree",
+          "group": "navigation@2"
+        },
+        {
+          "command": "evidentlyWorkspace.refresh",
+          "when": "view == evidentlyProjectsTree",
+          "group": "navigation@3"
+        },
+        {
+          "command": "evidentlyWorkspace.clearFilter",
+          "when": "view == evidentlyProjectsTree",
+          "group": "1_filter@1"
+        },
+        {
+          "command": "evidentlyWorkspace.configureServer",
+          "when": "view == evidentlyProjectsTree",
+          "group": "2_config@1"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "evidentlyWorkspace.openDataset",
+          "when": "view == evidentlyProjectsTree && (viewItem == dataset || viewItem == datasetVersionGroup)",
+          "group": "inline@1"
+        },
+        {
+          "command": "evidentlyWorkspace.selectLeftTable",
+          "when": "view == evidentlyProjectsTree && (viewItem == dataset || viewItem == datasetVersionGroup)",
+          "group": "inline@2"
+        },
+        {
+          "command": "evidentlyWorkspace.selectRightTable",
+          "when": "view == evidentlyProjectsTree && (viewItem == dataset || viewItem == datasetVersionGroup)",
+          "group": "inline@3"
+        },
+        {
+          "command": "evidentlyWorkspace.openDataset",
+          "when": "view == evidentlyProjectsTree && (viewItem == dataset || viewItem == datasetVersionGroup)",
+          "group": "1_browse@1"
+        },
+        {
+          "command": "evidentlyWorkspace.selectLeftTable",
+          "when": "view == evidentlyProjectsTree && (viewItem == dataset || viewItem == datasetVersionGroup)",
+          "group": "2_join@1"
+        },
+        {
+          "command": "evidentlyWorkspace.selectRightTable",
+          "when": "view == evidentlyProjectsTree && (viewItem == dataset || viewItem == datasetVersionGroup)",
+          "group": "2_join@2"
+        },
+        {
+          "command": "evidentlyWorkspace.createReportFromDataset",
+          "when": "view == evidentlyProjectsTree && (viewItem == dataset || viewItem == datasetVersionGroup)",
+          "group": "2_join@3"
+        },
+        {
+          "command": "evidentlyWorkspace.exportDatasetCsv",
+          "when": "view == evidentlyProjectsTree && (viewItem == dataset || viewItem == datasetVersionGroup)",
+          "group": "3_export@1"
+        },
+        {
+          "command": "evidentlyWorkspace.openReport",
+          "when": "view == evidentlyProjectsTree && viewItem == report",
+          "group": "inline@1"
+        },
+        {
+          "command": "evidentlyWorkspace.openReport",
+          "when": "view == evidentlyProjectsTree && viewItem == report",
+          "group": "1_browse@1"
+        },
+        {
+          "command": "evidentlyWorkspace.exportReportHtml",
+          "when": "view == evidentlyProjectsTree && viewItem == report",
+          "group": "3_export@1"
+        },
+        {
+          "command": "evidentlyWorkspace.openInBrowser",
+          "when": "view == evidentlyProjectsTree && (viewItem == project || viewItem == report || viewItem == dataset || viewItem == datasetVersionGroup)",
+          "group": "4_external@1"
+        },
+        {
+          "command": "evidentlyWorkspace.openJoinBuilder",
+          "when": "view == evidentlyProjectsTree && viewItem == project",
+          "group": "2_join@1"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Evidently Remote Workspace",
+      "properties": {
+        "evidentlyWorkspace.serverUrl": {
+          "type": "string",
+          "default": "http://192.168.0.15:8000",
+          "description": "Base URL of the local or remote Evidently workspace server."
+        },
+        "evidentlyWorkspace.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Optional API key / token for the Evidently server. If empty, reads from evidentlyWorkspace.apiKeyPath or EVIDENTLY_TOKEN."
+        },
+        "evidentlyWorkspace.apiKeyPath": {
+          "type": "string",
+          "default": "~/.config/evidently/api_key",
+          "description": "Path to file containing the Evidently API key."
+        },
+        "evidentlyWorkspace.pythonPath": {
+          "type": "string",
+          "default": "/mnt/LMSTUDIO/CASMI/.venv/bin/python",
+          "description": "Path to Python interpreter with the `evidently` and `pandas` packages installed for report generation."
+        },
+        "evidentlyWorkspace.defaultPageSize": {
+          "type": "number",
+          "default": 50,
+          "description": "Default number of rows per page in the Dataset Browser."
+        },
+        "evidentlyWorkspace.groupDatasetVersions": {
+          "type": "boolean",
+          "default": true,
+          "description": "Group datasets with identical names (multiple versions) into an expandable version group in the sidebar tree."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "npm run compile && node --test out/test/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.4.0"
+  }
+}
